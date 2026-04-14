@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Fonts se carga en layout.tsx vía <link> — aquí solo Tailwind */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-steel-900 antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  ::selection {
+    @apply bg-navy-500 text-white;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-steel-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-steel-400 rounded-full;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply text-3xl sm:text-4xl font-bold text-navy-950 leading-tight;
+  }
+  .section-subheading {
+    @apply text-steel-500 text-lg leading-relaxed;
+  }
+  .card-base {
+    @apply bg-white border border-steel-200 rounded-2xl overflow-hidden shadow-sm;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 bg-navy-500/10 border border-navy-500/20 rounded-full px-3 py-1 text-navy-600 text-xs font-semibold uppercase tracking-wide;
+  }
+  .btn-primary {
+    @apply bg-navy-500 hover:bg-navy-600 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-lg shadow-navy-500/20 hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply border border-navy-500 hover:border-navy-600 text-navy-600 px-6 py-3 rounded-xl font-semibold transition-all hover:bg-navy-50;
+  }
+  .prose-industrial {
+    @apply text-steel-500 leading-relaxed;
+  }
+  .grid-pattern {
+    background-image:
+      linear-gradient(rgba(55,154,214,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(55,154,214,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
