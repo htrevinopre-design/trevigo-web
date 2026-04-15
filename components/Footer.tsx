@@ -124,13 +124,29 @@ export default function Footer() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <address className="text-navy-400 text-sm not-italic leading-relaxed">
-                  {COMPANY.address.street}
-                  <br />
-                  {COMPANY.address.city}, {COMPANY.address.state}
-                  <br />
-                  {COMPANY.address.country}
-                </address>
+                <div>
+                  <a
+                    href={COMPANY.address.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-navy-400 hover:text-navy-200 text-sm not-italic leading-relaxed transition-colors block"
+                  >
+                    {COMPANY.address.street}
+                    <br />
+                    {COMPANY.address.zip} {COMPANY.address.city}, {COMPANY.address.state}
+                  </a>
+                  <a
+                    href={COMPANY.address.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 mt-2 text-[11px] font-bold text-navy-500 hover:text-navy-300 transition-colors"
+                  >
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    Ver en Google Maps
+                  </a>
+                </div>
               </li>
               <li className="flex gap-3 items-center">
                 <svg
