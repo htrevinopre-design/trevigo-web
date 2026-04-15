@@ -39,17 +39,25 @@ export default function ProductosPage() {
         {/* Category nav */}
         <div className="border-t border-white/10">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex overflow-x-auto">
-              {PRODUCT_CATEGORIES.map((cat) => (
-                <a
-                  key={cat.id}
-                  href={`#${cat.id}`}
-                  className="flex items-center gap-2 px-5 py-4 text-sm font-bold text-steel-400 hover:text-white border-b-2 border-transparent hover:border-orange-500 transition-all whitespace-nowrap"
-                >
-                  <span>{cat.icon}</span>
-                  {cat.name}
-                </a>
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-4">
+              {PRODUCT_CATEGORIES.map((cat) => {
+                const shortName: Record<string, string> = {
+                  "tratamiento-metales": "Trat. Metales",
+                  "tratamiento-aguas": "Trat. Aguas",
+                  "lubricantes-aceites": "Lubricantes",
+                  "materias-primas": "Mat. Primas",
+                };
+                return (
+                  <a
+                    key={cat.id}
+                    href={`#${cat.id}`}
+                    className="flex flex-col items-center gap-1 px-3 py-4 text-steel-400 hover:text-white border-b-2 border-transparent hover:border-orange-500 transition-all text-center"
+                  >
+                    <span className="text-xl">{cat.icon}</span>
+                    <span className="text-xs font-bold">{shortName[cat.id] ?? cat.name}</span>
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -64,16 +72,13 @@ export default function ProductosPage() {
         >
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Category header */}
-            <div className="flex items-start gap-4 mb-3">
+            <div className="flex items-start gap-4 mb-10">
               <div className={`${ACCENT_COLORS[cat.id] ?? "bg-navy-500"} w-1 h-10 rounded-full shrink-0 mt-1`} />
               <div>
-                <p className="text-navy-500 text-xs font-bold uppercase tracking-widest">{cat.icon} {cat.name}</p>
-                <h2 className="text-xl sm:text-2xl font-black text-steel-900 uppercase">{cat.description.split(".")[0]}.</h2>
+                <p className="text-navy-500 text-xs font-bold uppercase tracking-widest mb-1">{cat.icon} Categoría</p>
+                <h2 className="text-xl sm:text-2xl font-black text-steel-900 uppercase">{cat.name}</h2>
               </div>
             </div>
-            <p className="text-steel-500 text-sm leading-relaxed mb-12 ml-5 pl-4 border-l-2 border-steel-200">
-              {cat.description}
-            </p>
 
             {/* Subcategories */}
             {cat.subcategories.map((sub) => (
@@ -88,7 +93,7 @@ export default function ProductosPage() {
                   {sub.products.map((product) => {
                     const isSaco = product.formats.length === 1 && product.formats[0].name === "saco";
                     return (
-                      <div key={product.id} className="bg-white border border-steel-200 rounded-lg overflow-hidden hover:shadow-md hover:border-navy-300 transition-all group flex flex-col">
+                      <Link key={product.id} href={`/productos/${product.id}`} className="bg-white border border-steel-200 rounded-lg overflow-hidden hover:shadow-md hover:border-navy-300 transition-all group flex flex-col">
                         {/* Category label */}
                         <div className={`${ACCENT_COLORS[cat.id] ?? "bg-navy-500"} px-4 py-2.5`}>
                           <p className="text-white/50 text-[9px] font-bold uppercase tracking-widest">INDUSTRIAS TREVIGO</p>
@@ -131,14 +136,11 @@ export default function ProductosPage() {
                           </div>
 
                           {/* CTA */}
-                          <Link
-                            href="/contacto"
-                            className="block w-full text-center border-2 border-navy-500 text-navy-600 hover:bg-navy-500 hover:text-white py-2 text-[10px] font-black uppercase tracking-wide transition-colors"
-                          >
-                            Cotizar ahora
-                          </Link>
+                          <span className="block w-full text-center border-2 border-navy-500 text-navy-600 group-hover:bg-navy-500 group-hover:text-white py-2 text-[10px] font-black uppercase tracking-wide transition-colors">
+                            Ver ficha técnica →
+                          </span>
                         </div>
-                      </div>
+                      </Link>
                     );
                   })}
                 </div>
