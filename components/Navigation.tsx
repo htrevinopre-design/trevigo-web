@@ -122,7 +122,7 @@ export default function Navigation() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0" onClick={() => setActiveMenu(null)}>
-              <Image src="/logo.png" alt="Industrias Trevigo" width={48} height={48} className="object-contain" priority />
+              <Image src="/logo.png" alt="Industrias Trevigo" width={80} height={52} className="object-contain" priority />
             </Link>
 
             {/* Desktop nav items */}
@@ -307,19 +307,9 @@ export default function Navigation() {
                       Tratamiento de Metales
                     </span>
                   </Link>
-                  {/* Fosfatizado featured link */}
-                  <Link
-                    href="/servicios#fosfatizado"
-                    onClick={() => setActiveMenu(null)}
-                    className="flex items-center gap-2 mb-4 px-3 py-2 bg-orange-50 border border-orange-200 rounded-lg group hover:bg-orange-100 transition-colors"
-                  >
-                    <span className="text-base">🔩</span>
-                    <span className="text-xs font-black text-orange-600 uppercase tracking-wide group-hover:text-orange-700 transition-colors">
-                      Fosfatizado Industrial
-                    </span>
-                  </Link>
                   <ul className="grid grid-cols-2 gap-x-6 gap-y-1 border-l-2 border-steel-100 pl-3">
                     {[
+                      { id: "fosfatizado", name: "Fosfatizado Industrial", icon: "⚙️" },
                       { id: "galvanizado", name: "Galvanizado", icon: "🔩" },
                       { id: "tropicalizado", name: "Tropicalizado", icon: "🛡️" },
                       { id: "despintado", name: "Despintado", icon: "🔧" },
