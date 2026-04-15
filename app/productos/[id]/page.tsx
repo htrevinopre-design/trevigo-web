@@ -113,8 +113,6 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
                 <p className="text-steel-500 text-[10px] font-black uppercase tracking-widest mb-3">Documentación</p>
                 {[
                   { label: "Ficha técnica (TDS)", icon: "📄" },
-                  { label: "Hoja de seguridad (SDS)", icon: "⚠️" },
-                  { label: "Certificado de análisis (COA)", icon: "✅" },
                 ].map((doc) => (
                   <a
                     key={doc.label}
@@ -165,7 +163,6 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
                       { key: "Presentación principal", val: `${heroFormat.label} — ${heroFormat.weight}` },
                       { key: "Otras presentaciones", val: product.formats.length > 1 ? product.formats.map(f => f.label).join(", ") : "—" },
                       { key: "Ficha técnica", val: "Disponible bajo solicitud" },
-                      { key: "Hoja de seguridad (SDS)", val: "Disponible bajo solicitud" },
                     ].map((row) => (
                       <div key={row.key} className="grid grid-cols-2 px-4 py-2.5 text-xs">
                         <span className="text-steel-500 font-semibold">{row.key}</span>
