@@ -338,7 +338,7 @@ export default function ServiciosPage() {
                 Nuestros removedores están formulados para trabajar en baños calientes con tiempos de ciclo cortos, compatibles con acero al carbón, aluminio y zinc galvanizado según la formulación.
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Removedor alcalino", "Sin daño al sustrato", "Acero / Aluminio", "Baño caliente"].map((tag) => (
+                {["Sin daño al sustrato", "Acero / Aluminio", "Baño caliente"].map((tag) => (
                   <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
                     {tag}
                   </span>
