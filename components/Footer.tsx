@@ -195,6 +195,25 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Google Maps embed */}
+      <div className="border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <p className="text-white font-bold text-sm uppercase tracking-wider mb-4">Nuestra Ubicación</p>
+          <div className="rounded-xl overflow-hidden border border-white/10 h-64 w-full">
+            <iframe
+              src="https://www.google.com/maps?q=Puerto+Tampico+325,+La+Fe,+66477+San+Nicolás+de+los+Garza,+Nuevo+León,+México&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Ubicación Industrias Trevigo"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
