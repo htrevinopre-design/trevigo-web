@@ -61,6 +61,20 @@ const config: Config = {
         "8": "0.08",
         "15": "0.15",
       },
+      keyframes: {
+        slideUp: {
+          "0%":   { opacity: "0", transform: "translateY(16px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeIn: {
+          "0%":   { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        "slide-up": "slideUp 0.25s ease-out both",
+        "fade-in":  "fadeIn 0.2s ease-out both",
+      },
     },
   },
   plugins: [],
