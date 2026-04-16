@@ -834,60 +834,381 @@ export const SERVICES = SERVICES_METALES.slice(0, 4).map((s) => ({
 
 // ---- INDUSTRIAS ----
 
-export const INDUSTRIES = [
+export interface IndustryDefinition {
+  id: string;
+  name: string;
+  slug: string;
+  icon: string;
+  description: string;
+  heroText: string;
+  productSubcategoryIds: string[];  // IDs of product subcategories to feature
+  serviceIds: string[];              // IDs of services to feature (from SERVICES_METALES + SERVICES_AGUAS)
+  stats: Array<{ value: string; label: string }>;
+  faqs: Array<{ q: string; a: string }>;
+}
+
+export const INDUSTRIES: IndustryDefinition[] = [
   {
-    id: "automotriz",
-    name: "Automotriz",
-    slug: "automotriz",
-    description:
-      "Soluciones para la cadena automotriz en Nuevo León y México: fosfatado, galvanizado, tratamiento de aguas residuales de taller y productos para fabricantes de autopartes.",
-    heroText:
-      "Nuevo León produce el 42% de las autopartes de México. Trevigo lleva 35 años siendo proveedor técnico de confianza para esta industria.",
-    keyProducts: ["fosfatos", "galvanizado", "coagulantes", "detergentes-industriales"],
-    icon: "🚗",
-  },
-  {
-    id: "metalmecanica",
-    name: "Metalmecánica",
-    slug: "metalmecanica",
-    description:
-      "Desde talleres de maquinado hasta grandes plantas de manufactura: desoxidantes, inhibidores, fluidos de corte y tratamiento de aguas industriales.",
-    heroText:
-      "La industria metalmecánica es el núcleo del norte de México. Trevigo entiende sus procesos y tiene el producto correcto para cada etapa.",
-    keyProducts: [
-      "desoxidantes",
-      "inhibidores-corrosion",
-      "aceites-industriales",
-      "removedores-pintura",
+    id: "automotriz", name: "Automotriz", slug: "automotriz", icon: "🚗",
+    description: "Soluciones para la cadena automotriz en Nuevo León: fosfatado, galvanizado, tratamiento de aguas residuales de taller y productos para fabricantes de autopartes.",
+    heroText: "Nuevo León produce el 42% de las autopartes de México. Trevigo lleva 35 años siendo proveedor técnico de confianza para esta industria.",
+    productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "sellos", "inhibidores", "aceites-metales", "coagulantes", "floculantes", "lubricantes-especializados"],
+    serviceIds: ["galvanizado", "fosfatizado", "pasivado", "decapado", "ingenieria-asesoria"],
+    stats: [
+      { value: "42%", label: "de autopartes de México producidas en N.L." },
+      { value: "35+", label: "años proveyendo a la cadena automotriz" },
+      { value: "NOM-001", label: "Cumplimiento SEMARNAT en tratamiento de agua" },
+      { value: "GM/Ford", label: "Normas automotrices de fosfatado cubiertas" },
     ],
-    icon: "🔩",
-  },
-  {
-    id: "tratamiento-agua-municipal",
-    name: "Agua & Medio Ambiente",
-    slug: "agua-medio-ambiente",
-    description:
-      "Coagulantes, floculantes y consultoría técnica para plantas de tratamiento de aguas residuales industriales y municipales en cumplimiento NOM.",
-    heroText:
-      "Cumplir con la NOM-001-SEMARNAT no es negociable. Trevigo te ayuda a lograrlo con los productos correctos y el soporte técnico necesario.",
-    keyProducts: ["coagulantes", "floculantes"],
-    icon: "💧",
-  },
-  {
-    id: "manufactura-general",
-    name: "Manufactura General",
-    slug: "manufactura-general",
-    description:
-      "Portafolio completo para plantas de manufactura: limpieza industrial, protección de superficies, tratamiento de aguas y materias primas.",
-    heroText:
-      "Un solo proveedor técnico para todos tus requerimientos de químicos industriales. Eso es lo que Trevigo ofrece a las plantas manufactureras del norte de México.",
-    keyProducts: [
-      "detergentes-industriales",
-      "inhibidores-corrosion",
-      "acido-citrico",
-      "coagulantes",
+    faqs: [
+      { q: "¿Qué productos químicos se usan en el pretratamiento antes de la pintura?", a: "El proceso estándar incluye: (1) Desengrase alcalino, (2) Fosfatado de zinc, (3) Enjuague con agua desmineralizada, (4) Pasivado final. Trevigo suministra productos para cada etapa." },
+      { q: "¿Cómo cumplir con la normativa de descarga de aguas en una planta automotriz?", a: "Las plantas automotrices generan efluentes con metales pesados. Con nuestros coagulantes y floculantes ayudamos a cumplir NOM-001-SEMARNAT-2021. Realizamos Jar Test con muestra de tu efluente sin costo." },
+      { q: "¿Atienden a plantas tier 1 y tier 2?", a: "Sí, atendemos OEMs y fabricantes tier 1 y tier 2 en el AMM y norte de México. Tenemos experiencia con plantas de estampado, maquinado, pintura y ensamble." },
     ],
-    icon: "🏭",
+  },
+  {
+    id: "metalmecanica", name: "Metalmecánica", slug: "metalmecanica", icon: "🔩",
+    description: "Desde talleres de maquinado hasta grandes plantas: desoxidantes, inhibidores, fluidos de corte y tratamiento de aguas industriales.",
+    heroText: "La industria metalmecánica es el núcleo del norte de México. Trevigo entiende sus procesos y tiene el producto correcto para cada etapa.",
+    productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "removedores", "inhibidores", "aceites-metales", "grasas-lubricantes", "lubricantes-especializados", "coagulantes", "floculantes"],
+    serviceIds: ["galvanizado", "despintado", "decapado", "pasivado", "pintura-electrostatica"],
+    stats: [
+      { value: "35+", label: "años en la industria metalmecánica" },
+      { value: "200+", label: "clientes activos en el norte de México" },
+      { value: "24h", label: "tiempo de respuesta técnica" },
+      { value: "NOM", label: "cumplimiento normativo garantizado" },
+    ],
+    faqs: [
+      { q: "¿Qué desoxidante recomienda Trevigo para acero al carbón?", a: "Para acero al carbón recomendamos nuestro Desoxidante con Fosfato Ligero o el Limpiador y Desoxidante Fosfatizante, que limpian y protegen en un solo paso." },
+      { q: "¿Tienen fluidos de corte para maquinado CNC?", a: "Sí, nuestro Lubricante para Metalworking está formulado para procesos de corte, torneado, fresado y taladrado con herramientas de carburo y acero rápido." },
+      { q: "¿Cómo manejo el aceite residual de mis baños de maquinado?", a: "Ofrecemos coagulantes y floculantes especializados en separación aceite-agua para tratar los efluentes de talleres metalmecánicos antes de su descarga." },
+    ],
+  },
+  {
+    id: "aeronautica", name: "Aeronáutica", slug: "aeronautica", icon: "✈️",
+    description: "Productos de alta precisión para el tratamiento de superficies aeroespaciales: fosfatados, pasivados, selladores y lubricantes de alto rendimiento.",
+    heroText: "La industria aeronáutica exige los más altos estándares de calidad. Trevigo provee químicos de superficie que cumplen con las especificaciones más exigentes.",
+    productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "sellos", "inhibidores", "pasivados", "aceites-metales", "lubricantes-especializados"],
+    serviceIds: ["pasivado", "decapado", "galvanizado", "tropicalizado"],
+    stats: [
+      { value: "Spec", label: "cumplimiento con especificaciones aeroespaciales" },
+      { value: "35+", label: "años de experiencia en tratamiento de metales" },
+      { value: "100%", label: "trazabilidad de lotes" },
+      { value: "TDS+SDS", label: "documentación técnica completa" },
+    ],
+    faqs: [
+      { q: "¿Qué pasivados ofrecen para aluminio aeronáutico?", a: "Ofrecemos Pasivador de Aluminio con Cromo y Sellador ANTICOR SELL 50 a base de zirconio, compatibles con aleaciones de aluminio utilizadas en estructuras aeronáuticas." },
+      { q: "¿Sus selladores son libres de cromo VI?", a: "Sí, nuestro Sellador Anticorrosión Libre de Cromo está formulado sin cromo hexavalente, cumpliendo con las restricciones medioambientales de la industria aeroespacial moderna." },
+      { q: "¿Emiten certificados de análisis por lote?", a: "Sí, emitimos certificado de análisis (CoA) y ficha de seguridad (SDS) por cada lote, con trazabilidad completa para auditorías de calidad." },
+    ],
+  },
+  {
+    id: "alimenticia", name: "Alimenticia", slug: "alimenticia", icon: "🍽️",
+    description: "Lubricantes grado alimento, tratamiento de aguas residuales y materias primas para plantas procesadoras de alimentos con cumplimiento NSF y FDA.",
+    heroText: "La inocuidad alimentaria no se negocia. Trevigo provee productos certificados NSF H1 y químicos de proceso para la industria de alimentos en México.",
+    productSubcategoryIds: ["lubricantes-especializados", "lubricantes-formato-especial", "coagulantes", "floculantes", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas", "acidos-bases"],
+    serviceIds: ["ingenieria-asesoria", "mantenimiento", "pruebas-jarras", "optimizacion-procesos"],
+    stats: [
+      { value: "NSF H1", label: "lubricantes certificados para contacto incidental con alimentos" },
+      { value: "FDA", label: "compatibilidad con regulaciones de inocuidad" },
+      { value: "NOM-001", label: "cumplimiento en tratamiento de aguas residuales" },
+      { value: "35+", label: "años de experiencia en industria de alimentos" },
+    ],
+    faqs: [
+      { q: "¿Qué lubricantes son seguros en zonas de contacto con alimentos?", a: "Nuestro Lubricante Grado Alimento (SCE-407) está certificado NSF H1, diseñado para uso en zonas de contacto incidental con alimentos, cumpliendo con FDA 21 CFR y normas USDA." },
+      { q: "¿Cómo trato las aguas residuales de una planta procesadora de alimentos?", a: "Las aguas de proceso de plantas alimentarias contienen altas cargas orgánicas y grasas. Nuestros coagulantes y floculantes, junto con asesoría de pruebas de jarras, optimizan el tratamiento primario." },
+      { q: "¿Ofrecen hipoclorito de sodio para desinfección en planta?", a: "Sí, suministramos Hipoclorito de Sodio grado industrial en presentaciones de 200L y 1,000L para programas CIP/SIP y desinfección de superficies en plantas de alimentos." },
+    ],
+  },
+  {
+    id: "vitivinicola", name: "Vitivinícola", slug: "vitivinicola", icon: "🍷",
+    description: "Tratamiento de aguas residuales de vinícolas, materias primas de alta pureza y lubricantes grado alimento para la industria del vino y destilados.",
+    heroText: "Las vinícolas del norte de México requieren química de alta pureza. Trevigo provee los insumos correctos para cada etapa del proceso enológico industrial.",
+    productSubcategoryIds: ["coagulantes", "floculantes", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas", "acidos-bases", "lubricantes-especializados"],
+    serviceIds: ["ingenieria-asesoria", "pruebas-jarras", "optimizacion-procesos", "mantenimiento"],
+    stats: [
+      { value: "Alta", label: "pureza en materias primas para proceso enológico" },
+      { value: "NSF H1", label: "lubricantes certificados grado alimento" },
+      { value: "NOM-001", label: "cumplimiento en tratamiento de aguas residuales" },
+      { value: "Jar Test", label: "pruebas sin costo en tu efluente" },
+    ],
+    faqs: [
+      { q: "¿Qué químicos necesita una vinícola para el tratamiento de sus aguas residuales?", a: "Las aguas de prensado y lavado de una vinícola tienen alta DBO y sólidos suspendidos. Utilizamos coagulantes, floculantes y ajuste de pH con nuestras materias primas para obtener efluentes dentro de norma." },
+      { q: "¿Tienen ácido cítrico para uso en procesos enológicos?", a: "Sí, suministramos Ácido Cítrico de alta pureza en sacos de 25 kg, adecuado para ajuste de acidez y procesos de limpieza en industria vitivinícola." },
+    ],
+  },
+  {
+    id: "cervecera", name: "Cervecera", slug: "cervecera", icon: "🍺",
+    description: "Lubricantes grado alimento, tratamiento de aguas residuales y materias primas para plantas cerveceras y de bebidas fermentadas.",
+    heroText: "La industria cervecera genera grandes volúmenes de aguas residuales. Trevigo tiene la experiencia y los productos para tratar tus efluentes y lubricar tu maquinaria de forma segura.",
+    productSubcategoryIds: ["coagulantes", "floculantes", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas", "acidos-bases", "lubricantes-especializados", "lubricantes-formato-especial"],
+    serviceIds: ["ingenieria-asesoria", "mantenimiento", "pruebas-jarras", "optimizacion-procesos"],
+    stats: [
+      { value: "NSF H1", label: "lubricantes certificados grado alimento" },
+      { value: "Alto", label: "rendimiento en tratamiento de aguas cerveceras" },
+      { value: "NOM-001", label: "cumplimiento normativo en descarga" },
+      { value: "35+", label: "años de experiencia en plantas de bebidas" },
+    ],
+    faqs: [
+      { q: "¿Qué lubricantes necesito para transportadores de latas y botellas?", a: "Para transportadores de latas y botellas usamos el Lubricante para Transportadores (Conveyor) SCE-402, de alta resistencia al agua y con formulación compatible con zonas adyacentes a producto." },
+      { q: "¿Cómo trato las aguas residuales de una planta cervecera?", a: "Los efluentes cerveceros tienen alta DBO y temperatura variable. Realizamos pruebas de jarras con muestras de tu planta para determinar la dosis óptima de coagulante y floculante." },
+    ],
+  },
+  {
+    id: "farmaceutica", name: "Farmacéutica", slug: "farmaceutica", icon: "💊",
+    description: "Materias primas de alta pureza, tratamiento de aguas residuales de proceso y lubricantes grado alimento para laboratorios y plantas farmacéuticas.",
+    heroText: "La industria farmacéutica requiere materias primas con documentación GMP-ready. Trevigo provee productos con trazabilidad completa y soporte técnico especializado.",
+    productSubcategoryIds: ["acidos-bases", "coagulantes", "floculantes", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas", "lubricantes-especializados"],
+    serviceIds: ["ingenieria-asesoria", "mantenimiento", "optimizacion-procesos"],
+    stats: [
+      { value: "TDS+SDS", label: "documentación técnica GMP-ready" },
+      { value: "Alta", label: "pureza en materias primas" },
+      { value: "NSF H1", label: "lubricantes para zonas de proceso" },
+      { value: "NOM-001", label: "cumplimiento en tratamiento de aguas" },
+    ],
+    faqs: [
+      { q: "¿Sus materias primas cuentan con documentación GMP?", a: "Sí, todas nuestras materias primas incluyen ficha técnica (TDS), hoja de seguridad (SDS) conforme GHS/NOM-018-STPS, y certificado de análisis por lote con trazabilidad." },
+      { q: "¿Tienen sosa cáustica de grado farmacéutico?", a: "Suministramos Sosa Cáustica en Escamas y Sosa Cáustica al 50% con documentación técnica completa, adecuadas para formulación y limpieza CIP en plantas farmacéuticas." },
+    ],
+  },
+  {
+    id: "papel-derivados", name: "Papel y derivados", slug: "papel-derivados", icon: "📄",
+    description: "Tratamiento de aguas residuales de plantas papeleras, control de incrustaciones y biocidas para sistemas de agua de proceso.",
+    heroText: "Las plantas papeleras generan efluentes complejos con alta carga de fibras y sólidos. Trevigo tiene los coagulantes y floculantes para tratarlos eficientemente.",
+    productSubcategoryIds: ["coagulantes", "floculantes", "poliacrilamidas", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas"],
+    serviceIds: ["ingenieria-asesoria", "mantenimiento", "pruebas-jarras", "optimizacion-procesos"],
+    stats: [
+      { value: "Alta", label: "eficiencia en remoción de fibras y sólidos" },
+      { value: "NOM-001", label: "cumplimiento en descarga de efluentes papeleros" },
+      { value: "Jar Test", label: "pruebas sin costo en tu efluente" },
+      { value: "35+", label: "años de experiencia en tratamiento de aguas" },
+    ],
+    faqs: [
+      { q: "¿Qué coagulante es mejor para aguas de proceso de una papelera?", a: "Para aguas papeleras con alta carga de fibras cortas recomendamos el Coagulante de Alta Carga Catiónica en combinación con Poliacrilamida, para maximizar la clarificación." },
+      { q: "¿Cómo controlo las incrustaciones en los sistemas de agua de una planta de papel?", a: "Nuestro Agente Secuestrante previene la formación de incrustaciones de calcio y magnesio en sistemas de agua circulante de plantas papeleras." },
+    ],
+  },
+  {
+    id: "lavanderias", name: "Lavanderías", slug: "lavanderias", icon: "👕",
+    description: "Materias primas para formulación de productos de lavado industrial: sosa cáustica, hipoclorito, ácidos y químicos de proceso.",
+    heroText: "Las lavanderías industriales necesitan materias primas confiables para sus fórmulas de lavado. Trevigo las provee con entrega rápida y soporte técnico.",
+    productSubcategoryIds: ["acidos-bases", "detergentes", "microbicidas", "coagulantes", "floculantes"],
+    serviceIds: ["ingenieria-asesoria", "optimizacion-procesos"],
+    stats: [
+      { value: "Granel", label: "suministro en tote y tambo para grandes volúmenes" },
+      { value: "Entrega", label: "48 horas en el AMM" },
+      { value: "Alta", label: "pureza en materias primas" },
+      { value: "Soporte", label: "técnico en formulación" },
+    ],
+    faqs: [
+      { q: "¿En qué presentaciones suministran sosa cáustica?", a: "Suministramos Sosa Cáustica en Escamas (sacos 25 kg) y Sosa Cáustica al 50% (tambos 200 kg y totes 1,000 kg) para lavanderías industriales con alto consumo." },
+      { q: "¿Tienen hipoclorito de sodio a granel?", a: "Sí, suministramos Hipoclorito de Sodio en presentaciones de 200 litros (tambo) y 1,000 litros (tote IBC) para consumos de mediana y alta escala." },
+    ],
+  },
+  {
+    id: "agroindustria", name: "Agroindustria", slug: "agroindustria", icon: "🌾",
+    description: "Tratamiento de aguas residuales agroindustriales, materias primas para limpieza de equipos y lubricantes grado alimento para maquinaria de campo.",
+    heroText: "La agroindustria genera efluentes con alta carga orgánica. Trevigo provee los químicos necesarios para tratarlos y mantener la maquinaria operando eficientemente.",
+    productSubcategoryIds: ["coagulantes", "floculantes", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas", "acidos-bases", "lubricantes-especializados", "lubricantes-formato-especial"],
+    serviceIds: ["ingenieria-asesoria", "mantenimiento", "pruebas-jarras"],
+    stats: [
+      { value: "NSF H1", label: "lubricantes para maquinaria de proceso de alimentos" },
+      { value: "NOM-001", label: "cumplimiento en tratamiento de aguas agroindustriales" },
+      { value: "35+", label: "años de experiencia" },
+      { value: "Jar Test", label: "pruebas de jarras sin costo" },
+    ],
+    faqs: [
+      { q: "¿Cómo trato las aguas residuales de una empacadora o procesadora de frutas y verduras?", a: "Los efluentes de empacadoras tienen alta carga orgánica y sólidos. Con coagulantes y floculantes Trevigo, ajuste de pH y prueba de jarras previa, logramos efluentes dentro de la norma." },
+      { q: "¿Qué lubricantes son seguros para maquinaria en contacto con alimentos?", a: "El Lubricante Grado Alimento SCE-407 certificado NSF H1 es ideal para bandas, cadenas y engranajes en contacto incidental con alimentos frescos o procesados." },
+    ],
+  },
+  {
+    id: "minera", name: "Minera", slug: "minera", icon: "⛏️",
+    description: "Tratamiento de aguas ácidas de mina, lubricantes industriales de alto rendimiento y materias primas para la industria extractiva.",
+    heroText: "Las operaciones mineras enfrentan condiciones extremas. Trevigo provee lubricantes de alta exigencia y químicos para el tratamiento de aguas ácidas de mina (AMD).",
+    productSubcategoryIds: ["coagulantes", "floculantes", "poliacrilamidas", "agentes-secuestrantes", "lubricantes-especializados", "grasas-lubricantes", "aceites-generales", "lubricantes-formato-especial", "acidos-bases"],
+    serviceIds: ["ingenieria-asesoria", "mantenimiento", "pruebas-jarras", "optimizacion-procesos"],
+    stats: [
+      { value: "Extremo", label: "rendimiento en condiciones de alta carga y temperatura" },
+      { value: "AMD", label: "tratamiento de aguas ácidas de mina" },
+      { value: "NOM-001", label: "cumplimiento en descarga de efluentes mineros" },
+      { value: "35+", label: "años en industria extractiva y metalúrgica" },
+    ],
+    faqs: [
+      { q: "¿Pueden tratar aguas ácidas de mina (AMD)?", a: "Sí. Para tratamiento de AMD usamos coagulantes, floculantes y agentes de ajuste de pH de nuestro portafolio. Realizamos pruebas de jarras con muestras de tu efluente antes de cualquier recomendación." },
+      { q: "¿Qué grasas recomiendan para maquinaria minera expuesta a polvo y humedad?", a: "Nuestras Grasas Industriales de litio complejo (SCE-408) están formuladas para condiciones severas de polvo, vibración y humedad presentes en equipos mineros." },
+    ],
+  },
+  {
+    id: "cosmetica", name: "Cosmética", slug: "cosmetica", icon: "✨",
+    description: "Materias primas de alta pureza para formulación cosmética, tratamiento de aguas residuales y documentación técnica para plantas de cosméticos.",
+    heroText: "La industria cosmética requiere materias primas con documentación completa. Trevigo provee ácidos, bases y otros insumos con trazabilidad y soporte técnico.",
+    productSubcategoryIds: ["acidos-bases", "coagulantes", "floculantes", "agentes-secuestrantes", "microbicidas"],
+    serviceIds: ["ingenieria-asesoria", "optimizacion-procesos"],
+    stats: [
+      { value: "Alta", label: "pureza en materias primas para cosmética" },
+      { value: "TDS+SDS", label: "documentación técnica completa" },
+      { value: "NOM-001", label: "cumplimiento en tratamiento de aguas" },
+      { value: "35+", label: "años de experiencia" },
+    ],
+    faqs: [
+      { q: "¿Tienen ácido cítrico para uso en formulaciones cosméticas?", a: "Sí, suministramos Ácido Cítrico de alta pureza con ficha técnica y SDS, adecuado para ajuste de pH en emulsiones, tónicos y productos de cuidado personal." },
+      { q: "¿Cómo trato las aguas residuales de una planta de cosméticos?", a: "Los efluentes cosméticos tienen tensoactivos, surfactantes y aceites. Con nuestros coagulantes y floculantes, más asesoría técnica, logramos reducir DBO y aceites a niveles dentro de norma." },
+    ],
+  },
+  {
+    id: "artes-graficas", name: "Artes gráficas", slug: "artes-graficas", icon: "🖨️",
+    description: "Desengrasantes para cilindros de impresión, removedores de tintas y materias primas para la industria gráfica y editorial.",
+    heroText: "La industria gráfica requiere químicos precisos para la limpieza de prensas e impresoras industriales. Trevigo tiene la solución para cada proceso.",
+    productSubcategoryIds: ["detergentes", "desoxidantes", "removedores", "lubricantes-especializados", "lubricantes-formato-especial", "coagulantes"],
+    serviceIds: ["despintado", "decapado", "galvanizado"],
+    stats: [
+      { value: "Eficaz", label: "remoción de tintas y barnices en piezas de prensa" },
+      { value: "35+", label: "años de experiencia en química industrial" },
+      { value: "Entrega", label: "48h en el área metropolitana de Monterrey" },
+      { value: "Soporte", label: "técnico especializado post-venta" },
+    ],
+    faqs: [
+      { q: "¿Tienen removedores para tintas de impresión en offset?", a: "Sí, nuestros Removedores de Pinturas (alcalino y con solvente) son eficaces para la limpieza profunda de cilindros de impresión offset y piezas de prensa." },
+      { q: "¿Cómo limpio los rodillos de una prensa flexográfica?", a: "Para flexografía recomendamos el Desengrasante Multisuperficies o el Limpiador Líquido Alcalino, dependiendo del tipo de tinta (base agua o base solvente) utilizada." },
+    ],
+  },
+  {
+    id: "refresquera", name: "Refresquera", slug: "refresquera", icon: "🥤",
+    description: "Lubricantes grado alimento para transportadores, tratamiento de aguas residuales y materias primas para plantas embotelladores y refresqueras.",
+    heroText: "Las plantas embotelladores y refresqueras de México requieren lubricantes certificados NSF y químicos de proceso confiables. Trevigo los provee.",
+    productSubcategoryIds: ["lubricantes-especializados", "lubricantes-formato-especial", "coagulantes", "floculantes", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas", "acidos-bases"],
+    serviceIds: ["ingenieria-asesoria", "mantenimiento", "pruebas-jarras"],
+    stats: [
+      { value: "NSF H1", label: "lubricantes grado alimento certificados" },
+      { value: "Conveyor", label: "lubricantes para transportadores de botellas/latas" },
+      { value: "NOM-001", label: "tratamiento de aguas de proceso" },
+      { value: "35+", label: "años de experiencia" },
+    ],
+    faqs: [
+      { q: "¿Qué lubricante uso en un transportador de botellas PET?", a: "El Lubricante para Transportadores (Conveyor) SCE-402 con formulación NSF H1 es ideal para transportadores de botellas PET, latas de aluminio y vidrio en líneas de embotellado." },
+      { q: "¿Tienen ácido cítrico para limpieza CIP en una planta embotelladora?", a: "Sí, suministramos Ácido Cítrico de alta pureza en presentaciones de tambo (200 kg) y tote (1,000 kg) para programas CIP en plantas de bebidas." },
+    ],
+  },
+  {
+    id: "tratamiento-superficies-metalicas", name: "Tratamiento de superficies metálicas", slug: "tratamiento-superficies-metalicas", icon: "🔧",
+    description: "Portafolio completo para empresas de acabados metálicos: fosfatado, galvanizado, tropicalizado, pasivado, despintado y decapado industrial.",
+    heroText: "Trevigo es el proveedor técnico de referencia para empresas de tratamiento de superficies metálicas en el norte de México.",
+    productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "removedores", "sellos", "inhibidores", "pasivados", "aceites-metales", "coagulantes", "floculantes"],
+    serviceIds: ["galvanizado", "tropicalizado", "despintado", "decapado", "pasivado", "pintura-electrostatica"],
+    stats: [
+      { value: "8", label: "líneas de productos para tratamiento de metales" },
+      { value: "35+", label: "años en la industria de acabados metálicos" },
+      { value: "Cr-Free", label: "selladores sin cromo hexavalente" },
+      { value: "NSS", label: "pruebas de niebla salina ASTM B117" },
+    ],
+    faqs: [
+      { q: "¿Qué línea de fosfatado ofrecen para hierro y acero?", a: "Ofrecemos Fosfato de Zinc Brillante, Fosfato de Zinc-Calcio de Alta Resistencia y Fosfato de Fierro para acero, zinc y aluminio, con soporte técnico en arranque de línea." },
+      { q: "¿Tienen selladores libres de cromo VI?", a: "Sí, el Sellador Anticorrosión Libre de Cromo y el ANTICOR SELL 50 (zirconio) son alternativas Cr(VI)-free que cumplen con directivas medioambientales como RoHS y REACH." },
+      { q: "¿Pueden hacer pruebas en mis piezas antes de recomendar?", a: "Siempre. Tomamos muestras de tus piezas, las evaluamos en planta y entregamos un reporte técnico con la recomendación de proceso antes de cualquier compra." },
+    ],
+  },
+  {
+    id: "limpieza-general", name: "Limpieza general", slug: "limpieza-general", icon: "🧹",
+    description: "Materias primas y productos para formulación de limpiadores industriales: sosa, hipoclorito, ácidos y desengrasantes de alto rendimiento.",
+    heroText: "Para empresas de limpieza industrial y formuladores de productos de aseo, Trevigo provee las materias primas con la pureza, el precio y el servicio que necesitas.",
+    productSubcategoryIds: ["acidos-bases", "detergentes", "microbicidas", "coagulantes", "floculantes"],
+    serviceIds: ["ingenieria-asesoria"],
+    stats: [
+      { value: "Granel", label: "suministro en tote y tambo para grandes volúmenes" },
+      { value: "Alta", label: "pureza en materias primas para formulación" },
+      { value: "Entrega", label: "48h en el AMM" },
+      { value: "35+", label: "años de experiencia" },
+    ],
+    faqs: [
+      { q: "¿En qué volúmenes mínimos venden hipoclorito de sodio?", a: "El mínimo para Hipoclorito de Sodio es un tambo de 200 litros. Para grandes volúmenes contamos con tote IBC de 1,000 litros y podemos coordinar entregas programadas." },
+      { q: "¿Tienen sosa cáustica en escamas para formulación de limpiadores alcalinos?", a: "Sí, Sosa Cáustica en Escamas (SCE-400) en sacos de 25 kg, con alta pureza para formulación de limpiadores y desengrasantes industriales." },
+    ],
+  },
+  {
+    id: "electrica-electronica", name: "Eléctrica y electrónica", slug: "electrica-electronica", icon: "⚡",
+    description: "Limpiadores de precisión, pasivados y lubricantes para la industria eléctrica y electrónica: protección de componentes, terminales y gabinetes.",
+    heroText: "La industria eléctrica y electrónica requiere limpiadores de alta precisión y protectores anticorrosivos para componentes sensibles. Trevigo tiene la solución.",
+    productSubcategoryIds: ["detergentes", "desoxidantes", "pasivados", "sellos", "inhibidores", "aceites-metales", "lubricantes-especializados"],
+    serviceIds: ["pasivado", "decapado", "tropicalizado"],
+    stats: [
+      { value: "Alta", label: "precisión en limpiadores para componentes electrónicos" },
+      { value: "Cr-Free", label: "selladores sin cromo VI" },
+      { value: "35+", label: "años de experiencia" },
+      { value: "Soporte", label: "técnico especializado" },
+    ],
+    faqs: [
+      { q: "¿Tienen limpiadores para componentes electrónicos sensibles?", a: "El Limpiador Neutro Acuoso con Pasivado es compatible con metales sensibles como aluminio y zinc usados en gabinetes y carcasas electrónicas sin alterar tolerancias." },
+      { q: "¿Qué inhibidor de oxidación usan para piezas metálicas en almacenamiento?", a: "El Inhibidor de Oxidación Temporal para Acero proporciona protección anticorrosiva de corta a mediana duración para piezas en almacenamiento o tránsito entre procesos." },
+    ],
+  },
+  {
+    id: "textil", name: "Textil", slug: "textil", icon: "🧵",
+    description: "Tratamiento de aguas residuales textiles con alta carga de colorantes, materias primas para procesos de teñido y blanqueo industrial.",
+    heroText: "Las aguas residuales textiles son de las más complejas por su alta carga de colorantes y químicos de proceso. Trevigo tiene la experiencia para tratarlas.",
+    productSubcategoryIds: ["coagulantes", "floculantes", "poliacrilamidas", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas", "acidos-bases"],
+    serviceIds: ["ingenieria-asesoria", "pruebas-jarras", "optimizacion-procesos"],
+    stats: [
+      { value: "Alta", label: "eficiencia en remoción de colorantes textiles" },
+      { value: "NOM-001", label: "cumplimiento en descarga de efluentes textiles" },
+      { value: "Jar Test", label: "pruebas sin costo en tu efluente" },
+      { value: "35+", label: "años de experiencia en tratamiento de aguas industriales" },
+    ],
+    faqs: [
+      { q: "¿Pueden tratar efluentes textiles con colorantes reactivos?", a: "Sí. Para colorantes reactivos utilizamos coagulantes de alta carga catiónica combinados con floculantes aniónico de alto peso molecular. La dosis óptima se determina mediante prueba de jarras con tu muestra." },
+      { q: "¿Tienen hipoclorito de sodio para blanqueo industrial?", a: "Sí, suministramos Hipoclorito de Sodio industrial en presentaciones de 200 y 1,000 litros para procesos de blanqueo en plantas textiles." },
+    ],
+  },
+  {
+    id: "hule-caucho", name: "Hule y caucho", slug: "hule-caucho", icon: "⚙️",
+    description: "Desmoldantes industriales, lubricantes y aceites protectores para la industria del hule, elastómeros y productos de caucho.",
+    heroText: "La industria del hule y el caucho requiere desmoldantes de alta eficiencia y lubricantes especializados. Trevigo los provee con soporte técnico en planta.",
+    productSubcategoryIds: ["grasas-lubricantes", "lubricantes-especializados", "aceites-generales", "lubricantes-formato-especial", "aceites-metales", "detergentes"],
+    serviceIds: ["decapado", "galvanizado", "ingenieria-asesoria"],
+    stats: [
+      { value: "Alta", label: "eficiencia de desmoldado en moldes de hule" },
+      { value: "35+", label: "años de experiencia en industria del caucho" },
+      { value: "Soporte", label: "técnico en arranque de proceso" },
+      { value: "Entrega", label: "48h en el área metropolitana de Monterrey" },
+    ],
+    faqs: [
+      { q: "¿Qué desmoldante recomiendan para moldes de vulcanización de hule?", a: "El Desmoldante Industrial SCE-411 y el Aceite Desmoldante Nafténico son las opciones más usadas en moldes de vulcanización, garantizando una separación limpia sin residuos quemados." },
+      { q: "¿Tienen lubricantes para prensas hidráulicas de moldeo de caucho?", a: "Sí, los Aceites Hidráulicos SCE-413 y Lubricantes Sintéticos SCE-401 son adecuados para prensas hidráulicas en plantas de moldeo de hule." },
+    ],
+  },
+  {
+    id: "hospitales", name: "Hospitales", slug: "hospitales", icon: "🏥",
+    description: "Tratamiento de aguas residuales hospitalarias, desinfectantes de alto espectro y materias primas para procesos de higiene y esterilización.",
+    heroText: "Los hospitales y clínicas generan efluentes con alto riesgo sanitario. Trevigo provee biocidas de amplio espectro y químicos para el tratamiento seguro de estas aguas.",
+    productSubcategoryIds: ["microbicidas", "acidos-bases", "coagulantes", "floculantes", "agentes-secuestrantes", "inhibidores-oxigeno"],
+    serviceIds: ["ingenieria-asesoria", "mantenimiento", "optimizacion-procesos"],
+    stats: [
+      { value: "Amplio", label: "espectro en control de bacterias, hongos y virus" },
+      { value: "NOM-001", label: "cumplimiento en tratamiento de aguas hospitalarias" },
+      { value: "Alta", label: "pureza en materias primas desinfectantes" },
+      { value: "35+", label: "años de experiencia" },
+    ],
+    faqs: [
+      { q: "¿Tienen biocidas para el tratamiento de aguas residuales hospitalarias?", a: "El Microbicida de Amplio Espectro controla bacterias, algas y hongos en sistemas de agua de proceso y efluentes hospitalarios, cumpliendo con normativas de descarga." },
+      { q: "¿Suministran hipoclorito de sodio para desinfección en hospital?", a: "Sí, suministramos Hipoclorito de Sodio industrial en presentaciones de 200 y 1,000 litros para desinfección de superficies, equipos y tratamiento de aguas." },
+    ],
+  },
+  {
+    id: "polimeros", name: "Polímeros", slug: "polimeros", icon: "🔬",
+    description: "Desmoldantes industriales, lubricantes para maquinaria de inyección y extrusión, y aceites de proceso para la industria de plásticos y polímeros.",
+    heroText: "Las plantas de inyección y extrusión de plásticos necesitan desmoldantes precisos y lubricantes de alta temperatura. Trevigo tiene el portafolio adecuado.",
+    productSubcategoryIds: ["grasas-lubricantes", "lubricantes-especializados", "aceites-generales", "lubricantes-formato-especial", "aceites-metales", "detergentes"],
+    serviceIds: ["ingenieria-asesoria", "decapado", "galvanizado"],
+    stats: [
+      { value: "Alta", label: "temperatura de operación en lubricantes de proceso" },
+      { value: "35+", label: "años de experiencia en industria del plástico" },
+      { value: "Desmoldado", label: "sin residuos quemados en moldes de inyección" },
+      { value: "Soporte", label: "técnico en arranque de línea" },
+    ],
+    faqs: [
+      { q: "¿Tienen desmoldante para moldes de inyección de plástico?", a: "El Desmoldante Industrial SCE-411 es compatible con moldes de aluminio y acero para inyección de termoplásticos (PP, ABS, PA) y termoestables." },
+      { q: "¿Qué fluido térmico recomiendan para sistemas de calentamiento de moldes?", a: "El Fluido Térmico SCE-410 con estabilidad hasta 300°C es adecuado para sistemas de calentamiento de moldes de inyección y extrusión de polímeros." },
+    ],
   },
 ];
 

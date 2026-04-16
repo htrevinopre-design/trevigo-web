@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { COMPANY, SERVICES_METALES, SERVICES_AGUAS } from "@/lib/data";
+import { COMPANY, INDUSTRIES, SERVICES_METALES, SERVICES_AGUAS } from "@/lib/data";
 
 // Estructura del mega menu de productos (3 columnas: selector | items | imagen)
 const PRODUCTOS_MENU = [
@@ -159,9 +159,19 @@ export default function Navigation() {
                 Sak™
               </Link>
 
+              {/* INDUSTRIAS */}
+              <button
+                onMouseEnter={() => setActiveMenu("industrias")}
+                className={`flex items-center gap-1 px-4 h-full text-sm font-semibold border-b-2 transition-all ${activeMenu === "industrias" ? "text-navy-600 border-navy-500" : "text-steel-700 border-transparent hover:text-navy-600 hover:border-navy-500"}`}
+              >
+                Industrias
+                <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "industrias" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
               {/* Simple links */}
               {[
-                { label: "Industrias", href: "/industrias/automotriz" },
                 { label: "Nosotros", href: "/nosotros" },
                 { label: "Contacto", href: "/contacto" },
               ].map((item) => (
@@ -390,6 +400,38 @@ export default function Navigation() {
           </div>
         )}
 
+        {/* ── MEGA MENU: INDUSTRIAS ── */}
+        {activeMenu === "industrias" && (
+          <div className="absolute top-full left-0 right-0 bg-white border-t border-steel-200 shadow-2xl z-50">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
+              <div className="flex items-center justify-between mb-4">
+                <p className="text-[10px] font-black text-steel-400 uppercase tracking-widest">Industrias que atendemos</p>
+                <Link href="/industrias" onClick={() => setActiveMenu(null)} className="text-xs font-black text-navy-500 hover:text-navy-700 uppercase tracking-wide transition-colors">
+                  Ver todas las industrias →
+                </Link>
+              </div>
+              <div className="grid grid-cols-4 gap-2">
+                {INDUSTRIES.map((ind) => (
+                  <Link
+                    key={ind.slug}
+                    href={`/industrias/${ind.slug}`}
+                    onClick={() => setActiveMenu(null)}
+                    className="flex items-center justify-between px-3 py-2.5 rounded-lg border border-steel-200 text-sm font-semibold text-steel-700 hover:bg-navy-50 hover:border-navy-300 hover:text-navy-700 transition-all group"
+                  >
+                    <span className="flex items-center gap-2">
+                      <span className="text-base">{ind.icon}</span>
+                      <span className="leading-snug">{ind.name}</span>
+                    </span>
+                    <svg className="w-3.5 h-3.5 text-navy-400 group-hover:text-navy-600 shrink-0 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* ── Mobile menu ── */}
         {mobileOpen && (
           <div className="lg:hidden border-t border-steel-200 bg-white py-3 max-h-[80vh] overflow-y-auto">
@@ -480,9 +522,42 @@ export default function Navigation() {
               Sak™
             </Link>
 
+            {/* Industrias accordion */}
+            <div className="border-t border-steel-100">
+              <button
+                className="w-full flex items-center justify-between px-6 py-3 text-steel-800 font-bold text-sm"
+                onClick={() => setMobileExpanded(mobileExpanded === "industrias" ? null : "industrias")}
+              >
+                Industrias
+                <svg className={`w-4 h-4 transition-transform ${mobileExpanded === "industrias" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileExpanded === "industrias" && (
+                <div className="pb-2">
+                  {INDUSTRIES.map((ind) => (
+                    <Link
+                      key={ind.slug}
+                      href={`/industrias/${ind.slug}`}
+                      className="flex items-center gap-2 pl-10 pr-6 py-1.5 text-xs text-steel-600 hover:text-navy-600"
+                      onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}
+                    >
+                      <span>{ind.icon}</span>
+                      <span>{ind.name}</span>
+                    </Link>
+                  ))}
+                  <div className="px-8 pt-2">
+                    <Link href="/industrias" className="block text-xs font-black text-navy-500 uppercase underline"
+                      onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}>
+                      Ver todas las industrias →
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
             {/* Other links */}
             {[
-              { label: "Industrias", href: "/industrias/automotriz" },
               { label: "Nosotros", href: "/nosotros" },
               { label: "Contacto", href: "/contacto" },
             ].map((item) => (
