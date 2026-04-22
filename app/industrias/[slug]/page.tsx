@@ -37,11 +37,11 @@ export default function IndustriaPage({ params }: Props) {
     });
   });
 
-  const ACCENT_COLORS: Record<string, string> = {
-    "tratamiento-metales": "bg-navy-600",
-    "tratamiento-aguas":   "bg-navy-500",
-    "lubricantes-aceites": "bg-steel-700",
-    "materias-primas":     "bg-steel-800",
+  const CATEGORY_THEME: Record<string, { header: string; cardHover: string; cta: string; textHover: string }> = {
+    "tratamiento-metales": { header: "bg-blue-700",    cardHover: "hover:border-blue-300 hover:shadow-blue-100",     cta: "border-blue-600 text-blue-700 group-hover:bg-blue-700 group-hover:text-white group-hover:border-blue-700",     textHover: "group-hover:text-blue-700"    },
+    "tratamiento-aguas":   { header: "bg-teal-600",    cardHover: "hover:border-teal-300 hover:shadow-teal-100",     cta: "border-teal-600 text-teal-700 group-hover:bg-teal-600 group-hover:text-white group-hover:border-teal-600",     textHover: "group-hover:text-teal-700"    },
+    "lubricantes-aceites": { header: "bg-amber-600",   cardHover: "hover:border-amber-300 hover:shadow-amber-100",   cta: "border-amber-600 text-amber-700 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-600",   textHover: "group-hover:text-amber-700"   },
+    "materias-primas":     { header: "bg-emerald-700", cardHover: "hover:border-emerald-300 hover:shadow-emerald-100",cta: "border-emerald-600 text-emerald-700 group-hover:bg-emerald-700 group-hover:text-white group-hover:border-emerald-700",textHover: "group-hover:text-emerald-700" },
   };
 
   // Gather product subcategories for this industry
@@ -147,21 +147,20 @@ export default function IndustriaPage({ params }: Props) {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
               {representativeProducts.map(({ product, subcategoryName }) => {
                 const catId = productCategoryMap[product.id] ?? "";
-                const accentColor = ACCENT_COLORS[catId] ?? "bg-navy-500";
+                const theme = CATEGORY_THEME[catId] ?? CATEGORY_THEME["tratamiento-metales"];
                 const isSaco = product.formats.length === 1 && product.formats[0].name === "saco";
                 return (
                   <Link key={product.id} href={`/productos/${product.id}`}
-                    className="bg-white border border-steel-200 rounded-lg overflow-hidden hover:shadow-md hover:border-navy-300 transition-all group flex flex-col">
+                    className={`bg-white border border-steel-200 rounded-lg overflow-hidden hover:shadow-md transition-all group flex flex-col ${theme.cardHover}`}>
 
-                    {/* Category label strip — identical to productos page */}
-                    <div className={`${accentColor} px-4 py-2.5`}>
-                      <p className="text-white/50 text-[9px] font-bold uppercase tracking-widest">INDUSTRIAS TREVIGO</p>
-                      <p className="text-white text-[11px] font-black uppercase leading-tight">{subcategoryName}</p>
+                    {/* Category label strip */}
+                    <div className={`${theme.header} px-4 py-3`}>
+                      <p className="text-white text-xs font-black uppercase tracking-widest leading-tight">{subcategoryName}</p>
                     </div>
 
                     {/* Content */}
                     <div className="p-4 flex-1 flex flex-col">
-                      <h4 className="text-steel-900 font-black text-sm uppercase leading-tight mb-2 group-hover:text-navy-600 transition-colors">
+                      <h4 className={`text-steel-900 font-black text-sm uppercase leading-tight mb-2 transition-colors ${theme.textHover}`}>
                         {product.name}
                       </h4>
                       <p className="text-steel-500 text-xs leading-relaxed mb-3 flex-1">
@@ -190,7 +189,7 @@ export default function IndustriaPage({ params }: Props) {
                       </div>
 
                       {/* CTA */}
-                      <span className="block w-full text-center border-2 border-navy-500 text-navy-600 group-hover:bg-navy-500 group-hover:text-white py-2 text-[10px] font-black uppercase tracking-wide transition-colors">
+                      <span className={`block w-full text-center border-2 py-2 text-[10px] font-black uppercase tracking-wide transition-colors ${theme.cta}`}>
                         Ver ficha técnica →
                       </span>
                     </div>

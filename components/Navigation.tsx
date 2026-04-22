@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { COMPANY, INDUSTRIES, SERVICES_METALES, SERVICES_AGUAS } from "@/lib/data";
 
 // Estructura del mega menu de productos (3 columnas: selector | items | imagen)
@@ -71,6 +72,25 @@ export default function Navigation() {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState(0);
+  const pathname = usePathname();
+
+  const isActive = (prefix: string) => pathname === prefix || pathname.startsWith(prefix + "/");
+
+  const dropdownCls = (key: string) =>
+    `flex items-center gap-1 px-4 h-full text-sm font-semibold border-b-2 transition-all ${
+      activeMenu === key
+        ? "text-navy-600 border-navy-500"
+        : isActive(`/${key}`)
+        ? "text-navy-600 border-orange-500"
+        : "text-steel-700 border-transparent hover:text-navy-600 hover:border-navy-500"
+    }`;
+
+  const simpleLinkCls = (href: string) =>
+    `flex items-center px-4 h-full text-sm font-semibold border-b-2 transition-all ${
+      isActive(href)
+        ? "text-navy-600 border-orange-500"
+        : "text-steel-700 border-transparent hover:text-navy-600 hover:border-navy-500"
+    }`;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -131,7 +151,7 @@ export default function Navigation() {
               {/* PRODUCTOS */}
               <button
                 onMouseEnter={() => setActiveMenu("productos")}
-                className={`flex items-center gap-1 px-4 h-full text-sm font-semibold border-b-2 transition-all ${activeMenu === "productos" ? "text-navy-600 border-navy-500" : "text-steel-700 border-transparent hover:text-navy-600 hover:border-navy-500"}`}
+                className={dropdownCls("productos")}
               >
                 Productos
                 <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "productos" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -142,7 +162,7 @@ export default function Navigation() {
               {/* SERVICIOS */}
               <button
                 onMouseEnter={() => setActiveMenu("servicios")}
-                className={`flex items-center gap-1 px-4 h-full text-sm font-semibold border-b-2 transition-all ${activeMenu === "servicios" ? "text-navy-600 border-navy-500" : "text-steel-700 border-transparent hover:text-navy-600 hover:border-navy-500"}`}
+                className={dropdownCls("servicios")}
               >
                 Servicios
                 <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "servicios" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -154,15 +174,24 @@ export default function Navigation() {
               <Link
                 href="/sak"
                 onMouseEnter={() => setActiveMenu(null)}
-                className="flex items-center gap-1.5 px-4 h-full text-sm font-black text-orange-500 hover:text-orange-600 border-b-2 border-transparent hover:border-orange-500 transition-all uppercase tracking-wide"
+                className={`flex items-center gap-1.5 px-4 h-full text-sm font-black border-b-2 transition-all uppercase tracking-wide text-orange-500 hover:text-orange-600 ${isActive("/sak") ? "border-orange-500" : "border-transparent hover:border-orange-500"}`}
               >
                 Sak™
+              </Link>
+
+              {/* SURFACEAI — special branded link */}
+              <Link
+                href="/surface-ai"
+                onMouseEnter={() => setActiveMenu(null)}
+                className={`flex items-center gap-1.5 px-4 h-full text-sm font-black border-b-2 transition-all text-emerald-600 hover:text-emerald-700 ${isActive("/surface-ai") ? "border-emerald-500" : "border-transparent hover:border-emerald-500"}`}
+              >
+                SurfaceAI
               </Link>
 
               {/* INDUSTRIAS */}
               <button
                 onMouseEnter={() => setActiveMenu("industrias")}
-                className={`flex items-center gap-1 px-4 h-full text-sm font-semibold border-b-2 transition-all ${activeMenu === "industrias" ? "text-navy-600 border-navy-500" : "text-steel-700 border-transparent hover:text-navy-600 hover:border-navy-500"}`}
+                className={dropdownCls("industrias")}
               >
                 Industrias
                 <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "industrias" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -179,7 +208,7 @@ export default function Navigation() {
                   key={item.label}
                   href={item.href}
                   onMouseEnter={() => setActiveMenu(null)}
-                  className="flex items-center px-4 h-full text-sm font-semibold text-steel-700 hover:text-navy-600 border-b-2 border-transparent hover:border-navy-500 transition-all"
+                  className={simpleLinkCls(item.href)}
                 >
                   {item.label}
                 </Link>
@@ -520,6 +549,15 @@ export default function Navigation() {
               onClick={() => setMobileOpen(false)}
             >
               Sak™
+            </Link>
+
+            {/* SurfaceAI mobile link */}
+            <Link
+              href="/surface-ai"
+              className="block px-6 py-3 text-emerald-600 font-black text-sm border-t border-steel-100"
+              onClick={() => setMobileOpen(false)}
+            >
+              SurfaceAI
             </Link>
 
             {/* Industrias accordion */}

@@ -80,13 +80,16 @@ export default function Footer() {
             <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Servicios</h3>
             <ul className="space-y-2.5">
               {[
-                { label: "Tropicalizado", href: "/servicios#tropicalizado" },
-                { label: "Despintado", href: "/servicios#despintado" },
+                { label: "Tratamiento de Metales", href: "/servicios#tratamiento-metales" },
                 { label: "Galvanizado", href: "/servicios#galvanizado" },
-                { label: "Consultoría Técnica", href: "/servicios#consultoria-ingenieria" },
-                { label: "Industria Automotriz", href: "/industrias/automotriz" },
-                { label: "Metalmecánica", href: "/industrias/metalmecanica" },
-                { label: "Nosotros", href: "/nosotros" },
+                { label: "Tropicalizado", href: "/servicios#tropicalizado" },
+                { label: "Fosfatizado Industrial", href: "/servicios#fosfatizado" },
+                { label: "Despintado", href: "/servicios#despintado" },
+                { label: "Decapado", href: "/servicios#decapado" },
+                { label: "Pasivado", href: "/servicios#pasivado" },
+                { label: "Pintura Electrostática", href: "/servicios#pintura-electrostatica" },
+                { label: "Tratamiento de Aguas", href: "/servicios#tratamiento-aguas" },
+                { label: "Ingeniería y Asesoría", href: "/servicios#ingenieria-asesoria" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

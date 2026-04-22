@@ -10,11 +10,52 @@ export const metadata: Metadata = {
   alternates: { canonical: `${COMPANY.url}/productos` },
 };
 
-const ACCENT_COLORS: Record<string, string> = {
-  "tratamiento-metales": "bg-navy-600",
-  "tratamiento-aguas":   "bg-navy-500",
-  "lubricantes-aceites": "bg-steel-700",
-  "materias-primas":     "bg-steel-800",
+// Per-category color theme — header bg, card hover border, CTA, text accent, subcategory banner
+const CATEGORY_THEME: Record<string, {
+  header: string;
+  cardHover: string;
+  cta: string;
+  textHover: string;
+  subBanner: string;
+  subText: string;
+  subCount: string;
+}> = {
+  "tratamiento-metales": {
+    header:    "bg-blue-700",
+    cardHover: "hover:border-blue-300 hover:shadow-blue-100",
+    cta:       "border-blue-600 text-blue-700 group-hover:bg-blue-700 group-hover:text-white group-hover:border-blue-700",
+    textHover: "group-hover:text-blue-700",
+    subBanner: "border-blue-600 bg-blue-50",
+    subText:   "text-blue-800",
+    subCount:  "bg-blue-100 text-blue-700",
+  },
+  "tratamiento-aguas": {
+    header:    "bg-teal-600",
+    cardHover: "hover:border-teal-300 hover:shadow-teal-100",
+    cta:       "border-teal-600 text-teal-700 group-hover:bg-teal-600 group-hover:text-white group-hover:border-teal-600",
+    textHover: "group-hover:text-teal-700",
+    subBanner: "border-teal-600 bg-teal-50",
+    subText:   "text-teal-800",
+    subCount:  "bg-teal-100 text-teal-700",
+  },
+  "lubricantes-aceites": {
+    header:    "bg-amber-600",
+    cardHover: "hover:border-amber-300 hover:shadow-amber-100",
+    cta:       "border-amber-600 text-amber-700 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-600",
+    textHover: "group-hover:text-amber-700",
+    subBanner: "border-amber-500 bg-amber-50",
+    subText:   "text-amber-800",
+    subCount:  "bg-amber-100 text-amber-700",
+  },
+  "materias-primas": {
+    header:    "bg-emerald-700",
+    cardHover: "hover:border-emerald-300 hover:shadow-emerald-100",
+    cta:       "border-emerald-600 text-emerald-700 group-hover:bg-emerald-700 group-hover:text-white group-hover:border-emerald-700",
+    textHover: "group-hover:text-emerald-700",
+    subBanner: "border-emerald-600 bg-emerald-50",
+    subText:   "text-emerald-800",
+    subCount:  "bg-emerald-100 text-emerald-700",
+  },
 };
 
 export default function ProductosPage() {
@@ -41,20 +82,14 @@ export default function ProductosPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-4">
               {PRODUCT_CATEGORIES.map((cat) => {
-                const shortName: Record<string, string> = {
-                  "tratamiento-metales": "Trat. Metales",
-                  "tratamiento-aguas": "Trat. Aguas",
-                  "lubricantes-aceites": "Lubricantes",
-                  "materias-primas": "Mat. Primas",
-                };
+                const words = cat.name.split(" ");
                 return (
                   <a
                     key={cat.id}
                     href={`#${cat.id}`}
-                    className="flex flex-col items-center gap-1 px-3 py-4 text-steel-400 hover:text-white border-b-2 border-transparent hover:border-orange-500 transition-all text-center"
+                    className="flex items-center justify-center px-12 py-6 text-steel-400 hover:text-white border-b-2 border-transparent hover:border-orange-500 transition-all text-center"
                   >
-                    <span className="text-xl">{cat.icon}</span>
-                    <span className="text-xs font-bold">{shortName[cat.id] ?? cat.name}</span>
+                    <span className="text-xs font-bold leading-snug">{cat.name}</span>
                   </a>
                 );
               })}
@@ -73,7 +108,7 @@ export default function ProductosPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Category header */}
             <div className="flex items-start gap-4 mb-10">
-              <div className={`${ACCENT_COLORS[cat.id] ?? "bg-navy-500"} w-1 h-10 rounded-full shrink-0 mt-1`} />
+              <div className={`${CATEGORY_THEME[cat.id]?.header ?? "bg-navy-500"} w-1 h-10 rounded-full shrink-0 mt-1`} />
               <div>
                 <p className="text-navy-500 text-xs font-bold uppercase tracking-widest mb-1">{cat.icon} Categoría</p>
                 <h2 className="text-xl sm:text-2xl font-black text-steel-900 uppercase">{cat.name}</h2>
@@ -81,28 +116,34 @@ export default function ProductosPage() {
             </div>
 
             {/* Subcategories */}
-            {cat.subcategories.map((sub) => (
+            {cat.subcategories.map((sub) => {
+              const theme = CATEGORY_THEME[cat.id] ?? CATEGORY_THEME["tratamiento-metales"];
+              return (
               <div key={sub.id} className="mb-14 last:mb-0">
-                <div className="flex items-center gap-3 mb-6">
-                  <h3 className="text-sm font-black text-steel-700 uppercase tracking-widest whitespace-nowrap">{sub.name}</h3>
-                  <div className="flex-1 h-px bg-steel-200" />
-                  <span className="text-xs text-steel-400 font-semibold whitespace-nowrap">{sub.products.length} productos</span>
+                {/* Subcategory banner */}
+                <div className={`flex items-center gap-4 mb-7 pl-4 pr-5 py-3 rounded-r-xl border-l-4 ${theme.subBanner}`}>
+                  <h3 className={`text-base font-black uppercase tracking-widest leading-none ${theme.subText}`}>
+                    {sub.name}
+                  </h3>
+                  <div className="flex-1" />
+                  <span className={`text-[11px] font-black uppercase tracking-wide px-3 py-1 rounded-full ${theme.subCount}`}>
+                    {sub.products.length} producto{sub.products.length !== 1 ? "s" : ""}
+                  </span>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
                   {sub.products.map((product) => {
                     const isSaco = product.formats.length === 1 && product.formats[0].name === "saco";
                     return (
-                      <Link key={product.id} href={`/productos/${product.id}`} className="bg-white border border-steel-200 rounded-lg overflow-hidden hover:shadow-md hover:border-navy-300 transition-all group flex flex-col">
+                      <Link key={product.id} href={`/productos/${product.id}`} className={`bg-white border border-steel-200 rounded-lg overflow-hidden hover:shadow-md transition-all group flex flex-col ${theme.cardHover}`}>
                         {/* Category label */}
-                        <div className={`${ACCENT_COLORS[cat.id] ?? "bg-navy-500"} px-4 py-2.5`}>
-                          <p className="text-white/50 text-[9px] font-bold uppercase tracking-widest">INDUSTRIAS TREVIGO</p>
-                          <p className="text-white text-[11px] font-black uppercase leading-tight">{sub.name}</p>
+                        <div className={`${theme.header} px-4 py-3`}>
+                          <p className="text-white text-xs font-black uppercase tracking-widest leading-tight">{sub.name}</p>
                         </div>
 
                         {/* Content */}
                         <div className="p-4 flex-1 flex flex-col">
-                          <h4 className="text-steel-900 font-black text-sm uppercase leading-tight mb-2 group-hover:text-navy-600 transition-colors">
+                          <h4 className={`text-steel-900 font-black text-sm uppercase leading-tight mb-2 transition-colors ${theme.textHover}`}>
                             {product.name}
                           </h4>
                           <p className="text-steel-500 text-xs leading-relaxed mb-3 flex-1">
@@ -136,7 +177,7 @@ export default function ProductosPage() {
                           </div>
 
                           {/* CTA */}
-                          <span className="block w-full text-center border-2 border-navy-500 text-navy-600 group-hover:bg-navy-500 group-hover:text-white py-2 text-[10px] font-black uppercase tracking-wide transition-colors">
+                          <span className={`block w-full text-center border-2 py-2 text-[10px] font-black uppercase tracking-wide transition-colors ${theme.cta}`}>
                             Ver ficha técnica →
                           </span>
                         </div>
@@ -145,7 +186,8 @@ export default function ProductosPage() {
                   })}
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </section>
       ))}

@@ -207,7 +207,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
         products: [
           {
             id: "fosfato-zinc-brillante",
-            name: "Fosfato de Zinc Brillante",
+            name: "Fosfato de Zinc",
             sku: "MX-FOSF-001",
             shortDescription:
               "Fosfato de zinc de grano fino que genera un recubrimiento cristalino denso, ideal como base para pintura.",
@@ -1103,7 +1103,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
       { value: "NSS", label: "pruebas de niebla salina ASTM B117" },
     ],
     faqs: [
-      { q: "¿Qué línea de fosfatado ofrecen para hierro y acero?", a: "Ofrecemos Fosfato de Zinc Brillante, Fosfato de Zinc-Calcio de Alta Resistencia y Fosfato de Fierro para acero, zinc y aluminio, con soporte técnico en arranque de línea." },
+      { q: "¿Qué línea de fosfatado ofrecen para hierro y acero?", a: "Ofrecemos Fosfato de Zinc, Fosfato de Zinc-Calcio de Alta Resistencia y Fosfato de Fierro para acero, zinc y aluminio, con soporte técnico en arranque de línea." },
       { q: "¿Tienen selladores libres de cromo VI?", a: "Sí, el Sellador Anticorrosión Libre de Cromo y el ANTICOR SELL 50 (zirconio) son alternativas Cr(VI)-free que cumplen con directivas medioambientales como RoHS y REACH." },
       { q: "¿Pueden hacer pruebas en mis piezas antes de recomendar?", a: "Siempre. Tomamos muestras de tus piezas, las evaluamos en planta y entregamos un reporte técnico con la recomendación de proceso antes de cualquier compra." },
     ],
