@@ -329,25 +329,25 @@ export default function ServiciosPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader label="Servicio · Tratamiento de Metales" title="Despintado Industrial" accent="navy" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
-            <div>
-              <p className="text-steel-600 text-sm leading-relaxed mb-4">
-                El despintado es el proceso de remoción química o mecánica de recubrimientos —pintura en polvo, e-coat, pintura líquida— de superficies metálicas sin dañar el sustrato. Trevigo suministra los removedores alcalinos y solventes formulados para los dos casos de uso más comunes en líneas de pintura industrial.
-              </p>
-              <p className="text-steel-600 text-sm leading-relaxed mb-6">
-                Nuestros removedores están formulados para trabajar en baños calientes con tiempos de ciclo cortos, compatibles con acero al carbón, aluminio y zinc galvanizado según la formulación.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Sin daño al sustrato", "Acero / Aluminio", "Baño caliente"].map((tag) => (
-                  <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+          {/* Texto intro — full width */}
+          <div className="mb-10">
+            <p className="text-steel-600 text-sm leading-relaxed mb-4">
+              El despintado es el proceso de remoción química o mecánica de recubrimientos —pintura en polvo, e-coat, pintura líquida— de superficies metálicas sin dañar el sustrato. Trevigo suministra los removedores alcalinos y solventes formulados para los dos casos de uso más comunes en líneas de pintura industrial.
+            </p>
+            <p className="text-steel-600 text-sm leading-relaxed mb-6">
+              Nuestros removedores están formulados para trabajar en baños calientes con tiempos de ciclo cortos, compatibles con acero al carbón, aluminio y zinc galvanizado según la formulación.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Sin daño al sustrato", "Acero / Aluminio", "Baño caliente"].map((tag) => (
+                <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
+                  {tag}
+                </span>
+              ))}
             </div>
+          </div>
 
-            {/* Los dos tipos de despintado */}
-            <div className="space-y-6">
+          {/* Los dos tipos de despintado — lado a lado */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
               {[
                 {
                   tipo: "Despintado de Racks",
@@ -396,7 +396,6 @@ export default function ServiciosPage() {
                   </div>
                 </div>
               ))}
-            </div>
           </div>
 
           {/* Comparativo rápido */}
