@@ -572,10 +572,8 @@ export default function ServiciosPage() {
                   </span>
                 ))}
               </div>
-              <div className="border border-steel-200 rounded-xl overflow-hidden bg-white">
-                <div className="relative w-full h-48">
-                  <Image src="/servicios/pintura.png" alt="Pintura Electrostática" fill className="object-contain p-4" />
-                </div>
+              <div className="relative w-full h-48">
+                <Image src="/servicios/pintura.png" alt="Pintura Electrostática" fill className="object-contain" />
               </div>
             </div>
 
