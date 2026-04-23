@@ -360,7 +360,7 @@ export default function ServiciosPage() {
                   image: "/servicios/rack.png",
                 },
                 {
-                  tipo: "Despintado de Rechazo",
+                  tipo: "Despintado de Metales",
                   icon: "🔄",
                   uso: "Control de calidad · Recuperación de piezas",
                   desc: "Las piezas rechazadas en el proceso de pintura (burbujas, escurridos, contaminación, mal curado) pueden recuperarse retirando el recubrimiento defectuoso y reprocesándolas desde cero. El despintado de rechazo evita el desperdicio de la pieza metálica, reduciendo el costo de scrap. Trabajamos con pintura en polvo, e-coat y pintura líquida sobre acero y aluminio.",
@@ -404,7 +404,7 @@ export default function ServiciosPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-center">
               <div />
               <div className="font-black text-navy-700 uppercase">Despintado de Racks</div>
-              <div className="font-black text-navy-700 uppercase">Despintado de Rechazo</div>
+              <div className="font-black text-navy-700 uppercase">Despintado de Metales</div>
               {[
                 ["Objetivo", "Limpiar bastidor para reusar", "Recuperar pieza rechazada"],
                 ["Frecuencia", "Cada 50–150 ciclos de línea", "Por evento (rechazo QC)"],
@@ -444,7 +444,7 @@ export default function ServiciosPage() {
                 Trevigo suministra inhibidores de decapado que protegen el metal base de la sobredisolución (mordentado excesivo), así como los ácidos y formulaciones utilizadas en baños de decapado controlado.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {["HCl industrial", "H₂SO₄ técnico", "Inhibidores de mordentado", "Decapado neutro / alcalino"].map((tag) => (
+                {["HCl industrial", "H₂SO₄ técnico", "Inhibidores de corrosión", "Decapado neutro / alcalino"].map((tag) => (
                   <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
                     {tag}
                   </span>
