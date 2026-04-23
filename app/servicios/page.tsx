@@ -367,7 +367,7 @@ export default function ServiciosPage() {
                   items: ["Compatible con pintura en polvo y e-coat", "Recupera piezas de alto valor unitario", "No altera dimensiones ni tolerancias", "Entrega lista para fosfatizado y repintura"],
                   border: "border-navy-500",
                   bg: "bg-navy-50",
-                  image: null,
+                  image: "/servicios/despintado.png",
                 },
               ].map((item) => (
                 <div key={item.tipo} className={`${item.bg} border-2 ${item.border} rounded-xl overflow-hidden`}>
