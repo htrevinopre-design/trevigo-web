@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { COMPANY, SERVICES_METALES, SERVICES_AGUAS } from "@/lib/data";
+import { usePathname } from "next/navigation";
+import { COMPANY, INDUSTRIES, SERVICES_METALES, SERVICES_AGUAS } from "@/lib/data";
 
 // Estructura del mega menu de productos (3 columnas: selector | items | imagen)
 const PRODUCTOS_MENU = [
@@ -71,6 +72,25 @@ export default function Navigation() {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState(0);
+  const pathname = usePathname();
+
+  const isActive = (prefix: string) => pathname === prefix || pathname.startsWith(prefix + "/");
+
+  const dropdownCls = (key: string) =>
+    `flex items-center gap-1 px-4 h-full text-sm font-semibold border-b-2 transition-all ${
+      activeMenu === key
+        ? "text-navy-600 border-navy-500"
+        : isActive(`/${key}`)
+        ? "text-navy-600 border-orange-500"
+        : "text-steel-700 border-transparent hover:text-navy-600 hover:border-navy-500"
+    }`;
+
+  const simpleLinkCls = (href: string) =>
+    `flex items-center px-4 h-full text-sm font-semibold border-b-2 transition-all ${
+      isActive(href)
+        ? "text-navy-600 border-orange-500"
+        : "text-steel-700 border-transparent hover:text-navy-600 hover:border-navy-500"
+    }`;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
@@ -122,46 +142,71 @@ export default function Navigation() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0" onClick={() => setActiveMenu(null)}>
-              <Image src="/logo.png" alt="Industrias Trevigo" width={48} height={48} className="object-contain" priority />
+              <Image src="/logo.png" alt="Industrias Trevigo" width={80} height={52} className="object-contain" priority />
             </Link>
 
             {/* Desktop nav items */}
             <div className="hidden lg:flex items-center h-full">
 
               {/* PRODUCTOS */}
-              <button
+              <Link
+                href="/productos"
                 onMouseEnter={() => setActiveMenu("productos")}
-                className={`flex items-center gap-1 px-4 h-full text-sm font-semibold border-b-2 transition-all ${activeMenu === "productos" ? "text-navy-600 border-navy-500" : "text-steel-700 border-transparent hover:text-navy-600 hover:border-navy-500"}`}
+                onClick={() => setActiveMenu(null)}
+                className={dropdownCls("productos")}
               >
                 Productos
                 <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "productos" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
 
               {/* SERVICIOS */}
-              <button
+              <Link
+                href="/servicios"
                 onMouseEnter={() => setActiveMenu("servicios")}
-                className={`flex items-center gap-1 px-4 h-full text-sm font-semibold border-b-2 transition-all ${activeMenu === "servicios" ? "text-navy-600 border-navy-500" : "text-steel-700 border-transparent hover:text-navy-600 hover:border-navy-500"}`}
+                onClick={() => setActiveMenu(null)}
+                className={dropdownCls("servicios")}
               >
                 Servicios
                 <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "servicios" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
 
               {/* SAK — special branded link */}
               <Link
                 href="/sak"
                 onMouseEnter={() => setActiveMenu(null)}
-                className="flex items-center gap-1.5 px-4 h-full text-sm font-black text-orange-500 hover:text-orange-600 border-b-2 border-transparent hover:border-orange-500 transition-all uppercase tracking-wide"
+                className={`flex items-center gap-1.5 px-4 h-full text-sm font-black border-b-2 transition-all uppercase tracking-wide text-orange-500 hover:text-orange-600 ${isActive("/sak") ? "border-orange-500" : "border-transparent hover:border-orange-500"}`}
               >
                 Sak™
               </Link>
 
+              {/* SURFACEAI — special branded link */}
+              <Link
+                href="/surface-ai"
+                onMouseEnter={() => setActiveMenu(null)}
+                className={`flex items-center gap-1.5 px-4 h-full text-sm font-black border-b-2 transition-all text-emerald-600 hover:text-emerald-700 ${isActive("/surface-ai") ? "border-emerald-500" : "border-transparent hover:border-emerald-500"}`}
+              >
+                SurfaceAI
+              </Link>
+
+              {/* INDUSTRIAS */}
+              <Link
+                href="/industrias"
+                onMouseEnter={() => setActiveMenu("industrias")}
+                onClick={() => setActiveMenu(null)}
+                className={dropdownCls("industrias")}
+              >
+                Industrias
+                <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "industrias" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
+
               {/* Simple links */}
               {[
-                { label: "Industrias", href: "/industrias/automotriz" },
                 { label: "Nosotros", href: "/nosotros" },
                 { label: "Contacto", href: "/contacto" },
               ].map((item) => (
@@ -169,7 +214,7 @@ export default function Navigation() {
                   key={item.label}
                   href={item.href}
                   onMouseEnter={() => setActiveMenu(null)}
-                  className="flex items-center px-4 h-full text-sm font-semibold text-steel-700 hover:text-navy-600 border-b-2 border-transparent hover:border-navy-500 transition-all"
+                  className={simpleLinkCls(item.href)}
                 >
                   {item.label}
                 </Link>
@@ -307,19 +352,9 @@ export default function Navigation() {
                       Tratamiento de Metales
                     </span>
                   </Link>
-                  {/* Fosfatizado featured link */}
-                  <Link
-                    href="/servicios#fosfatizado"
-                    onClick={() => setActiveMenu(null)}
-                    className="flex items-center gap-2 mb-4 px-3 py-2 bg-orange-50 border border-orange-200 rounded-lg group hover:bg-orange-100 transition-colors"
-                  >
-                    <span className="text-base">🔩</span>
-                    <span className="text-xs font-black text-orange-600 uppercase tracking-wide group-hover:text-orange-700 transition-colors">
-                      Fosfatizado Industrial
-                    </span>
-                  </Link>
                   <ul className="grid grid-cols-2 gap-x-6 gap-y-1 border-l-2 border-steel-100 pl-3">
                     {[
+                      { id: "fosfatizado", name: "Fosfatizado Industrial", icon: "⚙️" },
                       { id: "galvanizado", name: "Galvanizado", icon: "🔩" },
                       { id: "tropicalizado", name: "Tropicalizado", icon: "🛡️" },
                       { id: "despintado", name: "Despintado", icon: "🔧" },
@@ -395,6 +430,38 @@ export default function Navigation() {
                 >
                   Ver todos los servicios →
                 </Link>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* ── MEGA MENU: INDUSTRIAS ── */}
+        {activeMenu === "industrias" && (
+          <div className="absolute top-full left-0 right-0 bg-white border-t border-steel-200 shadow-2xl z-50">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
+              <div className="flex items-center justify-between mb-4">
+                <p className="text-[10px] font-black text-steel-400 uppercase tracking-widest">Industrias que atendemos</p>
+                <Link href="/industrias" onClick={() => setActiveMenu(null)} className="text-xs font-black text-navy-500 hover:text-navy-700 uppercase tracking-wide transition-colors">
+                  Ver todas las industrias →
+                </Link>
+              </div>
+              <div className="grid grid-cols-4 gap-2">
+                {INDUSTRIES.map((ind) => (
+                  <Link
+                    key={ind.slug}
+                    href={`/industrias/${ind.slug}`}
+                    onClick={() => setActiveMenu(null)}
+                    className="flex items-center justify-between px-3 py-2.5 rounded-lg border border-steel-200 text-sm font-semibold text-steel-700 hover:bg-navy-50 hover:border-navy-300 hover:text-navy-700 transition-all group"
+                  >
+                    <span className="flex items-center gap-2">
+                      <span className="text-base">{ind.icon}</span>
+                      <span className="leading-snug">{ind.name}</span>
+                    </span>
+                    <svg className="w-3.5 h-3.5 text-navy-400 group-hover:text-navy-600 shrink-0 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
@@ -490,9 +557,51 @@ export default function Navigation() {
               Sak™
             </Link>
 
+            {/* SurfaceAI mobile link */}
+            <Link
+              href="/surface-ai"
+              className="block px-6 py-3 text-emerald-600 font-black text-sm border-t border-steel-100"
+              onClick={() => setMobileOpen(false)}
+            >
+              SurfaceAI
+            </Link>
+
+            {/* Industrias accordion */}
+            <div className="border-t border-steel-100">
+              <button
+                className="w-full flex items-center justify-between px-6 py-3 text-steel-800 font-bold text-sm"
+                onClick={() => setMobileExpanded(mobileExpanded === "industrias" ? null : "industrias")}
+              >
+                Industrias
+                <svg className={`w-4 h-4 transition-transform ${mobileExpanded === "industrias" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileExpanded === "industrias" && (
+                <div className="pb-2">
+                  {INDUSTRIES.map((ind) => (
+                    <Link
+                      key={ind.slug}
+                      href={`/industrias/${ind.slug}`}
+                      className="flex items-center gap-2 pl-10 pr-6 py-1.5 text-xs text-steel-600 hover:text-navy-600"
+                      onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}
+                    >
+                      <span>{ind.icon}</span>
+                      <span>{ind.name}</span>
+                    </Link>
+                  ))}
+                  <div className="px-8 pt-2">
+                    <Link href="/industrias" className="block text-xs font-black text-navy-500 uppercase underline"
+                      onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}>
+                      Ver todas las industrias →
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
             {/* Other links */}
             {[
-              { label: "Industrias", href: "/industrias/automotriz" },
               { label: "Nosotros", href: "/nosotros" },
               { label: "Contacto", href: "/contacto" },
             ].map((item) => (

@@ -64,7 +64,7 @@ export default function ServiciosPage() {
               </h1>
               <div className="w-12 h-1 bg-orange-500 mb-5" />
               <p className="text-steel-400 text-base leading-relaxed mb-8">
-                Servicios especializados en tratamientos de superficies metálicas y soluciones para aguas industriales. Calidad e innovación con más de 35 años de experiencia en el norte de México.
+                Servicios especializados en tratamientos de superficies metálicas y soluciones para aguas industriales. Calidad e innovación con más de 35 años de experiencia en México.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#tratamiento-metales"
@@ -97,7 +97,7 @@ export default function ServiciosPage() {
           <SectionHeader
             label="⚙️ Tratamiento de Metales"
             title="Servicios de Tratamiento de Superficies Metálicas"
-            desc="Procesos especializados de protección y acabado de superficies metálicas para la industria manufacturera del norte de México."
+            desc="Procesos especializados de protección y acabado de superficies metálicas para la industria manufacturera mexicana."
           />
           {/* Quick nav pills */}
           <div className="flex flex-wrap gap-2 mb-14">
@@ -329,25 +329,25 @@ export default function ServiciosPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader label="Servicio · Tratamiento de Metales" title="Despintado Industrial" accent="navy" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
-            <div>
-              <p className="text-steel-600 text-sm leading-relaxed mb-4">
-                El despintado es el proceso de remoción química o mecánica de recubrimientos —pintura en polvo, e-coat, pintura líquida— de superficies metálicas sin dañar el sustrato. Trevigo suministra los removedores alcalinos y solventes formulados para los dos casos de uso más comunes en líneas de pintura industrial.
-              </p>
-              <p className="text-steel-600 text-sm leading-relaxed mb-6">
-                Nuestros removedores están formulados para trabajar en baños calientes con tiempos de ciclo cortos, compatibles con acero al carbón, aluminio y zinc galvanizado según la formulación.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Removedor alcalino", "Sin daño al sustrato", "Acero / Aluminio", "Baño caliente"].map((tag) => (
-                  <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+          {/* Texto intro — full width */}
+          <div className="mb-10">
+            <p className="text-steel-600 text-sm leading-relaxed mb-4">
+              El despintado es el proceso de remoción química o mecánica de recubrimientos —pintura en polvo, e-coat, pintura líquida— de superficies metálicas sin dañar el sustrato. Trevigo suministra los removedores alcalinos y solventes formulados para los dos casos de uso más comunes en líneas de pintura industrial.
+            </p>
+            <p className="text-steel-600 text-sm leading-relaxed mb-6">
+              Nuestros removedores están formulados para trabajar en baños calientes con tiempos de ciclo cortos, compatibles con acero al carbón, aluminio y zinc galvanizado según la formulación.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Sin daño al sustrato", "Acero / Aluminio", "Baño caliente"].map((tag) => (
+                <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
+                  {tag}
+                </span>
+              ))}
             </div>
+          </div>
 
-            {/* Los dos tipos de despintado */}
-            <div className="space-y-6">
+          {/* Los dos tipos de despintado — lado a lado */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
               {[
                 {
                   tipo: "Despintado de Racks",
@@ -357,37 +357,45 @@ export default function ServiciosPage() {
                   items: ["Baño alcalino caliente a 80–90 °C", "Tiempo de inmersión: 30–120 min según espesor", "Enjuague y neutralización posterior", "Sin daño a la geometría del rack"],
                   border: "border-orange-500",
                   bg: "bg-orange-50",
+                  image: "/servicios/rack.png",
                 },
                 {
-                  tipo: "Despintado de Rechazo",
+                  tipo: "Despintado de Metales",
                   icon: "🔄",
                   uso: "Control de calidad · Recuperación de piezas",
                   desc: "Las piezas rechazadas en el proceso de pintura (burbujas, escurridos, contaminación, mal curado) pueden recuperarse retirando el recubrimiento defectuoso y reprocesándolas desde cero. El despintado de rechazo evita el desperdicio de la pieza metálica, reduciendo el costo de scrap. Trabajamos con pintura en polvo, e-coat y pintura líquida sobre acero y aluminio.",
                   items: ["Compatible con pintura en polvo y e-coat", "Recupera piezas de alto valor unitario", "No altera dimensiones ni tolerancias", "Entrega lista para fosfatizado y repintura"],
                   border: "border-navy-500",
                   bg: "bg-navy-50",
+                  image: "/servicios/despintado.png",
                 },
               ].map((item) => (
-                <div key={item.tipo} className={`${item.bg} border-2 ${item.border} rounded-xl p-6`}>
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-2xl">{item.icon}</span>
-                    <div>
-                      <h4 className="text-steel-900 font-black text-base uppercase">{item.tipo}</h4>
-                      <span className="text-[10px] font-bold text-steel-500 uppercase tracking-wide">{item.uso}</span>
+                <div key={item.tipo} className={`${item.bg} border-2 ${item.border} rounded-xl overflow-hidden`}>
+                  {item.image && (
+                    <div className="relative w-full h-48">
+                      <Image src={item.image} alt={item.tipo} fill className="object-contain p-4" />
                     </div>
+                  )}
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-2xl">{item.icon}</span>
+                      <div>
+                        <h4 className="text-steel-900 font-black text-base uppercase">{item.tipo}</h4>
+                        <span className="text-[10px] font-bold text-steel-500 uppercase tracking-wide">{item.uso}</span>
+                      </div>
+                    </div>
+                    <p className="text-steel-600 text-xs leading-relaxed mb-4">{item.desc}</p>
+                    <ul className="space-y-1">
+                      {item.items.map((pt) => (
+                        <li key={pt} className="flex items-start gap-2 text-xs text-steel-700">
+                          <span className="text-orange-500 font-black mt-0.5">✓</span>
+                          {pt}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <p className="text-steel-600 text-xs leading-relaxed mb-4">{item.desc}</p>
-                  <ul className="space-y-1">
-                    {item.items.map((pt) => (
-                      <li key={pt} className="flex items-start gap-2 text-xs text-steel-700">
-                        <span className="text-orange-500 font-black mt-0.5">✓</span>
-                        {pt}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               ))}
-            </div>
           </div>
 
           {/* Comparativo rápido */}
@@ -396,7 +404,7 @@ export default function ServiciosPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-center">
               <div />
               <div className="font-black text-navy-700 uppercase">Despintado de Racks</div>
-              <div className="font-black text-navy-700 uppercase">Despintado de Rechazo</div>
+              <div className="font-black text-navy-700 uppercase">Despintado de Metales</div>
               {[
                 ["Objetivo", "Limpiar bastidor para reusar", "Recuperar pieza rechazada"],
                 ["Frecuencia", "Cada 50–150 ciclos de línea", "Por evento (rechazo QC)"],
@@ -435,12 +443,17 @@ export default function ServiciosPage() {
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
                 Trevigo suministra inhibidores de decapado que protegen el metal base de la sobredisolución (mordentado excesivo), así como los ácidos y formulaciones utilizadas en baños de decapado controlado.
               </p>
-              <div className="flex flex-wrap gap-2">
-                {["HCl industrial", "H₂SO₄ técnico", "Inhibidores de mordentado", "Decapado neutro / alcalino"].map((tag) => (
+              <div className="flex flex-wrap gap-2 mb-6">
+                {["HCl industrial", "H₂SO₄ técnico", "Inhibidores de corrosión", "Decapado neutro / alcalino"].map((tag) => (
                   <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="border border-steel-200 rounded-xl overflow-hidden bg-white">
+                <div className="relative w-full h-48">
+                  <Image src="/servicios/decapado.png" alt="Decapado Industrial" fill className="object-contain p-4" />
+                </div>
               </div>
             </div>
 
@@ -499,12 +512,17 @@ export default function ServiciosPage() {
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
                 Trevigo suministra soluciones de pasivado para acero inoxidable (ácido nítrico, ácido cítrico), pasivantes de zinc galvanizado (Cr-free) y selladores sin cromo para líneas de fosfatizado, cumpliendo con ASTM A380, AMS 2700 y directivas RoHS.
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {["ASTM A380", "AMS 2700", "Cr(VI)-free", "Ácido cítrico (verde)", "Ácido nítrico"].map((tag) => (
                   <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="border border-steel-200 rounded-xl overflow-hidden bg-white">
+                <div className="relative w-full h-48">
+                  <Image src="/servicios/pasivado.png" alt="Pasivado Industrial" fill className="object-contain p-4" />
+                </div>
               </div>
             </div>
 
@@ -547,12 +565,15 @@ export default function ServiciosPage() {
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
                 Trevigo suministra los pretratamientos químicos que garantizan la adhesión del recubrimiento: desengrasantes para líneas de pintura en polvo, fosfatos y selladores previos al e-coat. Un pretratamiento correcto puede duplicar la vida útil del recubrimiento.
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {["Pintura en polvo", "E-coat", "Polvo termoendurecible", "Curado en horno 160–200°C"].map((tag) => (
                   <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="relative w-full h-48">
+                <Image src="/servicios/pintura.png" alt="Pintura Electrostática" fill className="object-contain" />
               </div>
             </div>
 
@@ -695,7 +716,7 @@ export default function ServiciosPage() {
                 Una planta de tratamiento de aguas mal mantenida genera efluentes fuera de norma, multas ambientales y paros de línea. Trevigo ofrece contratos de mantenimiento preventivo y correctivo para sistemas fisicoquímicos con visitas programadas, análisis de agua y reposición de productos.
               </p>
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
-                Contamos con técnicos especializados en el norte de México con respuesta en menos de 24 horas para emergencias.
+                Contamos con técnicos especializados con respuesta en menos de 24 horas para emergencias.
               </p>
             </div>
 

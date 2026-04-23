@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { COMPANY } from "@/lib/data";
 
 export default function Footer() {
@@ -12,8 +13,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 bg-navy-500 rounded-lg flex items-center justify-center font-black text-white text-lg">
-                T
+              <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                <Image src="/logo.png" alt="Trevigo" width={40} height={40} className="object-contain" />
               </div>
               <div>
                 <div className="text-white font-black text-lg leading-tight">TREVIGO</div>
@@ -80,13 +81,16 @@ export default function Footer() {
             <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Servicios</h3>
             <ul className="space-y-2.5">
               {[
-                { label: "Tropicalizado", href: "/servicios#tropicalizado" },
-                { label: "Despintado", href: "/servicios#despintado" },
+                { label: "Tratamiento de Metales", href: "/servicios#tratamiento-metales" },
                 { label: "Galvanizado", href: "/servicios#galvanizado" },
-                { label: "Consultoría Técnica", href: "/servicios#consultoria-ingenieria" },
-                { label: "Industria Automotriz", href: "/industrias/automotriz" },
-                { label: "Metalmecánica", href: "/industrias/metalmecanica" },
-                { label: "Nosotros", href: "/nosotros" },
+                { label: "Tropicalizado", href: "/servicios#tropicalizado" },
+                { label: "Fosfatizado Industrial", href: "/servicios#fosfatizado" },
+                { label: "Despintado", href: "/servicios#despintado" },
+                { label: "Decapado", href: "/servicios#decapado" },
+                { label: "Pasivado", href: "/servicios#pasivado" },
+                { label: "Pintura Electrostática", href: "/servicios#pintura-electrostatica" },
+                { label: "Tratamiento de Aguas", href: "/servicios#tratamiento-aguas" },
+                { label: "Ingeniería y Asesoría", href: "/servicios#ingenieria-asesoria" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -124,13 +128,29 @@ export default function Footer() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <address className="text-navy-400 text-sm not-italic leading-relaxed">
-                  {COMPANY.address.street}
-                  <br />
-                  {COMPANY.address.city}, {COMPANY.address.state}
-                  <br />
-                  {COMPANY.address.country}
-                </address>
+                <div>
+                  <a
+                    href={COMPANY.address.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-navy-400 hover:text-navy-200 text-sm not-italic leading-relaxed transition-colors block"
+                  >
+                    {COMPANY.address.street}
+                    <br />
+                    {COMPANY.address.zip} {COMPANY.address.city}, {COMPANY.address.state}
+                  </a>
+                  <a
+                    href={COMPANY.address.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 mt-2 text-[11px] font-bold text-navy-500 hover:text-navy-300 transition-colors"
+                  >
+                    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                    Ver en Google Maps
+                  </a>
+                </div>
               </li>
               <li className="flex gap-3 items-center">
                 <svg
@@ -175,6 +195,25 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Google Maps embed */}
+      <div className="border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <p className="text-white font-bold text-sm uppercase tracking-wider mb-4">Nuestra Ubicación</p>
+          <div className="rounded-xl overflow-hidden border border-white/10 h-64 w-full">
+            <iframe
+              src="https://www.google.com/maps?q=Puerto+Tampico+325,+La+Fe,+66477+San+Nicolás+de+los+Garza,+Nuevo+León,+México&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Ubicación Industrias Trevigo"
+            />
           </div>
         </div>
       </div>

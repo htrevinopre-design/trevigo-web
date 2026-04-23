@@ -11,7 +11,7 @@ interface CTASectionProps {
 
 export default function CTASection({
   title = "¿Necesitas un químico industrial para tu planta?",
-  subtitle = "Llevamos 35 años resolviendo retos de manufactura en el norte de México. Cuéntanos tu proceso y te hacemos una propuesta técnica sin costo.",
+  subtitle = "Llevamos 35 años resolviendo retos de manufactura en México. Cuéntanos tu proceso y te hacemos una propuesta técnica sin costo.",
   primaryCTA = { label: "Solicitar cotización", href: "/contacto" },
   secondaryCTA = { label: "Llamar ahora", href: `tel:${COMPANY.phone.replace(/\s|\(|\)|-/g, "")}` },
   variant = "default",

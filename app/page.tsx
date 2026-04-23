@@ -40,7 +40,7 @@ export default function HomePage() {
           </p>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase leading-[1.05] tracking-tight mb-6">
             Químicos industriales<br />
-            <span className="text-navy-500">para el norte de México</span>
+            <span className="text-navy-500">para la industria mexicana</span>
           </h1>
           <p className="text-steel-400 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
             Fabricamos y distribuimos productos para <strong className="text-white">tratamiento de metales</strong>,{" "}
@@ -69,7 +69,7 @@ export default function HomePage() {
             <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/10">
               {[
                 { value: "35+", label: "Años de experiencia", sub: "Desde 1989" },
-                { value: "200+", label: "Clientes activos", sub: "Norte de México" },
+                { value: "200+", label: "Clientes activos", sub: "En todo México" },
                 { value: "48h", label: "Tiempo de entrega", sub: "Área Metro Monterrey" },
                 { value: "3", label: "Líneas de producto", sub: "Metales, Agua, Mat. Primas" },
               ].map((s) => (
@@ -190,7 +190,7 @@ export default function HomePage() {
             <div className="py-16 lg:py-24 pr-0 lg:pr-16">
               <p className="text-navy-400 text-xs font-bold uppercase tracking-[0.2em] mb-4">Nuestra diferencia</p>
               <h2 className="text-2xl sm:text-4xl font-black text-white uppercase leading-tight mb-6">
-                Somos expertos en la industria química del norte de México
+                Somos expertos en química industrial para la manufactura mexicana
               </h2>
               <p className="text-steel-400 text-base leading-relaxed mb-8">
                 Analizamos cada operación y diseñamos soluciones específicas que responden a los retos particulares de tu planta, con respaldo técnico y cumplimiento normativo.
@@ -249,7 +249,7 @@ export default function HomePage() {
               No solo vendemos el químico.<br />Aplicamos el proceso.
             </h2>
             <p className="text-steel-500 text-base max-w-2xl mx-auto">
-              Servicios aplicados de tratamiento de superficie para la industria manufacturera del norte de México.
+              Servicios aplicados de tratamiento de superficie para la industria manufacturera mexicana.
             </p>
           </div>
 
@@ -319,7 +319,7 @@ export default function HomePage() {
             ¿Necesitas un químico industrial para tu planta?
           </h2>
           <p className="text-navy-100 text-base leading-relaxed mb-8 max-w-xl mx-auto">
-            Llevamos 35 años resolviendo retos de manufactura en el norte de México. Cuéntanos tu proceso y te hacemos una propuesta técnica sin costo.
+            Llevamos 35 años resolviendo retos de manufactura en México. Cuéntanos tu proceso y te hacemos una propuesta técnica sin costo.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link href="/contacto"

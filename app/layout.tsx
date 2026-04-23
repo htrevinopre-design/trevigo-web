@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SmartChatWidget from "@/components/SmartChatWidget";
 import { COMPANY } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -27,6 +28,9 @@ export const metadata: Metadata = {
   authors: [{ name: COMPANY.name, url: COMPANY.url }],
   creator: COMPANY.name,
   publisher: COMPANY.name,
+  verification: {
+    google: "wip5Qc-dhzHnKzsq3KvCnm0kOUJ1hTlCkJgq9kucNLU",
+  },
   robots: {
     index: true,
     follow: true,
@@ -142,6 +146,9 @@ export default function RootLayout({
         <Navigation />
         <main>{children}</main>
         <Footer />
+
+        {/* ── Smart chat widget (replaces static WhatsApp button) ── */}
+        <SmartChatWidget />
       </body>
     </html>
   );
