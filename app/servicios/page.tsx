@@ -565,12 +565,17 @@ export default function ServiciosPage() {
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
                 Trevigo suministra los pretratamientos químicos que garantizan la adhesión del recubrimiento: desengrasantes para líneas de pintura en polvo, fosfatos y selladores previos al e-coat. Un pretratamiento correcto puede duplicar la vida útil del recubrimiento.
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {["Pintura en polvo", "E-coat", "Polvo termoendurecible", "Curado en horno 160–200°C"].map((tag) => (
                   <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="border border-steel-200 rounded-xl overflow-hidden bg-white">
+                <div className="relative w-full h-48">
+                  <Image src="/servicios/pintura.png" alt="Pintura Electrostática" fill className="object-contain p-4" />
+                </div>
               </div>
             </div>
 
