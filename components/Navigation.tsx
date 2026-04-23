@@ -149,26 +149,30 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center h-full">
 
               {/* PRODUCTOS */}
-              <button
+              <Link
+                href="/productos"
                 onMouseEnter={() => setActiveMenu("productos")}
+                onClick={() => setActiveMenu(null)}
                 className={dropdownCls("productos")}
               >
                 Productos
                 <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "productos" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
 
               {/* SERVICIOS */}
-              <button
+              <Link
+                href="/servicios"
                 onMouseEnter={() => setActiveMenu("servicios")}
+                onClick={() => setActiveMenu(null)}
                 className={dropdownCls("servicios")}
               >
                 Servicios
                 <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "servicios" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
 
               {/* SAK — special branded link */}
               <Link
@@ -189,15 +193,17 @@ export default function Navigation() {
               </Link>
 
               {/* INDUSTRIAS */}
-              <button
+              <Link
+                href="/industrias"
                 onMouseEnter={() => setActiveMenu("industrias")}
+                onClick={() => setActiveMenu(null)}
                 className={dropdownCls("industrias")}
               >
                 Industrias
                 <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "industrias" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
 
               {/* Simple links */}
               {[
