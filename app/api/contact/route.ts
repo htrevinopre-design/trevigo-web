@@ -144,7 +144,7 @@ export async function POST(req: NextRequest) {
 
     const { data, error } = await resend.emails.send({
       from: FROM,
-      to: [TO],
+      to: TO,
       ...(replyTo ? { replyTo } : {}),
       subject,
       html,
