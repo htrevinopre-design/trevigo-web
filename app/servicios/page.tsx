@@ -443,12 +443,15 @@ export default function ServiciosPage() {
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
                 Trevigo suministra inhibidores de decapado que protegen el metal base de la sobredisolución (mordentado excesivo), así como los ácidos y formulaciones utilizadas en baños de decapado controlado.
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {["HCl industrial", "H₂SO₄ técnico", "Inhibidores de mordentado", "Decapado neutro / alcalino"].map((tag) => (
                   <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="relative w-full h-52 rounded-xl overflow-hidden">
+                <Image src="/servicios/decapado.png" alt="Decapado Industrial" fill className="object-contain" />
               </div>
             </div>
 
