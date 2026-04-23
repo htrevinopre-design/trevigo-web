@@ -451,9 +451,6 @@ export default function ServiciosPage() {
                 ))}
               </div>
               <div className="border border-steel-200 rounded-xl overflow-hidden bg-white">
-                <div className="px-4 py-2 border-b border-steel-100 bg-steel-50">
-                  <span className="text-[10px] font-black text-steel-400 uppercase tracking-widest">Decapado Industrial</span>
-                </div>
                 <div className="relative w-full h-48">
                   <Image src="/servicios/decapado.png" alt="Decapado Industrial" fill className="object-contain p-4" />
                 </div>
