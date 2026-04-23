@@ -372,8 +372,8 @@ export default function ServiciosPage() {
               ].map((item) => (
                 <div key={item.tipo} className={`${item.bg} border-2 ${item.border} rounded-xl overflow-hidden`}>
                   {item.image && (
-                    <div className="relative w-full h-48">
-                      <Image src={item.image} alt={item.tipo} fill className="object-cover" />
+                    <div className="relative w-full h-48 bg-white">
+                      <Image src={item.image} alt={item.tipo} fill className="object-contain p-4" />
                     </div>
                   )}
                   <div className="p-6">
