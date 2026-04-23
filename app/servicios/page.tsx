@@ -64,7 +64,7 @@ export default function ServiciosPage() {
               </h1>
               <div className="w-12 h-1 bg-orange-500 mb-5" />
               <p className="text-steel-400 text-base leading-relaxed mb-8">
-                Servicios especializados en tratamientos de superficies metálicas y soluciones para aguas industriales. Calidad e innovación con más de 35 años de experiencia en el norte de México.
+                Servicios especializados en tratamientos de superficies metálicas y soluciones para aguas industriales. Calidad e innovación con más de 35 años de experiencia en México.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#tratamiento-metales"
@@ -97,7 +97,7 @@ export default function ServiciosPage() {
           <SectionHeader
             label="⚙️ Tratamiento de Metales"
             title="Servicios de Tratamiento de Superficies Metálicas"
-            desc="Procesos especializados de protección y acabado de superficies metálicas para la industria manufacturera del norte de México."
+            desc="Procesos especializados de protección y acabado de superficies metálicas para la industria manufacturera mexicana."
           />
           {/* Quick nav pills */}
           <div className="flex flex-wrap gap-2 mb-14">
@@ -716,7 +716,7 @@ export default function ServiciosPage() {
                 Una planta de tratamiento de aguas mal mantenida genera efluentes fuera de norma, multas ambientales y paros de línea. Trevigo ofrece contratos de mantenimiento preventivo y correctivo para sistemas fisicoquímicos con visitas programadas, análisis de agua y reposición de productos.
               </p>
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
-                Contamos con técnicos especializados en el norte de México con respuesta en menos de 24 horas para emergencias.
+                Contamos con técnicos especializados con respuesta en menos de 24 horas para emergencias.
               </p>
             </div>
 

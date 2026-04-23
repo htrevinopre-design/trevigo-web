@@ -41,7 +41,7 @@ const TIMELINE = [
   {
     year: "1990",
     title: "Fundación",
-    desc: "Industrias Trevigo nació en Monterrey como distribuidor de productos químicos para la industria metalmecánica local. La industria automotriz y manufacturera del norte de México estaba en pleno auge post-TLCAN.",
+    desc: "Industrias Trevigo nació en Monterrey como distribuidor de productos químicos para la industria metalmecánica local. La industria automotriz y manufacturera de México estaba en pleno auge post-TLCAN.",
   },
   {
     year: "2002",

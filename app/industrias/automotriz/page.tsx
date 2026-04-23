@@ -25,7 +25,7 @@ const automotrizFaqs = [
   },
   {
     q: "¿Trevigo atiende a plantas de la cadena de autopartes (tier 1, tier 2)?",
-    a: "Sí, atendemos tanto a OEMs como a fabricantes tier 1 y tier 2 en el Área Metropolitana de Monterrey y en toda la región norte de México. Tenemos experiencia con plantas de estampado, maquinado, pintura y ensamble.",
+    a: "Sí, atendemos tanto a OEMs como a fabricantes tier 1 y tier 2 en todo México. Tenemos experiencia con plantas de estampado, maquinado, pintura y ensamble.",
   },
 ];
 

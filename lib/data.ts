@@ -863,18 +863,18 @@ export const INDUSTRIES: IndustryDefinition[] = [
     faqs: [
       { q: "¿Qué productos químicos se usan en el pretratamiento antes de la pintura?", a: "El proceso estándar incluye: (1) Desengrase alcalino, (2) Fosfatado de zinc, (3) Enjuague con agua desmineralizada, (4) Pasivado final. Trevigo suministra productos para cada etapa." },
       { q: "¿Cómo cumplir con la normativa de descarga de aguas en una planta automotriz?", a: "Las plantas automotrices generan efluentes con metales pesados. Con nuestros coagulantes y floculantes ayudamos a cumplir NOM-001-SEMARNAT-2021. Realizamos Jar Test con muestra de tu efluente sin costo." },
-      { q: "¿Atienden a plantas tier 1 y tier 2?", a: "Sí, atendemos OEMs y fabricantes tier 1 y tier 2 en el AMM y norte de México. Tenemos experiencia con plantas de estampado, maquinado, pintura y ensamble." },
+      { q: "¿Atienden a plantas tier 1 y tier 2?", a: "Sí, atendemos OEMs y fabricantes tier 1 y tier 2 en todo México. Tenemos experiencia con plantas de estampado, maquinado, pintura y ensamble." },
     ],
   },
   {
     id: "metalmecanica", name: "Metalmecánica", slug: "metalmecanica", icon: "🔩",
     description: "Desde talleres de maquinado hasta grandes plantas: desoxidantes, inhibidores, fluidos de corte y tratamiento de aguas industriales.",
-    heroText: "La industria metalmecánica es el núcleo del norte de México. Trevigo entiende sus procesos y tiene el producto correcto para cada etapa.",
+    heroText: "La industria metalmecánica es el núcleo de la manufactura mexicana. Trevigo entiende sus procesos y tiene el producto correcto para cada etapa.",
     productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "removedores", "inhibidores", "aceites-metales", "grasas-lubricantes", "lubricantes-especializados", "coagulantes", "floculantes"],
     serviceIds: ["galvanizado", "despintado", "decapado", "pasivado", "pintura-electrostatica"],
     stats: [
       { value: "35+", label: "años en la industria metalmecánica" },
-      { value: "200+", label: "clientes activos en el norte de México" },
+      { value: "200+", label: "clientes activos en México" },
       { value: "24h", label: "tiempo de respuesta técnica" },
       { value: "NOM", label: "cumplimiento normativo garantizado" },
     ],
@@ -923,7 +923,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
   {
     id: "vitivinicola", name: "Vitivinícola", slug: "vitivinicola", icon: "🍷",
     description: "Tratamiento de aguas residuales de vinícolas, materias primas de alta pureza y lubricantes grado alimento para la industria del vino y destilados.",
-    heroText: "Las vinícolas del norte de México requieren química de alta pureza. Trevigo provee los insumos correctos para cada etapa del proceso enológico industrial.",
+    heroText: "Las vinícolas de México requieren química de alta pureza. Trevigo provee los insumos correctos para cada etapa del proceso enológico industrial.",
     productSubcategoryIds: ["coagulantes", "floculantes", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas", "acidos-bases", "lubricantes-especializados"],
     serviceIds: ["ingenieria-asesoria", "pruebas-jarras", "optimizacion-procesos", "mantenimiento"],
     stats: [
@@ -1093,7 +1093,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
   {
     id: "tratamiento-superficies-metalicas", name: "Tratamiento de superficies metálicas", slug: "tratamiento-superficies-metalicas", icon: "🔧",
     description: "Portafolio completo para empresas de acabados metálicos: fosfatado, galvanizado, tropicalizado, pasivado, despintado y decapado industrial.",
-    heroText: "Trevigo es el proveedor técnico de referencia para empresas de tratamiento de superficies metálicas en el norte de México.",
+    heroText: "Trevigo es el proveedor técnico de referencia para empresas de tratamiento de superficies metálicas en México.",
     productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "removedores", "sellos", "inhibidores", "pasivados", "aceites-metales", "coagulantes", "floculantes"],
     serviceIds: ["galvanizado", "tropicalizado", "despintado", "decapado", "pasivado", "pintura-electrostatica"],
     stats: [
@@ -1241,7 +1241,7 @@ export const GENERAL_FAQS = [
 
 export const STATS = [
   { value: "35+", label: "Años de experiencia", description: "En el mercado industrial mexicano" },
-  { value: "200+", label: "Clientes activos", description: "En el norte de México" },
+  { value: "200+", label: "Clientes activos", description: "En todo México" },
   { value: "3", label: "Líneas de negocio", description: "Metales, agua, materias primas" },
   { value: "48h", label: "Entrega en AMM", description: "Tiempo promedio de entrega" },
 ];
