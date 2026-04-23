@@ -512,12 +512,17 @@ export default function ServiciosPage() {
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
                 Trevigo suministra soluciones de pasivado para acero inoxidable (ácido nítrico, ácido cítrico), pasivantes de zinc galvanizado (Cr-free) y selladores sin cromo para líneas de fosfatizado, cumpliendo con ASTM A380, AMS 2700 y directivas RoHS.
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {["ASTM A380", "AMS 2700", "Cr(VI)-free", "Ácido cítrico (verde)", "Ácido nítrico"].map((tag) => (
                   <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="border border-steel-200 rounded-xl overflow-hidden bg-white">
+                <div className="relative w-full h-48">
+                  <Image src="/servicios/pasivado.png" alt="Pasivado Industrial" fill className="object-contain p-4" />
+                </div>
               </div>
             </div>
 
