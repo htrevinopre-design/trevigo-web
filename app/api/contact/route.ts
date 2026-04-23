@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const FROM =
   process.env.RESEND_FROM_EMAIL ?? "Industrias Trevigo <noreply@trevigo.com.mx>";
-const TO = ["ventas@trevigo.com.mx", "htrevinopre@gmail.com"];
+const TO = ["ventas@trevigo.com.mx", "htrevinopre@gmail.com", "Andress.trevi@gmail.com"];
 
 // ─── HTML helpers ──────────────────────────────────────────────────────────
 
