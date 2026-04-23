@@ -357,6 +357,7 @@ export default function ServiciosPage() {
                   items: ["Baño alcalino caliente a 80–90 °C", "Tiempo de inmersión: 30–120 min según espesor", "Enjuague y neutralización posterior", "Sin daño a la geometría del rack"],
                   border: "border-orange-500",
                   bg: "bg-orange-50",
+                  image: "/servicios/rack.png",
                 },
                 {
                   tipo: "Despintado de Rechazo",
@@ -366,25 +367,33 @@ export default function ServiciosPage() {
                   items: ["Compatible con pintura en polvo y e-coat", "Recupera piezas de alto valor unitario", "No altera dimensiones ni tolerancias", "Entrega lista para fosfatizado y repintura"],
                   border: "border-navy-500",
                   bg: "bg-navy-50",
+                  image: null,
                 },
               ].map((item) => (
-                <div key={item.tipo} className={`${item.bg} border-2 ${item.border} rounded-xl p-6`}>
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-2xl">{item.icon}</span>
-                    <div>
-                      <h4 className="text-steel-900 font-black text-base uppercase">{item.tipo}</h4>
-                      <span className="text-[10px] font-bold text-steel-500 uppercase tracking-wide">{item.uso}</span>
+                <div key={item.tipo} className={`${item.bg} border-2 ${item.border} rounded-xl overflow-hidden`}>
+                  {item.image && (
+                    <div className="relative w-full h-48">
+                      <Image src={item.image} alt={item.tipo} fill className="object-cover" />
                     </div>
+                  )}
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-2xl">{item.icon}</span>
+                      <div>
+                        <h4 className="text-steel-900 font-black text-base uppercase">{item.tipo}</h4>
+                        <span className="text-[10px] font-bold text-steel-500 uppercase tracking-wide">{item.uso}</span>
+                      </div>
+                    </div>
+                    <p className="text-steel-600 text-xs leading-relaxed mb-4">{item.desc}</p>
+                    <ul className="space-y-1">
+                      {item.items.map((pt) => (
+                        <li key={pt} className="flex items-start gap-2 text-xs text-steel-700">
+                          <span className="text-orange-500 font-black mt-0.5">✓</span>
+                          {pt}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <p className="text-steel-600 text-xs leading-relaxed mb-4">{item.desc}</p>
-                  <ul className="space-y-1">
-                    {item.items.map((pt) => (
-                      <li key={pt} className="flex items-start gap-2 text-xs text-steel-700">
-                        <span className="text-orange-500 font-black mt-0.5">✓</span>
-                        {pt}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               ))}
             </div>
