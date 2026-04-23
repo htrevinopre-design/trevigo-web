@@ -13,7 +13,7 @@ export const COMPANY = {
     "Más de 30 años fabricando y distribuyendo productos químicos para el tratamiento de metales, limpieza industrial y tratamiento de aguas en México. Tecnología avanzada, servicio técnico especializado y precios competitivos.",
   founded: "1990",
   yearsExperience: 35,
-  phone: "81 2040 3158",
+  phone: "81 2040 3135",
   email: "ventas@trevigo.com.mx",
   address: {
     street: "Puerto Tampico 325, La Fe",
