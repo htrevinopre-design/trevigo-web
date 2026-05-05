@@ -1,45 +1,37 @@
 import { MetadataRoute } from "next";
-import { COMPANY, PRODUCT_CATEGORIES, SERVICES, INDUSTRIES } from "@/lib/data";
+import { COMPANY, PRODUCT_CATEGORIES, INDUSTRIES } from "@/lib/data";
+import { ARTICLES } from "@/lib/articles";
+import { SERVICES_CONTENT } from "@/lib/services-content";
+import { GLOSSARY } from "@/lib/glossary";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = COMPANY.url;
   const now = new Date();
 
-  // Static pages
+  // ── Static pages ────────────────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/productos`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/servicios`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/nosotros`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/contacto`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
+    { url: baseUrl,                        lastModified: now, changeFrequency: "weekly",  priority: 1.0 },
+    { url: `${baseUrl}/productos`,         lastModified: now, changeFrequency: "weekly",  priority: 0.95 },
+    { url: `${baseUrl}/servicios`,         lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/industrias`,        lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/nosotros`,          lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/contacto`,          lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/sak`,               lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/surface-ai`,        lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${baseUrl}/recursos`,          lastModified: now, changeFrequency: "weekly",  priority: 0.85 },
+    { url: `${baseUrl}/casos-de-exito`,    lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/glosario`,          lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
 
-  // Industry pages
+  // ── Artículos técnicos / blog ────────────────────────────────────
+  const articlePages: MetadataRoute.Sitemap = ARTICLES.map((a) => ({
+    url: `${baseUrl}/recursos/${a.slug}`,
+    lastModified: new Date(a.updatedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  // ── Industry pages (each has its own URL + content) ─────────────
   const industryPages: MetadataRoute.Sitemap = INDUSTRIES.map((ind) => ({
     url: `${baseUrl}/industrias/${ind.slug}`,
     lastModified: now,
@@ -47,23 +39,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // Service pages (anchor links — still listed for reference)
-  const servicePages: MetadataRoute.Sitemap = SERVICES.map((svc) => ({
-    url: `${baseUrl}/servicios#${svc.id}`,
+  // ── Product detail pages (/productos/[id]) ───────────────────────
+  // These are the highest-value pages for long-tail keyword ranking
+  const allProducts = PRODUCT_CATEGORIES.flatMap((cat) =>
+    cat.subcategories.flatMap((sub) => sub.products)
+  );
+  const productDetailPages: MetadataRoute.Sitemap = allProducts.map((product) => ({
+    url: `${baseUrl}/productos/${product.id}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  // ── Service detail pages (/servicios/[slug]) ────────────────────
+  // Páginas dedicadas con contenido técnico profundo + FAQ schema
+  const servicePages: MetadataRoute.Sitemap = SERVICES_CONTENT.map((svc) => ({
+    url: `${baseUrl}/servicios/${svc.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
+  // ── Glossary detail pages (/glosario/[slug]) ────────────────────
+  // Long-tail SEO con definiciones técnicas
+  const glossaryPages: MetadataRoute.Sitemap = GLOSSARY.map((g) => ({
+    url: `${baseUrl}/glosario/${g.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
 
-  // Product category anchors
-  const productPages: MetadataRoute.Sitemap = PRODUCT_CATEGORIES.flatMap((cat) =>
-    cat.products.map((product) => ({
-      url: `${baseUrl}/productos#${product.id}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    }))
-  );
-
-  return [...staticPages, ...industryPages, ...servicePages, ...productPages];
+  return [
+    ...staticPages,
+    ...articlePages,
+    ...industryPages,
+    ...productDetailPages,
+    ...servicePages,
+    ...glossaryPages,
+  ];
 }

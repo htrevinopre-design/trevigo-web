@@ -99,7 +99,7 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-10">
             <span className="text-white/50 text-xs font-semibold tracking-widest uppercase hidden md:block">
-              Industrias Trevigo — Monterrey, N.L.
+              Industrias Trevigo · Monterrey, N.L.
             </span>
             <span className="text-white/50 text-xs font-semibold tracking-widest uppercase md:hidden">
               Industrias Trevigo
@@ -149,26 +149,30 @@ export default function Navigation() {
             <div className="hidden lg:flex items-center h-full">
 
               {/* PRODUCTOS */}
-              <button
+              <Link
+                href="/productos"
                 onMouseEnter={() => setActiveMenu("productos")}
+                onClick={() => setActiveMenu(null)}
                 className={dropdownCls("productos")}
               >
                 Productos
                 <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "productos" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
 
               {/* SERVICIOS */}
-              <button
+              <Link
+                href="/servicios"
                 onMouseEnter={() => setActiveMenu("servicios")}
+                onClick={() => setActiveMenu(null)}
                 className={dropdownCls("servicios")}
               >
                 Servicios
                 <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "servicios" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
 
               {/* SAK — special branded link */}
               <Link
@@ -189,15 +193,30 @@ export default function Navigation() {
               </Link>
 
               {/* INDUSTRIAS */}
-              <button
+              <Link
+                href="/industrias"
                 onMouseEnter={() => setActiveMenu("industrias")}
+                onClick={() => setActiveMenu(null)}
                 className={dropdownCls("industrias")}
               >
                 Industrias
                 <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "industrias" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
+
+              {/* RECURSOS dropdown */}
+              <Link
+                href="/recursos"
+                onMouseEnter={() => setActiveMenu("recursos")}
+                onClick={() => setActiveMenu(null)}
+                className={dropdownCls("recursos")}
+              >
+                Recursos
+                <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "recursos" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                </svg>
+              </Link>
 
               {/* Simple links */}
               {[
@@ -461,6 +480,87 @@ export default function Navigation() {
           </div>
         )}
 
+        {/* RECURSOS dropdown panel */}
+        {activeMenu === "recursos" && (
+          <div className="absolute top-full left-0 right-0 bg-white border-t border-steel-200 shadow-2xl z-50">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
+              <div className="grid grid-cols-3 gap-6">
+                {/* Artículos técnicos */}
+                <Link
+                  href="/recursos"
+                  onClick={() => setActiveMenu(null)}
+                  className="group bg-steel-50 hover:bg-navy-50 border border-steel-200 hover:border-navy-300 rounded-xl p-5 transition-all flex flex-col"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xl">📚</span>
+                    <p className="text-[10px] font-black text-navy-500 uppercase tracking-widest">
+                      Artículos técnicos
+                    </p>
+                  </div>
+                  <h3 className="text-steel-900 font-black text-base uppercase leading-tight mb-2 group-hover:text-navy-700 transition-colors">
+                    Guías técnicas y artículos
+                  </h3>
+                  <p className="text-steel-500 text-xs leading-relaxed mb-3 flex-1">
+                    Lecturas profundas sobre fosfatizado, decapado, tratamiento
+                    de aguas y procesos industriales.
+                  </p>
+                  <span className="text-navy-500 text-xs font-black uppercase tracking-wide">
+                    Ver artículos →
+                  </span>
+                </Link>
+
+                {/* Glosario */}
+                <Link
+                  href="/glosario"
+                  onClick={() => setActiveMenu(null)}
+                  className="group bg-steel-50 hover:bg-navy-50 border border-steel-200 hover:border-navy-300 rounded-xl p-5 transition-all flex flex-col"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xl">📖</span>
+                    <p className="text-[10px] font-black text-navy-500 uppercase tracking-widest">
+                      Glosario técnico
+                    </p>
+                  </div>
+                  <h3 className="text-steel-900 font-black text-base uppercase leading-tight mb-2 group-hover:text-navy-700 transition-colors">
+                    Términos y definiciones
+                  </h3>
+                  <p className="text-steel-500 text-xs leading-relaxed mb-3 flex-1">
+                    Definiciones de DBO, ISO VG, NOM-001, ASTM A967 y más
+                    términos técnicos del sector.
+                  </p>
+                  <span className="text-navy-500 text-xs font-black uppercase tracking-wide">
+                    Ver glosario →
+                  </span>
+                </Link>
+
+                {/* Casos de éxito */}
+                <Link
+                  href="/casos-de-exito"
+                  onClick={() => setActiveMenu(null)}
+                  className="group bg-steel-50 hover:bg-orange-50 border border-steel-200 hover:border-orange-300 rounded-xl p-5 transition-all flex flex-col"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xl">🏭</span>
+                    <p className="text-[10px] font-black text-orange-500 uppercase tracking-widest">
+                      Casos de éxito
+                    </p>
+                  </div>
+                  <h3 className="text-steel-900 font-black text-base uppercase leading-tight mb-2 group-hover:text-orange-600 transition-colors">
+                    Proyectos en plantas
+                  </h3>
+                  <p className="text-steel-500 text-xs leading-relaxed mb-3 flex-1">
+                    Resultados medibles en plantas automotrices, alimenticias,
+                    metalmecánicas y de tratamiento de aguas.
+                  </p>
+                  <span className="text-orange-500 text-xs font-black uppercase tracking-wide">
+                    Ver casos →
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* ── Mobile menu ── */}
         {mobileOpen && (
           <div className="lg:hidden border-t border-steel-200 bg-white py-3 max-h-[80vh] overflow-y-auto">
@@ -494,7 +594,7 @@ export default function Navigation() {
                           className="block pl-12 pr-6 py-1.5 text-xs text-steel-600 hover:text-navy-600"
                           onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}
                         >
-                          — {item.label}
+                          · {item.label}
                         </Link>
                       ))}
                     </div>
@@ -590,6 +690,38 @@ export default function Navigation() {
                       Ver todas las industrias →
                     </Link>
                   </div>
+                </div>
+              )}
+            </div>
+
+            {/* Recursos accordion */}
+            <div className="border-t border-steel-100">
+              <button
+                className="w-full flex items-center justify-between px-6 py-3 text-steel-800 font-bold text-sm"
+                onClick={() => setMobileExpanded(mobileExpanded === "recursos" ? null : "recursos")}
+              >
+                Recursos
+                <svg className={`w-4 h-4 transition-transform ${mobileExpanded === "recursos" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileExpanded === "recursos" && (
+                <div className="pb-2">
+                  {[
+                    { label: "Artículos técnicos", href: "/recursos", icon: "📚" },
+                    { label: "Glosario técnico", href: "/glosario", icon: "📖" },
+                    { label: "Casos de éxito", href: "/casos-de-exito", icon: "🏭" },
+                  ].map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="flex items-center gap-2 pl-10 pr-6 py-2 text-sm text-steel-600 hover:text-navy-600"
+                      onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}
+                    >
+                      <span>{item.icon}</span>
+                      <span>{item.label}</span>
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>

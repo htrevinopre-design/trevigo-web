@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { COMPANY, PRODUCT_CATEGORIES } from "@/lib/data";
+import { COMPANY, PRODUCT_CATEGORIES, INDUSTRIES } from "@/lib/data";
+import { ARTICLES } from "@/lib/articles";
 import ProductCotizaForm from "@/components/ProductCotizaForm";
 
 const allProducts = PRODUCT_CATEGORIES.flatMap((cat) =>
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   const product = allProducts.find((p) => p.id === params.id);
   if (!product) return { title: "Producto no encontrado" };
   return {
-    title: `${product.name} — Industrias Trevigo`,
+    title: product.name,
     description: product.shortDescription,
     alternates: { canonical: `${COMPANY.url}/productos/${product.id}` },
   };
@@ -40,6 +41,16 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
     .filter((p) => p.subcategoryId === product.subcategoryId && p.id !== product.id)
     .slice(0, 3);
 
+  // Industrias que usan productos de esta subcategoría (link interno SEO)
+  const relatedIndustries = INDUSTRIES.filter((ind) =>
+    ind.productSubcategoryIds.includes(product.subcategoryId)
+  ).slice(0, 6);
+
+  // Artículos técnicos que mencionan este producto
+  const relatedArticles = ARTICLES.filter((a) =>
+    a.relatedProducts?.includes(product.id)
+  ).slice(0, 3);
+
   // Use the largest format image as the "hero" product image
   const heroFormat =
     product.formats.find((f) => f.name === "tote") ??
@@ -51,8 +62,62 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
     `Hola, me interesa obtener la ficha técnica y cotización del producto: ${product.name} (SKU: ${product.sku})`
   )}`;
 
+  // ── Schema.org Product (rich snippet con nombre, marca, SKU, etc.) ──
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.shortDescription,
+    sku: product.sku,
+    mpn: product.sku,
+    image: `${COMPANY.url}${heroFormat.image}`,
+    category: `${product.categoryName} > ${product.subcategoryName}`,
+    brand: {
+      "@type": "Brand",
+      name: COMPANY.shortName,
+    },
+    manufacturer: {
+      "@type": "Organization",
+      name: COMPANY.legalName,
+      url: COMPANY.url,
+    },
+    // Sin `offers` porque el modelo es B2B por cotización (sin precio público).
+    // El tipo Product sigue siendo válido semánticamente para Google.
+  };
+
+  // ── Schema.org BreadcrumbList (mejora cómo Google muestra la URL) ──
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Inicio", item: COMPANY.url },
+      { "@type": "ListItem", position: 2, name: "Productos", item: `${COMPANY.url}/productos` },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.categoryName,
+        item: `${COMPANY.url}/productos#${product.categoryId}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: product.name,
+        item: `${COMPANY.url}/productos/${product.id}`,
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       {/* ─── BREADCRUMB STRIP ───────────────────────────────────── */}
       <div className="bg-navy-950 pt-[100px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -160,8 +225,8 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
                   <div className="divide-y divide-steel-100">
                     {[
                       { key: "Forma física", val: product.formats[0].name === "saco" ? "Sólido / Polvo" : "Líquido" },
-                      { key: "Presentación principal", val: `${heroFormat.label} — ${heroFormat.weight}` },
-                      { key: "Otras presentaciones", val: product.formats.length > 1 ? product.formats.map(f => f.label).join(", ") : "—" },
+                      { key: "Presentación principal", val: `${heroFormat.label}, ${heroFormat.weight}` },
+                      { key: "Otras presentaciones", val: product.formats.length > 1 ? product.formats.map(f => f.label).join(", ") : "N/A" },
                       { key: "Ficha técnica", val: "Disponible bajo solicitud" },
                     ].map((row) => (
                       <div key={row.key} className="grid grid-cols-2 px-4 py-2.5 text-xs">
@@ -177,7 +242,7 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
                   <h3 className="text-navy-800 font-black text-xs uppercase tracking-wide mb-3">¿Por qué Industrias Trevigo?</h3>
                   <ul className="space-y-1.5">
                     {[
-                      "Fabricante local — Monterrey, N.L.",
+                      "Fabricante local. Monterrey, N.L.",
                       "Entrega en 48 h en área metropolitana",
                       "Soporte técnico de ingenieros especialistas",
                       "TDS y SDS incluidas en cada entrega",
@@ -283,6 +348,70 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
                   </h3>
                   <p className="text-steel-500 text-xs leading-relaxed mb-3 line-clamp-2">{p.shortDescription}</p>
                   <span className="text-navy-500 text-xs font-black uppercase tracking-wide">Ver producto →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ─── INDUSTRIAS DONDE SE USA ────────────────────────────── */}
+      {relatedIndustries.length > 0 && (
+        <section className="py-12 bg-white border-b border-steel-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-orange-500 w-1 h-8 rounded-full shrink-0" />
+              <h2 className="text-lg font-black text-steel-900 uppercase">
+                Industrias donde se usa
+              </h2>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              {relatedIndustries.map((ind) => (
+                <Link
+                  key={ind.id}
+                  href={`/industrias/${ind.slug}`}
+                  className="bg-steel-50 border border-steel-200 rounded-lg p-4 hover:border-orange-300 hover:bg-white hover:shadow-sm transition-all group flex flex-col items-center text-center"
+                >
+                  <span className="text-2xl mb-2">{ind.icon}</span>
+                  <span className="text-steel-900 font-black text-xs uppercase leading-tight group-hover:text-orange-600 transition-colors">
+                    {ind.name}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ─── ARTÍCULOS TÉCNICOS RELACIONADOS ────────────────────── */}
+      {relatedArticles.length > 0 && (
+        <section className="py-12 bg-steel-50 border-b border-steel-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-navy-500 w-1 h-8 rounded-full shrink-0" />
+              <h2 className="text-lg font-black text-steel-900 uppercase">
+                Lecturas técnicas relacionadas
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {relatedArticles.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={`/recursos/${a.slug}`}
+                  className="bg-white border border-steel-200 rounded-xl p-5 hover:shadow-md hover:border-navy-300 transition-all group"
+                >
+                  <p className="text-navy-500 text-[10px] font-black uppercase tracking-wider mb-2">
+                    {a.category} · {a.readingTime}
+                  </p>
+                  <h3 className="text-steel-900 font-black text-sm uppercase leading-tight mb-2 group-hover:text-navy-700 transition-colors">
+                    {a.title}
+                  </h3>
+                  <p className="text-steel-500 text-xs leading-relaxed line-clamp-2 mb-3">
+                    {a.excerpt}
+                  </p>
+                  <span className="text-navy-500 text-xs font-black uppercase tracking-wide">
+                    Leer artículo →
+                  </span>
                 </Link>
               ))}
             </div>

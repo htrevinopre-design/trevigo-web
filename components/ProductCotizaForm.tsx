@@ -127,7 +127,7 @@ export default function ProductCotizaForm({ productName, sku, formats }: Props) 
             <select value={form.presentacion} onChange={(e) => set("presentacion", e.target.value)} className={selectCls}>
               <option value="">Seleccionar presentación</option>
               {formats.map((f) => (
-                <option key={f.label} value={`${f.label} ${f.weight}`}>{f.label} — {f.weight}</option>
+                <option key={f.label} value={`${f.label} ${f.weight}`}>{f.label} / {f.weight}</option>
               ))}
             </select>
             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-steel-400 pointer-events-none text-xs">▼</span>

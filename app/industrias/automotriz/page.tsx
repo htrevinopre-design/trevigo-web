@@ -4,7 +4,7 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { COMPANY, PRODUCT_CATEGORIES } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Químicos para la Industria Automotriz en México — Fosfatado, Galvanizado, Tratamiento de Agua",
+  title: "Químicos para la Industria Automotriz en México | Fosfatado, Galvanizado, Tratamiento de Agua",
   description:
     "Industrias Trevigo es proveedor de productos químicos para la cadena automotriz en Nuevo León: fosfatado, inhibidores de corrosión, coagulantes y más. Cumplimiento con normas GM, Ford, Chrysler.",
   alternates: { canonical: `${COMPANY.url}/industrias/automotriz` },
@@ -25,7 +25,7 @@ const automotrizFaqs = [
   },
   {
     q: "¿Trevigo atiende a plantas de la cadena de autopartes (tier 1, tier 2)?",
-    a: "Sí, atendemos tanto a OEMs como a fabricantes tier 1 y tier 2 en el Área Metropolitana de Monterrey y en toda la región norte de México. Tenemos experiencia con plantas de estampado, maquinado, pintura y ensamble.",
+    a: "Sí, atendemos tanto a OEMs como a fabricantes tier 1 y tier 2 en todo México. Tenemos experiencia con plantas de estampado, maquinado, pintura y ensamble.",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function IndustriaAutomotrizPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "Químicos para la Industria Automotriz — Industrias Trevigo",
+            name: "Químicos para la Industria Automotriz | Industrias Trevigo",
             description: "Productos y servicios químicos para la cadena automotriz en Nuevo León, México.",
             url: `${COMPANY.url}/industrias/automotriz`,
           }),
@@ -201,7 +201,7 @@ export default function IndustriaAutomotrizPage() {
       {/* ─── FAQ ─────────────────────────────────────────────────── */}
       <FAQAccordion
         faqs={automotrizFaqs}
-        title="Preguntas frecuentes — Químicos para industria automotriz"
+        title="Preguntas frecuentes: Químicos para industria automotriz"
       />
 
       {/* ─── CTA ─────────────────────────────────────────────────── */}

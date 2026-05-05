@@ -3,7 +3,7 @@ import Link from "next/link";
 import { COMPANY, INDUSTRIES } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Industrias que atendemos — Industrias Trevigo",
+  title: "Industrias que Atendemos",
   description: "Trevigo provee químicos industriales para más de 20 industrias en México: automotriz, alimenticia, farmacéutica, minera y más.",
   alternates: { canonical: `${COMPANY.url}/industrias` },
 };
@@ -52,6 +52,38 @@ const DEFAULT_THEME = INDUSTRY_THEME["automotriz"];
 export default function IndustriasPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Industrias que Atendemos",
+            description:
+              "Sectores productivos a los que Industrias Trevigo provee químicos especializados en México.",
+            url: `${COMPANY.url}/industrias`,
+            isPartOf: { "@type": "WebSite", name: COMPANY.legalName, url: COMPANY.url },
+            hasPart: INDUSTRIES.map((ind) => ({
+              "@type": "WebPage",
+              name: ind.name,
+              url: `${COMPANY.url}/industrias/${ind.slug}`,
+            })),
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: COMPANY.url },
+              { "@type": "ListItem", position: 2, name: "Industrias", item: `${COMPANY.url}/industrias` },
+            ],
+          }),
+        }}
+      />
       <section className="bg-navy-950 pt-[100px]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <nav className="flex items-center gap-2 text-steel-500 text-xs mb-8">

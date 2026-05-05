@@ -252,6 +252,50 @@ export default function SakPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Sak: Insumos para Limpieza Industrial",
+            description:
+              "Sak es la línea de Trevigo para limpieza industrial e institucional: químicos, papel, jarcería, equipo y bolsas. Inventario completo, entrega 48h en Monterrey.",
+            url: `${COMPANY.url}/sak`,
+            provider: {
+              "@type": "Organization",
+              name: COMPANY.legalName,
+              url: COMPANY.url,
+            },
+            serviceType: "Industrial Cleaning Supplies",
+            areaServed: {
+              "@type": "City",
+              name: COMPANY.address.city,
+            },
+            offers: {
+              "@type": "Offer",
+              availability: "https://schema.org/InStock",
+              seller: {
+                "@type": "Organization",
+                name: COMPANY.legalName,
+              },
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: COMPANY.url },
+              { "@type": "ListItem", position: 2, name: "Sak", item: `${COMPANY.url}/sak` },
+            ],
+          }),
+        }}
+      />
       {/* ─── HERO ─────────────────────────────────────────────────────── */}
       <section className="bg-navy-500 pt-[100px] min-h-[480px] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10"
@@ -279,7 +323,7 @@ export default function SakPage() {
               </h1>
               <div className="w-16 h-1 bg-orange-400 mb-6" />
               <p className="text-white/80 text-base leading-relaxed max-w-lg mb-8">
-                Sak™ es la línea de limpieza e higiene de Industrias Trevigo. Más de {totalProducts} productos en 8 categorías para industria, HORECA y servicios — entrega en 48 h en Monterrey.
+                Sak™ es la línea de limpieza e higiene de Industrias Trevigo. Más de {totalProducts} productos en 8 categorías para industria, HORECA y servicios. Entrega en 48 h en Monterrey.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="#catalogo"

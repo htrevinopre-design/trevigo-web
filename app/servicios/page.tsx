@@ -4,7 +4,7 @@ import Link from "next/link";
 import { COMPANY } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Servicios de Tratamiento de Metales y Aguas Residuales | Trevigo",
+  title: "Servicios de Tratamiento de Metales y Aguas",
   description:
     "Servicios aplicados de galvanizado, tropicalizado, despintado, decapado, pasivado, pintura electrostática e ingeniería para tratamiento de aguas. Monterrey, N.L.",
   alternates: { canonical: `${COMPANY.url}/servicios` },
@@ -27,7 +27,7 @@ function SectionHeader({ label, title, desc, accent = "navy" }: { label: string;
 }
 
 // ─── Helper: dark CTA strip ───────────────────────────────────────────────────
-function ServiceCTA({ title, body, linkLabel, linkHref }: { title: string; body: string; linkLabel: string; linkHref: string }) {
+function ServiceCTA({ title, body, linkLabel, linkHref, detailSlug }: { title: string; body: string; linkLabel: string; linkHref: string; detailSlug?: string }) {
   return (
     <div className="bg-navy-950 rounded-xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 mt-10">
       <div>
@@ -39,10 +39,17 @@ function ServiceCTA({ title, body, linkLabel, linkHref }: { title: string; body:
           className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 font-black text-sm uppercase tracking-wide transition-colors">
           {linkLabel}
         </Link>
-        <Link href="/contacto"
-          className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white/60 text-white px-6 py-3 font-bold text-sm uppercase tracking-wide transition-colors">
-          Contactar asesor
-        </Link>
+        {detailSlug ? (
+          <Link href={`/servicios/${detailSlug}`}
+            className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white/60 text-white px-6 py-3 font-bold text-sm uppercase tracking-wide transition-colors">
+            Ver guía técnica
+          </Link>
+        ) : (
+          <Link href="/contacto"
+            className="inline-flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white/60 text-white px-6 py-3 font-bold text-sm uppercase tracking-wide transition-colors">
+            Contactar asesor
+          </Link>
+        )}
       </div>
     </div>
   );
@@ -51,6 +58,63 @@ function ServiceCTA({ title, body, linkLabel, linkHref }: { title: string; body:
 export default function ServiciosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Servicios de Tratamiento de Metales y Aguas",
+            description:
+              "Servicios técnicos de Industrias Trevigo: galvanizado, tropicalizado, fosfatizado, decapado, pasivado, pintura electrostática y tratamiento de aguas residuales.",
+            url: `${COMPANY.url}/servicios`,
+            isPartOf: { "@type": "WebSite", name: COMPANY.legalName, url: COMPANY.url },
+            provider: {
+              "@type": "Organization",
+              name: COMPANY.legalName,
+              url: COMPANY.url,
+            },
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: [
+                "Galvanizado",
+                "Tropicalizado",
+                "Fosfatizado",
+                "Despintado",
+                "Decapado",
+                "Pasivado",
+                "Pintura Electrostática",
+                "Ingeniería y Asesoría en Aguas",
+                "Mantenimiento de PTAR",
+                "Pruebas de Jarras",
+                "Optimización de Procesos",
+              ].map((name, idx) => ({
+                "@type": "Service",
+                position: idx + 1,
+                name,
+                provider: {
+                  "@type": "Organization",
+                  name: COMPANY.legalName,
+                },
+                areaServed: { "@type": "Country", name: "México" },
+              })),
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: COMPANY.url },
+              { "@type": "ListItem", position: 2, name: "Servicios", item: `${COMPANY.url}/servicios` },
+            ],
+          }),
+        }}
+      />
       {/* ─── HERO ─────────────────────────────────────────────── */}
       <section className="bg-navy-950 pt-[100px]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
@@ -64,7 +128,7 @@ export default function ServiciosPage() {
               </h1>
               <div className="w-12 h-1 bg-orange-500 mb-5" />
               <p className="text-steel-400 text-base leading-relaxed mb-8">
-                Servicios especializados en tratamientos de superficies metálicas y soluciones para aguas industriales. Calidad e innovación con más de 35 años de experiencia en el norte de México.
+                Servicios especializados en tratamientos de superficies metálicas y soluciones para aguas industriales. Calidad e innovación con más de 35 años de experiencia en México.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#tratamiento-metales"
@@ -97,7 +161,7 @@ export default function ServiciosPage() {
           <SectionHeader
             label="⚙️ Tratamiento de Metales"
             title="Servicios de Tratamiento de Superficies Metálicas"
-            desc="Procesos especializados de protección y acabado de superficies metálicas para la industria manufacturera del norte de México."
+            desc="Procesos especializados de protección y acabado de superficies metálicas para la industria manufacturera mexicana."
           />
           {/* Quick nav pills */}
           <div className="flex flex-wrap gap-2 mb-14">
@@ -200,8 +264,9 @@ export default function ServiciosPage() {
           <ServiceCTA
             title="¿Tienes una línea de galvanizado?"
             body="Analizamos tu baño, eficiencia catódica y calidad del depósito. Te proponemos mejoras con impacto medible en resistencia a niebla salina."
-            linkLabel="Agendar análisis de baño →"
+            linkLabel="Solicitar análisis de baño →"
             linkHref="/contacto"
+            detailSlug="galvanizado"
           />
         </div>
       </section>
@@ -250,6 +315,7 @@ export default function ServiciosPage() {
             body="Te ayudamos a hacer la transición sin parar la línea. Realizamos pruebas comparativas de NSS y te entregamos el reporte de validación."
             linkLabel="Solicitar prueba comparativa →"
             linkHref="/contacto"
+            detailSlug="tropicalizado"
           />
         </div>
       </section>
@@ -295,7 +361,7 @@ export default function ServiciosPage() {
 
           {/* Proceso */}
           <div className="mb-10">
-            <h3 className="text-steel-900 font-black text-sm uppercase tracking-wide mb-5 text-center">Línea de fosfatizado — etapas del proceso</h3>
+            <h3 className="text-steel-900 font-black text-sm uppercase tracking-wide mb-5 text-center">Línea de fosfatizado: etapas del proceso</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
               {[
                 { n: "1", name: "Desengrase", detail: "Alcalino caliente", icon: "🧹" },
@@ -320,6 +386,7 @@ export default function ServiciosPage() {
             body="Visita técnica sin costo. Analizamos tu baño actual, detectamos desviaciones y te proponemos ajustes con impacto medible en adhesión y resistencia a corrosión."
             linkLabel="Agendar visita técnica →"
             linkHref="/contacto"
+            detailSlug="fosfatizado"
           />
         </div>
       </section>
@@ -329,25 +396,25 @@ export default function ServiciosPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader label="Servicio · Tratamiento de Metales" title="Despintado Industrial" accent="navy" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
-            <div>
-              <p className="text-steel-600 text-sm leading-relaxed mb-4">
-                El despintado es el proceso de remoción química o mecánica de recubrimientos —pintura en polvo, e-coat, pintura líquida— de superficies metálicas sin dañar el sustrato. Trevigo suministra los removedores alcalinos y solventes formulados para los dos casos de uso más comunes en líneas de pintura industrial.
-              </p>
-              <p className="text-steel-600 text-sm leading-relaxed mb-6">
-                Nuestros removedores están formulados para trabajar en baños calientes con tiempos de ciclo cortos, compatibles con acero al carbón, aluminio y zinc galvanizado según la formulación.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["Sin daño al sustrato", "Acero / Aluminio", "Baño caliente"].map((tag) => (
-                  <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+          {/* Texto intro — full width */}
+          <div className="mb-10">
+            <p className="text-steel-600 text-sm leading-relaxed mb-4">
+              El despintado es el proceso de remoción química o mecánica de recubrimientos (pintura en polvo, e-coat, pintura líquida) de superficies metálicas sin dañar el sustrato. Trevigo suministra los removedores alcalinos y solventes formulados para los dos casos de uso más comunes en líneas de pintura industrial.
+            </p>
+            <p className="text-steel-600 text-sm leading-relaxed mb-6">
+              Nuestros removedores están formulados para trabajar en baños calientes con tiempos de ciclo cortos, compatibles con acero al carbón, aluminio y zinc galvanizado según la formulación.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Sin daño al sustrato", "Acero / Aluminio", "Baño caliente"].map((tag) => (
+                <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
+                  {tag}
+                </span>
+              ))}
             </div>
+          </div>
 
-            {/* Los dos tipos de despintado */}
-            <div className="space-y-6">
+          {/* Los dos tipos de despintado — lado a lado */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
               {[
                 {
                   tipo: "Despintado de Racks",
@@ -357,37 +424,45 @@ export default function ServiciosPage() {
                   items: ["Baño alcalino caliente a 80–90 °C", "Tiempo de inmersión: 30–120 min según espesor", "Enjuague y neutralización posterior", "Sin daño a la geometría del rack"],
                   border: "border-orange-500",
                   bg: "bg-orange-50",
+                  image: "/servicios/rack.png",
                 },
                 {
-                  tipo: "Despintado de Rechazo",
+                  tipo: "Despintado de Metales",
                   icon: "🔄",
                   uso: "Control de calidad · Recuperación de piezas",
                   desc: "Las piezas rechazadas en el proceso de pintura (burbujas, escurridos, contaminación, mal curado) pueden recuperarse retirando el recubrimiento defectuoso y reprocesándolas desde cero. El despintado de rechazo evita el desperdicio de la pieza metálica, reduciendo el costo de scrap. Trabajamos con pintura en polvo, e-coat y pintura líquida sobre acero y aluminio.",
                   items: ["Compatible con pintura en polvo y e-coat", "Recupera piezas de alto valor unitario", "No altera dimensiones ni tolerancias", "Entrega lista para fosfatizado y repintura"],
                   border: "border-navy-500",
                   bg: "bg-navy-50",
+                  image: "/servicios/despintado.png",
                 },
               ].map((item) => (
-                <div key={item.tipo} className={`${item.bg} border-2 ${item.border} rounded-xl p-6`}>
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-2xl">{item.icon}</span>
-                    <div>
-                      <h4 className="text-steel-900 font-black text-base uppercase">{item.tipo}</h4>
-                      <span className="text-[10px] font-bold text-steel-500 uppercase tracking-wide">{item.uso}</span>
+                <div key={item.tipo} className={`${item.bg} border-2 ${item.border} rounded-xl overflow-hidden`}>
+                  {item.image && (
+                    <div className="relative w-full h-48">
+                      <Image src={item.image} alt={item.tipo} fill className="object-contain p-4" />
                     </div>
+                  )}
+                  <div className="p-6">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-2xl">{item.icon}</span>
+                      <div>
+                        <h4 className="text-steel-900 font-black text-base uppercase">{item.tipo}</h4>
+                        <span className="text-[10px] font-bold text-steel-500 uppercase tracking-wide">{item.uso}</span>
+                      </div>
+                    </div>
+                    <p className="text-steel-600 text-xs leading-relaxed mb-4">{item.desc}</p>
+                    <ul className="space-y-1">
+                      {item.items.map((pt) => (
+                        <li key={pt} className="flex items-start gap-2 text-xs text-steel-700">
+                          <span className="text-orange-500 font-black mt-0.5">✓</span>
+                          {pt}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <p className="text-steel-600 text-xs leading-relaxed mb-4">{item.desc}</p>
-                  <ul className="space-y-1">
-                    {item.items.map((pt) => (
-                      <li key={pt} className="flex items-start gap-2 text-xs text-steel-700">
-                        <span className="text-orange-500 font-black mt-0.5">✓</span>
-                        {pt}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               ))}
-            </div>
           </div>
 
           {/* Comparativo rápido */}
@@ -396,7 +471,7 @@ export default function ServiciosPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-center">
               <div />
               <div className="font-black text-navy-700 uppercase">Despintado de Racks</div>
-              <div className="font-black text-navy-700 uppercase">Despintado de Rechazo</div>
+              <div className="font-black text-navy-700 uppercase">Despintado de Metales</div>
               {[
                 ["Objetivo", "Limpiar bastidor para reusar", "Recuperar pieza rechazada"],
                 ["Frecuencia", "Cada 50–150 ciclos de línea", "Por evento (rechazo QC)"],
@@ -418,6 +493,7 @@ export default function ServiciosPage() {
             body="Te enviamos una muestra de removedor y te acompañamos en la prueba en tu planta. Sin costo, sin compromiso."
             linkLabel="Solicitar muestra →"
             linkHref="/contacto"
+            detailSlug="despintado"
           />
         </div>
       </section>
@@ -435,12 +511,17 @@ export default function ServiciosPage() {
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
                 Trevigo suministra inhibidores de decapado que protegen el metal base de la sobredisolución (mordentado excesivo), así como los ácidos y formulaciones utilizadas en baños de decapado controlado.
               </p>
-              <div className="flex flex-wrap gap-2">
-                {["HCl industrial", "H₂SO₄ técnico", "Inhibidores de mordentado", "Decapado neutro / alcalino"].map((tag) => (
+              <div className="flex flex-wrap gap-2 mb-6">
+                {["HCl industrial", "H₂SO₄ técnico", "Inhibidores de corrosión", "Decapado neutro / alcalino"].map((tag) => (
                   <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="border border-steel-200 rounded-xl overflow-hidden bg-white">
+                <div className="relative w-full h-48">
+                  <Image src="/servicios/decapado.png" alt="Decapado Industrial" fill className="object-contain p-4" />
+                </div>
               </div>
             </div>
 
@@ -482,6 +563,7 @@ export default function ServiciosPage() {
             body="Sobre-mordentado, rugosidad excesiva o cascarilla residual tienen solución. Realizamos análisis de tu baño y ajustamos el inhibidor sin parar la línea."
             linkLabel="Solicitar análisis de baño →"
             linkHref="/contacto"
+            detailSlug="decapado"
           />
         </div>
       </section>
@@ -499,12 +581,17 @@ export default function ServiciosPage() {
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
                 Trevigo suministra soluciones de pasivado para acero inoxidable (ácido nítrico, ácido cítrico), pasivantes de zinc galvanizado (Cr-free) y selladores sin cromo para líneas de fosfatizado, cumpliendo con ASTM A380, AMS 2700 y directivas RoHS.
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {["ASTM A380", "AMS 2700", "Cr(VI)-free", "Ácido cítrico (verde)", "Ácido nítrico"].map((tag) => (
                   <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="border border-steel-200 rounded-xl overflow-hidden bg-white">
+                <div className="relative w-full h-48">
+                  <Image src="/servicios/pasivado.png" alt="Pasivado Industrial" fill className="object-contain p-4" />
+                </div>
               </div>
             </div>
 
@@ -530,6 +617,7 @@ export default function ServiciosPage() {
             body="Realizamos pruebas de niebla salina NSS ASTM B117, prueba de gota de sulfato de cobre y análisis de superficie. Resultados en 72–240 horas."
             linkLabel="Solicitar prueba NSS →"
             linkHref="/contacto"
+            detailSlug="pasivado"
           />
         </div>
       </section>
@@ -547,12 +635,15 @@ export default function ServiciosPage() {
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
                 Trevigo suministra los pretratamientos químicos que garantizan la adhesión del recubrimiento: desengrasantes para líneas de pintura en polvo, fosfatos y selladores previos al e-coat. Un pretratamiento correcto puede duplicar la vida útil del recubrimiento.
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {["Pintura en polvo", "E-coat", "Polvo termoendurecible", "Curado en horno 160–200°C"].map((tag) => (
                   <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
                     {tag}
                   </span>
                 ))}
+              </div>
+              <div className="relative w-full h-48">
+                <Image src="/servicios/pintura.png" alt="Pintura Electrostática" fill className="object-contain" />
               </div>
             </div>
 
@@ -596,6 +687,7 @@ export default function ServiciosPage() {
             body="Auditamos tu línea de pretratamiento: análisis de baños, pH, temperatura, tiempos. Identificamos la causa raíz y proponemos corrección."
             linkLabel="Solicitar auditoría de línea →"
             linkHref="/contacto"
+            detailSlug="pintura-electrostatica"
           />
         </div>
       </section>
@@ -606,7 +698,7 @@ export default function ServiciosPage() {
       <div className="bg-navy-500 py-6">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-white text-center text-sm font-bold uppercase tracking-widest opacity-80">
-            Soluciones industriales integrales — Monterrey, N.L.
+            Soluciones industriales integrales. Monterrey, N.L.
           </p>
         </div>
       </div>
@@ -678,8 +770,9 @@ export default function ServiciosPage() {
           <ServiceCTA
             title="¿Tu planta necesita sistema de tratamiento de aguas?"
             body="Hacemos la visita técnica y caracterización del efluente sin costo. En 5 días hábiles te entregamos una propuesta de sistema con estimado de inversión."
-            linkLabel="Agendar visita de diagnóstico →"
+            linkLabel="Agendar visita técnica →"
             linkHref="/contacto"
+            detailSlug="ingenieria-asesoria"
           />
         </div>
       </section>
@@ -695,7 +788,7 @@ export default function ServiciosPage() {
                 Una planta de tratamiento de aguas mal mantenida genera efluentes fuera de norma, multas ambientales y paros de línea. Trevigo ofrece contratos de mantenimiento preventivo y correctivo para sistemas fisicoquímicos con visitas programadas, análisis de agua y reposición de productos.
               </p>
               <p className="text-steel-600 text-sm leading-relaxed mb-6">
-                Contamos con técnicos especializados en el norte de México con respuesta en menos de 24 horas para emergencias.
+                Contamos con técnicos especializados con respuesta en menos de 24 horas para emergencias.
               </p>
             </div>
 
@@ -727,6 +820,7 @@ export default function ServiciosPage() {
             body="Un efluente fuera de NOM-001 puede resultar en clausura. Cotizamos un contrato de mantenimiento preventivo mensual a un costo menor al de una multa ambiental."
             linkLabel="Cotizar contrato de mantenimiento →"
             linkHref="/contacto"
+            detailSlug="mantenimiento"
           />
         </div>
       </section>
@@ -781,6 +875,7 @@ export default function ServiciosPage() {
             body="Envíanos una muestra de tu agua residual sin tratar. En 48–72 horas te entregamos el reporte con el producto y la dosis exacta para tu proceso."
             linkLabel="Solicitar Jar Test →"
             linkHref="/contacto"
+            detailSlug="pruebas-jarras"
           />
         </div>
       </section>
@@ -819,8 +914,9 @@ export default function ServiciosPage() {
           <ServiceCTA
             title="¿Tu planta de tratamiento gasta más de lo necesario en químicos?"
             body="Una auditoría de proceso puede reducir tu consumo de coagulante hasta un 30%. Realizamos la visita sin costo y presentamos un reporte de hallazgos con potencial de ahorro estimado."
-            linkLabel="Agendar auditoría de proceso →"
+            linkLabel="Solicitar auditoría de proceso →"
             linkHref="/contacto"
+            detailSlug="optimizacion-procesos"
           />
         </div>
       </section>

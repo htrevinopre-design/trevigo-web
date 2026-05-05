@@ -36,7 +36,7 @@ export default function SurfaceAIROI() {
       <div className="px-6 py-4 border-b border-steel-100 flex items-center gap-3 bg-steel-50">
         <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
         <span className="text-emerald-700 text-xs font-black uppercase tracking-widest">
-          Calculadora de ROI — SurfaceAI
+          Calculadora de ROI · SurfaceAI
         </span>
       </div>
 

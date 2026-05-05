@@ -4,7 +4,7 @@ import { COMPANY } from "@/lib/data";
 import SurfaceAIROI from "@/components/SurfaceAIROI";
 
 export const metadata: Metadata = {
-  title: "SurfaceAI — Inteligencia Artificial para Líneas de Acabado | Trevigo",
+  title: "SurfaceAI: IA para Líneas de Acabado",
   description:
     "SurfaceAI integra IA en tiempo real a sus tanques químicos y cabinas de pintura en polvo. Cero defectos, 15-20% de ahorro en insumos, control de titulación y curado predictivo. Para manufactura en Monterrey y LATAM.",
   alternates: { canonical: `${COMPANY.url}/surface-ai` },
@@ -22,7 +22,7 @@ const PILLARS = [
     ),
     title: "Pre-tratamiento Inteligente",
     tagline: "Sus baños químicos, bajo control 24/7",
-    desc: "SurfaceAI monitorea en tiempo real la concentración, pH y temperatura de cada etapa de pre-tratamiento — fosfatado, desengrasado, enjuagues — usando los productos Trevigo como base de calibración. Un modelo predictivo detecta desviaciones de titulación hasta 40 minutos antes de que afecten la adherencia, eliminando el principal origen de rechazo en línea.",
+    desc: "SurfaceAI monitorea en tiempo real la concentración, pH y temperatura de cada etapa de pre-tratamiento (fosfatado, desengrasado, enjuagues), usando los productos Trevigo como base de calibración. Un modelo predictivo detecta desviaciones de titulación hasta 40 minutos antes de que afecten la adherencia, eliminando el principal origen de rechazo en línea.",
     specs: [
       "Monitoreo continuo de titulación (ácido libre / ácido total)",
       "Predicción de falla de adherencia antes de pintar",
@@ -61,7 +61,7 @@ const PILLARS = [
     ),
     title: "Curado Predictivo",
     tagline: "El horno sabe lo que necesita cada lote",
-    desc: "El mayor desperdicio energético de una línea de polvo es hornear todas las piezas al mismo perfil de tiempo-temperatura, ignorando la masa térmica real de cada carga. SurfaceAI calcula el perfil de curado óptimo por lote — considerando peso, espesor de recubrimiento y temperatura ambiente — reduciendo hasta un 25% el consumo de gas y electricidad.",
+    desc: "El mayor desperdicio energético de una línea de polvo es hornear todas las piezas al mismo perfil de tiempo-temperatura, ignorando la masa térmica real de cada carga. SurfaceAI calcula el perfil de curado óptimo por lote, considerando peso, espesor de recubrimiento y temperatura ambiente, reduciendo hasta un 25% el consumo de gas y electricidad.",
     specs: [
       "Cálculo de masa térmica en tiempo real",
       "Perfil de curado dinámico por geometría y carga",
@@ -81,6 +81,56 @@ const METRICS = [
 export default function SurfaceAIPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "SurfaceAI",
+            applicationCategory: "BusinessApplication",
+            applicationSubCategory: "Industrial Process Optimization",
+            operatingSystem: "Web",
+            description:
+              "SurfaceAI integra inteligencia artificial en tiempo real a tanques químicos y cabinas de pintura en polvo. Cero defectos, 15-20% de ahorro en insumos, control de titulación y curado predictivo.",
+            url: `${COMPANY.url}/surface-ai`,
+            provider: {
+              "@type": "Organization",
+              name: COMPANY.legalName,
+              url: COMPANY.url,
+            },
+            offers: {
+              "@type": "Offer",
+              availability: "https://schema.org/InStock",
+              areaServed: { "@type": "Country", name: "México" },
+              seller: {
+                "@type": "Organization",
+                name: COMPANY.legalName,
+              },
+            },
+            featureList: [
+              "Control de titulación en tiempo real",
+              "Curado predictivo en cabinas de pintura",
+              "Detección de defectos con visión computacional",
+              "Integración con tanques químicos existentes",
+              "Reducción 15-20% en consumo de insumos",
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: COMPANY.url },
+              { "@type": "ListItem", position: 2, name: "SurfaceAI", item: `${COMPANY.url}/surface-ai` },
+            ],
+          }),
+        }}
+      />
       {/* ─── HERO ────────────────────────────────────────────────────── */}
       <section className="bg-white pt-[100px] border-b border-steel-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -104,7 +154,7 @@ export default function SurfaceAIPage() {
 
               <p className="text-steel-600 text-lg leading-relaxed mb-10 max-w-xl">
                 SurfaceAI conecta inteligencia artificial a sus tanques químicos
-                y cabinas de pintura en polvo —{" "}
+                y cabinas de pintura en polvo,{" "}
                 <strong className="text-navy-950">en tiempo real, dentro de su planta</strong>.
                 Cero defectos. Ahorro del{" "}
                 <strong className="text-emerald-600">15–20% en insumos</strong>.
@@ -251,7 +301,7 @@ export default function SurfaceAIPage() {
                   </svg>
                 ),
                 title: "Rechazo en el cliente, no en la línea",
-                desc: "Las fallas de adherencia, cráter o espesor insuficiente se detectan en el cliente final — o en la auditoría del OEM. El costo no es el polvo: es la pieza completa más la relación comercial.",
+                desc: "Las fallas de adherencia, cráter o espesor insuficiente se detectan en el cliente final, o en la auditoría del OEM. El costo no es el polvo: es la pieza completa más la relación comercial.",
               },
             ].map((item) => (
               <div
@@ -405,9 +455,9 @@ export default function SurfaceAIPage() {
               <p className="text-steel-600 text-base leading-relaxed mb-6">
                 SurfaceAI corre en un servidor industrial dentro de su planta.
                 Los parámetros de titulación, los perfiles de curado y las
-                configuraciones electrostáticas —{" "}
-                <strong className="text-navy-950">su "know-how" acumulado en años</strong>{" "}
-                — nunca salen de su red local.
+                configuraciones electrostáticas.{" "}
+                <strong className="text-navy-950">Su "know-how" acumulado en años</strong>{" "}
+                nunca sale de su red local.
               </p>
               <p className="text-steel-500 text-sm leading-relaxed mb-8">
                 No dependemos de conexión a internet para operar. No hay

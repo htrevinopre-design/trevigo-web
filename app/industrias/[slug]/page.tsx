@@ -4,6 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import FAQAccordion from "@/components/FAQAccordion";
 import { COMPANY, INDUSTRIES, PRODUCT_CATEGORIES, SERVICES_METALES, SERVICES_AGUAS } from "@/lib/data";
+import { getCasesByIndustrySlug } from "@/lib/cases";
 
 interface Props {
   params: { slug: string };
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const industry = INDUSTRIES.find((i) => i.slug === params.slug);
   if (!industry) return {};
   return {
-    title: `Químicos para la Industria ${industry.name} en México — Industrias Trevigo`,
+    title: `Químicos para ${industry.name}`,
     description: industry.description,
     alternates: { canonical: `${COMPANY.url}/industrias/${industry.slug}` },
   };
@@ -69,9 +70,23 @@ export default function IndustriaPage({ params }: Props) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: `Químicos para la Industria ${industry.name} — Industrias Trevigo`,
+            name: `Químicos para la Industria ${industry.name} | Industrias Trevigo`,
             description: industry.description,
             url: `${COMPANY.url}/industrias/${industry.slug}`,
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: COMPANY.url },
+              { "@type": "ListItem", position: 2, name: "Industrias", item: `${COMPANY.url}/industrias` },
+              { "@type": "ListItem", position: 3, name: industry.name, item: `${COMPANY.url}/industrias/${industry.slug}` },
+            ],
           }),
         }}
       />
@@ -261,11 +276,58 @@ export default function IndustriaPage({ params }: Props) {
         </section>
       )}
 
+      {/* RELATED CASE STUDIES */}
+      {(() => {
+        const relatedCases = getCasesByIndustrySlug(industry.slug);
+        if (relatedCases.length === 0) return null;
+        return (
+          <section className="bg-white py-14 border-y border-steel-200">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+              <p className="text-orange-500 text-xs font-black uppercase tracking-[0.2em] mb-2">
+                Casos de éxito
+              </p>
+              <h2 className="text-2xl sm:text-3xl font-black text-steel-900 uppercase mb-2">
+                Proyectos en plantas {industry.name.toLowerCase()}
+              </h2>
+              <div className="w-12 h-1 bg-orange-500 mb-8" />
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                {relatedCases.map((c) => (
+                  <Link
+                    key={c.id}
+                    href="/casos-de-exito"
+                    className="bg-steel-50 border border-steel-200 rounded-xl p-6 hover:bg-white hover:border-orange-300 hover:shadow-md transition-all group"
+                  >
+                    <p className="text-navy-500 text-[10px] font-black uppercase tracking-widest mb-2">
+                      {c.serviceArea} · {c.location}
+                    </p>
+                    <h3 className="text-steel-900 font-black text-base uppercase leading-tight mb-3 group-hover:text-orange-600 transition-colors">
+                      {c.industry}
+                    </h3>
+                    <p className="text-steel-600 text-sm leading-relaxed mb-3 line-clamp-3">
+                      {c.challenge}
+                    </p>
+                    {c.results[0] && (
+                      <p className="text-green-700 text-xs font-bold flex items-center gap-1.5">
+                        <span className="text-green-600">✓</span>
+                        {c.results[0]}
+                      </p>
+                    )}
+                    <span className="inline-block mt-3 text-orange-500 text-xs font-black uppercase tracking-wide">
+                      Ver detalle del caso →
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* FAQ */}
       {industry.faqs.length > 0 && (
         <FAQAccordion
           faqs={industry.faqs}
-          title={`Preguntas frecuentes — Industria ${industry.name}`}
+          title={`Preguntas frecuentes: Industria ${industry.name}`}
         />
       )}
 

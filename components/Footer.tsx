@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { COMPANY } from "@/lib/data";
 
 export default function Footer() {
@@ -12,8 +13,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 bg-navy-500 rounded-lg flex items-center justify-center font-black text-white text-lg">
-                T
+              <div className="w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center">
+                <Image src="/logo.png" alt="Trevigo" width={40} height={40} className="object-contain" />
               </div>
               <div>
                 <div className="text-white font-black text-lg leading-tight">TREVIGO</div>

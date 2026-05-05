@@ -1,47 +1,20 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { COMPANY, STATS } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Nosotros — Quiénes somos y nuestra historia | Industrias Trevigo",
+  title: "Nosotros: Quiénes Somos y Nuestra Historia",
   description:
     "Industrias Trevigo: 35+ años fabricando y distribuyendo productos químicos industriales en Monterrey, Nuevo León. Conoce nuestra historia, valores y equipo técnico.",
   alternates: { canonical: `${COMPANY.url}/nosotros` },
 };
 
-function ImgPlaceholder({ label, className = "" }: { label: string; className?: string }) {
-  return (
-    <div
-      className={`bg-steel-100 border-2 border-dashed border-steel-300 rounded-2xl flex items-center justify-center ${className}`}
-    >
-      <div className="text-center p-6">
-        <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-steel-200 flex items-center justify-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 text-steel-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-            />
-          </svg>
-        </div>
-        <p className="text-steel-400 text-[11px] font-bold uppercase tracking-widest">{label}</p>
-      </div>
-    </div>
-  );
-}
-
 const TIMELINE = [
   {
     year: "1990",
     title: "Fundación",
-    desc: "Industrias Trevigo nació en Monterrey como distribuidor de productos químicos para la industria metalmecánica local. La industria automotriz y manufacturera del norte de México estaba en pleno auge post-TLCAN.",
+    desc: "Industrias Trevigo nació en Monterrey como distribuidor de productos químicos para la industria metalmecánica local. La industria automotriz y manufacturera de México estaba en pleno auge post-TLCAN.",
   },
   {
     year: "2002",
@@ -63,6 +36,60 @@ const TIMELINE = [
 export default function NosotrosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            name: "Nosotros: Quiénes Somos y Nuestra Historia",
+            description:
+              "Industrias Trevigo: 35+ años fabricando y distribuyendo productos químicos industriales en Monterrey.",
+            url: `${COMPANY.url}/nosotros`,
+            mainEntity: {
+              "@type": "Organization",
+              name: COMPANY.legalName,
+              alternateName: COMPANY.shortName,
+              url: COMPANY.url,
+              logo: `${COMPANY.url}/logo.png`,
+              foundingDate: "1990",
+              foundingLocation: {
+                "@type": "Place",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: COMPANY.address.city,
+                  addressRegion: COMPANY.address.state,
+                  addressCountry: "MX",
+                },
+              },
+              description:
+                "Fabricantes y distribuidores de productos químicos para tratamiento de metales, limpieza industrial y tratamiento de aguas residuales. 35+ años de experiencia en México.",
+              numberOfEmployees: { "@type": "QuantitativeValue", minValue: 50 },
+              areaServed: { "@type": "Country", name: "México" },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: COMPANY.phone,
+                contactType: "sales",
+                areaServed: "MX",
+                availableLanguage: ["Spanish", "English"],
+              },
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: COMPANY.url },
+              { "@type": "ListItem", position: 2, name: "Nosotros", item: `${COMPANY.url}/nosotros` },
+            ],
+          }),
+        }}
+      />
       {/* ─── HERO ────────────────────────────────────────────────── */}
       <section className="bg-navy-950 pt-[100px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
@@ -79,7 +106,7 @@ export default function NosotrosPage() {
               <div className="w-16 h-1 bg-orange-500 mb-7" />
               <p className="text-steel-300 text-lg leading-relaxed max-w-lg">
                 Fundada en San Nicolás de los Garza, fabricamos y distribuimos
-                productos químicos industriales con soporte técnico real — no
+                productos químicos industriales con soporte técnico real: no
                 solo vendemos, acompañamos el proceso.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-10">
@@ -97,10 +124,17 @@ export default function NosotrosPage() {
                 </Link>
               </div>
             </div>
-            <ImgPlaceholder
-              label="Foto: Instalaciones / Planta Trevigo"
-              className="aspect-[4/3] lg:aspect-square"
-            />
+
+            {/* Hero image */}
+            <div className="relative aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden">
+              <Image
+                src="/nosotros.png"
+                alt="Industrias Trevigo: equipo y planta"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
 
@@ -154,7 +188,7 @@ export default function NosotrosPage() {
             <div className="absolute left-14 top-14 bottom-14 w-px bg-steel-200 hidden sm:block" />
 
             <div className="space-y-0">
-              {TIMELINE.map((item, idx) => (
+              {TIMELINE.map((item) => (
                 <div key={item.year} className="relative flex gap-10 sm:gap-14 pb-14 last:pb-0">
                   {/* Year bubble */}
                   <div className="relative z-10 shrink-0">
@@ -165,7 +199,7 @@ export default function NosotrosPage() {
                     </div>
                   </div>
                   {/* Content */}
-                  <div className="flex-1 pt-4 border-l-0">
+                  <div className="flex-1 pt-4">
                     <h3 className="text-steel-900 font-black text-xl uppercase mb-3 leading-tight">
                       {item.title}
                     </h3>
@@ -177,11 +211,6 @@ export default function NosotrosPage() {
               ))}
             </div>
           </div>
-
-          <ImgPlaceholder
-            label="Foto: Historia / equipo o proceso Trevigo"
-            className="mt-16 aspect-[21/9]"
-          />
         </div>
       </section>
 
@@ -204,10 +233,14 @@ export default function NosotrosPage() {
                 compromiso real con el cliente.
               </p>
             </div>
-            <ImgPlaceholder
-              label="Foto: Laboratorio / control de calidad"
-              className="aspect-[4/3]"
-            />
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/quimica.png"
+                alt="Laboratorio de química industrial Trevigo"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
 
           {/* Values cards */}
@@ -246,95 +279,6 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      {/* ─── EQUIPO ───────────────────────────────────────────────── */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-16">
-            <p className="text-navy-500 text-xs font-black uppercase tracking-[0.2em] mb-3">
-              Nuestro equipo
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-black text-steel-900 uppercase leading-tight mb-4">
-              Las personas detrás del producto
-            </h2>
-            <div className="w-12 h-1 bg-orange-500 mb-6" />
-            <p className="text-steel-500 text-base leading-relaxed">
-              Nuestro equipo técnico suma décadas de experiencia en la industria
-              química, metalmecánica y de tratamiento de aguas en México.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              {
-                role: "Dirección General",
-                expertise: "Ingeniería Química · 30+ años en la industria",
-                desc: "Fundador de Trevigo. Experto en formulación de químicos para tratamiento de metales y gestión de procesos industriales.",
-              },
-              {
-                role: "Gerente Técnico de Ventas",
-                expertise: "Ingeniero Químico · Especialista en superficies",
-                desc: "Responsable de diagnóstico de procesos, visitas técnicas y desarrollo de soluciones a medida para clientes industriales.",
-              },
-              {
-                role: "Área de Calidad",
-                expertise: "Control de calidad y certificaciones",
-                desc: "Garantiza que cada lote cumpla con las especificaciones técnicas y genera la documentación requerida (TDS, SDS, COA).",
-              },
-            ].map((member) => (
-              <div key={member.role}>
-                <ImgPlaceholder
-                  label={`Foto: ${member.role}`}
-                  className="aspect-[3/4] mb-5"
-                />
-                <h3 className="text-steel-900 font-black text-base uppercase mb-1">
-                  {member.role}
-                </h3>
-                <p className="text-orange-500 text-xs font-black uppercase tracking-wide mb-3">
-                  {member.expertise}
-                </p>
-                <p className="text-steel-500 text-sm leading-relaxed">{member.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <ImgPlaceholder
-            label="Foto: Equipo completo Trevigo"
-            className="mt-16 aspect-[21/9]"
-          />
-        </div>
-      </section>
-
-      {/* ─── INSTALACIONES ────────────────────────────────────────── */}
-      <section className="py-24 bg-navy-950">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-14">
-            <p className="text-orange-400 text-xs font-black uppercase tracking-[0.2em] mb-3">
-              Nuestras instalaciones
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-black text-white uppercase leading-tight mb-4">
-              Planta y laboratorio en San Nicolás
-            </h2>
-            <div className="w-12 h-1 bg-orange-500 mb-6" />
-            <p className="text-steel-400 text-base leading-relaxed">
-              Contamos con planta de producción, laboratorio de control de calidad
-              y almacén en San Nicolás de los Garza — a minutos de las principales
-              zonas industriales del Área Metropolitana de Monterrey.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            <ImgPlaceholder
-              label="Foto: Planta de producción"
-              className="col-span-2 lg:col-span-1 aspect-square"
-            />
-            <ImgPlaceholder label="Foto: Laboratorio" className="aspect-video" />
-            <ImgPlaceholder label="Foto: Almacén / producto terminado" className="aspect-video" />
-            <ImgPlaceholder label="Foto: Proceso de formulación" className="aspect-video" />
-            <ImgPlaceholder label="Foto: Control de calidad" className="aspect-video" />
-          </div>
-        </div>
-      </section>
-
       {/* ─── UBICACIÓN ───────────────────────────────────────────── */}
       <section className="py-24 bg-steel-50 border-y border-steel-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -348,7 +292,7 @@ export default function NosotrosPage() {
               </h2>
               <div className="w-12 h-1 bg-orange-500 mb-7" />
               <p className="text-steel-500 text-base leading-relaxed mb-8">
-                Nuestras instalaciones están en San Nicolás de los Garza — Área
+                Nuestras instalaciones están en San Nicolás de los Garza, en el Área
                 Metropolitana de Monterrey, el centro industrial más importante
                 del norte de México. Desde aquí atendemos clientes en todo Nuevo
                 León y en las principales ciudades industriales del país.
@@ -379,41 +323,19 @@ export default function NosotrosPage() {
               </a>
             </div>
 
-            {/* Map card */}
+            {/* Interactive map */}
             <div className="bg-white border border-steel-200 rounded-2xl overflow-hidden shadow-sm">
-              <div className="aspect-[4/3] bg-steel-100 border-b border-steel-200 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-steel-200 flex items-center justify-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 text-steel-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-steel-400 text-[11px] font-bold uppercase tracking-widest">
-                    Mapa interactivo
-                  </p>
-                  <p className="text-steel-400 text-xs mt-1 leading-relaxed">
-                    {COMPANY.address.street}
-                    <br />
-                    {COMPANY.address.city}, {COMPANY.address.state}
-                  </p>
-                </div>
+              <div className="rounded-xl overflow-hidden h-80 w-full">
+                <iframe
+                  src="https://www.google.com/maps?q=Puerto+Tampico+325,+La+Fe,+66477+San+Nicolás+de+los+Garza,+Nuevo+León,+México&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ubicación Industrias Trevigo"
+                />
               </div>
               <div className="p-5">
                 <p className="text-steel-900 font-black text-sm uppercase mb-1">

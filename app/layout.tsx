@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -8,26 +9,37 @@ import { COMPANY } from "@/lib/data";
 export const metadata: Metadata = {
   metadataBase: new URL(COMPANY.url),
   title: {
-    default: `${COMPANY.name} — Químicos Industriales & Tratamiento de Metales | Monterrey, México`,
-    template: `%s | ${COMPANY.shortName} — Químicos Industriales`,
+    default: `${COMPANY.name} | Químicos Industriales en Monterrey`,
+    template: `%s | ${COMPANY.shortName}`,
   },
   description:
     "Industrias Trevigo: fabricantes y distribuidores de productos químicos para tratamiento de metales, limpieza industrial y tratamiento de aguas residuales en Monterrey, N.L. Más de 35 años de experiencia. Fosfatos, desoxidantes, coagulantes, floculantes y más.",
   keywords: [
     "químicos industriales Monterrey",
+    "productos químicos Monterrey",
     "tratamiento de metales México",
     "fosfatado industrial",
+    "fosfatizado industrial Monterrey",
     "desoxidantes industriales",
+    "acido fosforico desoxidante",
     "coagulantes floculantes",
     "tratamiento aguas residuales industriales",
-    "inhibidores corrosion",
+    "inhibidores de corrosion",
     "removedor pintura industrial",
     "tropicalizado galvanizado Monterrey",
+    "pasivado industrial",
+    "decapado industrial",
+    "limpieza industrial Monterrey",
     "industrias trevigo",
+    "trevigo quimicos",
+    "proveedor quimicos Nuevo León",
   ],
   authors: [{ name: COMPANY.name, url: COMPANY.url }],
   creator: COMPANY.name,
   publisher: COMPANY.name,
+  verification: {
+    google: "wip5Qc-dhzHnKzsq3KvCnm0kOUJ1hTlCkJgq9kucNLU",
+  },
   robots: {
     index: true,
     follow: true,
@@ -44,7 +56,7 @@ export const metadata: Metadata = {
     locale: "es_MX",
     url: COMPANY.url,
     siteName: COMPANY.name,
-    title: `${COMPANY.name} — Químicos Industriales & Tratamiento de Metales`,
+    title: `${COMPANY.name} | Químicos Industriales & Tratamiento de Metales`,
     description:
       "Más de 35 años fabricando y distribuyendo productos químicos para la industria mexicana. Fosfatos, coagulantes, inhibidores de corrosión y servicios de superficie en Monterrey, N.L.",
     images: [
@@ -52,13 +64,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Industrias Trevigo — Químicos Industriales Monterrey",
+        alt: "Industrias Trevigo | Químicos Industriales Monterrey",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${COMPANY.name} — Químicos Industriales`,
+    title: `${COMPANY.name} | Químicos Industriales`,
     description:
       "35+ años fabricando productos químicos para la industria mexicana. Monterrey, N.L.",
     images: ["/og-image.jpg"],
@@ -146,6 +158,20 @@ export default function RootLayout({
 
         {/* ── Smart chat widget (replaces static WhatsApp button) ── */}
         <SmartChatWidget />
+
+        {/* ── Google Analytics ── */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-WJ848EVPGN"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WJ848EVPGN');
+          `}
+        </Script>
       </body>
     </html>
   );

@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { COMPANY } from "@/lib/data";
 
+type Status = "idle" | "loading" | "success" | "error";
+
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
     nombre: "",
@@ -14,11 +16,34 @@ export default function ContactoPage() {
     asunto: "",
     mensaje: "",
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus("loading");
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tipo: "contacto", ...formData }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Error al enviar");
+      }
+
+      setStatus("success");
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+      setErrorMsg(
+        err instanceof Error ? err.message : "Ocurrió un error. Intenta de nuevo."
+      );
+    }
   };
 
   const handleChange = (
@@ -29,6 +54,66 @@ export default function ContactoPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: "Contacto: Cotización y Asesoría Técnica",
+            description:
+              "Contacta a Industrias Trevigo para cotización de químicos industriales y asesoría técnica.",
+            url: `${COMPANY.url}/contacto`,
+            mainEntity: {
+              "@type": "LocalBusiness",
+              "@id": `${COMPANY.url}#localbusiness`,
+              name: COMPANY.legalName,
+              url: COMPANY.url,
+              telephone: COMPANY.phone,
+              email: COMPANY.email,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: COMPANY.address.street,
+                addressLocality: COMPANY.address.city,
+                addressRegion: COMPANY.address.state,
+                postalCode: COMPANY.address.zip,
+                addressCountry: "MX",
+              },
+              areaServed: { "@type": "Country", name: "México" },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  opens: "08:00",
+                  closes: "18:00",
+                },
+              ],
+              contactPoint: [
+                {
+                  "@type": "ContactPoint",
+                  telephone: COMPANY.phone,
+                  contactType: "sales",
+                  areaServed: "MX",
+                  availableLanguage: ["Spanish", "English"],
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: COMPANY.url },
+              { "@type": "ListItem", position: 2, name: "Contacto", item: `${COMPANY.url}/contacto` },
+            ],
+          }),
+        }}
+      />
       {/* ─── HERO ────────────────────────────────────────────────── */}
       <section className="bg-navy-950 pt-[100px]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -102,11 +187,11 @@ export default function ContactoPage() {
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-steel-500">Lun – Vie</span>
-                    <span className="text-steel-800 font-semibold">8:00 — 18:00</span>
+                    <span className="text-steel-800 font-semibold">8:00 a 18:00</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-steel-500">Sábados</span>
-                    <span className="text-steel-800 font-semibold">9:00 — 13:00</span>
+                    <span className="text-steel-800 font-semibold">9:00 a 13:00</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-steel-500">Domingos</span>
@@ -138,21 +223,26 @@ export default function ContactoPage() {
 
             {/* Form */}
             <div className="lg:col-span-2">
-              {submitted ? (
+              {status === "success" ? (
                 <div className="bg-white border border-steel-200 rounded-xl p-12 text-center flex flex-col items-center justify-center min-h-[400px]">
-                  <div className="w-16 h-16 bg-navy-50 border-2 border-navy-200 rounded-full flex items-center justify-center mx-auto mb-5">
-                    <svg className="w-8 h-8 text-navy-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-16 h-16 bg-emerald-50 border-2 border-emerald-200 rounded-full flex items-center justify-center mx-auto mb-5">
+                    <svg className="w-8 h-8 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h2 className="text-2xl font-black text-steel-900 uppercase mb-3">¡Mensaje recibido!</h2>
+                  <h2 className="text-2xl font-black text-steel-900 uppercase mb-3">¡Mensaje enviado!</h2>
                   <p className="text-steel-500 text-sm mb-6 max-w-md">
-                    Gracias por contactarnos. Un ingeniero de Trevigo revisará tu solicitud y te responderá en menos de 24 horas hábiles.
+                    Tu solicitud llegó a nuestro equipo. Un ingeniero de Trevigo te responderá en menos de 24 horas hábiles.
                   </p>
-                  <Link href="/"
-                    className="inline-flex items-center gap-2 bg-navy-500 hover:bg-navy-600 text-white px-8 py-3 font-black text-sm uppercase tracking-wide transition-colors">
-                    Volver al inicio
-                  </Link>
+                  <button
+                    onClick={() => {
+                      setStatus("idle");
+                      setFormData({ nombre: "", empresa: "", email: "", telefono: "", industria: "", asunto: "", mensaje: "" });
+                    }}
+                    className="inline-flex items-center gap-2 bg-navy-500 hover:bg-navy-600 text-white px-8 py-3 font-black text-sm uppercase tracking-wide transition-colors"
+                  >
+                    Enviar otra consulta
+                  </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="bg-white border border-steel-200 rounded-xl p-8 space-y-5">
@@ -257,10 +347,36 @@ export default function ContactoPage() {
                     />
                   </div>
 
+                  {/* Error message */}
+                  {status === "error" && (
+                    <div className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-lg px-4 py-3">
+                      <svg className="w-4 h-4 text-red-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <p className="text-red-700 text-sm">
+                        {errorMsg || "No se pudo enviar el mensaje. Por favor intenta de nuevo o escríbenos directamente a"}{" "}
+                        <a href={`mailto:${COMPANY.email}`} className="font-bold underline">{COMPANY.email}</a>
+                      </p>
+                    </div>
+                  )}
+
                   <div className="flex flex-col sm:flex-row items-center gap-4 pt-1">
-                    <button type="submit"
-                      className="w-full sm:w-auto px-10 py-3.5 bg-navy-500 hover:bg-navy-600 text-white font-black text-sm uppercase tracking-wide transition-colors">
-                      Enviar solicitud →
+                    <button
+                      type="submit"
+                      disabled={status === "loading"}
+                      className="w-full sm:w-auto px-10 py-3.5 bg-navy-500 hover:bg-navy-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-black text-sm uppercase tracking-wide transition-colors flex items-center justify-center gap-2"
+                    >
+                      {status === "loading" ? (
+                        <>
+                          <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                          </svg>
+                          Enviando…
+                        </>
+                      ) : (
+                        "Enviar solicitud →"
+                      )}
                     </button>
                     <p className="text-steel-400 text-xs text-center sm:text-left">
                       Al enviar aceptas nuestra{" "}

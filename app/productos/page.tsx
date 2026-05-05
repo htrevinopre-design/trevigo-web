@@ -4,7 +4,7 @@ import Link from "next/link";
 import { COMPANY, PRODUCT_CATEGORIES } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Catálogo de Productos Químicos Industriales | Trevigo — Monterrey",
+  title: "Catálogo de Productos Químicos Industriales",
   description:
     "Catálogo completo de químicos industriales Trevigo: limpiadores, desoxidantes, fosfatos, coagulantes, floculantes, lubricantes y materias primas. Entrega en 48h en Monterrey.",
   alternates: { canonical: `${COMPANY.url}/productos` },
@@ -61,6 +61,37 @@ const CATEGORY_THEME: Record<string, {
 export default function ProductosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Catálogo de Productos Químicos Industriales",
+            description:
+              "Catálogo completo de químicos industriales: limpiadores, desoxidantes, fosfatos, coagulantes, floculantes, lubricantes y materias primas.",
+            url: `${COMPANY.url}/productos`,
+            isPartOf: { "@type": "WebSite", name: COMPANY.legalName, url: COMPANY.url },
+            about: PRODUCT_CATEGORIES.map((cat) => ({
+              "@type": "Thing",
+              name: cat.name,
+            })),
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Inicio", item: COMPANY.url },
+              { "@type": "ListItem", position: 2, name: "Productos", item: `${COMPANY.url}/productos` },
+            ],
+          }),
+        }}
+      />
       {/* ─── HERO ─────────────────────────────────────────────── */}
       <section className="bg-navy-950 pt-[100px]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -119,7 +150,7 @@ export default function ProductosPage() {
             {cat.subcategories.map((sub) => {
               const theme = CATEGORY_THEME[cat.id] ?? CATEGORY_THEME["tratamiento-metales"];
               return (
-              <div key={sub.id} className="mb-14 last:mb-0">
+              <div key={sub.id} id={sub.id} className="mb-14 last:mb-0">
                 {/* Subcategory banner */}
                 <div className={`flex items-center gap-4 mb-7 pl-4 pr-5 py-3 rounded-r-xl border-l-4 ${theme.subBanner}`}>
                   <h3 className={`text-base font-black uppercase tracking-widest leading-none ${theme.subText}`}>
@@ -199,7 +230,7 @@ export default function ProductosPage() {
             ¿No encontraste lo que buscas?
           </h2>
           <p className="text-navy-100 text-base mb-8">
-            Nuestro catálogo es amplio y en constante actualización. Contáctanos — un asesor técnico te ayudará a encontrar el producto adecuado para tu proceso.
+            Nuestro catálogo es amplio y en constante actualización. Contáctanos: un asesor técnico te ayudará a encontrar el producto adecuado para tu proceso.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contacto"
