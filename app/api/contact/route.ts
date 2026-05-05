@@ -1,7 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = "force-dynamic";
+
+function getResend() {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) throw new Error("RESEND_API_KEY is not set");
+  return new Resend(key);
+}
 
 const FROM =
   process.env.RESEND_FROM_EMAIL ?? "Industrias Trevigo <noreply@trevigo.com.mx>";
@@ -142,7 +148,7 @@ export async function POST(req: NextRequest) {
 
     const replyTo = body.email || body.correo;
 
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await getResend().emails.send({
       from: FROM,
       to: TO,
       ...(replyTo ? { replyTo } : {}),
