@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { COMPANY, PRODUCT_CATEGORIES, SERVICES, INDUSTRIES } from "@/lib/data";
+import { COMPANY, PRODUCT_CATEGORIES, INDUSTRIES } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = COMPANY.url;
@@ -47,23 +47,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // Service pages (anchor links — still listed for reference)
-  const servicePages: MetadataRoute.Sitemap = SERVICES.map((svc) => ({
-    url: `${baseUrl}/servicios#${svc.id}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
-
-  // Product category anchors
+  // Individual product detail pages (real URLs, not anchors)
   const productPages: MetadataRoute.Sitemap = PRODUCT_CATEGORIES.flatMap((cat) =>
-    cat.products.map((product) => ({
-      url: `${baseUrl}/productos#${product.id}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.75,
-    }))
+    cat.subcategories.flatMap((sub) =>
+      sub.products.map((product) => ({
+        url: `${baseUrl}/productos/${product.id}`,
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.8,
+      }))
+    )
   );
 
-  return [...staticPages, ...industryPages, ...servicePages, ...productPages];
+  return [...staticPages, ...industryPages, ...productPages];
 }
