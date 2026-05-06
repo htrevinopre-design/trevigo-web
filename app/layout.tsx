@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SmartChatWidget from "@/components/SmartChatWidget";
+import CookieBanner from "@/components/CookieBanner";
 import { COMPANY } from "@/lib/data";
 
 export const metadata: Metadata = {
@@ -158,6 +159,9 @@ export default function RootLayout({
 
         {/* ── Smart chat widget (replaces static WhatsApp button) ── */}
         <SmartChatWidget />
+
+        {/* ── Cookie consent banner ── */}
+        <CookieBanner />
 
         {/* ── Google Analytics ── */}
         <Script
