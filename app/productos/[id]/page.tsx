@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { COMPANY, PRODUCT_CATEGORIES, INDUSTRIES } from "@/lib/data";
 import { ARTICLES } from "@/lib/articles";
+import { PRODUCT_CONTENT } from "@/lib/products-content";
 import ProductCotizaForm from "@/components/ProductCotizaForm";
 
 const allProducts = PRODUCT_CATEGORIES.flatMap((cat) =>
@@ -50,6 +51,9 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
   const relatedArticles = ARTICLES.filter((a) =>
     a.relatedProducts?.includes(product.id)
   ).slice(0, 3);
+
+  // Contenido técnico único por producto (descripción + aplicaciones + nota)
+  const content = PRODUCT_CONTENT[product.id];
 
   // Use the largest format image as the "hero" product image
   const heroFormat =
@@ -277,6 +281,69 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
           </div>
         </div>
       </section>
+
+      {/* ─── APLICACIONES Y CONSIDERACIONES TÉCNICAS ─────────────── */}
+      {content && (
+        <section className="bg-white py-14 border-b border-steel-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="bg-navy-500 w-1 h-8 rounded-full shrink-0" />
+              <div>
+                <p className="text-navy-500 text-[10px] font-black uppercase tracking-widest mb-0.5">
+                  Información técnica
+                </p>
+                <h2 className="text-lg sm:text-xl font-black text-steel-900 uppercase">
+                  Aplicaciones y consideraciones técnicas
+                </h2>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* ── Descripción técnica extendida ── */}
+              <div className="lg:col-span-2 bg-steel-50 border border-steel-200 rounded-xl p-7">
+                <p className="text-steel-700 text-sm sm:text-base leading-relaxed">
+                  {content.description}
+                </p>
+              </div>
+
+              {/* ── Aplicaciones + Nota técnica ── */}
+              <div className="space-y-4">
+                <div className="bg-navy-50 border border-navy-100 rounded-xl p-6">
+                  <h3 className="text-navy-800 font-black text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <span className="text-orange-500">▸</span>
+                    Aplicaciones típicas
+                  </h3>
+                  <ul className="space-y-2">
+                    {content.applications.map((app, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-2 text-xs text-navy-700 leading-relaxed"
+                      >
+                        <span className="text-orange-500 font-black mt-0.5 shrink-0">
+                          ✓
+                        </span>
+                        <span>{app}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {content.notes && (
+                  <div className="bg-orange-50 border border-orange-200 rounded-xl p-5">
+                    <h3 className="text-orange-800 font-black text-[10px] uppercase tracking-widest mb-2 flex items-center gap-2">
+                      <span>⚠</span>
+                      Consideración técnica
+                    </h3>
+                    <p className="text-orange-900 text-xs leading-relaxed">
+                      {content.notes}
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ─── TABS: Método de uso / Manipulación ─────────────────── */}
       <section className="bg-white border-y border-steel-200">
