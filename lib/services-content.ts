@@ -201,7 +201,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
   {
     slug: "decapado",
     title: "Servicio de Decapado: Remoción Química de Óxidos",
-    metaTitle: "Decapado Industrial de Metales",
+    metaTitle: "Servicio de Decapado de Metales en Monterrey",
     metaDescription:
       "Servicio técnico para procesos de decapado: ácidos formulados, asesoría de baño y optimización de tiempos en plantas metalmecánicas y de pretratamiento.",
     category: "metales",

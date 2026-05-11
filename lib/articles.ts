@@ -559,7 +559,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "decapado-metales-industrial",
     title: "Decapado industrial de metales: químicos, procesos y aplicaciones en manufactura",
-    metaTitle: "Decapado Industrial de Metales",
+    metaTitle: "Decapado Industrial de Metales: Guía Técnica",
     metaDescription:
       "Guía técnica del decapado industrial: ácidos, procesos y aplicaciones en acero, aluminio y acero inoxidable. Productos químicos y servicio en Monterrey.",
     excerpt:
