@@ -653,6 +653,129 @@ export const ARTICLES: Article[] = [
         "Distribuimos ácidos técnicos y mezclas formuladas para decapado industrial. Asesoría técnica gratuita para optimizar tu proceso.",
     },
   },
+
+  // ─────────────────────────────────────────────────────────────────
+  // 7. DESPINTADO INDUSTRIAL (keyword: "despintado monterrey" — 240 visitas)
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: "despintado-industrial",
+    title: "Despintado industrial de metales: métodos, químicos y servicio en Monterrey",
+    metaTitle: "Despintado Industrial de Metales en Monterrey",
+    metaDescription:
+      "Guía técnica del despintado industrial: métodos químicos, alcalinos y por pirólisis para remover pintura de piezas metálicas. Productos y asesoría en Monterrey.",
+    excerpt:
+      "El despintado industrial es la clave para recuperar piezas rechazadas, reprocesar recubrimientos fallados o renovar flota industrial. Conoce los métodos, los químicos correctos y cómo elegir el sistema para tu proceso en Monterrey.",
+    category: "Tratamiento de Metales",
+    readingTime: "7 min",
+    publishedAt: "2026-05-11",
+    updatedAt: "2026-05-11",
+    keywords: [
+      "despintado monterrey",
+      "despintado industrial",
+      "despintado de piezas metalicas",
+      "stripping pintura industrial",
+      "remover pintura metal",
+      "despintado quimico",
+      "despintado alcalino",
+      "recuperar piezas rechazadas pintura",
+    ],
+    intro:
+      "En toda línea de pintura industrial hay un porcentaje de piezas rechazadas: pintura fuera de espesor, mala adherencia, contaminación en la cabina, corridas o defectos de aspersión. La única forma correcta de recuperar esas piezas es el despintado industrial: la remoción completa de la capa de pintura, primer o polvo para reprocesarla desde cero. Esta guía explica los tres métodos principales de despintado, qué químicos se usan en cada caso y cómo elegir el sistema correcto para tu tipo de pieza y recubrimiento.",
+    sections: [
+      {
+        heading: "¿Qué es el despintado industrial y cuándo se necesita?",
+        paragraphs: [
+          "El despintado industrial es el proceso de remoción de capas de pintura, primer, powder coating, e-coat o barniz sobre piezas metálicas. Se aplica en cuatro escenarios principales: piezas rechazadas en control de calidad que no cumplen especificaciones de espesor o adhesión; piezas que llegarán al final de su vida útil y se quiere recuperar el metal base; renovación de flota o maquinaria industrial con recubrimientos desgastados; y reproceso de piezas con defectos cosméticos antes de repintar.",
+          "En Monterrey y el Área Metropolitana, la demanda de despintado industrial proviene principalmente de plantas de manufactura automotriz y proveedores Tier 1-2, fabricantes de electrodomésticos, maquiladoras con rechazo de línea de pintura y talleres de mantenimiento industrial. La decisión clave es el método: no toda pieza puede despintarse con cualquier proceso.",
+        ],
+      },
+      {
+        heading: "Método 1: Despintado químico alcalino",
+        paragraphs: [
+          "El despintado químico alcalino es el método más usado en plantas mexicanas. Consiste en sumergir las piezas en un baño de solución alcalina concentrada (sosa cáustica, hidróxido de potasio o formulaciones especializadas con aminas) que ataca la película de pintura y la separa del sustrato metálico.",
+          "Las condiciones típicas de operación son temperatura de 60 a 90°C, concentración de sosa cáustica al 5 al 15% según la pintura, y tiempos de inmersión de 20 a 90 minutos para pinturas en base acuosa o polvo de baja resistencia. Para pinturas de alta resistencia química como e-coat catódico (CED), epóxico de alta densidad o poliuretano bicomponente, se requieren formulaciones con acelerantes orgánicos (monoetanolamina, benzilamina) o mezclas con solventes polares.",
+          "La ventaja principal del despintado alcalino es que no daña el metal base ni afecta tolerancias dimensionales, lo que lo hace ideal para piezas con geometría compleja y cavidades interiores. El residuo generado es un lodo con pigmentos metálicos que debe disponerse como residuo peligroso según NOM-052-SEMARNAT-2005.",
+        ],
+      },
+      {
+        heading: "Método 2: Despintado pirolítico (por horno)",
+        paragraphs: [
+          "El despintado pirolítico usa un horno a alta temperatura (350 a 550°C) para carbonizar la película de pintura y convertirla en ceniza que luego se remueve con agua o granallado. Es el método más eficiente para volúmenes altos y piezas de acero estructural robusto.",
+          "Sus principales ventajas son la capacidad de procesar grandes volúmenes sin químicos líquidos y la eliminación total de cualquier recubrimiento, incluyendo los más resistentes. Sin embargo, tiene limitaciones importantes: no es apto para piezas con tolerancias estrechas porque el calor puede generar distorsiones, no puede usarse en piezas con insertos de zinc, aluminio o plástico, y requiere inversión en equipo especializado. Muy pocas plantas en Monterrey cuentan con este método internamente.",
+        ],
+      },
+      {
+        heading: "Método 3: Despintado mecánico (granallado)",
+        paragraphs: [
+          "El despintado mecánico por granalla metálica proyecta partículas de acero a alta velocidad sobre la pieza para arrancar mecánicamente la pintura. Es el método más agresivo y el más rápido para piezas de acero al carbón de gran tamaño y geometría simple.",
+          "La desventaja es que elimina el perfil superficial del metal base y puede crear microfisuras en piezas delgadas o de geometría compleja. Después del granallado siempre se necesita una nueva preparación de superficie completa: limpieza, fosfatizado y pasivado antes de repintar. Para piezas pequeñas o de geometría compleja, el granallado no llega a interiores y cavidades, por lo que se combina con despintado químico.",
+        ],
+      },
+      {
+        heading: "Cómo elegir el método correcto según el recubrimiento",
+        paragraphs: [
+          "La selección del método depende del tipo de recubrimiento, el metal base, la geometría de la pieza y el volumen a procesar. Esta es la guía general que usamos en Trevigo al asesorar a nuestros clientes:",
+        ],
+        list: {
+          items: [
+            "Pintura en polvo (powder coating) sobre acero: despintado alcalino con sosa + acelerante a 70-80°C. Tiempo 30-60 min. Opción más económica.",
+            "E-coat catódico (CED): requiere formulación alcalina especializada con aminas. Sosa sola no es suficiente. Tiempo 60-90 min a 80-90°C.",
+            "Pintura líquida epóxica o poliuretano: despintado alcalino con formulación con solvente polar, o despintado pirolítico para volúmenes altos.",
+            "Piezas grandes de acero estructural: granallado + limpieza química posterior.",
+            "Piezas con aluminio, zinc o insertos plásticos: solo despintado alcalino a temperatura controlada (<65°C) para no atacar el aluminio.",
+            "Piezas de precisión con tolerancias estrechas: solo despintado químico, nunca granallado ni pirolítico.",
+          ],
+        },
+      },
+      {
+        heading: "Proceso completo: de la pieza rechazada al reproceso",
+        paragraphs: [
+          "Un ciclo completo de despintado y reproceso en planta incluye las siguientes etapas: recepción e identificación de piezas rechazadas, inspección del tipo de recubrimiento y estado del metal base, selección del método y configuración del baño, despintado y enjuague abundante, inspección visual del sustrato (no debe haber residuo de pintura, manchas ni ataque al metal), preparación de superficie para reproceso (limpieza, fosfatizado, pasivado), y finalmente reentrada a la línea de pintura.",
+          "El enjuague después del despintado es tan crítico como el proceso mismo. Residuos alcalinos en la superficie interfieren con el fosfatizado y la adherencia de la nueva pintura. Se recomienda enjuague en dos etapas: agua limpia y enjuague con agua ligeramente acidulada (ácido fosfórico al 0.5%) para neutralizar residuos alcalinos.",
+        ],
+      },
+      {
+        heading: "Despintado industrial en Monterrey: qué buscar en un proveedor",
+        paragraphs: [
+          "Si tu planta en el Área Metropolitana de Monterrey o en Nuevo León requiere químicos para despintado, los criterios clave son: disponibilidad de formulaciones específicas para el tipo de recubrimiento que manejas (polvo, e-coat, líquida), asesoría técnica en configuración del baño (temperatura, concentración, tiempo), entrega en presentaciones adecuadas al volumen de producción (tambor, IBC o granel), y disponibilidad de SDS y COA por lote.",
+          "Industrias Trevigo distribuye desde San Nicolás de los Garza formulaciones alcalinas especializadas para despintado de powder coating, e-coat y pinturas líquidas de alta resistencia, así como los ácidos de enjuague y los químicos de reproceso (fosfatizado, pasivado) que necesitas después. Podemos visitar tu planta sin costo para evaluar tu proceso de despintado actual y recomendar mejoras.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Qué químico se usa para despintar powder coating?",
+        a: "Para powder coating sobre acero se usa típicamente una solución de hidróxido de sodio (sosa cáustica) al 8-15% con acelerantes orgánicos (monoetanolamina o dietilenglicol), operada a 70-80°C. El tiempo de inmersión varía de 20 a 60 minutos según el espesor y tipo de polvo. Algunos polvos de alta resistencia química requieren formulaciones especializadas con solventes polares añadidos.",
+      },
+      {
+        q: "¿El despintado alcalino daña las piezas metálicas?",
+        a: "Un despintado alcalino bien controlado no daña el acero al carbón ni el acero inoxidable. Sin embargo, puede atacar el aluminio si la temperatura supera 65°C o la concentración de sosa es muy alta, y puede dañar piezas de zinc galvanizado si el tiempo de inmersión es excesivo. Para sustratos sensibles se usan formulaciones de pH más bajo o tiempos controlados.",
+      },
+      {
+        q: "¿Cuánto tiempo toma despintar una pieza?",
+        a: "Depende del recubrimiento y el método. Powder coating en baño alcalino caliente: 20-60 minutos. E-coat catódico con formulación especializada: 60-90 minutos. Pintura líquida epóxica: 30-90 minutos. Granallado mecánico: 5-15 minutos para piezas robustas de geometría simple. El tiempo se determina en pruebas piloto antes de procesar el lote.",
+      },
+      {
+        q: "¿Después del despintado se puede ir directo a pintar?",
+        a: "No. Después del despintado siempre se necesita una preparación de superficie completa antes de repintar: enjuague doble (agua + enjuague acidulado), inspección del sustrato, fosfatizado o conversión química según el recubrimiento final, enjuague con agua desmineralizada y secado. Saltar estos pasos resulta en la misma falla de adherencia que motivó el despintado inicial.",
+      },
+      {
+        q: "¿Pueden ayudarme a despintar piezas en mi planta en Monterrey?",
+        a: "Trevigo no ofrece servicio de despintado directamente, pero suministramos los químicos, asesoramos en la configuración del proceso y visitamos tu planta para evaluar el sistema. Si necesitas un contratista de servicio de despintado, podemos referirte a talleres especializados en el Área Metropolitana de Monterrey con quienes trabajamos.",
+      },
+    ],
+    relatedProducts: [
+      "limpiador-acido-fosforico-hierro-acero",
+      "limpiador-acido-desincrustante",
+      "acido-clorhidrico",
+      "fosfato-zinc-brillante",
+    ],
+    cta: {
+      title: "¿Necesitas químicos para despintado en tu planta?",
+      description:
+        "Distribuimos formulaciones alcalinas especializadas para despintado de powder coating, e-coat y pinturas de alta resistencia. Visita técnica sin costo en Monterrey.",
+    },
+  },
 ];
 
 export const getArticleBySlug = (slug: string) =>

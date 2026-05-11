@@ -301,6 +301,81 @@ export const GLOSSARY: GlossaryEntry[] = [
     relatedServiceSlugs: ["ingenieria-asesoria", "optimizacion-procesos"],
   },
 
+  // ─── TRATAMIENTO DE METALES (continuación) ───
+  {
+    slug: "despintado",
+    term: "Despintado",
+    shortDef:
+      "Proceso de remoción química o mecánica de capas de pintura, recubrimientos o barnices sobre piezas metálicas para reprocesarlas o reacondicionarlas.",
+    longDef: [
+      "El despintado, también llamado stripping de pintura o remoción de recubrimientos, es el proceso industrial que elimina capas de pintura, primer, e-coat, polvo o barniz de piezas metálicas. Se aplica cuando una pieza está mal pintada (rechazo de calidad), cuando se requiere reproceso, cuando la pieza llega al final de su vida útil y quiere recuperarse el metal base, o cuando se renueva flota industrial.",
+      "Existen tres métodos principales: despintado químico con solventes o soluciones alcalinas (eficaz en piezas complejas con geometría interior difícil), despintado por llama o pirolítico (horno a alta temperatura que carboniza la pintura, luego se lava), y despintado mecánico con granalla o abrasivos (para piezas grandes y robustas).",
+      "El despintado químico alcalino es el más usado en industria metalmecánica. Baños de sosa cáustica al 5-15% a 60-80°C disuelven la mayoría de pinturas en base acuosa y polvo en 20-60 minutos. Para pinturas de alta resistencia (epóxico, poliuretano, e-coat catódico) se requieren formulaciones especializadas con aminas o solventes clorados.",
+    ],
+    category: "metales",
+    relatedTerms: ["fosfatizado", "granallado", "decapado", "pasivado"],
+    relatedServiceSlugs: ["decapado"],
+  },
+  {
+    slug: "galvanizado",
+    term: "Galvanizado",
+    shortDef:
+      "Recubrimiento de zinc sobre acero para protegerlo contra corrosión, por inmersión en zinc fundido o por deposición electrolítica.",
+    longDef: [
+      "El galvanizado es el proceso de aplicar una capa de zinc sobre acero para protegerlo contra la corrosión. El zinc actúa como ánodo de sacrificio: se oxida antes que el acero base, protegiéndolo incluso cuando hay raspaduras o discontinuidades en el recubrimiento.",
+      "Existen dos métodos principales: galvanizado por inmersión en caliente (GIC o hot-dip galvanizing), donde las piezas se sumergen en zinc fundido a 450°C formando una capa de 45-85 micras con aleación zinc-hierro en la interfaz; y galvanizado electrolítico (electrodeposición de zinc), donde el zinc se deposita en una celda electrolítica dando capas de 5-25 micras más uniformes y brillantes.",
+      "Las piezas galvanizadas requieren pasivado posterior para sellar la capa de zinc y aumentar resistencia a corrosión. El pasivado puede ser cromato hexavalente (restringido por RoHS), cromo trivalente o formulaciones libres de cromo con zirconio. Una pieza galvanizada y bien pasivada alcanza 500-1000 horas de niebla salina en prueba ASTM B117.",
+    ],
+    category: "metales",
+    relatedTerms: ["pasivado", "cromo-hexavalente", "electrodeposicion", "niebla-salina", "tropicalizado"],
+    relatedProductIds: ["sellador-anticorrosion-libre-cromo", "pasivador-aluminio-cromo"],
+    relatedServiceSlugs: ["pasivado", "tropicalizado"],
+  },
+  {
+    slug: "granallado",
+    term: "Granallado",
+    shortDef:
+      "Proceso de limpieza y preparación de superficie por impacto de partículas abrasivas metálicas proyectadas a alta velocidad.",
+    longDef: [
+      "El granallado (shot blasting en inglés) es un proceso de preparación de superficie en el que se proyectan partículas metálicas (granalla de acero, granalla de acero inoxidable, granalla de cobre) a alta velocidad contra la pieza metálica. El impacto limpia óxido, calamina, recubrimientos anteriores y contaminantes, y crea un perfil de rugosidad controlado.",
+      "El perfil de rugosidad es el factor clave: la norma ISO 8501 clasifica el grado de preparación de Sa 1 (limpieza ligera) a Sa 3 (metal al blanco puro). Para adherencia óptima de fosfatizado y pintura se busca Sa 2.5 con perfil de 25-75 micras. Un perfil muy liso no ancla; uno muy rugoso crea picos que punzan el recubrimiento.",
+      "A diferencia del granallado, el arenado (sandblasting) usa arena de sílice que genera polvo de sílice cristalina, sustancia clasificada como carcinógena (Grupo 1 IARC). En México la NOM-010-STPS obliga a usar equipos con extracción. La industria automotriz y de electrodomésticos ha migrado casi completamente a granallado metálico que no genera polvo de sílice.",
+    ],
+    category: "metales",
+    relatedTerms: ["fosfatizado", "decapado", "despintado"],
+    relatedServiceSlugs: ["decapado"],
+  },
+  {
+    slug: "electrodeposicion",
+    term: "Electrodeposición (Zinc Electrolítico)",
+    shortDef:
+      "Proceso electroquímico que deposita una capa de zinc sobre acero usando corriente eléctrica en solución ácida o alcalina.",
+    longDef: [
+      "La electrodeposición de zinc, también llamada galvanizado electrolítico o zinc electrolítico, es el proceso en el que se deposita zinc sobre piezas de acero mediante corriente eléctrica en una celda electrolítica. La pieza actúa como cátodo, ánodos de zinc solubles se disuelven y el zinc migra y se deposita sobre la pieza.",
+      "Los baños de electrodeposición de zinc pueden ser ácidos (cloruro de zinc o sulfato de zinc) o alcalinos (cianuro de zinc o zinc alcalino libre de cianuro). Los baños ácidos dan depósito más brillante y mayor eficiencia de corriente; los alcalinos dan mejor distribución sobre geometrías complejas.",
+      "El zinc electrolítico da capas más delgadas (5-25 micras) y uniformes que el galvanizado por inmersión en caliente (45-85 micras), con mejor tolerancia dimensional. Es el proceso preferido para tornillería, clips, brackets y piezas de estampado automotriz donde las tolerancias son críticas. Requiere pasivado posterior para cumplir especificaciones de corrosión.",
+    ],
+    category: "metales",
+    relatedTerms: ["galvanizado", "pasivado", "niebla-salina", "cromo-hexavalente"],
+    relatedProductIds: ["sellador-anticorrosion-libre-cromo"],
+    relatedServiceSlugs: ["pasivado"],
+  },
+  {
+    slug: "fosfato-manganeso",
+    term: "Fosfato de Manganeso",
+    shortDef:
+      "Recubrimiento de conversión de fosfato que reduce fricción y resistencia al desgaste en superficies de acero sometidas a alta carga.",
+    longDef: [
+      "El fosfato de manganeso es un tratamiento de conversión química que forma cristales de fosfato de manganeso sobre acero al carbón. A diferencia del fosfato de zinc (orientado a adherencia para pintura), el fosfato de manganeso se usa principalmente para reducir fricción y resistencia al desgaste en piezas que trabajan con contacto metal-metal.",
+      "El proceso se realiza a 88-98°C en baños con ácido fosfórico y sales de manganeso, formando una capa de cristales porosos grises oscuros de 5-25 micras. Los poros de la capa retienen aceite lubricante, lo que es crítico durante el periodo de rodaje de piezas nuevas.",
+      "Aplicaciones principales: engranajes de transmisión, árboles de leva, pistones y camisas de motor, tornillería de alta resistencia, herramientas de corte y piezas de armas de fuego. Es estándar en industria automotriz, aeronáutica y defensa. La norma de referencia es MIL-DTL-16232.",
+    ],
+    category: "metales",
+    relatedTerms: ["fosfatizado", "pasivado", "decapado"],
+    relatedProductIds: ["fosfato-zinc-calcio-alta-resistencia"],
+    relatedServiceSlugs: ["pasivado"],
+  },
+
   // ─── LUBRICANTES ───
   {
     slug: "iso-vg",
@@ -331,6 +406,61 @@ export const GLOSSARY: GlossaryEntry[] = [
     relatedProductIds: ["aceites-motor"],
   },
   {
+    slug: "nlgi",
+    term: "NLGI (Clasificación de Grasas)",
+    shortDef:
+      "Sistema de clasificación de la consistencia de grasas lubricantes en escala de 000 (muy fluida) a 6 (muy dura).",
+    longDef: [
+      "NLGI son las siglas de National Lubricating Grease Institute. La clasificación NLGI establece 9 grados de consistencia para grasas lubricantes, del 000 (grasa semifluida) al 6 (grasa muy dura, casi sólida). El grado se determina midiendo la penetración de un cono estándar bajo condiciones de norma ASTM D217.",
+      "Los grados más usados industrialmente son: NLGI 1 (grasas para rodamientos de alta velocidad y baja temperatura), NLGI 2 (el estándar universal para rodamientos industriales y automotrices, el más consumido), y NLGI 3 (para rodamientos verticales o bajo vibraciones fuertes). Grados 4-6 se usan en aplicaciones estáticas como sellos.",
+      "La base del espesante define otras propiedades: litio es el más universal (resistente al agua y temperatura hasta 120°C), litio complejo (hasta 180°C), calcio sulfonato (excelente resistencia al agua y EP), polimolibdeno o molibdeno (alta carga y antidesgaste). El código completo de una grasa incluye grado NLGI, base y clasificación ISO o NLGI.",
+    ],
+    category: "lubricantes",
+    relatedTerms: ["viscosidad", "iso-vg", "ep-extreme-pressure"],
+  },
+  {
+    slug: "ep-extreme-pressure",
+    term: "EP (Extreme Pressure)",
+    shortDef:
+      "Aditivos para lubricantes que forman una capa protectora sobre metales bajo condiciones de alta presión de contacto.",
+    longDef: [
+      "Los aditivos EP (Extreme Pressure, presión extrema) son compuestos químicos que se incorporan a aceites y grasas lubricantes para proteger las superficies metálicas cuando la película de aceite se rompe bajo condiciones de alta carga, baja velocidad o impacto. Reaccionan químicamente con el metal a altas temperaturas locales para formar una capa de sacrificio.",
+      "Los aditivos EP más comunes son compuestos de azufre-fósforo (el estándar industrial), compuestos de cloro (en fluidos de corte), y organo-molibdeno (en lubricantes premium para motores de alto desempeño). La norma de prueba estándar es ASTM D2783 (prueba de 4 bolas de Timken) que mide la carga de soldadura antes de falla.",
+      "Los aceites de engranes industriales ISO VG 220-460 casi siempre incluyen aditivos EP para proteger flancos de engranajes. También son estándar en fluidos de corte, aceites de taladrinas y lubricantes para compresores de tornillo. Se designan con las letras EP en el nombre del producto: Aceite EP 220, Grasa EP NLGI 2, etc.",
+    ],
+    category: "lubricantes",
+    relatedTerms: ["iso-vg", "viscosidad", "nlgi"],
+    relatedProductIds: ["aceite-engranes"],
+  },
+  {
+    slug: "indice-de-viscosidad",
+    term: "Índice de Viscosidad (IV)",
+    shortDef:
+      "Número que cuantifica qué tan estable es la viscosidad de un aceite ante cambios de temperatura.",
+    longDef: [
+      "El índice de viscosidad (IV o VI en inglés) es un número adimensional que describe cuánto cambia la viscosidad de un aceite cuando cambia la temperatura. Un IV alto indica que el aceite mantiene viscosidad más estable ante cambios de temperatura, lo cual es deseable para la mayoría de aplicaciones industriales.",
+      "El IV se calcula con la norma ASTM D2270 comparando la viscosidad a 40°C y 100°C contra aceites de referencia. Un IV de 100 es el estándar para aceites minerales convencionales. Aceites minerales de alta refinación tienen IV de 95-110. Aceites sintéticos (polialquilenglicoles, ésteres sintéticos, polialfaolefinas) tienen IV de 130-180+.",
+      "El IV es especialmente crítico en aceites multigrado de motor (SAE 5W-30, 10W-40) donde polímeros modificadores de viscosidad elevan el IV a 150-200. En aceites hidráulicos para sistemas expuestos a variaciones de temperatura el IV debe ser mayor a 95 para garantizar eficiencia tanto en arranque frío como en operación plena.",
+    ],
+    category: "lubricantes",
+    relatedTerms: ["viscosidad", "iso-vg", "sae"],
+    relatedProductIds: ["aceites-hidraulicos"],
+  },
+  {
+    slug: "punto-de-inflamacion",
+    term: "Punto de Inflamación",
+    shortDef:
+      "Temperatura mínima a la que un lubricante emite vapores en cantidad suficiente para encenderse con una fuente de ignición.",
+    longDef: [
+      "El punto de inflamación (flash point) es la temperatura mínima a la que un lubricante o fluido inflamable produce suficientes vapores para formar una mezcla inflamable con el aire que se enciende momentáneamente al acercar una fuente de ignición (no necesariamente sostenida). Es el parámetro de seguridad más importante en almacenamiento, transporte y selección de lubricantes.",
+      "Se mide por dos métodos: copa cerrada (ASTM D93, Pensky-Martens) y copa abierta (ASTM D92, Cleveland). La copa cerrada da valores 5-10°C menores. Reguladores, como el DOT (transporte) y OSHA (seguridad industrial), usan el valor de copa cerrada para clasificar peligrosidad.",
+      "Valores típicos: aceites minerales ISO VG 32-100 tienen flash point de 160-200°C; aceites sintéticos PAO de 220-280°C; fluidos hidráulicos resistentes al fuego (HFC, HFDU) de 300°C+. En plantas con fuentes de ignición (hornos, soldadura, motores de combustión) se deben usar lubricantes con flash point al menos 50°C por encima de la temperatura máxima de operación.",
+    ],
+    category: "lubricantes",
+    relatedTerms: ["viscosidad", "iso-vg", "sds"],
+    relatedProductIds: ["aceites-hidraulicos"],
+  },
+  {
     slug: "viscosidad",
     term: "Viscosidad",
     shortDef:
@@ -343,6 +473,51 @@ export const GLOSSARY: GlossaryEntry[] = [
     category: "lubricantes",
     relatedTerms: ["iso-vg", "sae"],
     relatedProductIds: ["aceites-hidraulicos"],
+  },
+
+  // ─── TRATAMIENTO DE AGUAS (continuación) ───
+  {
+    slug: "dureza-del-agua",
+    term: "Dureza del Agua",
+    shortDef:
+      "Concentración de iones calcio y magnesio en el agua, expresada en mg/L de CaCO₃, que causa incrustaciones en equipos.",
+    longDef: [
+      "La dureza del agua es la medida de la concentración de iones calcio (Ca²⁺) y magnesio (Mg²⁺) disueltos. Se expresa en mg/L o ppm de carbonato de calcio equivalente (CaCO₃). El agua blanda tiene menos de 60 mg/L; el agua moderadamente dura de 60-120 mg/L; agua dura de 120-180 mg/L; agua muy dura más de 180 mg/L.",
+      "La dureza es el principal responsable de incrustaciones en tuberías, calderas, intercambiadores de calor y torres de enfriamiento. Al calentar el agua, la solubilidad del carbonato de calcio disminuye y precipita como sarro (CaCO₃) sobre superficies calientes. Una incrustación de 3 mm de sarro en una caldera aumenta el consumo de combustible entre 15 y 20%.",
+      "El control de dureza se hace con ablandadores de agua por intercambio iónico (resinas catiónicas en ciclo sodio), inhibidores de incrustación químicos (polifosfatos, policarboxilatos, fosfonatos) o tratamiento de agua en la pluma de alimentación. NOM-127-SSA1 establece límite de 500 mg/L para agua potable.",
+    ],
+    category: "aguas",
+    relatedTerms: ["ptar", "ph", "osmosis-inversa"],
+    relatedServiceSlugs: ["ingenieria-asesoria"],
+  },
+  {
+    slug: "osmosis-inversa",
+    term: "Ósmosis Inversa",
+    shortDef:
+      "Proceso de filtración de membrana a alta presión que retiene sales, iones y microcontaminantes para producir agua ultrapura.",
+    longDef: [
+      "La ósmosis inversa (OI o RO por sus siglas en inglés) es un proceso de separación por membrana semipermeable en el que se aplica una presión superior a la presión osmótica del agua a tratar para forzar el paso de agua pura a través de la membrana, mientras se retienen sales disueltas, iones, metales pesados, nitratos, microorganismos y microcontaminantes.",
+      "Las membranas de OI estándar son de poliamida de película delgada y rechazan el 95-99% de sólidos disueltos. La presión de operación varía de 10-20 bar para agua salobre a 55-80 bar para agua de mar. El rendimiento típico (recovery) es del 50-75%, lo que significa que se produce ese porcentaje en agua permeada y el resto se descarta como rechazo concentrado.",
+      "Aplicaciones industriales: producción de agua ultrapura para calderas de alta presión (ASTM D1193), manufactura de electrónica y semiconductores, industria farmacéutica, bebidas y alimentos, y remoción de metales pesados en efluentes industriales. El mayor costo operativo es el consumo eléctrico del sistema de alta presión: 0.5-1.0 kWh/m³ para agua salobre, 3-7 kWh/m³ para agua de mar.",
+    ],
+    category: "aguas",
+    relatedTerms: ["dureza-del-agua", "ptar", "dbo", "dqo"],
+    relatedServiceSlugs: ["ingenieria-asesoria"],
+  },
+  {
+    slug: "pac-policloruro-aluminio",
+    term: "PAC (Policloruro de Aluminio)",
+    shortDef:
+      "Coagulante inorgánico polimérico de alta basicidad para tratamiento de agua con mejor desempeño que el sulfato de aluminio en aguas frías o de baja turbidez.",
+    longDef: [
+      "El Policloruro de Aluminio (PAC o PACl) es un coagulante inorgánico que se obtiene por polimerización controlada de cloruro de aluminio con hidróxido de sodio. Su fórmula general es Aln(OH)mCl(3n-m). La basicidad (relación OH/Al) varía de 10% a 85%, siendo los PAC de alta basicidad (70-85%) los de mayor eficiencia coagulante.",
+      "Ventajas frente al sulfato de aluminio: mayor rango eficaz de pH (5.5-8.5 vs 6.0-7.5 del alumbre), mejor coagulación en aguas frías donde el alumbre pierde actividad, menor generación de lodos (hasta 30% menos), menor depresión de pH por lo que reduce o elimina la necesidad de cal correctora, y eficaz en aguas de muy baja turbidez donde el alumbre falla.",
+      "Se presenta en solución líquida (10-18% Al₂O₃, densidad 1.2-1.4 g/mL) o en polvo (30% Al₂O₃). La dosis típica en potabilización es de 5-50 mg/L según la turbidez y calidad del agua. En aguas residuales industriales de alta carga la dosis puede ser de 100-500 mg/L. Siempre debe determinarse por Jar Test.",
+    ],
+    category: "aguas",
+    relatedTerms: ["coagulante", "floculante", "jar-test", "ph", "ptar"],
+    relatedProductIds: ["coagulante-inorganico-clarificacion"],
+    relatedServiceSlugs: ["pruebas-jarras"],
   },
 
   // ─── GENERAL ───
@@ -414,6 +589,34 @@ export const GLOSSARY: GlossaryEntry[] = [
     ],
     category: "general",
     relatedTerms: ["coa"],
+  },
+  {
+    slug: "reach",
+    term: "REACH",
+    shortDef:
+      "Reglamento europeo de registro, evaluación, autorización y restricción de sustancias químicas que impacta exportaciones industriales a Europa.",
+    longDef: [
+      "REACH son las siglas de Registration, Evaluation, Authorisation and Restriction of Chemicals. Es el reglamento europeo EC 1907/2006, en vigor desde 2007, que regula la fabricación, importación, uso y comercialización de sustancias químicas en la Unión Europea. Es la regulación química más completa y de mayor alcance global.",
+      "REACH obliga a los fabricantes e importadores a demostrar que las sustancias que producen o importan son seguras. El principio central es la responsabilidad del fabricante: 'sin datos, sin mercado'. Las sustancias de muy alta preocupación (SVHC) están sujetas a autorización previa o restricción. La lista SVHC actualizada contiene más de 240 sustancias, incluyendo cromo hexavalente, ftalatos, hidrocarburos aromáticos policíclicos y plomo.",
+      "Para exportadores mexicanos que venden a Europa o a multinacionales con operaciones europeas, REACH es obligación indirecta: el cliente europeo exige que los productos y piezas metálicas cumplan restricciones de REACH, lo que afecta directamente los procesos de tratamiento de superficie (pasivados libres de cromo hexavalente, pinturas sin plomo). El incumplimiento puede resultar en rechazo de embarques en aduana.",
+    ],
+    category: "general",
+    relatedTerms: ["rohs", "cromo-hexavalente", "sds"],
+    relatedProductIds: ["sellador-anticorrosion-libre-cromo"],
+  },
+  {
+    slug: "galvanoplastia",
+    term: "Galvanoplastia",
+    shortDef:
+      "Proceso electroquímico de deposición de metales (zinc, níquel, cromo, cobre, oro) sobre piezas metálicas con fines funcionales o decorativos.",
+    longDef: [
+      "La galvanoplastia es el proceso de deposición electrolítica de metales sobre piezas metálicas o no metálicas (con previo metalizado). Se aplica corriente continua en un baño electrolítico con sales del metal a depositar: la pieza actúa como cátodo y el metal se deposita sobre su superficie.",
+      "Los metales más depositados industrialmente son: zinc (protección anticorrosión en automotriz), níquel (resistencia a corrosión y abrasión, base para cromado), cromo (dureza superficial extrema hasta 1000 HV y resistencia química), cobre (base de adhesión y blindaje electromagnético), plata y oro (contactos eléctricos de alta conducción).",
+      "Las aplicaciones industriales van desde la tornillería anticorrosión (zinc electrolítico) hasta piezas aeronáuticas con recubrimientos de cadmio (en declive por toxicidad), pasando por cromado duro en vástagos hidráulicos y moldes de inyección. En México la galvanoplastia es una industria concentrada principalmente en Monterrey, Guadalajara y Estado de México.",
+    ],
+    category: "general",
+    relatedTerms: ["electrodeposicion", "galvanizado", "cromo-hexavalente", "rohs"],
+    relatedServiceSlugs: ["pasivado"],
   },
   {
     slug: "coa",
