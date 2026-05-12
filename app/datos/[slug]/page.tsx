@@ -72,6 +72,12 @@ export default function DatoPage({ params }: { params: { slug: string } }) {
       "@type": "WebPage",
       "@id": `${COMPANY.url}/datos/${dato.slug}`,
     },
+    contentLocation: {
+      "@type": "Country",
+      name: "México",
+    },
+    inLanguage: "es-MX",
+    isAccessibleForFree: true,
   };
 
   const breadcrumbSchema = {
