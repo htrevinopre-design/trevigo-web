@@ -71,7 +71,7 @@ export default function HomePage() {
                 { value: "35+", label: "Años de experiencia", sub: "Desde 1989" },
                 { value: "200+", label: "Clientes activos", sub: "En todo México" },
                 { value: "48h", label: "Tiempo de entrega", sub: "Área Metro Monterrey" },
-                { value: "3", label: "Líneas de producto", sub: "Metales, Agua, Mat. Primas" },
+                { value: "4", label: "Líneas de producto", sub: "Metales, Aguas, Lubricantes, Mat. Primas" },
               ].map((s) => (
                 <div key={s.label} className="py-6 px-6 text-center">
                   <div className="text-2xl sm:text-3xl font-black text-orange-500 mb-0.5">{s.value}</div>
