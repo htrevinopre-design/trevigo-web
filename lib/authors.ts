@@ -13,6 +13,10 @@ export interface Author {
   longBio: string;
   yearsExperience?: number;
   expertise: string[];
+  /** Perfil de LinkedIn verificable (usado en schema.org sameAs para E-E-A-T) */
+  linkedin?: string;
+  /** Para concordancia gramatical en español ("el autor" / "la autora") */
+  gender: "masculino" | "femenino";
 }
 
 export const AUTHORS: Record<string, Author> = {
@@ -33,6 +37,9 @@ export const AUTHORS: Record<string, Author> = {
       "Asesoría técnica a OEMs y tier 1 automotriz",
       "Pruebas de jarras y optimización de PTAR",
     ],
+    linkedin:
+      "https://www.linkedin.com/in/blanca-esthela-garza-alvarado-25ba79a9/",
+    gender: "femenino",
   },
   "arturo-trevino": {
     slug: "arturo-trevino",
@@ -49,6 +56,8 @@ export const AUTHORS: Record<string, Author> = {
       "Mercado mexicano de químicos para manufactura",
       "Nearshoring y manufactura de exportación",
     ],
+    linkedin: "https://www.linkedin.com/in/arturo-trevi%C3%B1o-a7361629/",
+    gender: "masculino",
   },
 };
 

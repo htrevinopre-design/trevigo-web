@@ -70,6 +70,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                 url: COMPANY.url,
               },
               knowsAbout: author.expertise,
+              ...(author.linkedin ? { sameAs: [author.linkedin] } : {}),
             },
             publisher: {
               "@type": "Organization",
