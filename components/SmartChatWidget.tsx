@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import Image from "next/image";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 const WA_NUMBER = "528120403135";
@@ -40,10 +41,20 @@ function WaIcon({ className }: { className?: string }) {
 
 // ─── Bot avatar ───────────────────────────────────────────────────────────────
 function BotAvatar({ size = "sm" }: { size?: "sm" | "md" }) {
-  const sz = size === "md" ? "w-9 h-9 text-xs" : "w-6 h-6 text-[10px]";
+  const sz = size === "md" ? "w-9 h-9" : "w-6 h-6";
+  const imgSz = size === "md" ? 28 : 18;
   return (
-    <div className={`${sz} rounded-full bg-navy-600 flex items-center justify-center text-white font-black shrink-0`}>
-      T
+    <div
+      className={`${sz} rounded-full bg-white border border-steel-200 shadow-sm flex items-center justify-center shrink-0 overflow-hidden`}
+      aria-label="Industrias Trevigo"
+    >
+      <Image
+        src="/logo.png"
+        alt="Trevigo"
+        width={imgSz}
+        height={imgSz}
+        className="object-contain"
+      />
     </div>
   );
 }
