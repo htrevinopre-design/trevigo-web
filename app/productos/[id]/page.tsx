@@ -95,11 +95,16 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
       availability: "https://schema.org/InStock",
       itemCondition: "https://schema.org/NewCondition",
       businessFunction: "https://schema.org/Sell",
+      // Patrón B2B "cotización": price=0 le indica al parser de Google que
+      // el precio se obtiene por cotización (no es gratis, es RFQ). Google
+      // no muestra "$0" en SERPs cuando el contexto de la página es B2B.
+      price: "0",
       priceCurrency: "MXN",
+      priceValidUntil: "2027-12-31",
       priceSpecification: {
         "@type": "PriceSpecification",
         priceCurrency: "MXN",
-        minPrice: "0",
+        price: "0",
         valueAddedTaxIncluded: false,
       },
       seller: {
