@@ -124,6 +124,37 @@ function buildQuoteHtml(f: Record<string, string>) {
   );
 }
 
+// ─── Service quote email ───────────────────────────────────────────────────
+
+function buildServiceHtml(f: Record<string, string>) {
+  const table = `
+    <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;border:1px solid #e5e7eb;border-radius:6px;overflow:hidden;">
+      ${row("Servicio", f.servicio)}
+      ${row("Nombre", f.nombre)}
+      ${row("Empresa", f.empresa)}
+      ${row("Correo", f.correo)}
+      ${row("Teléfono", f.telefono)}
+      ${row("Estado", f.estado)}
+      ${row("Puesto", f.puesto)}
+      ${row("Tipo de pieza / aplicación", f.aplicacion)}
+      ${row("Frecuencia estimada", f.frecuencia)}
+      ${row("¿Ya es cliente?", f.yaCliente === "true" ? "Sí" : "No")}
+    </table>`;
+
+  const detalles = f.detalles
+    ? `<div style="margin-top:20px;padding:16px;background:#f8f9fa;border-left:3px solid #f97316;border-radius:0 6px 6px 0;">
+        <p style="margin:0 0 6px;font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:0.1em;">Detalles del proyecto</p>
+        <p style="margin:0;font-size:14px;color:#374151;line-height:1.6;">${f.detalles.replace(/\n/g, "<br>")}</p>
+       </div>`
+    : "";
+
+  return emailWrapper(
+    "Solicitud de servicio",
+    `Servicio: ${f.servicio || "Por definir"}`,
+    table + detalles
+  );
+}
+
 // ─── Route handler ─────────────────────────────────────────────────────────
 
 export async function POST(req: NextRequest) {
@@ -142,6 +173,10 @@ export async function POST(req: NextRequest) {
       const empresa = body.empresa ? ` — ${body.empresa}` : "";
       subject = `[Web] Cotización rápida${empresa}`;
       html = buildQuoteHtml(body);
+    } else if (tipo === "servicio") {
+      const empresa = body.empresa ? ` — ${body.empresa}` : "";
+      subject = `[Web] Servicio: ${body.servicio || "Solicitud"}${empresa}`;
+      html = buildServiceHtml(body);
     } else {
       return NextResponse.json({ error: "Tipo inválido" }, { status: 400 });
     }
