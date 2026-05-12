@@ -71,6 +71,174 @@ export interface Dato {
 
 export const DATOS: Dato[] = [
   // ══════════════════════════════════════════════
+  // 0. INDUSTRIA AUTOMOTRIZ EN MÉXICO
+  // ══════════════════════════════════════════════
+  {
+    slug: "industria-automotriz-mexico-tamano",
+    category: "Industria",
+    metaTitle: "¿Cuántos vehículos produce México al año? Cifras de la industria automotriz",
+    metaDescription:
+      "Producción anual de vehículos en México, valor de la industria automotriz, exportaciones, empleos y posición global. Fuentes AMIA, INA, INEGI y Banxico.",
+    question: "¿Cuántos vehículos produce México al año?",
+    shortAnswer:
+      "México produce aproximadamente 4 millones de vehículos ligeros al año y se ubica entre el sexto y séptimo lugar mundial en producción automotriz, según AMIA. El sector representa cerca del 4% del PIB nacional.",
+    headlineStat: {
+      value: "≈ 4",
+      unit: "millones de vehículos/año",
+      label:
+        "Producción anual de vehículos ligeros en México (AMIA, promedio reciente)",
+      source: {
+        name: "AMIA — Asociación Mexicana de la Industria Automotriz",
+        url: "https://www.amia.com.mx/",
+        year: "2024",
+      },
+    },
+    intro:
+      "La industria automotriz es la columna vertebral de la manufactura mexicana y el principal motor de exportación del país. México es el séptimo productor mundial de vehículos y el cuarto exportador, por delante de países como Alemania o Corea del Sur. El sector incluye armadoras (OEMs) de marcas globales — General Motors, Ford, Stellantis, Volkswagen, Audi, BMW, Toyota, Nissan, Honda, Kia, Mazda, Mercedes-Benz, JAC — y un ecosistema de más de mil empresas de autopartes (tier 1, tier 2, tier 3) distribuidas principalmente en el Bajío, el norte y centro del país.",
+    supportingStats: [
+      {
+        value: "≈ 4°",
+        label: "Lugar mundial de México como exportador de vehículos ligeros",
+        source: "OICA — Organización Internacional de Constructores Automotrices",
+      },
+      {
+        value: "USD 180B+",
+        label:
+          "Valor anual de exportaciones automotrices y de autopartes desde México",
+        source: "Banxico / Secretaría de Economía",
+      },
+      {
+        value: "≈ 1,000,000+",
+        label:
+          "Empleos directos en armadoras y la cadena de autopartes en México",
+        source: "INA — Industria Nacional de Autopartes",
+      },
+      {
+        value: "≈ 4%",
+        label: "Participación de la industria automotriz en el PIB nacional",
+        source: "INEGI — Sistema de Cuentas Nacionales",
+      },
+      {
+        value: "≈ 20",
+        label: "Plantas de ensamble de vehículos en operación en México",
+        source: "AMIA",
+      },
+      {
+        value: "≈ 90%",
+        label:
+          "Porcentaje de vehículos producidos en México que se exportan a Estados Unidos y otros mercados",
+        source: "AMIA — Reportes mensuales de producción y exportación",
+      },
+    ],
+    context: [
+      {
+        heading: "Las regiones automotrices de México",
+        paragraphs: [
+          "La producción automotriz mexicana está concentrada en cuatro grandes regiones que dividen al país por especialización:",
+        ],
+        list: [
+          "Bajío (Guanajuato, Querétaro, Aguascalientes, San Luis Potosí): clusters de Nissan, Mazda, Honda, Toyota, GM y proveedores tier 1 — la zona automotriz con más crecimiento de la última década",
+          "Noreste (Nuevo León, Coahuila, Tamaulipas): GM en Ramos Arizpe, Stellantis en Saltillo, Kia en Pesquería, plus la cadena tier 1 más grande del país y el cluster de Tesla anunciado para Santa Catarina",
+          "Norte (Chihuahua, Sonora): Ford en Hermosillo, plantas de motores y transmisiones, fuerte componente maquilador",
+          "Centro (CDMX, Edomex, Puebla, Morelos): Audi en Puebla, Volkswagen, Nissan en Aguascalientes (extensión), Mercedes-Benz autobuses",
+        ],
+      },
+      {
+        heading: "Pretratamiento químico en la línea automotriz",
+        paragraphs: [
+          "Cada vehículo producido en México pasa por una secuencia químico-industrial intensiva antes de salir de la planta: limpieza alcalina para retirar aceites de estampado, desoxidación ácida, fosfatado de zinc tricatiónico (la capa anticorrosiva base previa al e-coat), pasivado o sello sin cromo, electrodepósito (e-coat), aplicación de primer y pintura final, y finalmente sellado y protección anticorrosiva en cavidades. Cada una de estas etapas consume químicos especializados que cumplen con especificaciones OEM como GMW3179 (GM), WSS-M3P18-A (Ford), o equivalentes Chrysler, Toyota y Volkswagen.",
+          "La cadena de proveeduría tier 1 y tier 2 — que abastece a las armadoras de autopartes, ejes, suspensiones, asientos, plásticos y electrónica vehicular — también consume químicos para sus propios procesos de fosfatado, galvanizado, decapado y tratamiento de aguas residuales. Esto multiplica el tamaño real del mercado de químicos industriales para automotriz.",
+          "Industrias Trevigo, fundada en 1989 en San Nicolás de los Garza, abastece desde hace tres décadas a OEMs y a la cadena tier 1/tier 2 automotriz del norte de México con productos para cada una de estas etapas.",
+        ],
+      },
+      {
+        heading: "Tendencia: electrificación y nearshoring",
+        paragraphs: [
+          "El sector automotriz mexicano vive dos transformaciones simultáneas. La primera es la transición a vehículos eléctricos (EV) e híbridos, que implica cambios en la cadena de suministro: menos partes mecánicas, más electrónica, baterías y aluminio. Las plantas que producen EVs requieren menos químicos de algunos tipos (por ejemplo, limpieza de motores de combustión) pero más de otros (tratamientos para aluminio, recubrimientos especiales para componentes de batería).",
+          "La segunda tendencia es el nearshoring: la relocalización masiva de proveedores y armadoras desde Asia hacia México por proximidad con Estados Unidos. Esto está incrementando la demanda de químicos industriales en regiones como Nuevo León, Bajío y norte del país, y generando oportunidades para proveedores químicos mexicanos con capacidad técnica.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿En qué lugar del mundo está México como productor de vehículos?",
+        a: "México se ubica generalmente entre el sexto y séptimo lugar mundial en producción de vehículos ligeros, según los reportes anuales de la OICA (Organización Internacional de Constructores Automotrices). Como exportador, México está en el top 5 mundial, alrededor del cuarto lugar.",
+      },
+      {
+        q: "¿Cuántas armadoras de autos hay en México?",
+        a: "Operan en México aproximadamente 13 marcas con plantas de ensamble: General Motors, Ford, Stellantis (Chrysler/Jeep/RAM), Volkswagen, Audi, BMW, Toyota, Nissan, Honda, Kia, Mazda, Mercedes-Benz y JAC. En total son alrededor de 20 plantas de ensamble en operación, considerando que algunas marcas tienen múltiples plantas en diferentes estados.",
+      },
+      {
+        q: "¿Cuál es el principal destino de las exportaciones automotrices mexicanas?",
+        a: "Estados Unidos es por mucho el principal destino, recibiendo alrededor del 75-80% de las exportaciones automotrices mexicanas. Le siguen Canadá, Alemania y mercados latinoamericanos. La integración productiva con Norteamérica se rige por el T-MEC.",
+      },
+      {
+        q: "¿Cuántas empresas de autopartes hay en México?",
+        a: "Según datos de la INA (Industria Nacional de Autopartes), México cuenta con más de 1,000 empresas de autopartes (tier 1, tier 2 y tier 3) distribuidas principalmente en el Bajío, noreste y norte del país. El sector autopartes en sí mismo emplea a más de 800,000 personas y genera exportaciones por más de 100 mil millones de USD al año.",
+      },
+    ],
+    sources: [
+      {
+        name: "AMIA — Asociación Mexicana de la Industria Automotriz",
+        url: "https://www.amia.com.mx/",
+      },
+      {
+        name: "INA — Industria Nacional de Autopartes",
+        url: "https://www.ina.com.mx/",
+      },
+      {
+        name: "INEGI — Estadísticas mensuales de la industria automotriz",
+        url: "https://www.inegi.org.mx/temas/automotriz/",
+      },
+      {
+        name: "Banxico — Balanza comercial automotriz",
+        url: "https://www.banxico.org.mx/",
+      },
+      {
+        name: "OICA — Organización Internacional de Constructores Automotrices",
+        url: "https://www.oica.net/",
+      },
+    ],
+    internalLinks: [
+      {
+        text: "Industria automotriz: cómo Trevigo abastece a OEMs y tier 1",
+        href: "/industrias/automotriz",
+        description:
+          "Productos y servicios químicos para cada etapa de la línea de pretratamiento automotriz en Nuevo León.",
+      },
+      {
+        text: "Fosfato de zinc tricatiónico — estándar OEM",
+        href: "/productos/fosfato-zinc-brillante",
+        description:
+          "El recubrimiento de conversión que usan todas las armadoras antes del e-coat.",
+      },
+      {
+        text: "Servicio de fosfatizado industrial",
+        href: "/servicios/fosfatizado",
+        description: "Pretratamiento de zinc y hierro previo a pintura electrostática.",
+      },
+      {
+        text: "Nearshoring en Nuevo León: cifras 2025",
+        href: "/datos/nearshoring-nuevo-leon-cifras",
+        description:
+          "Cómo el nearshoring está transformando la cadena automotriz mexicana.",
+      },
+      {
+        text: "Metalmecánica: la base de la cadena automotriz",
+        href: "/industrias/metalmecanica",
+        description: "Desoxidantes, inhibidores y fluidos de corte para tier 1 y tier 2.",
+      },
+      {
+        text: "Industria química mexicana: tamaño y datos",
+        href: "/datos/industria-quimica-mexico-tamano",
+        description: "El sector que abastece de químicos a la industria automotriz.",
+      },
+    ],
+    updatedAt: "2026-05-12",
+    publishedAt: "2026-05-12",
+  },
+
+  // ══════════════════════════════════════════════
   // 1. INDUSTRIA QUÍMICA EN MÉXICO
   // ══════════════════════════════════════════════
   {
