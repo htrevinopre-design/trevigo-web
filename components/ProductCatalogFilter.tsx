@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { ProductCategory } from "@/lib/data";
@@ -70,6 +70,25 @@ export default function ProductCatalogFilter({ categories }: Props) {
   const [selectedCategories, setSelectedCategories] = useState<Set<string>>(new Set());
   const [selectedSubcategories, setSelectedSubcategories] = useState<Set<string>>(new Set());
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
+  // Ref al top del área de búsqueda — para devolver al usuario aquí cuando
+  // cambie filtros y el documento se acorte (evita que se "vaya al footer").
+  const topAnchorRef = useRef<HTMLDivElement>(null);
+
+  /**
+   * Trae el área de filtros a la vista si el usuario está scrolleado debajo.
+   * Se llama después de cambiar filtros de categoría/subcategoría/limpiar.
+   * No se llama al teclear en el buscador para no interrumpir la escritura.
+   */
+  function scrollToTopOfCatalog() {
+    const el = topAnchorRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    // Solo si el área está fuera de pantalla por arriba o muy abajo
+    if (rect.top < 0 || rect.top > window.innerHeight) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
 
   // Normaliza string para búsqueda (sin acentos, lowercase)
   const norm = (s: string) =>
@@ -147,6 +166,9 @@ export default function ProductCatalogFilter({ categories }: Props) {
       cat.subcategories.forEach((s) => next.delete(s.id));
       return next;
     });
+    // El estado se actualiza primero, después React re-renderiza, luego
+    // hacemos el scroll. requestAnimationFrame asegura que el DOM ya cambió.
+    requestAnimationFrame(() => scrollToTopOfCatalog());
   }
 
   function toggleSubcategory(subId: string) {
@@ -156,12 +178,14 @@ export default function ProductCatalogFilter({ categories }: Props) {
       else next.add(subId);
       return next;
     });
+    requestAnimationFrame(() => scrollToTopOfCatalog());
   }
 
   function clearAll() {
     setQuery("");
     setSelectedCategories(new Set());
     setSelectedSubcategories(new Set());
+    requestAnimationFrame(() => scrollToTopOfCatalog());
   }
 
   const hasActiveFilters =
@@ -179,6 +203,9 @@ export default function ProductCatalogFilter({ categories }: Props) {
   return (
     <div className="bg-white py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Anchor invisible para scroll-to-top después de filtrar */}
+        <div ref={topAnchorRef} className="scroll-mt-24" aria-hidden="true" />
+
         {/* ─── Barra de búsqueda + contador + toggle mobile ───── */}
         <div className="mb-6 flex flex-col gap-4">
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
