@@ -3,7 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { COMPANY } from "@/lib/data";
 import { DATOS, getDatoBySlug } from "@/lib/datos";
+import { getAuthor, DEFAULT_AUTHOR_SLUG } from "@/lib/authors";
 import FAQAccordion from "@/components/FAQAccordion";
+import AuthorBlock from "@/components/AuthorBlock";
 
 export async function generateStaticParams() {
   return DATOS.map((d) => ({ slug: d.slug }));
@@ -35,6 +37,8 @@ export default function DatoPage({ params }: { params: { slug: string } }) {
   const dato = getDatoBySlug(params.slug);
   if (!dato) notFound();
 
+  const author = getAuthor(dato.authorSlug ?? DEFAULT_AUTHOR_SLUG)!;
+
   // ── Schema.org Article + FAQPage + BreadcrumbList ──
   const articleSchema = {
     "@context": "https://schema.org",
@@ -44,9 +48,15 @@ export default function DatoPage({ params }: { params: { slug: string } }) {
     datePublished: dato.publishedAt,
     dateModified: dato.updatedAt,
     author: {
-      "@type": "Organization",
-      name: COMPANY.legalName,
-      url: COMPANY.url,
+      "@type": "Person",
+      name: author.name,
+      jobTitle: author.role,
+      worksFor: {
+        "@type": "Organization",
+        name: author.company,
+        url: COMPANY.url,
+      },
+      knowsAbout: author.expertise,
     },
     publisher: {
       "@type": "Organization",
@@ -135,9 +145,12 @@ export default function DatoPage({ params }: { params: { slug: string } }) {
             {dato.question}
           </h1>
           <div className="w-16 h-1 bg-orange-500 mb-6" />
-          <p className="text-steel-300 text-base sm:text-lg leading-relaxed max-w-3xl">
+          <p className="text-steel-300 text-base sm:text-lg leading-relaxed max-w-3xl mb-7">
             {dato.shortAnswer}
           </p>
+
+          {/* ── Byline del autor ── */}
+          <AuthorBlock author={author} variant="byline" date={dato.updatedAt} />
         </div>
       </section>
 
@@ -330,6 +343,9 @@ export default function DatoPage({ params }: { params: { slug: string } }) {
           title="Preguntas relacionadas"
         />
       )}
+
+      {/* ─── SOBRE EL AUTOR ───────────────────────────────────────── */}
+      <AuthorBlock author={author} variant="full" />
 
       {/* ─── INTERNAL LINKS (funnel a money pages) ────────────────── */}
       <section className="bg-white py-14 border-y border-steel-200">

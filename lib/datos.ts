@@ -38,6 +38,8 @@ export interface DatoInternalLink {
 export interface Dato {
   slug: string;
   category: "Industria" | "Sustentabilidad" | "Nearshoring" | "Mercado";
+  /** Slug del autor (key de AUTHORS en lib/authors.ts). Default: blanca-garza */
+  authorSlug?: string;
   metaTitle: string;
   metaDescription: string;
   /** Pregunta exacta tal como un periodista la teclearía */
@@ -533,6 +535,7 @@ export const DATOS: Dato[] = [
   {
     slug: "nearshoring-nuevo-leon-cifras",
     category: "Nearshoring",
+    authorSlug: "arturo-trevino",
     metaTitle: "Nearshoring en Nuevo León: cifras de inversión 2024-2026",
     metaDescription:
       "Inversión extranjera directa, anuncios de plantas y empleos del nearshoring en Nuevo León. Por qué NL es el estado #1 en captación de IED por nearshoring en México.",

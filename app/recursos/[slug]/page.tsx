@@ -3,7 +3,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { COMPANY, PRODUCT_CATEGORIES } from "@/lib/data";
 import { ARTICLES, getArticleBySlug } from "@/lib/articles";
+import { getAuthor, DEFAULT_AUTHOR_SLUG } from "@/lib/authors";
 import FAQAccordion from "@/components/FAQAccordion";
+import AuthorBlock from "@/components/AuthorBlock";
 
 const allProducts = PRODUCT_CATEGORIES.flatMap((cat) =>
   cat.subcategories.flatMap((sub) => sub.products)
@@ -40,6 +42,8 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
   const article = getArticleBySlug(params.slug);
   if (!article) notFound();
 
+  const author = getAuthor(article.authorSlug ?? DEFAULT_AUTHOR_SLUG)!;
+
   const relatedProducts = (article.relatedProducts ?? [])
     .map((id) => allProducts.find((p) => p.id === id))
     .filter(Boolean) as typeof allProducts;
@@ -57,9 +61,15 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             datePublished: article.publishedAt,
             dateModified: article.updatedAt,
             author: {
-              "@type": "Organization",
-              name: COMPANY.legalName,
-              url: COMPANY.url,
+              "@type": "Person",
+              name: author.name,
+              jobTitle: author.role,
+              worksFor: {
+                "@type": "Organization",
+                name: author.company,
+                url: COMPANY.url,
+              },
+              knowsAbout: author.expertise,
             },
             publisher: {
               "@type": "Organization",
@@ -130,7 +140,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             {article.title}
           </h1>
           <div className="w-12 h-1 bg-orange-500 mb-6" />
-          <div className="flex items-center gap-4 text-steel-400 text-sm">
+          <div className="flex items-center gap-4 text-steel-400 text-sm mb-7">
             <time dateTime={article.publishedAt}>
               {new Date(article.publishedAt).toLocaleDateString("es-MX", {
                 year: "numeric",
@@ -141,6 +151,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             <span className="text-steel-600">·</span>
             <span>{article.readingTime} de lectura</span>
           </div>
+
+          {/* ── Byline del autor ── */}
+          <AuthorBlock author={author} variant="byline" />
         </div>
       </section>
 
@@ -217,6 +230,9 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           title={`Preguntas frecuentes: ${article.category}`}
         />
       )}
+
+      {/* SOBRE EL AUTOR */}
+      <AuthorBlock author={author} variant="full" />
 
       {/* CTA */}
       <section className="bg-navy-950 py-16">

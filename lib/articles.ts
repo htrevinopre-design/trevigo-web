@@ -10,6 +10,8 @@ export type ArticleSection = {
 
 export type Article = {
   slug: string;
+  /** Slug del autor (key de AUTHORS en lib/authors.ts). Default: blanca-garza */
+  authorSlug?: string;
   title: string;
   metaTitle: string;
   metaDescription: string;
