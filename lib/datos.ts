@@ -80,15 +80,15 @@ export const DATOS: Dato[] = [
     category: "Industria",
     metaTitle: "¿Cuántos vehículos produce México al año? Cifras de la industria automotriz",
     metaDescription:
-      "Producción anual de vehículos en México, valor de la industria automotriz, exportaciones, empleos y posición global. Fuentes AMIA, INA, INEGI y Banxico.",
+      "Producción anual de vehículos en México (récord histórico 2024: 3.99 millones), exportaciones, empleos y posición global según AMIA, INA, INEGI y OICA.",
     question: "¿Cuántos vehículos produce México al año?",
     shortAnswer:
-      "México produce aproximadamente 4 millones de vehículos ligeros al año y se ubica entre el sexto y séptimo lugar mundial en producción automotriz, según AMIA. El sector representa cerca del 4% del PIB nacional.",
+      "México produjo 3,989,403 vehículos ligeros en 2024 (récord histórico) y se ubica entre los primeros cinco productores automotrices del mundo, según AMIA y la OICA.",
     headlineStat: {
-      value: "≈ 4",
-      unit: "millones de vehículos/año",
+      value: "3.99",
+      unit: "millones de vehículos en 2024",
       label:
-        "Producción anual de vehículos ligeros en México (AMIA, promedio reciente)",
+        "Producción de vehículos ligeros en México en 2024 — récord histórico, +5.6% vs 2023 (AMIA)",
       source: {
         name: "AMIA — Asociación Mexicana de la Industria Automotriz",
         url: "https://www.amia.com.mx/",
@@ -96,18 +96,25 @@ export const DATOS: Dato[] = [
       },
     },
     intro:
-      "La industria automotriz es la columna vertebral de la manufactura mexicana y el principal motor de exportación del país. México es el séptimo productor mundial de vehículos y el cuarto exportador, por delante de países como Alemania o Corea del Sur. El sector incluye armadoras (OEMs) de marcas globales — General Motors, Ford, Stellantis, Volkswagen, Audi, BMW, Toyota, Nissan, Honda, Kia, Mazda, Mercedes-Benz, JAC — y un ecosistema de más de mil empresas de autopartes (tier 1, tier 2, tier 3) distribuidas principalmente en el Bajío, el norte y centro del país.",
+      "La industria automotriz es la columna vertebral de la manufactura mexicana y el principal motor de exportación del país. Según la OICA (Organización Internacional de Constructores Automotrices), México se ubicó en el quinto lugar mundial de producción automotriz en 2024, por encima de Corea del Sur y Brasil. El sector incluye armadoras (OEMs) de marcas globales — General Motors, Ford, Stellantis, Volkswagen, Audi, BMW, Toyota, Nissan, Honda, Kia, Mazda, Mercedes-Benz, JAC — y un ecosistema de más de mil empresas de autopartes (tier 1, tier 2, tier 3) distribuidas principalmente en el Bajío, el norte y centro del país.",
     supportingStats: [
       {
-        value: "≈ 4°",
-        label: "Lugar mundial de México como exportador de vehículos ligeros",
+        value: "5° lugar",
+        label:
+          "Posición mundial de México en producción automotriz 2024 (OICA), arriba de Corea y Brasil",
         source: "OICA — Organización Internacional de Constructores Automotrices",
       },
       {
-        value: "USD 180B+",
+        value: "3.48M",
         label:
-          "Valor anual de exportaciones automotrices y de autopartes desde México",
-        source: "Banxico / Secretaría de Economía",
+          "Vehículos ligeros exportados desde México en 2024 (récord histórico)",
+        source: "AMIA — Reporte anual 2024",
+      },
+      {
+        value: "169,929",
+        label:
+          "Vehículos híbridos y eléctricos producidos en México en 2024 (Mach-E, Equinox EV, Blazer EV, Tacoma híbrida, Wagoner)",
+        source: "AMIA",
       },
       {
         value: "≈ 1,000,000+",
@@ -116,20 +123,15 @@ export const DATOS: Dato[] = [
         source: "INA — Industria Nacional de Autopartes",
       },
       {
-        value: "≈ 4%",
-        label: "Participación de la industria automotriz en el PIB nacional",
-        source: "INEGI — Sistema de Cuentas Nacionales",
-      },
-      {
         value: "≈ 20",
         label: "Plantas de ensamble de vehículos en operación en México",
         source: "AMIA",
       },
       {
-        value: "≈ 90%",
+        value: "≈ 87%",
         label:
-          "Porcentaje de vehículos producidos en México que se exportan a Estados Unidos y otros mercados",
-        source: "AMIA — Reportes mensuales de producción y exportación",
+          "Porcentaje de la producción de 2024 que se exportó (principalmente a Estados Unidos)",
+        source: "AMIA — Cálculo: 3.48M exportados / 3.99M producidos",
       },
     ],
     context: [
@@ -164,7 +166,7 @@ export const DATOS: Dato[] = [
     faqs: [
       {
         q: "¿En qué lugar del mundo está México como productor de vehículos?",
-        a: "México se ubica generalmente entre el sexto y séptimo lugar mundial en producción de vehículos ligeros, según los reportes anuales de la OICA (Organización Internacional de Constructores Automotrices). Como exportador, México está en el top 5 mundial, alrededor del cuarto lugar.",
+        a: "En 2024 México se consolidó en el quinto lugar mundial de producción automotriz con 4.2 millones de unidades (incluyendo vehículos pesados), de acuerdo con la OICA. El ranking ese año fue: China (31.3M), Estados Unidos (10.56M), Japón (8.23M), India (6.01M) y México. La posición de México ha fluctuado entre el quinto y el séptimo lugar en años recientes según el comportamiento de Corea del Sur y Brasil.",
       },
       {
         q: "¿Cuántas armadoras de autos hay en México?",
@@ -253,44 +255,48 @@ export const DATOS: Dato[] = [
     shortAnswer:
       "La industria química mexicana genera ventas anuales por aproximadamente 110,000 millones de dólares y representa el segundo sector manufacturero más grande del país, después del automotriz.",
     headlineStat: {
-      value: "≈ 110,000",
+      value: "≈ 45,663",
       unit: "millones de USD",
       label:
-        "Ventas anuales de la industria química mexicana (ANIQ, último anuario disponible)",
+        "Valor de mercado de la industria química mexicana en 2024 (ANIQ, no incluye petroquímica de PEMEX)",
       source: {
-        name: "ANIQ — Anuario Estadístico de la Industria Química Mexicana",
-        url: "https://aniq.org.mx/",
+        name: "ANIQ — Anuario Estadístico de la Industria Química Mexicana 2024",
+        url: "https://aniq.org.mx/anuario/2025/Capitulo2/introduccion.html",
         year: "2024",
       },
     },
     intro:
-      "La industria química es el segundo sector manufacturero más importante de México por valor agregado, después del automotriz. Concentra plantas de petroquímicos, químicos básicos, especialidades, fertilizantes, productos de higiene y cosméticos. Es proveedor obligado de prácticamente todas las cadenas de manufactura mexicanas, desde la automotriz hasta la alimenticia.",
+      "La industria química es uno de los pilares de la manufactura mexicana. Según el Anuario Estadístico de ANIQ, el sector tiene un valor de mercado cercano a los 45,663 millones de dólares y representa alrededor del 1.7% del PIB nacional. Concentra plantas de químicos básicos, especialidades, fertilizantes, productos de higiene y cosméticos. Es proveedor obligado de prácticamente todas las cadenas de manufactura mexicanas, desde la automotriz hasta la alimenticia. La cifra no incluye la petroquímica básica operada por PEMEX, que se contabiliza por separado.",
     supportingStats: [
+      {
+        value: "USD 21,025M",
+        label: "Producción de la industria química mexicana en 2024",
+        source: "ANIQ — Anuario 2024",
+      },
+      {
+        value: "≈ 1.7%",
+        label: "Participación de la industria química en el PIB nacional",
+        source: "ANIQ — Anuario 2024",
+      },
+      {
+        value: "USD 38,140M",
+        label: "Importaciones del sector químico en 2025 (+5.0% vs 2024)",
+        source: "ANIQ — Balanza Comercial 2025",
+      },
+      {
+        value: "USD 9,984M",
+        label: "Exportaciones del sector químico en 2025 (-14.6% vs 2024)",
+        source: "ANIQ — Balanza Comercial 2025",
+      },
+      {
+        value: "USD -28,156M",
+        label: "Déficit de balanza comercial del sector químico mexicano en 2025",
+        source: "ANIQ",
+      },
       {
         value: "≈ 5,000",
         label: "Establecimientos químicos registrados en México",
         source: "DENUE INEGI",
-      },
-      {
-        value: "≈ 110,000",
-        label: "Empleos directos en el sector químico",
-        source: "INEGI / ANIQ",
-      },
-      {
-        value: "≈ 3-4%",
-        label: "Participación en el PIB manufacturero mexicano",
-        source: "INEGI — Sistema de Cuentas Nacionales",
-      },
-      {
-        value: "≈ 25%",
-        label:
-          "Concentración geográfica en la región noreste (NL, Coahuila, Tamaulipas)",
-        source: "ANIQ — distribución regional",
-      },
-      {
-        value: "USD 38B+",
-        label: "Importaciones anuales de productos químicos a México",
-        source: "Secretaría de Economía / SAT",
       },
     ],
     context: [
@@ -389,31 +395,37 @@ export const DATOS: Dato[] = [
       "Volumen de aguas residuales industriales generadas y tratadas en México, descargas por sector y cobertura de tratamiento según CONAGUA y SEMARNAT.",
     question: "¿Cuánta agua residual genera la industria en México?",
     shortAnswer:
-      "La industria mexicana genera aproximadamente 7 km³ (7,000 hm³) de aguas residuales por año, de los cuales se trata cerca del 50%, según datos de CONAGUA.",
+      "La industria mexicana genera alrededor de 210 m³/s de aguas residuales (≈ 6,800-7,000 hm³ al año), de los cuales sólo cerca del 27% recibe tratamiento antes de su descarga, según CONAGUA.",
     headlineStat: {
-      value: "≈ 7",
+      value: "≈ 6.9",
       unit: "km³/año",
       label:
-        "Volumen anual de aguas residuales industriales generadas en México (CONAGUA)",
+        "Volumen anual de aguas residuales industriales descargadas en México — ~6,880 hm³ (CONAGUA, último dato consolidado)",
       source: {
-        name: "CONAGUA — Estadísticas del Agua en México",
-        url: "https://www.gob.mx/conagua",
-        year: "2023",
+        name: "CONAGUA — Estadísticas del Agua en México / SINA",
+        url: "https://sina.conagua.gob.mx/sina/index.php?p=12",
+        year: "2017-2023",
       },
     },
     intro:
-      "Las aguas residuales de origen industrial son uno de los principales focos de regulación ambiental en México. La normativa rectora es la NOM-001-SEMARNAT-2021, que establece los límites máximos permisibles de contaminantes en descargas a cuerpos receptores. El tratamiento físico-químico (coagulación, floculación, sedimentación) y biológico es obligatorio para plantas que descargan a redes municipales o cuerpos de agua federales.",
+      "Las aguas residuales de origen industrial son uno de los principales focos de regulación ambiental en México. La normativa rectora es la NOM-001-SEMARNAT-2021, que establece los límites máximos permisibles de contaminantes en descargas a cuerpos receptores. El tratamiento físico-químico (coagulación, floculación, sedimentación) y biológico es obligatorio para plantas que descargan a redes municipales o cuerpos de agua federales. A pesar de ello, los datos de CONAGUA muestran que sólo una fracción minoritaria del agua residual industrial se trata de manera efectiva antes de su descarga.",
     supportingStats: [
       {
-        value: "≈ 195",
-        label: "m³/segundo de aguas residuales industriales descargadas",
-        source: "CONAGUA",
+        value: "≈ 210",
+        label: "m³/segundo de aguas residuales descargadas por la industria",
+        source: "CONAGUA / SINA",
       },
       {
-        value: "≈ 50%",
+        value: "≈ 27%",
         label:
-          "Porcentaje aproximado de aguas residuales industriales tratadas antes de descarga",
-        source: "CONAGUA — Estadísticas del Agua",
+          "Porcentaje del agua residual industrial que recibe tratamiento antes de su descarga",
+        source: "CONAGUA — Sistema Nacional de Información del Agua",
+      },
+      {
+        value: "≈ 3,041",
+        label:
+          "Plantas industriales de tratamiento de aguas registradas (CONAGUA 2016)",
+        source: "CONAGUA — Inventario de plantas industriales",
       },
       {
         value: "NOM-001",
@@ -422,15 +434,16 @@ export const DATOS: Dato[] = [
         source: "DOF — Diario Oficial de la Federación",
       },
       {
-        value: "≈ 2,800",
-        label: "Plantas de tratamiento de aguas residuales en operación (municipales e industriales)",
-        source: "CONAGUA — Inventario Nacional",
-      },
-      {
         value: "Hasta 20%",
         label:
-          "Penalización al recibo de agua por incumplimiento de descarga industrial",
+          "Recargo al recibo de agua por incumplimiento de la norma de descarga industrial",
         source: "Ley Federal de Derechos",
+      },
+      {
+        value: "+28.4%",
+        label:
+          "Aumento del volumen de descargas industriales entre 2000 y 2017",
+        source: "CONAGUA — series históricas",
       },
     ],
     context: [
@@ -542,15 +555,15 @@ export const DATOS: Dato[] = [
     question:
       "¿Cuánta inversión ha captado Nuevo León por nearshoring?",
     shortAnswer:
-      "Nuevo León lidera la captación de inversión extranjera por nearshoring en México con anuncios acumulados por más de 30,000 millones de dólares entre 2022 y 2025, según la Secretaría de Economía del estado.",
+      "El Gobierno de Nuevo León reporta más de 75 mil millones de dólares en inversión anunciada por 382 proyectos (192 nuevos y 190 expansiones), con más de 385,000 empleos comprometidos. La IED acumulada del estado supera los 117 mil millones de dólares al cierre de 2025.",
     headlineStat: {
-      value: "USD 30,000M+",
+      value: "USD 75,000M+",
       unit: "anunciados",
       label:
-        "Inversión extranjera directa anunciada para Nuevo León 2022-2025 (Gobierno de NL)",
+        "Inversión anunciada para Nuevo León vía 382 proyectos (192 nuevos + 190 expansiones), Gobierno del Estado 2025",
       source: {
         name: "Gobierno de Nuevo León — Secretaría de Economía",
-        url: "https://www.nl.gob.mx/economia",
+        url: "https://www.nl.gob.mx/es/boletines/registra-nuevo-leon-3032-mdd-de-inversion-extranjera-directa-al-segundo-trimestre-de-2025",
         year: "2025",
       },
     },
@@ -558,35 +571,38 @@ export const DATOS: Dato[] = [
       "Nuevo León es el principal beneficiario del fenómeno de nearshoring en México. La combinación de cercanía con Estados Unidos, ecosistema industrial maduro, talento técnico, infraestructura logística y oferta de parques industriales lo ha posicionado como destino #1 para empresas que relocalizan operaciones desde Asia. Esto se traduce en demanda creciente de químicos industriales, servicios de pretratamiento, lubricantes y tratamiento de aguas en toda la cadena de proveeduría local.",
     supportingStats: [
       {
-        value: "#1",
+        value: "382",
         label:
-          "Ranking nacional de captación de IED por nearshoring (Secretaría de Economía)",
+          "Proyectos de inversión anunciados en NL (192 nuevos + 190 expansiones)",
+        source: "Gobierno del Estado de Nuevo León",
       },
       {
-        value: "100+",
-        label: "Empresas extranjeras nuevas establecidas en NL 2022-2025",
-        source: "Secretaría de Economía NL",
+        value: "USD 117,000M+",
+        label:
+          "IED acumulada de Nuevo León al cierre de 2025 (Gobierno del Estado)",
+        source: "Gobierno del Estado de Nuevo León",
       },
       {
-        value: "≈ 30",
-        label: "Empresas coreanas operando o establecidas en NL",
-        source: "Embajada de Corea / Secretaría de Economía",
+        value: "+73%",
+        label:
+          "Crecimiento de IED captada por NL en 2025 vs. año anterior",
+        source: "Vértigo Político / Secretaría de Economía NL",
       },
       {
-        value: "20+",
-        label: "Empresas chinas establecidas en NL recientemente",
-        source: "Reportes prensa industrial",
+        value: "237,894",
+        label:
+          "Empleos ya generados por proyectos anunciados (de más de 385 mil comprometidos)",
+        source: "Gobierno del Estado de Nuevo León",
+      },
+      {
+        value: "USD 3,628M",
+        label: "IED captada por Nuevo León durante 2025",
+        source: "Gobierno del Estado / Secretaría de Economía Federal",
       },
       {
         value: ">95%",
         label: "Ocupación de parques industriales en NL en 2024-2025",
         source: "AMPIP / brokers industriales",
-      },
-      {
-        value: "USD 10B",
-        label:
-          "Anuncio de gigafactory Tesla en Santa Catarina (anunciado 2023, en pausa parcial 2024)",
-        source: "Comunicados oficiales Tesla / NL",
       },
     ],
     context: [
@@ -640,7 +656,7 @@ export const DATOS: Dato[] = [
       },
       {
         q: "¿Qué pasó con la gigafactory de Tesla en Nuevo León?",
-        a: "Tesla anunció en marzo de 2023 una inversión de aproximadamente 10,000 millones de dólares para construir una gigafactory en Santa Catarina, NL. En 2024 la empresa anunció una pausa parcial del proyecto en espera de condiciones más favorables. Sin embargo, otras inversiones automotrices y de proveeduría tier 1 han seguido fluyendo al estado.",
+        a: "Tesla anunció en marzo de 2023 una inversión de aproximadamente 10,000 millones de dólares para construir una gigafactory en Santa Catarina. En 2024 Elon Musk anunció que se pausaría la inversión a la espera de las elecciones de Estados Unidos y las eventuales políticas arancelarias. Al cierre de 2025 el proyecto sigue oficialmente en pausa (no cancelado): el predio no ha iniciado construcción pero el Gobierno federal y el de NL han reiterado que la inversión no se cancela. Otras inversiones automotrices y de proveeduría tier 1 han seguido fluyendo al estado durante este período.",
       },
     ],
     sources: [
