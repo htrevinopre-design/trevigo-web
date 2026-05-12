@@ -11,6 +11,7 @@ import {
 import { SERVICES_CONTENT, getServiceContentBySlug } from "@/lib/services-content";
 import { getCasesByServiceSlug } from "@/lib/cases";
 import FAQAccordion from "@/components/FAQAccordion";
+import ServiceCotizaForm from "@/components/ServiceCotizaForm";
 
 const allProducts = PRODUCT_CATEGORIES.flatMap((cat) =>
   cat.subcategories.flatMap((sub) =>
@@ -141,32 +142,44 @@ export default function ServicioPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      {/* BODY SECTIONS */}
+      {/* BODY SECTIONS + COTIZA SIDEBAR */}
       <article className="bg-white py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          {content.sections.map((section, idx) => (
-            <section key={idx} className="mb-12">
-              <h2 className="text-2xl sm:text-3xl font-black text-steel-900 uppercase mb-5 leading-tight">
-                {section.heading}
-              </h2>
-              <div className="w-10 h-1 bg-orange-500 mb-6" />
-              {section.paragraphs.map((p, i) => (
-                <p key={i} className="text-steel-700 text-base leading-relaxed mb-4">
-                  {p}
-                </p>
-              ))}
-              {section.list && (
-                <ul className="space-y-3 mt-5 mb-2">
-                  {section.list.map((item, i) => (
-                    <li key={i} className="flex gap-3 text-steel-700 text-base leading-relaxed">
-                      <span className="text-orange-500 font-black mt-1 shrink-0">›</span>
-                      <span>{item}</span>
-                    </li>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-10 lg:gap-12 items-start">
+            {/* ── Contenido del servicio ── */}
+            <div>
+              {content.sections.map((section, idx) => (
+                <section key={idx} className="mb-12 last:mb-0">
+                  <h2 className="text-2xl sm:text-3xl font-black text-steel-900 uppercase mb-5 leading-tight">
+                    {section.heading}
+                  </h2>
+                  <div className="w-10 h-1 bg-orange-500 mb-6" />
+                  {section.paragraphs.map((p, i) => (
+                    <p key={i} className="text-steel-700 text-base leading-relaxed mb-4">
+                      {p}
+                    </p>
                   ))}
-                </ul>
-              )}
-            </section>
-          ))}
+                  {section.list && (
+                    <ul className="space-y-3 mt-5 mb-2">
+                      {section.list.map((item, i) => (
+                        <li key={i} className="flex gap-3 text-steel-700 text-base leading-relaxed">
+                          <span className="text-orange-500 font-black mt-1 shrink-0">›</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </section>
+              ))}
+            </div>
+
+            {/* ── Formulario de cotización (sticky en desktop) ── */}
+            <aside className="lg:sticky lg:top-[100px] h-fit">
+              <ServiceCotizaForm
+                serviceName={baseService?.name ?? content.title}
+              />
+            </aside>
+          </div>
         </div>
       </article>
 
