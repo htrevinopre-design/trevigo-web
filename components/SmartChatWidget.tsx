@@ -6,13 +6,16 @@ import Image from "next/image";
 // ─── Constants ───────────────────────────────────────────────────────────────
 const WA_NUMBER = "528120403135";
 
+type CotizarType = "servicio" | "producto";
+
 type Stage =
   | "hidden"           // not yet triggered
   | "bubble"           // notification bubble shown, chat closed
   | "chat"             // chat open, showing initial quick-action buttons
   | "cotizar-servicio" // flow: picking service type
-  | "cotizar-empresa"  // flow: entering company name
-  | "cotizar-urgencia" // flow: picking urgency
+  | "cotizar-producto" // flow: picking product category
+  | "cotizar-empresa"  // flow: entering company name (común para producto y servicio)
+  | "cotizar-urgencia" // flow: picking urgency (común para producto y servicio)
   | "done";            // flow complete, final CTA shown
 
 const SERVICIOS = [
@@ -21,6 +24,15 @@ const SERVICIOS = [
   "Galvanizado",
   "Tratamiento de aguas",
   "Despintado",
+  "Otro",
+];
+
+const PRODUCTOS = [
+  "Tratamiento de metales",
+  "Tratamiento de aguas",
+  "Lubricantes y aceites",
+  "Materias primas",
+  "Limpieza (SAK)",
   "Otro",
 ];
 
@@ -86,7 +98,8 @@ function UserMsg({ children }: { children: React.ReactNode }) {
 export default function SmartChatWidget() {
   const [stage, setStage] = useState<Stage>("hidden");
   const [triggered, setTriggered] = useState(false);
-  const [servicio, setServicio] = useState("");
+  const [cotizarType, setCotizarType] = useState<CotizarType>("servicio");
+  const [selection, setSelection] = useState(""); // servicio o categoría de producto
   const [empresa, setEmpresa] = useState("");
   const bodyRef = useRef<HTMLDivElement>(null);
   const empresaRef = useRef<HTMLInputElement>(null);
@@ -127,20 +140,34 @@ export default function SmartChatWidget() {
   const openWA = (msg: string) =>
     window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank");
 
-  const buildLeadMsg = () =>
-    `Hola, me interesa cotizar con Industrias Trevigo.\n\nServicio: ${servicio}\nEmpresa: ${empresa || "Por definir"}\n\n¿Podrían contactarme?`;
+  // Etiqueta usada en el mensaje de WhatsApp ("Servicio" o "Producto")
+  const typeLabel = cotizarType === "producto" ? "Producto" : "Servicio";
+
+  const buildLeadMsg = (urgencia?: string) =>
+    `Hola, me interesa cotizar con Industrias Trevigo.\n\n` +
+    `${typeLabel}: ${selection}\n` +
+    `Empresa: ${empresa || "Por definir"}` +
+    (urgencia ? `\nUrgencia: ${urgencia}` : "") +
+    `\n\n¿Podrían contactarme?`;
 
   const handleQuickAction = (key: string) => {
-    if (key === "cotizar")   return setStage("cotizar-servicio");
-    if (key === "servicios") return (window.location.href = "/servicios");
+    if (key === "cotizar-servicio") {
+      setCotizarType("servicio");
+      return setStage("cotizar-servicio");
+    }
+    if (key === "cotizar-producto") {
+      setCotizarType("producto");
+      return setStage("cotizar-producto");
+    }
+    if (key === "ver-catalogo") return (window.location.href = "/productos");
     if (key === "whatsapp")
       return openWA("Hola, estoy interesado en sus servicios de Trevigo. Me gustaría cotizar.");
     if (key === "cliente")
       return openWA("Hola, soy cliente de Industrias Trevigo y necesito apoyo con mi cuenta.");
   };
 
-  const handleServicio = (s: string) => {
-    setServicio(s);
+  const handleSelection = (s: string) => {
+    setSelection(s);
     setStage("cotizar-empresa");
   };
 
@@ -149,8 +176,7 @@ export default function SmartChatWidget() {
   };
 
   const handleUrgencia = (u: string) => {
-    // Skip urgencia capture — go straight to done (fewer friction steps)
-    openWA(`Hola, me interesa cotizar con Industrias Trevigo.\n\nServicio: ${servicio}\nEmpresa: ${empresa || "Por definir"}\nUrgencia: ${u}\n\n¿Podrían ayudarme?`);
+    openWA(buildLeadMsg(u));
     setStage("done");
   };
 
@@ -232,16 +258,17 @@ export default function SmartChatWidget() {
           <div ref={bodyRef} className="flex flex-col gap-3 p-4 overflow-y-auto flex-1">
 
             {/* Opening message — always visible once chat is open */}
-            <BotMsg>¿Estás cotizando un servicio? Te ayudo rápido 👇</BotMsg>
+            <BotMsg>¿Buscas una cotización? Te ayudo rápido 👇</BotMsg>
 
             {/* ── Stage: initial quick actions ── */}
             {stage === "chat" && (
               <div className="flex flex-col gap-2 ml-8 animate-fade-in">
                 {[
-                  { key: "cotizar",   label: "💬 Cotizar servicio" },
-                  { key: "servicios", label: "🔍 Ver servicios" },
-                  { key: "whatsapp",  label: "📱 Hablar por WhatsApp" },
-                  { key: "cliente",   label: "✅ Ya soy cliente" },
+                  { key: "cotizar-producto", label: "🧪 Cotizar producto" },
+                  { key: "cotizar-servicio", label: "🔧 Cotizar servicio" },
+                  { key: "ver-catalogo",     label: "🔍 Ver catálogo" },
+                  { key: "whatsapp",         label: "📱 Hablar por WhatsApp" },
+                  { key: "cliente",          label: "✅ Ya soy cliente" },
                 ].map((btn) => (
                   <button
                     key={btn.key}
@@ -255,9 +282,9 @@ export default function SmartChatWidget() {
             )}
 
             {/* ── Flow: service type ── */}
-            {["cotizar-servicio","cotizar-empresa","cotizar-urgencia","done"].includes(stage) && (
+            {cotizarType === "servicio" && ["cotizar-servicio","cotizar-empresa","cotizar-urgencia","done"].includes(stage) && (
               <>
-                <UserMsg>💬 Cotizar servicio</UserMsg>
+                <UserMsg>🔧 Cotizar servicio</UserMsg>
                 <BotMsg>¿Qué tipo de servicio necesitas?</BotMsg>
               </>
             )}
@@ -267,7 +294,7 @@ export default function SmartChatWidget() {
                 {SERVICIOS.map((s) => (
                   <button
                     key={s}
-                    onClick={() => handleServicio(s)}
+                    onClick={() => handleSelection(s)}
                     className="border border-navy-200 rounded-full px-3 py-1.5 text-[11px] font-semibold text-navy-700 hover:bg-navy-50 hover:border-navy-400 transition-all"
                   >
                     {s}
@@ -276,10 +303,32 @@ export default function SmartChatWidget() {
               </div>
             )}
 
+            {/* ── Flow: product category ── */}
+            {cotizarType === "producto" && ["cotizar-producto","cotizar-empresa","cotizar-urgencia","done"].includes(stage) && (
+              <>
+                <UserMsg>🧪 Cotizar producto</UserMsg>
+                <BotMsg>¿Qué tipo de producto necesitas?</BotMsg>
+              </>
+            )}
+
+            {stage === "cotizar-producto" && (
+              <div className="flex flex-wrap gap-2 ml-8 animate-fade-in">
+                {PRODUCTOS.map((p) => (
+                  <button
+                    key={p}
+                    onClick={() => handleSelection(p)}
+                    className="border border-navy-200 rounded-full px-3 py-1.5 text-[11px] font-semibold text-navy-700 hover:bg-navy-50 hover:border-navy-400 transition-all"
+                  >
+                    {p}
+                  </button>
+                ))}
+              </div>
+            )}
+
             {/* ── Flow: company ── */}
             {["cotizar-empresa","cotizar-urgencia","done"].includes(stage) && (
               <>
-                <UserMsg>{servicio}</UserMsg>
+                <UserMsg>{selection}</UserMsg>
                 <BotMsg>¿A nombre de qué empresa?</BotMsg>
               </>
             )}
