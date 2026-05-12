@@ -3,6 +3,7 @@ import { COMPANY, PRODUCT_CATEGORIES, INDUSTRIES } from "@/lib/data";
 import { ARTICLES } from "@/lib/articles";
 import { SERVICES_CONTENT } from "@/lib/services-content";
 import { GLOSSARY } from "@/lib/glossary";
+import { DATOS } from "@/lib/datos";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = COMPANY.url;
@@ -21,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/recursos`,          lastModified: now, changeFrequency: "weekly",  priority: 0.85 },
     { url: `${baseUrl}/casos-de-exito`,    lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/glosario`,          lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/datos`,             lastModified: now, changeFrequency: "monthly", priority: 0.85 },
   ];
 
   // ── Artículos técnicos / blog ────────────────────────────────────
@@ -69,6 +71,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // ── Data pages (/datos/[slug]) ──────────────────────────────────
+  // Reverse outreach SEO: páginas estadísticas que los periodistas
+  // buscan en Google y citan como fuente.
+  const datoPages: MetadataRoute.Sitemap = DATOS.map((d) => ({
+    url: `${baseUrl}/datos/${d.slug}`,
+    lastModified: new Date(d.updatedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
+
   return [
     ...staticPages,
     ...articlePages,
@@ -76,5 +88,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...productDetailPages,
     ...servicePages,
     ...glossaryPages,
+    ...datoPages,
   ];
 }

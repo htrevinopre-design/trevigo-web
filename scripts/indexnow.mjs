@@ -37,6 +37,7 @@ const dataSrc = readFile("lib/data.ts");
 const articlesSrc = readFile("lib/articles.ts");
 const servicesSrc = readFile("lib/services-content.ts");
 const glossarySrc = readFile("lib/glossary.ts");
+const datosSrc = readFile("lib/datos.ts");
 
 // Product IDs: 12+ espacios de indent (dentro de subcategorías)
 const productIds = extractMatches(
@@ -68,6 +69,12 @@ const glossarySlugs = extractMatches(
   /slug: "([a-z0-9-]+)"/g
 );
 
+// Data page slugs
+const datosSlugs = extractMatches(
+  datosSrc,
+  /slug: "([a-z0-9-]+)"/g
+);
+
 // ── Construir lista de URLs ────────────────────────────────────────
 const staticPaths = [
   "/",
@@ -81,6 +88,7 @@ const staticPaths = [
   "/recursos",
   "/casos-de-exito",
   "/glosario",
+  "/datos",
 ];
 
 const urls = [
@@ -90,6 +98,7 @@ const urls = [
   ...articleSlugs.map((s) => `/recursos/${s}`),
   ...serviceSlugs.map((s) => `/servicios/${s}`),
   ...glossarySlugs.map((s) => `/glosario/${s}`),
+  ...datosSlugs.map((s) => `/datos/${s}`),
 ].map((p) => `${BASE_URL}${p}`);
 
 // Deduplicar
