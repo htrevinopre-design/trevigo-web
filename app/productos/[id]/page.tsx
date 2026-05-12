@@ -85,8 +85,33 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
       name: COMPANY.legalName,
       url: COMPANY.url,
     },
-    // Sin `offers` porque el modelo es B2B por cotización (sin precio público).
-    // El tipo Product sigue siendo válido semánticamente para Google.
+    // Offer B2B "Request for Quote" (RFQ): satisface el requisito de Google
+    // para Rich Results sin publicar precio falso. El cliente cotiza vía la
+    // URL del producto (WhatsApp o formulario). minPrice 0 = "desde
+    // cotización" por las buenas prácticas de Google para B2B sin precio.
+    offers: {
+      "@type": "Offer",
+      url: `${COMPANY.url}/productos/${product.id}`,
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      businessFunction: "https://schema.org/Sell",
+      priceCurrency: "MXN",
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        priceCurrency: "MXN",
+        minPrice: "0",
+        valueAddedTaxIncluded: false,
+      },
+      seller: {
+        "@type": "Organization",
+        name: COMPANY.legalName,
+        url: COMPANY.url,
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "México",
+      },
+    },
   };
 
   // ── Schema.org BreadcrumbList (mejora cómo Google muestra la URL) ──
