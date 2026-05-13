@@ -210,7 +210,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300 text-xs font-bold uppercase tracking-wide transition-colors"
             >
-              📍 Ver ficha verificada en Google →
+              Ver ficha verificada en Google →
             </a>
           </div>
           <div className="rounded-xl overflow-hidden border border-white/10 h-64 w-full">
