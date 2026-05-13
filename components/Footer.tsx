@@ -202,7 +202,17 @@ export default function Footer() {
       {/* Google Maps embed */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <p className="text-white font-bold text-sm uppercase tracking-wider mb-4">Nuestra Ubicación</p>
+          <div className="flex flex-wrap items-end justify-between gap-3 mb-4">
+            <p className="text-white font-bold text-sm uppercase tracking-wider">Nuestra Ubicación</p>
+            <a
+              href={COMPANY.social.googleBusiness}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-orange-400 hover:text-orange-300 text-xs font-bold uppercase tracking-wide transition-colors"
+            >
+              📍 Ver ficha verificada en Google →
+            </a>
+          </div>
           <div className="rounded-xl overflow-hidden border border-white/10 h-64 w-full">
             <iframe
               src="https://www.google.com/maps?q=Puerto+Tampico+325,+La+Fe,+66477+San+Nicolás+de+los+Garza,+Nuevo+León,+México&output=embed"

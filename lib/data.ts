@@ -31,6 +31,7 @@ export const COMPANY = {
   social: {
     linkedin: "https://www.linkedin.com/company/industrias-trevigo",
     facebook: "https://www.facebook.com/industriastrevigo",
+    googleBusiness: "https://maps.app.goo.gl/35MYDqnokHs8AwHy6",
   },
   url: "https://www.trevigo.com.mx",
 };

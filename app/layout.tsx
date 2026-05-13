@@ -113,7 +113,11 @@ const organizationSchema = {
   },
   telephone: COMPANY.phone,
   email: COMPANY.email,
-  sameAs: [COMPANY.social.linkedin, COMPANY.social.facebook],
+  sameAs: [
+    COMPANY.social.linkedin,
+    COMPANY.social.facebook,
+    COMPANY.social.googleBusiness,
+  ],
   areaServed: {
     "@type": "Country",
     name: "México",
