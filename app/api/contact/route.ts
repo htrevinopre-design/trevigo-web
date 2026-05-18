@@ -124,6 +124,32 @@ function buildQuoteHtml(f: Record<string, string>) {
   );
 }
 
+// ─── Product quote email ───────────────────────────────────────────────────
+
+function buildProductoHtml(f: Record<string, string>) {
+  const table = `
+    <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;border:1px solid #e5e7eb;border-radius:6px;overflow:hidden;">
+      ${row("Producto", f.producto)}
+      ${row("SKU", f.sku)}
+      ${row("Presentación", f.presentacion)}
+      ${row("Cantidad", f.cantidad)}
+      ${row("Pedido periódico", f.periodo)}
+      ${row("Nombre", f.nombre)}
+      ${row("Empresa", f.empresa)}
+      ${row("Correo", f.correo)}
+      ${row("Teléfono", f.telefono)}
+      ${row("Estado", f.estado)}
+      ${row("Puesto", f.puesto)}
+      ${row("¿Ya es cliente?", f.yaCliente === "true" ? "Sí" : "No")}
+    </table>`;
+
+  return emailWrapper(
+    "Solicitud de producto",
+    `Producto: ${f.producto || "Por definir"} · SKU: ${f.sku || "—"}`,
+    table
+  );
+}
+
 // ─── Service quote email ───────────────────────────────────────────────────
 
 function buildServiceHtml(f: Record<string, string>) {
@@ -177,6 +203,10 @@ export async function POST(req: NextRequest) {
       const empresa = body.empresa ? ` — ${body.empresa}` : "";
       subject = `[Web] Servicio: ${body.servicio || "Solicitud"}${empresa}`;
       html = buildServiceHtml(body);
+    } else if (tipo === "producto") {
+      const empresa = body.empresa ? ` — ${body.empresa}` : "";
+      subject = `[Web] Producto: ${body.producto || "Solicitud"}${empresa}`;
+      html = buildProductoHtml(body);
     } else {
       return NextResponse.json({ error: "Tipo inválido" }, { status: 400 });
     }
