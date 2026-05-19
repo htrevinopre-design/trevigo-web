@@ -6,6 +6,7 @@ import { DATOS, getDatoBySlug } from "@/lib/datos";
 import { getAuthor, DEFAULT_AUTHOR_SLUG } from "@/lib/authors";
 import FAQAccordion from "@/components/FAQAccordion";
 import AuthorBlock from "@/components/AuthorBlock";
+import { Icon } from "@/components/Icon";
 
 export async function generateStaticParams() {
   return DATOS.map((d) => ({ slug: d.slug }));
@@ -165,8 +166,9 @@ export default function DatoPage({ params }: { params: { slug: string } }) {
       <section className="bg-white border-b border-steel-200 py-12 -mt-1">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-navy-50 border-2 border-navy-200 rounded-2xl p-8 sm:p-10">
-            <p className="text-navy-600 text-[11px] font-black uppercase tracking-[0.2em] mb-3">
-              📊 La cifra
+            <p className="text-navy-600 text-[11px] font-black uppercase tracking-[0.2em] mb-3 inline-flex items-center gap-1.5">
+              <Icon name="chart-bar" className="w-3.5 h-3.5" />
+              La cifra
             </p>
             <div className="flex flex-wrap items-baseline gap-3 mb-3">
               <span className="text-4xl sm:text-6xl font-black text-navy-900 leading-none">

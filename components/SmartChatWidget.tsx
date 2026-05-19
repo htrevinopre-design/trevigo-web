@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
+import { Icon, type IconName } from "@/components/Icon";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 const WA_NUMBER = "528120403135";
@@ -36,10 +37,10 @@ const PRODUCTOS = [
   "Otro",
 ];
 
-const URGENCIAS = [
-  { label: "🔥 Urgente (hoy o mañana)", value: "Urgente" },
-  { label: "📅 Esta semana",             value: "Esta semana" },
-  { label: "🗓 Sin prisa",               value: "Sin prisa" },
+const URGENCIAS: { icon: IconName; label: string; value: string }[] = [
+  { icon: "fire",          label: "Urgente (hoy o mañana)", value: "Urgente" },
+  { icon: "calendar",      label: "Esta semana",            value: "Esta semana" },
+  { icon: "calendar-days", label: "Sin prisa",              value: "Sin prisa" },
 ];
 
 // ─── WhatsApp icon (inline SVG to avoid extra dep) ───────────────────────────
@@ -193,7 +194,10 @@ export default function SmartChatWidget() {
             <BotAvatar size="md" />
             <p className="text-steel-800 text-xs font-medium leading-snug flex-1">
               ¿Estás cotizando algo?<br />
-              <span className="text-navy-600 font-bold">Te ayudo rápido 👇</span>
+              <span className="text-navy-600 font-bold inline-flex items-center gap-1">
+                Te ayudo rápido
+                <Icon name="arrow-down" className="w-3 h-3" />
+              </span>
             </p>
             <button
               onClick={() => setStage("hidden")}
@@ -249,8 +253,15 @@ export default function SmartChatWidget() {
 
           {/* ── Trust bar ── */}
           <div className="bg-navy-900 px-4 py-1.5 flex items-center gap-4 overflow-x-auto shrink-0 scrollbar-none">
-            {["⚡ Respuesta rápida", "📍 Todo NL", "🏭 +500 clientes"].map((t) => (
-              <span key={t} className="text-[9px] text-navy-300 font-semibold whitespace-nowrap">{t}</span>
+            {[
+              { icon: "bolt" as const,       label: "Respuesta rápida" },
+              { icon: "map-pin" as const,    label: "Todo NL" },
+              { icon: "building-2" as const, label: "+500 clientes" },
+            ].map((t) => (
+              <span key={t.label} className="text-[9px] text-navy-300 font-semibold whitespace-nowrap inline-flex items-center gap-1">
+                <Icon name={t.icon} className="w-3 h-3" />
+                {t.label}
+              </span>
             ))}
           </div>
 
@@ -258,24 +269,30 @@ export default function SmartChatWidget() {
           <div ref={bodyRef} className="flex flex-col gap-3 p-4 overflow-y-auto flex-1">
 
             {/* Opening message — always visible once chat is open */}
-            <BotMsg>¿Buscas una cotización? Te ayudo rápido 👇</BotMsg>
+            <BotMsg>
+              <span className="inline-flex items-center gap-1.5">
+                ¿Buscas una cotización? Te ayudo rápido
+                <Icon name="arrow-down" className="w-3 h-3" />
+              </span>
+            </BotMsg>
 
             {/* ── Stage: initial quick actions ── */}
             {stage === "chat" && (
               <div className="flex flex-col gap-2 ml-8 animate-fade-in">
-                {[
-                  { key: "cotizar-producto", label: "🧪 Cotizar producto" },
-                  { key: "cotizar-servicio", label: "🔧 Cotizar servicio" },
-                  { key: "ver-catalogo",     label: "🔍 Ver catálogo" },
-                  { key: "whatsapp",         label: "📱 Hablar por WhatsApp" },
-                  { key: "cliente",          label: "✅ Ya soy cliente" },
-                ].map((btn) => (
+                {([
+                  { key: "cotizar-producto", icon: "flask",            label: "Cotizar producto" },
+                  { key: "cotizar-servicio", icon: "wrench",           label: "Cotizar servicio" },
+                  { key: "ver-catalogo",     icon: "magnifying-glass", label: "Ver catálogo" },
+                  { key: "whatsapp",         icon: "phone",            label: "Hablar por WhatsApp" },
+                  { key: "cliente",          icon: "check-circle",     label: "Ya soy cliente" },
+                ] as const).map((btn) => (
                   <button
                     key={btn.key}
                     onClick={() => handleQuickAction(btn.key)}
-                    className="w-full text-left border border-navy-200 rounded-xl px-3 py-2.5 text-xs font-semibold text-navy-700 hover:bg-navy-50 hover:border-navy-400 transition-all"
+                    className="w-full text-left border border-navy-200 rounded-xl px-3 py-2.5 text-xs font-semibold text-navy-700 hover:bg-navy-50 hover:border-navy-400 transition-all inline-flex items-center gap-2"
                   >
-                    {btn.label}
+                    <Icon name={btn.icon} className="w-4 h-4 text-navy-600 shrink-0" />
+                    <span>{btn.label}</span>
                   </button>
                 ))}
               </div>
@@ -284,7 +301,12 @@ export default function SmartChatWidget() {
             {/* ── Flow: service type ── */}
             {cotizarType === "servicio" && ["cotizar-servicio","cotizar-empresa","cotizar-urgencia","done"].includes(stage) && (
               <>
-                <UserMsg>🔧 Cotizar servicio</UserMsg>
+                <UserMsg>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Icon name="wrench" className="w-3.5 h-3.5" />
+                    Cotizar servicio
+                  </span>
+                </UserMsg>
                 <BotMsg>¿Qué tipo de servicio necesitas?</BotMsg>
               </>
             )}
@@ -306,7 +328,12 @@ export default function SmartChatWidget() {
             {/* ── Flow: product category ── */}
             {cotizarType === "producto" && ["cotizar-producto","cotizar-empresa","cotizar-urgencia","done"].includes(stage) && (
               <>
-                <UserMsg>🧪 Cotizar producto</UserMsg>
+                <UserMsg>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Icon name="flask" className="w-3.5 h-3.5" />
+                    Cotizar producto
+                  </span>
+                </UserMsg>
                 <BotMsg>¿Qué tipo de producto necesitas?</BotMsg>
               </>
             )}
@@ -365,13 +392,14 @@ export default function SmartChatWidget() {
 
             {stage === "cotizar-urgencia" && (
               <div className="flex flex-col gap-2 ml-8 animate-fade-in">
-                {URGENCIAS.map(({ label, value }) => (
+                {URGENCIAS.map(({ icon, label, value }) => (
                   <button
                     key={value}
                     onClick={() => handleUrgencia(value)}
-                    className="w-full text-left border border-navy-200 rounded-xl px-3 py-2.5 text-xs font-semibold text-navy-700 hover:bg-navy-50 hover:border-navy-400 transition-all"
+                    className="w-full text-left border border-navy-200 rounded-xl px-3 py-2.5 text-xs font-semibold text-navy-700 hover:bg-navy-50 hover:border-navy-400 transition-all inline-flex items-center gap-2"
                   >
-                    {label}
+                    <Icon name={icon} className="w-4 h-4 text-navy-600 shrink-0" />
+                    <span>{label}</span>
                   </button>
                 ))}
               </div>
@@ -381,7 +409,7 @@ export default function SmartChatWidget() {
             {stage === "done" && (
               <>
                 <BotMsg>
-                  ¡Perfecto! Te enviamos los detalles por WhatsApp ahora mismo. 🚀
+                  ¡Perfecto! Te enviamos los detalles por WhatsApp ahora mismo.
                 </BotMsg>
                 <div className="ml-8 animate-fade-in">
                   <button

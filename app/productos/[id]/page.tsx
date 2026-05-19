@@ -6,6 +6,7 @@ import { COMPANY, PRODUCT_CATEGORIES, INDUSTRIES } from "@/lib/data";
 import { ARTICLES } from "@/lib/articles";
 import { PRODUCT_CONTENT } from "@/lib/products-content";
 import ProductCotizaForm from "@/components/ProductCotizaForm";
+import { Icon } from "@/components/Icon";
 
 const allProducts = PRODUCT_CATEGORIES.flatMap((cat) =>
   cat.subcategories.flatMap((sub) =>
@@ -340,7 +341,7 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
               <div className="space-y-4">
                 <div className="bg-navy-50 border border-navy-100 rounded-xl p-6">
                   <h3 className="text-navy-800 font-black text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
-                    <span className="text-orange-500">▸</span>
+                    <Icon name="chevron-right" className="w-3 h-3 text-orange-500" />
                     Aplicaciones típicas
                   </h3>
                   <ul className="space-y-2">
@@ -361,7 +362,7 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
                 {content.notes && (
                   <div className="bg-orange-50 border border-orange-200 rounded-xl p-5">
                     <h3 className="text-orange-800 font-black text-[10px] uppercase tracking-widest mb-2 flex items-center gap-2">
-                      <span>⚠</span>
+                      <Icon name="alert-triangle" className="w-3.5 h-3.5" />
                       Consideración técnica
                     </h3>
                     <p className="text-orange-900 text-xs leading-relaxed">
