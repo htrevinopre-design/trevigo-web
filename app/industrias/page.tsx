@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { COMPANY, INDUSTRIES } from "@/lib/data";
+import { EmojiIcon } from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "Industrias que Atendemos",
@@ -120,7 +121,7 @@ export default function IndustriasPage() {
 
                   {/* Body */}
                   <div className="p-4 flex-1 flex flex-col items-center text-center gap-2">
-                    <span className="text-4xl mt-2">{ind.icon}</span>
+                    <span className="mt-2 text-navy-700"><EmojiIcon emoji={ind.icon} className="w-9 h-9" /></span>
                     <h3 className={`text-steel-800 font-black text-sm uppercase leading-tight mt-1 transition-colors ${theme.textHover}`}>
                       {ind.name}
                     </h3>

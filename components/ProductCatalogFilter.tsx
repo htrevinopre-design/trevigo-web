@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { ProductCategory } from "@/lib/data";
+import { EmojiIcon } from "@/components/Icon";
 
 // ─── Color theme por categoría (duplicado del page.tsx, mantenidos sincronizados)
 const CATEGORY_THEME: Record<
@@ -361,8 +362,9 @@ export default function ProductCatalogFilter({ categories }: Props) {
                         className={`${theme.header} w-1 h-9 rounded-full shrink-0 mt-1`}
                       />
                       <div>
-                        <p className="text-navy-500 text-[10px] font-bold uppercase tracking-widest mb-0.5">
-                          {cat.icon} Categoría
+                        <p className="text-navy-500 text-[10px] font-bold uppercase tracking-widest mb-0.5 inline-flex items-center gap-1.5">
+                          <EmojiIcon emoji={cat.icon} className="w-3.5 h-3.5" />
+                          Categoría
                         </p>
                         <h2 className="text-lg sm:text-xl font-black text-steel-900 uppercase">
                           {cat.name}
@@ -508,8 +510,9 @@ function FiltersSidebar({
                   onChange={() => toggleCategory(cat.id)}
                   className="mt-0.5 w-4 h-4 accent-navy-500 shrink-0 cursor-pointer"
                 />
-                <span className="text-steel-800 font-black text-xs uppercase tracking-wide leading-tight group-hover:text-navy-700 transition-colors">
-                  {cat.icon} {cat.name}
+                <span className="text-steel-800 font-black text-xs uppercase tracking-wide leading-tight group-hover:text-navy-700 transition-colors inline-flex items-center gap-1.5">
+                  <EmojiIcon emoji={cat.icon} className="w-3.5 h-3.5" />
+                  {cat.name}
                 </span>
               </label>
               <ul className="ml-6 mt-2 space-y-1.5">

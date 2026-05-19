@@ -3,6 +3,7 @@ import Link from "next/link";
 import FAQAccordion from "@/components/FAQAccordion";
 import QuoteForm from "@/components/QuoteForm";
 import { COMPANY, PRODUCT_CATEGORIES, SERVICES, INDUSTRIES, GENERAL_FAQS } from "@/lib/data";
+import { EmojiIcon } from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: `${COMPANY.name} | Químicos Industriales & Tratamientos | Monterrey, México`,
@@ -127,7 +128,7 @@ export default function HomePage() {
                 <div key={cat.id} className="bg-white border border-steel-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow group">
                   {/* Color top */}
                   <div className={`${colors.bg} px-6 py-8 text-white`}>
-                    <div className="text-3xl mb-3">{cat.icon}</div>
+                    <div className="mb-3"><EmojiIcon emoji={cat.icon} className="w-9 h-9" /></div>
                     <p className="text-white/60 text-[10px] font-bold uppercase tracking-widest mb-1">INDUSTRIAS TREVIGO</p>
                     <h3 className="text-xl font-black uppercase leading-tight">{cat.name}</h3>
                   </div>
@@ -260,8 +261,8 @@ export default function HomePage() {
                 href={`/servicios#${service.id}`}
                 className="group bg-white border border-steel-200 rounded-lg p-6 hover:border-navy-400 hover:shadow-md transition-all text-center"
               >
-                <div className="w-14 h-14 rounded-full bg-navy-50 border-2 border-navy-100 flex items-center justify-center text-2xl mx-auto mb-4">
-                  {service.icon}
+                <div className="w-14 h-14 rounded-full bg-navy-50 border-2 border-navy-100 flex items-center justify-center mx-auto mb-4 text-navy-600">
+                  <EmojiIcon emoji={service.icon} className="w-6 h-6" />
                 </div>
                 <h3 className="text-steel-900 font-black text-sm uppercase mb-2 group-hover:text-navy-600 transition-colors">
                   {service.name}
@@ -298,7 +299,7 @@ export default function HomePage() {
             {INDUSTRIES.map((industry) => (
               <Link key={industry.id} href={`/industrias/${industry.slug}`}
                 className="group bg-white border border-steel-200 rounded-lg p-6 text-center hover:border-navy-400 hover:shadow-md transition-all">
-                <div className="text-4xl mb-3">{industry.icon}</div>
+                <div className="mb-3 flex justify-center text-navy-700"><EmojiIcon emoji={industry.icon} className="w-10 h-10" /></div>
                 <h3 className="text-steel-800 font-black text-sm uppercase mb-2 group-hover:text-navy-600 transition-colors">
                   {industry.name}
                 </h3>

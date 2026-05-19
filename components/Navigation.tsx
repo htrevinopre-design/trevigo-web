@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { COMPANY, INDUSTRIES, SERVICES_METALES, SERVICES_AGUAS } from "@/lib/data";
+import { EmojiIcon } from "@/components/Icon";
 
 // Estructura del mega menu de productos (3 columnas: selector | items | imagen)
 const PRODUCTOS_MENU = [
@@ -360,7 +361,7 @@ export default function Navigation() {
                     onClick={() => setActiveMenu(null)}
                     className="flex items-center gap-2 mb-5 group"
                   >
-                    <span className="text-lg">⚙️</span>
+                    <EmojiIcon emoji="⚙️" className="w-4 h-4 text-navy-600" />
                     <span className="text-xs font-black text-navy-600 uppercase tracking-wider group-hover:text-navy-800 transition-colors">
                       Tratamiento de Metales
                     </span>
@@ -381,7 +382,7 @@ export default function Navigation() {
                           onClick={() => setActiveMenu(null)}
                           className="flex items-center gap-2 py-1.5 text-xs text-steel-600 hover:text-navy-600 transition-colors group"
                         >
-                          <span className="text-base">{svc.icon}</span>
+                          <EmojiIcon emoji={svc.icon} className="w-4 h-4 text-steel-500 group-hover:text-navy-600" />
                           <span className="group-hover:translate-x-0.5 transition-transform leading-snug">{svc.name}</span>
                         </Link>
                       </li>
@@ -396,7 +397,7 @@ export default function Navigation() {
                     onClick={() => setActiveMenu(null)}
                     className="flex items-center gap-2 mb-5 group"
                   >
-                    <span className="text-lg">💧</span>
+                    <EmojiIcon emoji="💧" className="w-4 h-4 text-navy-600" />
                     <span className="text-xs font-black text-navy-600 uppercase tracking-wider group-hover:text-navy-800 transition-colors">
                       Tratamiento de Aguas Residuales
                     </span>
@@ -409,7 +410,7 @@ export default function Navigation() {
                           onClick={() => setActiveMenu(null)}
                           className="flex items-center gap-2 py-1.5 text-xs text-steel-600 hover:text-navy-600 transition-colors group"
                         >
-                          <span className="text-base">{svc.icon}</span>
+                          <EmojiIcon emoji={svc.icon} className="w-4 h-4 text-steel-500 group-hover:text-navy-600" />
                           <span className="group-hover:translate-x-0.5 transition-transform leading-snug">{svc.name}</span>
                         </Link>
                       </li>
@@ -467,7 +468,7 @@ export default function Navigation() {
                     className="flex items-center justify-between px-3 py-2.5 rounded-lg border border-steel-200 text-sm font-semibold text-steel-700 hover:bg-navy-50 hover:border-navy-300 hover:text-navy-700 transition-all group"
                   >
                     <span className="flex items-center gap-2">
-                      <span className="text-base">{ind.icon}</span>
+                      <EmojiIcon emoji={ind.icon} className="w-4 h-4 text-steel-500 group-hover:text-navy-600" />
                       <span className="leading-snug">{ind.name}</span>
                     </span>
                     <svg className="w-3.5 h-3.5 text-navy-400 group-hover:text-navy-600 shrink-0 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -627,7 +628,8 @@ export default function Navigation() {
                     <Link key={svc.id} href={`/servicios#${svc.id}`}
                       className="flex items-center gap-2 pl-10 pr-6 py-1.5 text-xs text-steel-600 hover:text-navy-600"
                       onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}>
-                      {svc.icon} {svc.name}
+                      <EmojiIcon emoji={svc.icon} className="w-3.5 h-3.5 text-steel-500" />
+                      {svc.name}
                     </Link>
                   ))}
                   <p className="px-8 py-1 mt-2 text-[10px] font-black text-navy-400 uppercase tracking-wider">Tratamiento de Aguas</p>
@@ -635,7 +637,8 @@ export default function Navigation() {
                     <Link key={svc.id} href={`/servicios#${svc.id}`}
                       className="flex items-center gap-2 pl-10 pr-6 py-1.5 text-xs text-steel-600 hover:text-navy-600"
                       onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}>
-                      {svc.icon} {svc.name}
+                      <EmojiIcon emoji={svc.icon} className="w-3.5 h-3.5 text-steel-500" />
+                      {svc.name}
                     </Link>
                   ))}
                 </div>
@@ -680,7 +683,7 @@ export default function Navigation() {
                       className="flex items-center gap-2 pl-10 pr-6 py-1.5 text-xs text-steel-600 hover:text-navy-600"
                       onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}
                     >
-                      <span>{ind.icon}</span>
+                      <EmojiIcon emoji={ind.icon} className="w-3.5 h-3.5 text-steel-500" />
                       <span>{ind.name}</span>
                     </Link>
                   ))}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import FAQAccordion from "@/components/FAQAccordion";
+import { EmojiIcon } from "@/components/Icon";
 import { COMPANY, INDUSTRIES, PRODUCT_CATEGORIES, SERVICES_METALES, SERVICES_AGUAS } from "@/lib/data";
 import { getCasesByIndustrySlug } from "@/lib/cases";
 
@@ -104,8 +105,9 @@ export default function IndustriaPage({ params }: Props) {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <div>
-              <p className="text-navy-400 text-xs font-bold uppercase tracking-[0.2em] mb-3">
-                {industry.icon} Industria {industry.name}
+              <p className="text-navy-400 text-xs font-bold uppercase tracking-[0.2em] mb-3 inline-flex items-center gap-1.5">
+                <EmojiIcon emoji={industry.icon} className="w-3.5 h-3.5" />
+                Industria {industry.name}
               </p>
               <h1 className="text-3xl sm:text-5xl font-black text-white uppercase leading-tight mb-4">
                 Químicos para la{" "}
@@ -244,8 +246,8 @@ export default function IndustriaPage({ params }: Props) {
                 <article key={service.id}
                   className="bg-white border border-steel-200 rounded-2xl overflow-hidden hover:shadow-lg hover:border-navy-300 transition-all group">
                   <div className="bg-gradient-to-br from-steel-800 to-steel-900 p-6">
-                    <div className="w-14 h-14 bg-navy-500 rounded-full flex items-center justify-center mb-4 shadow-lg text-2xl">
-                      {service.icon}
+                    <div className="w-14 h-14 bg-navy-500 rounded-full flex items-center justify-center mb-4 shadow-lg text-white">
+                      <EmojiIcon emoji={service.icon} className="w-6 h-6" />
                     </div>
                     <h3 className="text-white font-black text-sm uppercase leading-snug group-hover:text-orange-300 transition-colors">
                       {service.name}

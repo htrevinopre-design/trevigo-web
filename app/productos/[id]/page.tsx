@@ -6,7 +6,7 @@ import { COMPANY, PRODUCT_CATEGORIES, INDUSTRIES } from "@/lib/data";
 import { ARTICLES } from "@/lib/articles";
 import { PRODUCT_CONTENT } from "@/lib/products-content";
 import ProductCotizaForm from "@/components/ProductCotizaForm";
-import { Icon } from "@/components/Icon";
+import { Icon, EmojiIcon } from "@/components/Icon";
 
 const allProducts = PRODUCT_CATEGORIES.flatMap((cat) =>
   cat.subcategories.flatMap((sub) =>
@@ -470,7 +470,7 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
                   href={`/industrias/${ind.slug}`}
                   className="bg-steel-50 border border-steel-200 rounded-lg p-4 hover:border-orange-300 hover:bg-white hover:shadow-sm transition-all group flex flex-col items-center text-center"
                 >
-                  <span className="text-2xl mb-2">{ind.icon}</span>
+                  <span className="mb-2 text-navy-700"><EmojiIcon emoji={ind.icon} className="w-6 h-6" /></span>
                   <span className="text-steel-900 font-black text-xs uppercase leading-tight group-hover:text-orange-600 transition-colors">
                     {ind.name}
                   </span>

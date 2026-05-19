@@ -3,6 +3,7 @@ import Link from "next/link";
 import { COMPANY, INDUSTRIES } from "@/lib/data";
 import { CASES } from "@/lib/cases";
 import { SERVICES_CONTENT } from "@/lib/services-content";
+import { EmojiIcon } from "@/components/Icon";
 
 export const metadata: Metadata = {
   title: "Casos de Éxito en Plantas Industriales",
@@ -195,7 +196,7 @@ export default function CasosDeExitoPage() {
                 href={`/industrias/${ind.slug}`}
                 className="bg-white border border-steel-200 rounded-lg p-4 hover:border-orange-300 hover:shadow-sm transition-all group flex items-center gap-3"
               >
-                <span className="text-2xl shrink-0">{ind.icon}</span>
+                <span className="shrink-0 text-navy-700"><EmojiIcon emoji={ind.icon} className="w-6 h-6" /></span>
                 <span className="text-steel-900 font-black text-xs uppercase leading-tight group-hover:text-orange-600 transition-colors">
                   {ind.name}
                 </span>

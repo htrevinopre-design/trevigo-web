@@ -8,6 +8,7 @@ import {
   SERVICES_METALES,
   SERVICES_AGUAS,
 } from "@/lib/data";
+import { EmojiIcon } from "@/components/Icon";
 import { SERVICES_CONTENT, getServiceContentBySlug } from "@/lib/services-content";
 import { getCasesByServiceSlug } from "@/lib/cases";
 import FAQAccordion from "@/components/FAQAccordion";
@@ -236,7 +237,7 @@ export default function ServicioPage({ params }: { params: { slug: string } }) {
                   href={`/industrias/${ind.slug}`}
                   className="bg-steel-50 border border-steel-200 rounded-lg p-4 hover:border-orange-300 hover:bg-white hover:shadow-sm transition-all group flex items-center gap-3"
                 >
-                  <span className="text-2xl shrink-0">{ind.icon}</span>
+                  <span className="shrink-0 text-navy-700"><EmojiIcon emoji={ind.icon} className="w-6 h-6" /></span>
                   <span className="text-steel-900 font-black text-xs uppercase leading-tight group-hover:text-orange-600 transition-colors">
                     {ind.name}
                   </span>
