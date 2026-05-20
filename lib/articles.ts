@@ -778,6 +778,458 @@ export const ARTICLES: Article[] = [
         "Distribuimos formulaciones alcalinas especializadas para despintado de powder coating, e-coat y pinturas de alta resistencia. Visita técnica sin costo en Monterrey.",
     },
   },
+
+  // ─────────────────────────────────────────────────────────────────
+  // 8. FOSFATO DE ZINC VS FOSFATO DE HIERRO (comparativa, alta intención)
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: "fosfato-zinc-vs-fosfato-hierro",
+    title: "Fosfato de zinc vs fosfato de hierro: cuándo usar cada uno en pretratamiento de pintura",
+    metaTitle: "Fosfato de Zinc vs Fosfato de Hierro: Comparativa Técnica",
+    metaDescription:
+      "Diferencias entre fosfato de zinc y fosfato de hierro en pretratamiento de pintura industrial: aplicaciones, costos, peso de recubrimiento y desempeño anticorrosivo.",
+    excerpt:
+      "El fosfato de zinc y el fosfato de hierro son los dos sistemas de pretratamiento más usados antes de pintar acero. La elección entre uno y otro impacta directamente la durabilidad, costo y capacidad de tu línea de pintura.",
+    category: "Tratamiento de Metales",
+    readingTime: "8 min",
+    publishedAt: "2026-05-14",
+    updatedAt: "2026-05-14",
+    keywords: [
+      "fosfato zinc vs fosfato hierro",
+      "fosfatizado de zinc",
+      "fosfatizado de hierro",
+      "pretratamiento pintura",
+      "fosfato pintura automotriz",
+      "diferencia fosfato zinc hierro",
+    ],
+    intro:
+      "El fosfato de zinc y el fosfato de hierro son los dos sistemas de pretratamiento por conversión química más usados en la industria mexicana antes de aplicar pintura electrostática, e-coat o esmaltes industriales sobre acero. Aunque cumplen una función similar — formar una capa de conversión que mejora la adhesión y resistencia anticorrosiva — sus diferencias en costo operativo, peso del recubrimiento, capacidad de línea y desempeño final son significativas. Esta guía técnica te ayuda a decidir cuál sistema usar según tu aplicación.",
+    sections: [
+      {
+        heading: "Qué hace cada sistema",
+        paragraphs: [
+          "El fosfato de zinc deposita un recubrimiento cristalino denso compuesto principalmente por hopeita (Zn₃(PO₄)₂·4H₂O) y, en formulaciones tricatiónicas, fosfofilita (Zn₂Fe(PO₄)₂·4H₂O). El peso típico del recubrimiento va de 1.5 a 3.5 g/m² en sistemas estándar y hasta 7 g/m² en formulaciones de alta resistencia anticorrosiva.",
+          "El fosfato de hierro, por contraste, deposita una película amorfa de óxidos y fosfatos de hierro (FePO₄ + Fe₃O₄) con peso de 0.2 a 0.6 g/m². No es cristalino y técnicamente es más una capa de conversión ligera que un fosfato pleno.",
+          "Ambos sistemas mejoran la adhesión del recubrimiento posterior y protegen el sustrato, pero el fosfato de zinc lo hace mediante anclaje mecánico (área superficial mayor por la estructura cristalina) y barrera química, mientras que el fosfato de hierro depende casi exclusivamente del anclaje químico ligero.",
+        ],
+      },
+      {
+        heading: "Desempeño anticorrosivo: la diferencia más importante",
+        paragraphs: [
+          "En pruebas de niebla salina ASTM B117 con e-coat de buena calidad, los resultados típicos son:",
+        ],
+        list: {
+          items: [
+            "Fosfato de hierro + powder coating: 150-300 horas antes de falla del 5% en el panel",
+            "Fosfato de zinc estándar + powder coating: 400-700 horas",
+            "Fosfato de zinc + e-coat (automotriz OEM): 500-1,000 horas",
+            "Fosfato de zinc-calcio de alto peso + e-coat: >1,000 horas (especificación para mercados costeros y exportación)",
+          ],
+        },
+      },
+      {
+        heading: "Costo operativo y capacidad de línea",
+        paragraphs: [
+          "El fosfato de hierro es más económico de operar: requiere menos químico por pieza, opera a temperaturas menores (40-55°C vs 50-60°C del zinc), y la línea puede ser más compacta — un sistema de 3 etapas (limpieza+fosfato → enjuague → sello) es suficiente. Esto es atractivo para plantas pequeñas y medianas.",
+          "El fosfato de zinc requiere una línea de 5 a 7 etapas con activador, control estricto de relación punto libre/total, y un sistema de sellado posterior. La inversión inicial y el costo operativo por pieza son mayores, pero el desempeño anticorrosivo es muy superior.",
+          "Como regla general, si tu cliente final es la industria automotriz tier 1, electrodomésticos de exportación o cualquier producto con servicio exterior, el fosfato de zinc es prácticamente obligatorio. Para muebles metálicos, lockers, archiveros o productos de servicio interior, el fosfato de hierro es suficiente y mucho más económico.",
+        ],
+      },
+      {
+        heading: "Compatibilidad con sustratos",
+        paragraphs: [
+          "El fosfato de zinc tradicional es selectivo: funciona excelente sobre acero al carbón y zinc galvanizado, pero requiere formulaciones tricatiónicas (Zn-Mn-Ni) para procesar aluminio en la misma línea. Las plantas automotrices modernas usan estas formulaciones para procesar carrocerías mixtas con paneles de acero y aluminio.",
+          "El fosfato de hierro es más versátil sobre sustratos mixtos en operaciones de bajo a mediano peso, ya que su recubrimiento más ligero no genera los mismos problemas de compatibilidad. Sin embargo, el desempeño anticorrosivo se reduce sobre aluminio comparado con un buen pasivado específico para aluminio.",
+        ],
+      },
+      {
+        heading: "Tendencia: química verde y selladores sin cromo",
+        paragraphs: [
+          "Tanto el fosfato de zinc como el fosfato de hierro se complementan con selladores post-fosfatado. Tradicionalmente se usaba cromo hexavalente (Cr+6), pero la regulación europea REACH y la presión OEM han impulsado el cambio a selladores sin cromo basados en zirconio y silanos.",
+          "Industrias Trevigo distribuye selladores libres de cromo de última generación que mejoran 30-50% la resistencia anticorrosiva del recubrimiento de fosfato sin riesgos ambientales ni de salud ocupacional.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Puedo cambiar mi línea de fosfato de hierro a fosfato de zinc fácilmente?",
+        a: "Es técnicamente posible pero requiere modificar las etapas de la línea (típicamente pasar de 3 a 5-7 etapas), ajustar tiempos de contacto y temperatura, y agregar un baño de activador. La inversión puede ser significativa. Recomendamos evaluar primero si el desempeño anticorrosivo real lo justifica para tu aplicación.",
+      },
+      {
+        q: "¿Qué fosfato se usa en la industria automotriz mexicana?",
+        a: "Las armadoras (OEMs) usan fosfato de zinc tricatiónico (Zn-Mn-Ni) seguido de e-coat. Es el estándar que cumple con especificaciones GM (GMW3179), Ford (WSS-M3P18-A) y los lineamientos de la cadena tier 1.",
+      },
+      {
+        q: "¿Cómo controlo la calidad del fosfato en mi planta?",
+        a: "Los parámetros básicos son: peso del recubrimiento (gravimetría), relación punto libre/punto total del baño (titulación diaria), cristalinidad y uniformidad (inspección visual), y desempeño de niebla salina con panel testigo cada lote. Trevigo provee soporte técnico para establecer estos protocolos sin costo adicional para clientes activos.",
+      },
+      {
+        q: "¿Cuál es la vida útil promedio de un baño de fosfato de zinc?",
+        a: "Depende del volumen de producción y la calidad del enjuague previo, pero un baño bien controlado dura típicamente 3-6 meses antes de necesitar reemplazo o regeneración. El control de Fe disuelto, lodo y relación de acidez son los indicadores clave.",
+      },
+    ],
+    relatedProducts: [
+      "fosfato-zinc-brillante",
+      "fosfato-zinc-calcio-alta-resistencia",
+      "limpiador-fosfato-fierro-multimetales",
+      "fosfato-acido-detergente-integral",
+      "sellador-anticorrosion-libre-cromo",
+    ],
+    cta: {
+      title: "¿Quieres optimizar tu línea de fosfatado?",
+      description:
+        "Distribuimos fosfatos de zinc y de hierro formulados en México. Visita técnica sin costo para evaluar tu proceso y recomendar la formulación correcta.",
+    },
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // 9. COAGULANTE ORGÁNICO VS INORGÁNICO
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: "coagulante-organico-vs-inorganico",
+    title: "Coagulante orgánico vs inorgánico: cuándo elegir cada uno en tratamiento de aguas industriales",
+    metaTitle: "Coagulante Orgánico vs Inorgánico: Guía de Selección",
+    metaDescription:
+      "Diferencias entre coagulantes orgánicos y inorgánicos en tratamiento de aguas residuales industriales: cuándo usar cada uno, dosis, costos y casos de uso reales.",
+    excerpt:
+      "Elegir el coagulante correcto para tu planta de tratamiento de aguas residuales puede reducir 30-50% el costo operativo y los lodos generados. Conoce cuándo conviene un coagulante inorgánico (PAC, sulfato de aluminio) y cuándo uno orgánico (polyDADMAC, poliaminas).",
+    category: "Tratamiento de Aguas",
+    readingTime: "7 min",
+    publishedAt: "2026-05-14",
+    updatedAt: "2026-05-14",
+    keywords: [
+      "coagulante organico vs inorganico",
+      "coagulante PAC mexico",
+      "coagulante para PTAR",
+      "polyDADMAC",
+      "policloruro aluminio",
+      "tratamiento aguas industriales coagulante",
+    ],
+    intro:
+      "Los coagulantes son el primer químico que entra a una planta de tratamiento de aguas residuales (PTAR) industrial. Su función es neutralizar las cargas negativas de las partículas coloidales en suspensión para que se aglomeren y luego sedimenten o floten. La selección entre un coagulante inorgánico (basado en sales metálicas) y uno orgánico (basado en polímeros) afecta directamente el costo operativo, la cantidad de lodos generados y el cumplimiento de la NOM-001-SEMARNAT.",
+    sections: [
+      {
+        heading: "Coagulantes inorgánicos: qué son y cuándo usarlos",
+        paragraphs: [
+          "Los coagulantes inorgánicos más usados en México son el policloruro de aluminio (PAC, ~18% Al₂O₃), el sulfato de aluminio (alumbre) y el cloruro férrico. Funcionan generando cationes metálicos de alta carga (Al³⁺, Fe³⁺) que neutralizan las cargas negativas de las partículas en el agua.",
+          "Sus ventajas: bajo costo por kg, amplia disponibilidad, efectivos para aguas con turbidez alta y sólidos suspendidos visibles. El PAC en particular tiene un rango de pH operativo amplio (5.5-9.0) lo que lo hace muy versátil.",
+          "Sus desventajas: generan más lodos (hidróxidos metálicos), introducen aluminio o hierro residual al efluente, y consumen alcalinidad del agua (a veces requieren ajustar pH con sosa cáustica).",
+        ],
+        list: {
+          title: "Cuándo elegir coagulante inorgánico:",
+          items: [
+            "Aguas con TSS (sólidos suspendidos) >500 mg/L",
+            "Efluentes industriales con turbidez visible (>50 NTU)",
+            "Plantas con tolerancia a generación de lodos (espacio para deshidratación)",
+            "Sistemas que descargan a drenaje municipal donde aluminio residual no es problema",
+            "Operaciones que priorizan costo operativo bajo",
+          ],
+        },
+      },
+      {
+        heading: "Coagulantes orgánicos: qué son y cuándo usarlos",
+        paragraphs: [
+          "Los coagulantes orgánicos catiónicos son polímeros sintéticos: polyDADMAC (polidialildimetilamonio), poliaminas, o polielectrolitos catiónicos de alta densidad de carga. A diferencia de los inorgánicos, no generan precipitados metálicos — actúan formando puentes moleculares directos entre las partículas.",
+          "Sus ventajas: no aumentan el contenido de metales en el efluente, generan 30-50% menos lodos, funcionan a pH neutro sin ajuste, y dosis menores (10-100 ppm vs 50-300 ppm de los inorgánicos).",
+          "Sus desventajas: costo por kg significativamente mayor (3-5x), sensibles a overdose (inversión de carga si te pasas), y menos efectivos contra turbidez muy alta o sólidos gruesos sin un coagulante inorgánico como apoyo previo.",
+        ],
+        list: {
+          title: "Cuándo elegir coagulante orgánico:",
+          items: [
+            "Plantas con descarga directa a cuerpo de agua sensible (ríos, lagos)",
+            "Operaciones que reúsan el agua tratada (necesitan baja salinidad y metales)",
+            "Efluentes con alta carga orgánica disuelta o emulsiones aceite-agua",
+            "Industrias con regulación estricta de aluminio/hierro residual",
+            "Plantas con poco espacio para manejo de lodos",
+          ],
+        },
+      },
+      {
+        heading: "Combinación: lo que hacen las plantas optimizadas",
+        paragraphs: [
+          "En la práctica, las PTAR industriales más eficientes en México combinan ambos tipos. Una secuencia típica es: dosis baja de coagulante inorgánico (PAC) para neutralizar la turbidez gruesa, seguida de un polímero orgánico catiónico para formar flóculos compactos y, finalmente, un floculante aniónico (poliacrilamida) de alto peso molecular para aglomerar y sedimentar.",
+          "Esta combinación reduce el costo total 20-40% comparado con usar un solo tipo de coagulante en altas dosis, y produce un efluente de calidad superior con menos lodos.",
+        ],
+      },
+      {
+        heading: "Cómo determinar el coagulante correcto: la Prueba de Jarras",
+        paragraphs: [
+          "No hay forma de saber con certeza qué coagulante (o combinación) funciona mejor para tu efluente sin hacer una Prueba de Jarras (Jar Test) con muestra real. Este ensayo de laboratorio prueba 3-6 coagulantes a distintas dosis y mide turbidez residual, sólidos sedimentables y pH del clarificado.",
+          "En Trevigo realizamos Jar Test sin costo para clientes nuevos y existentes. El proceso toma 2-3 días e identifica el coagulante óptimo, la dosis correcta y el pH de trabajo antes de hacer cualquier ajuste en planta.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Cuánto coagulante necesito por m³ de agua tratada?",
+        a: "Depende totalmente del efluente. Como referencia: aguas con TSS bajo (50-200 mg/L) requieren 20-50 ppm de PAC; aguas con TSS medio-alto (500-2,000 mg/L) requieren 100-300 ppm. Los coagulantes orgánicos típicamente operan en 10-100 ppm. La única forma de tener la dosis exacta es con Jar Test.",
+      },
+      {
+        q: "¿El policloruro de aluminio (PAC) es lo mismo que el sulfato de aluminio?",
+        a: "No. El PAC tiene mayor carga catiónica activa por unidad de masa, opera en un rango de pH más amplio, genera menos lodos y consume menos alcalinidad. Cuesta más por kg pero suele ser más económico por m³ tratado. El sulfato de aluminio sigue usándose por su bajo costo en plantas grandes con tolerancia a más lodos.",
+      },
+      {
+        q: "¿Los coagulantes orgánicos son seguros para descarga ambiental?",
+        a: "Los polielectrolitos modernos son biodegradables y no se acumulan en el ambiente. Sin embargo, sobredosificarlos puede afectar organismos acuáticos por su alta carga. Siempre usar dosis óptima determinada por Jar Test es la práctica correcta.",
+      },
+      {
+        q: "¿Qué pasa si sobredosifico el coagulante?",
+        a: "Inversión de carga: las partículas vuelven a quedar con carga positiva (en lugar de neutralizadas) y se desestabilizan. Visualmente verás que el agua queda turbia y no flocula. La solución es reducir dosis y/o agregar floculante aniónico. Es el error más común en operadores nuevos de PTAR.",
+      },
+    ],
+    relatedProducts: [
+      "coagulante-inorganico-clarificacion",
+      "coagulante-organico-liquido",
+      "coagulante-alta-carga-cationica",
+      "floculante-anionico-alto-peso",
+      "poliacrilamida-phpa",
+    ],
+    cta: {
+      title: "¿Quieres optimizar tu PTAR?",
+      description:
+        "Realizamos Prueba de Jarras sin costo con muestra de tu efluente para determinar el coagulante óptimo, dosis exacta y ahorro proyectado en químicos.",
+    },
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // 10. NOM-001-SEMARNAT 2026: CHECKLIST DE CUMPLIMIENTO
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: "nom-001-semarnat-cumplimiento-checklist",
+    title: "NOM-001-SEMARNAT 2021: guía completa de cumplimiento para plantas industriales",
+    metaTitle: "NOM-001-SEMARNAT 2021: Checklist de Cumplimiento",
+    metaDescription:
+      "Guía completa de cumplimiento de la NOM-001-SEMARNAT-2021 para descargas industriales en México: parámetros, límites, checklist y consecuencias del incumplimiento.",
+    excerpt:
+      "La NOM-001-SEMARNAT-2021 regula todas las descargas de aguas residuales a cuerpos nacionales en México. Cumplirla no es opcional: las multas por incumplimiento pueden suspender tu operación. Esta guía te da la checklist completa para garantizar conformidad.",
+    category: "Cumplimiento Normativo",
+    readingTime: "10 min",
+    publishedAt: "2026-05-14",
+    updatedAt: "2026-05-14",
+    keywords: [
+      "NOM-001-SEMARNAT-2021",
+      "cumplimiento descargas aguas residuales",
+      "limite descarga industrial mexico",
+      "checklist NOM-001",
+      "PROFEPA descarga industrial",
+      "SEMARNAT descarga industrial",
+    ],
+    intro:
+      "La NOM-001-SEMARNAT-2021 entró en vigor en 2023 reemplazando a la histórica NOM-001-ECOL-1996. Es la norma rectora para descargas de aguas residuales a cuerpos receptores nacionales (ríos, embalses, suelo, costa) y aplica a todas las plantas industriales en México. Su cumplimiento es supervisado por PROFEPA mediante inspecciones aleatorias y reportes obligatorios de la planta misma. Esta guía resume los parámetros, límites y acciones requeridas para garantizar conformidad.",
+    sections: [
+      {
+        heading: "Qué regula la NOM-001-SEMARNAT-2021",
+        paragraphs: [
+          "La norma establece los límites máximos permisibles de contaminantes en descargas de aguas residuales en cuerpos receptores propiedad de la Nación. Aplica tanto a descargas industriales como a tratamiento municipal cuando éste vierte a un cuerpo receptor.",
+          "Los parámetros regulados se dividen en cinco grupos: (1) contaminantes básicos, (2) metales pesados, (3) cianuros, (4) microbiológicos, y (5) toxicológicos. Cada cuerpo receptor (río, embalse, suelo, costa, drenaje urbano) tiene límites distintos según su uso y capacidad asimilativa.",
+        ],
+      },
+      {
+        heading: "Parámetros básicos y límites típicos",
+        paragraphs: [
+          "Para una descarga típica industrial a río o embalse, los parámetros básicos son:",
+        ],
+        list: {
+          items: [
+            "DBO5 (Demanda Bioquímica de Oxígeno): 30-75 mg/L según cuerpo receptor",
+            "DQO (Demanda Química de Oxígeno): 75-200 mg/L",
+            "Sólidos Suspendidos Totales (SST): 30-75 mg/L",
+            "Grasas y aceites: 15-25 mg/L",
+            "Fósforo total: 5-15 mg/L (más estricto cerca de embalses)",
+            "Nitrógeno total: 15-40 mg/L",
+            "pH: 6.0-9.0",
+            "Temperatura: máximo 35-40°C",
+          ],
+        },
+      },
+      {
+        heading: "Checklist de cumplimiento para tu planta",
+        paragraphs: [
+          "Si tu planta industrial descarga aguas residuales a cuerpo nacional o a drenaje municipal con tratamiento, este es el orden lógico de cumplimiento:",
+        ],
+        list: {
+          items: [
+            "1. Tener permiso de descarga vigente registrado en CONAGUA (REPDA)",
+            "2. Caracterización del efluente real con laboratorio acreditado (no estimación)",
+            "3. Comparar resultados de caracterización vs límites de tu cuerpo receptor",
+            "4. Si hay parámetros fuera de norma, implementar tratamiento físico-químico (coagulación-floculación-sedimentación) y/o biológico (lodos activados)",
+            "5. Análisis mensual o trimestral según volumen — laboratorio acreditado",
+            "6. Reportes a CONAGUA y SEMARNAT en los formatos oficiales",
+            "7. Bitácora de operación de la PTAR (firma del operador y supervisor)",
+            "8. Disposición autorizada de lodos generados (NOM-052-SEMARNAT)",
+            "9. Auditoría interna anual + capacitación del personal operador",
+          ],
+        },
+      },
+      {
+        heading: "Consecuencias del incumplimiento",
+        paragraphs: [
+          "PROFEPA y CONAGUA tienen facultades de inspección sin previo aviso. Cuando detectan incumplimiento, las consecuencias escalan según gravedad:",
+        ],
+        list: {
+          items: [
+            "Multa administrativa: desde 50 hasta 50,000 UMAs (~$5,400 hasta $5.4 millones MXN)",
+            "Recargo del 10-20% en el cobro de derechos de agua según la Ley Federal de Derechos",
+            "Clausura temporal o permanente de la descarga (medida de emergencia)",
+            "Suspensión del título de concesión de agua para la planta",
+            "En casos graves con afectación a salud o ambiente: responsabilidad penal del Director General y/o responsable técnico",
+          ],
+        },
+      },
+      {
+        heading: "Cómo Trevigo apoya el cumplimiento",
+        paragraphs: [
+          "Industrias Trevigo provee los químicos necesarios para tratamiento físico-químico de aguas industriales (coagulantes, floculantes, poliacrilamidas, microbicidas) y asesoría técnica para diagnosticar tu planta. Nuestro proceso para clientes nuevos incluye:",
+          "Visita técnica sin costo, Prueba de Jarras con muestra real, diseño de dosificación, capacitación del operador y soporte post-arranque. Para plantas con incumplimiento detectado, nuestro equipo puede acompañarte en el proceso de regularización con CONAGUA.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Cuáles son los parámetros más fáciles de incumplir en industria?",
+        a: "Los más frecuentes son: grasas y aceites (industria alimenticia, automotriz, metalmecánica), DQO/DBO (alimenticia, papel), metales pesados como zinc y plomo (galvanizado, fosfatado, electrodepósito), y sólidos suspendidos (manufactura general, lavanderías).",
+      },
+      {
+        q: "¿Cada cuánto tengo que hacer análisis del efluente?",
+        a: "Depende del volumen de descarga. Plantas con >100 L/s: análisis mensual. Plantas con 10-100 L/s: análisis trimestral. Plantas con <10 L/s: semestral. Pero PROFEPA puede solicitar análisis adicionales en cualquier momento durante una inspección.",
+      },
+      {
+        q: "¿La NOM-001 aplica si descargo a drenaje municipal?",
+        a: "Para descargas a drenaje municipal aplica la NOM-002-SEMARNAT-1996, no la NOM-001. Sin embargo, muchos municipios exigen que también cumplas con la NOM-001 como condición para autorizar la conexión. Si tu municipio no tiene PTAR municipal y descarga al ambiente, la NOM-001 te aplica indirectamente.",
+      },
+      {
+        q: "¿Qué laboratorio debo usar para los análisis?",
+        a: "Únicamente laboratorios acreditados por la Entidad Mexicana de Acreditación (EMA) bajo la ISO/IEC 17025. Los resultados de laboratorios no acreditados no son válidos para reportes oficiales y pueden invalidar tu cumplimiento ante PROFEPA.",
+      },
+    ],
+    relatedProducts: [
+      "coagulante-inorganico-clarificacion",
+      "coagulante-organico-liquido",
+      "floculante-anionico-alto-peso",
+      "poliacrilamida-phpa",
+      "microbicida-amplio-espectro",
+      "inhibidor-oxigeno-calderas",
+    ],
+    cta: {
+      title: "¿Tu planta cumple con NOM-001-SEMARNAT-2021?",
+      description:
+        "Diagnóstico técnico sin costo: revisamos tus análisis recientes, identificamos brechas y proponemos el tratamiento químico para cumplimiento. Visita en planta incluida.",
+    },
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // 11. PRUEBA DE JARRAS (JAR TEST): PROTOCOLO COMPLETO
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: "prueba-de-jarras-jar-test-protocolo",
+    title: "Prueba de jarras (Jar Test): protocolo paso a paso para optimizar coagulación",
+    metaTitle: "Prueba de Jarras (Jar Test): Protocolo Completo",
+    metaDescription:
+      "Protocolo paso a paso de la Prueba de Jarras (Jar Test) para determinar el coagulante óptimo, dosis exacta y pH de trabajo en plantas de tratamiento de aguas industriales.",
+    excerpt:
+      "La Prueba de Jarras (Jar Test) es el ensayo de laboratorio más importante en tratamiento de aguas. Permite determinar el coagulante correcto, la dosis exacta y el pH óptimo antes de hacer cambios en planta — ahorrando semanas de ensayo-error.",
+    category: "Tratamiento de Aguas",
+    readingTime: "8 min",
+    publishedAt: "2026-05-14",
+    updatedAt: "2026-05-14",
+    keywords: [
+      "prueba de jarras",
+      "jar test protocolo",
+      "test de jarras tratamiento agua",
+      "dosis optima coagulante",
+      "ensayo coagulacion floculacion",
+      "jar test PTAR",
+    ],
+    intro:
+      "La Prueba de Jarras (Jar Test en inglés) es un ensayo de laboratorio que simula el proceso de coagulación-floculación a escala pequeña. Es la herramienta fundamental de cualquier ingeniero de procesos para decidir qué coagulante usar, en qué dosis y a qué pH, antes de hacer cualquier ajuste en una planta real de tratamiento de aguas residuales. Esta guía detalla el protocolo paso a paso y cómo interpretar los resultados.",
+    sections: [
+      {
+        heading: "Qué necesitas para hacer una Prueba de Jarras",
+        paragraphs: [
+          "El equipo básico incluye un floculador de jarras (típicamente 4-6 vasos de precipitado de 1 L con agitadores sincronizados a velocidad variable), una muestra fresca del efluente a tratar (mínimo 5 litros, refrigerada si han pasado más de 24 horas), los coagulantes y floculantes candidatos a evaluar, y equipo de medición: turbidímetro, pH-metro, conductivímetro y, opcionalmente, balanza analítica.",
+          "También necesitas pipetas calibradas para dosificar los coagulantes a las jarras y un cronómetro para controlar los tiempos exactos del ensayo.",
+        ],
+      },
+      {
+        heading: "Protocolo paso a paso",
+        paragraphs: [
+          "El protocolo estándar de un Jar Test sigue esta secuencia:",
+        ],
+        list: {
+          items: [
+            "1. Caracterización inicial: medir pH, conductividad, temperatura y turbidez de la muestra original",
+            "2. Llenar 4-6 jarras con 1 L cada una de la misma muestra homogeneizada",
+            "3. Si la prueba evalúa dosis: aplicar dosis crecientes del mismo coagulante (ej. 20, 50, 100, 150, 200 ppm)",
+            "4. Si la prueba evalúa coagulantes distintos: aplicar misma dosis nominal de cada coagulante candidato",
+            "5. Agitación rápida: 1 minuto a 100-150 rpm para dispersión del coagulante",
+            "6. Agitación lenta: 15-20 minutos a 30-40 rpm para favorecer floculación",
+            "7. Sedimentación: detener agitación y dejar reposar 20-30 minutos sin perturbar",
+            "8. Toma de muestra del sobrenadante (~2 cm bajo la superficie) y medir turbidez residual",
+            "9. Registrar pH final, observar tamaño de flóculo y velocidad de sedimentación",
+          ],
+        },
+      },
+      {
+        heading: "Cómo interpretar los resultados",
+        paragraphs: [
+          "El coagulante óptimo es el que produce la menor turbidez residual con la menor dosis posible. Pero también importa cómo se ve el proceso visualmente:",
+        ],
+        list: {
+          items: [
+            "Flóculos grandes (3-5 mm) que sedimentan rápido = buena coagulación",
+            "Flóculos pequeños y dispersos que no sedimentan = dosis insuficiente o coagulante incorrecto",
+            "Agua turbia sin flóculos visibles = sobredosis (inversión de carga) o pH fuera de rango",
+            "Buena claridad pero flóculos muy ligeros que flotan = típico de aguas con alta carga orgánica, considerar coagulante orgánico",
+          ],
+        },
+      },
+      {
+        heading: "Ajustes avanzados: pH y floculante",
+        paragraphs: [
+          "Una vez identificado el coagulante y dosis base, vale la pena repetir el Jar Test ajustando el pH inicial de las jarras (con sosa cáustica o ácido sulfúrico al 10%) para encontrar el pH óptimo de coagulación. Para PAC, el rango óptimo suele ser 6.5-8.0; para sulfato de aluminio 5.5-7.5; para cloruro férrico 4.5-6.5.",
+          "Después del coagulante, agregar un floculante aniónico de alto peso molecular (poliacrilamida) en dosis bajas (0.5-2 ppm) puede mejorar dramáticamente la sedimentación. Hacer una segunda ronda de jarras con el coagulante óptimo + distintas dosis de floculante para encontrar la combinación ideal.",
+        ],
+      },
+      {
+        heading: "Cómo se usa el resultado en planta",
+        paragraphs: [
+          "Una vez identificada la dosis óptima en jarras, hay que ajustarla al sistema real. Como regla general, la dosis en planta suele ser 10-20% mayor que la óptima en jarras por turbulencia y tiempos de contacto distintos. Empieza con la dosis del Jar Test, monitorea la turbidez del efluente clarificado diariamente y ajusta gradualmente.",
+          "El Jar Test debe repetirse cada 3-6 meses o cuando el efluente cambie significativamente (nuevo producto en la planta, cambio de proveedor de químicos, variación estacional). Cambios en la composición del efluente pueden requerir ajustes mayores que un simple cambio de dosis.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Cuánto cuesta hacer una Prueba de Jarras?",
+        a: "Un Jar Test completo en laboratorio externo cuesta entre $2,500 y $8,000 MXN dependiendo de los coagulantes evaluados y los análisis post-jarras (DBO, DQO, metales, etc.). En Trevigo lo hacemos sin costo para clientes activos y prospectos con potencial de compra de químicos.",
+      },
+      {
+        q: "¿Puedo hacer el Jar Test yo mismo en mi planta?",
+        a: "Sí, si tienes el equipo (floculador, turbidímetro, pH-metro). El equipo de floculador cuesta $25,000-$80,000 MXN. La inversión se justifica si tu planta procesa volúmenes altos o tiene efluentes variables que requieren ajustes frecuentes. Para empezar, recomendamos hacerlo con asesoría técnica externa hasta que el equipo interno domine el protocolo.",
+      },
+      {
+        q: "¿Cuántas veces al año debo repetir el Jar Test?",
+        a: "Mínimo cada 6 meses como mantenimiento preventivo. Adicionalmente, cada vez que: (1) cambies de proveedor de químicos, (2) ingrese un nuevo producto a la planta que afecte el efluente, (3) cambien estaciones del año con efectos en temperatura o flujo, o (4) detectes degradación de la calidad del clarificado.",
+      },
+      {
+        q: "¿Qué hago si ningún coagulante de los probados funciona?",
+        a: "Probablemente tu efluente requiere pretratamiento adicional antes de coagulación. Causas típicas: pH muy bajo o muy alto (ajustar primero), presencia de aceites/grasas emulsionadas (separar con DAF antes), exceso de surfactantes (tratamiento biológico o filtración con carbón activado), o temperatura demasiado alta (>40°C interfiere con coagulación).",
+      },
+    ],
+    relatedProducts: [
+      "coagulante-inorganico-clarificacion",
+      "coagulante-organico-liquido",
+      "coagulante-alta-carga-cationica",
+      "floculante-anionico-alto-peso",
+      "poliacrilamida-phpa",
+      "poliacrilamida-baja-densidad",
+    ],
+    cta: {
+      title: "¿Quieres una Prueba de Jarras sin costo para tu efluente?",
+      description:
+        "Trae 5 litros de muestra a nuestro laboratorio en San Nicolás. Te entregamos el reporte completo con coagulante recomendado, dosis óptima y ahorro proyectado en 5 días hábiles.",
+    },
+  },
 ];
 
 export const getArticleBySlug = (slug: string) =>

@@ -710,6 +710,503 @@ export const DATOS: Dato[] = [
     updatedAt: "2026-05-12",
     publishedAt: "2026-05-12",
   },
+
+  // ══════════════════════════════════════════════
+  // 5. INDUSTRIA ALIMENTARIA Y DE BEBIDAS EN MÉXICO
+  // ══════════════════════════════════════════════
+  {
+    slug: "industria-alimentaria-mexico-tamano",
+    category: "Industria",
+    metaTitle: "¿Cuánto vale la industria alimentaria y de bebidas en México?",
+    metaDescription:
+      "Tamaño de la industria alimentaria y de bebidas en México: ventas, empleo, participación en PIB y consumo de químicos industriales. Fuentes INEGI y ConMéxico.",
+    question: "¿Cuánto vale la industria alimentaria y de bebidas en México?",
+    shortAnswer:
+      "La industria alimentaria y de bebidas mexicana genera ventas anuales por aproximadamente 1.5 billones de pesos y emplea directamente a más de 800,000 personas, según INEGI. Es el principal subsector manufacturero del país por valor agregado.",
+    headlineStat: {
+      value: "≈ 1.5",
+      unit: "billones de MXN",
+      label:
+        "Valor anual de la industria de alimentos, bebidas y tabaco en México (INEGI, estimaciones recientes)",
+      source: {
+        name: "INEGI — Sistema de Cuentas Nacionales / Censos Económicos",
+        url: "https://www.inegi.org.mx/temas/manufactura/",
+        year: "2024",
+      },
+    },
+    intro:
+      "La industria de alimentos, bebidas y tabaco es el principal subsector manufacturero de México por valor agregado y empleo. Concentra la operación de cervecerías exportadoras (Heineken, Modelo, Constellation), refresqueras (Coca-Cola FEMSA, Arca Continental, PepsiCo), procesadoras de carne (Sukarne, Bachoco, Sigma), industrias lácteas (Lala, Alpura, Sigma), panadería industrial (Bimbo) y cientos de empresas regionales. Es además el sector con mayor consumo de químicos industriales para limpieza CIP, tratamiento de aguas de proceso y lubricación grado alimento.",
+    supportingStats: [
+      {
+        value: "≈ 800,000",
+        label: "Empleos directos en la industria alimentaria mexicana",
+        source: "INEGI — ENOE",
+      },
+      {
+        value: "≈ 4-5%",
+        label: "Participación de alimentos y bebidas en el PIB nacional",
+        source: "INEGI — Sistema de Cuentas Nacionales",
+      },
+      {
+        value: "≈ 25%",
+        label:
+          "Participación de alimentos y bebidas en el PIB manufacturero",
+        source: "INEGI",
+      },
+      {
+        value: "≈ 200,000",
+        label:
+          "Unidades económicas registradas en alimentos y bebidas (DENUE)",
+        source: "DENUE INEGI",
+      },
+      {
+        value: "USD 50B+",
+        label:
+          "Exportaciones anuales del sector agroalimentario mexicano",
+        source: "Banxico / SADER",
+      },
+      {
+        value: "#1",
+        label:
+          "Lugar de México como exportador mundial de cerveza, aguacate, tomate y berries",
+        source: "Trade Map / SADER",
+      },
+    ],
+    context: [
+      {
+        heading: "Composición del sector",
+        paragraphs: [
+          "La industria alimentaria y de bebidas mexicana incluye subsectores muy distintos en escala y dinámica: industria cervecera (~250 millones hl/año, segundo productor mundial), industria de bebidas no alcohólicas (refrescos, agua embotellada, jugos), industria láctea y derivados, industria cárnica (res, cerdo, aves), industria panificadora (Bimbo es la panificadora más grande del mundo), confitería, alimentos procesados y conservas.",
+          "Geográficamente, el Bajío y el centro del país concentran procesamiento agroindustrial, el norte (Nuevo León, Coahuila, Sonora) la industria cárnica y de bebidas, y la zona metropolitana del Valle de México el procesamiento de alimentos terminados.",
+        ],
+      },
+      {
+        heading: "Demanda de químicos industriales",
+        paragraphs: [
+          "La industria alimentaria mexicana es uno de los mayores consumidores de químicos industriales del país. Sus áreas críticas de consumo son:",
+        ],
+        list: [
+          "Limpieza y sanitización CIP (Clean-in-Place) — sosa cáustica, ácido fosfórico, ácido nítrico, hipoclorito de sodio",
+          "Tratamiento de aguas residuales — coagulantes catiónicos de alta carga para DAF, poliacrilamidas",
+          "Lubricantes grado alimento (NSF H1) — cadenas de transportador, motores, reductores",
+          "Limpieza institucional — químicos sanitizantes, papel, jarcería (línea SAK de Trevigo)",
+          "Tratamiento de aguas de calderas — inhibidores de oxígeno y secuestrantes",
+        ],
+      },
+      {
+        heading: "Regulación específica",
+        paragraphs: [
+          "Por ser sector de salud pública, la industria alimentaria está bajo doble regulación: COFEPRIS (control sanitario), SADER (regulación agropecuaria) y SEMARNAT (regulación ambiental). Los químicos que entran en contacto incidental con alimentos deben tener certificación NSF H1, y la limpieza CIP debe documentarse en HACCP y, para exportadores, en FSMA (US) o BRC (UK).",
+          "Esto eleva las exigencias técnicas: los proveedores químicos deben tener TDS y SDS en español e inglés, certificaciones NSF para lubricantes y compatibilidad ISO 22000/HACCP para sanitizantes.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Cuál es la industria de alimentos más grande de México?",
+        a: "La industria de bebidas (cerveza + refrescos + agua embotellada) es la de mayor valor agregado, seguida por la industria cárnica y la láctea. La cerveza por sí sola genera más de 25 mil millones de dólares en ventas y exportaciones combinadas.",
+      },
+      {
+        q: "¿Cuántas plantas alimentarias hay en México?",
+        a: "Según el DENUE de INEGI, México tiene aproximadamente 200,000 unidades económicas en alimentos y bebidas, considerando desde panaderías locales hasta plantas industriales grandes. Las plantas industriales formales (con >50 empleados) son alrededor de 5,000-8,000.",
+      },
+      {
+        q: "¿La industria alimentaria mexicana exporta más de lo que importa?",
+        a: "Sí, es uno de los pocos sectores con superávit comercial sostenido. Las exportaciones del sector agroalimentario superan los 50 mil millones de USD anuales, principalmente a Estados Unidos. Productos clave: cerveza, aguacate, tomate, berries, productos del mar, carne de res.",
+      },
+    ],
+    sources: [
+      {
+        name: "INEGI — Manufactura y Sistema de Cuentas Nacionales",
+        url: "https://www.inegi.org.mx/temas/manufactura/",
+      },
+      {
+        name: "INEGI — DENUE",
+        url: "https://www.inegi.org.mx/app/mapa/denue/",
+      },
+      {
+        name: "ConMéxico — Consejo Mexicano de la Industria de Productos de Consumo",
+        url: "https://www.conmexico.com.mx/",
+      },
+      {
+        name: "SADER — Secretaría de Agricultura y Desarrollo Rural",
+        url: "https://www.gob.mx/agricultura",
+      },
+      {
+        name: "Banxico — Balanza comercial agroalimentaria",
+        url: "https://www.banxico.org.mx/",
+      },
+    ],
+    internalLinks: [
+      {
+        text: "Lubricantes grado alimento NSF H1 — para plantas alimentarias",
+        href: "/productos/lubricante-grado-alimento",
+        description: "Lubricantes certificados para contacto incidental con alimentos.",
+      },
+      {
+        text: "Industria alimentaria — soluciones químicas",
+        href: "/industrias/alimenticia",
+        description: "Cómo Trevigo atiende a procesadoras de alimentos y bebidas.",
+      },
+      {
+        text: "Industria cervecera mexicana",
+        href: "/industrias/cervecera",
+        description: "Químicos para cervecerías exportadoras en México.",
+      },
+      {
+        text: "Industria refresquera",
+        href: "/industrias/refresquera",
+        description: "Tratamiento de aguas y limpieza para embotelladoras.",
+      },
+      {
+        text: "Datos: aguas residuales industriales en México",
+        href: "/datos/aguas-residuales-industriales-mexico",
+        description: "Volumen y regulación de descargas de la industria.",
+      },
+    ],
+    updatedAt: "2026-05-14",
+    publishedAt: "2026-05-14",
+  },
+
+  // ══════════════════════════════════════════════
+  // 6. COSTO DEL TRATAMIENTO DE AGUAS RESIDUALES INDUSTRIALES
+  // ══════════════════════════════════════════════
+  {
+    slug: "costo-tratamiento-aguas-residuales-industriales-mexico",
+    category: "Sustentabilidad",
+    metaTitle: "¿Cuánto cuesta tratar aguas residuales industriales en México?",
+    metaDescription:
+      "Costos operativos del tratamiento de aguas residuales industriales en México: químicos, energía, mano de obra y disposición de lodos. Cifras 2026.",
+    question:
+      "¿Cuánto cuesta tratar las aguas residuales industriales en México?",
+    shortAnswer:
+      "El costo total de operación de una planta de tratamiento de aguas residuales industriales en México varía entre 4 y 25 pesos por metro cúbico tratado, dependiendo del tipo de efluente, tecnología empleada y volumen.",
+    headlineStat: {
+      value: "$4 - $25",
+      unit: "pesos por m³",
+      label:
+        "Rango típico de costo operativo de PTAR industrial en México (incluye químicos, energía, mano de obra y disposición de lodos)",
+      source: {
+        name: "Estimaciones de la industria (consultoras y operadores de PTAR)",
+        url: "https://www.gob.mx/conagua",
+        year: "2024-2026",
+      },
+    },
+    intro:
+      "El costo de tratar un metro cúbico de agua residual industrial en México varía drásticamente según el tipo de efluente, la tecnología empleada (físico-químico vs biológico vs avanzado) y el volumen procesado. Esta página desglosa los componentes del costo y los rangos típicos que vemos en plantas industriales mexicanas, basado en operaciones reales que abastecemos en Industrias Trevigo.",
+    supportingStats: [
+      {
+        value: "≈ 35-50%",
+        label: "Porcentaje del costo operativo dedicado a químicos (coagulantes, floculantes, ajustadores de pH)",
+        source: "Operadores de PTAR / Consultoras",
+      },
+      {
+        value: "≈ 20-30%",
+        label: "Porcentaje del costo dedicado a energía eléctrica (bombeo y aireación)",
+        source: "Operadores de PTAR",
+      },
+      {
+        value: "≈ 15-25%",
+        label: "Porcentaje del costo dedicado a disposición de lodos",
+        source: "Industria",
+      },
+      {
+        value: "≈ 10-20%",
+        label: "Porcentaje del costo dedicado a mano de obra y mantenimiento",
+        source: "Industria",
+      },
+      {
+        value: "Hasta 60%",
+        label:
+          "Ahorro típico que se puede lograr con optimización química (Jar Test + dosificación correcta)",
+        source: "Casos documentados",
+      },
+      {
+        value: "20%",
+        label: "Recargo adicional al recibo de agua por incumplimiento de NOM-001 (Ley Federal de Derechos)",
+        source: "Ley Federal de Derechos",
+      },
+    ],
+    context: [
+      {
+        heading: "Componentes del costo: dónde se va el dinero",
+        paragraphs: [
+          "Una planta de tratamiento de aguas residuales industriales tiene cuatro grandes rubros de costo operativo, y entender sus proporciones es la primera palanca de optimización:",
+        ],
+        list: [
+          "Químicos (35-50%): coagulantes inorgánicos (PAC, sulfato de aluminio), coagulantes orgánicos (polyDADMAC, poliaminas), floculantes (poliacrilamidas aniónicas), ajustadores de pH (sosa cáustica, ácido sulfúrico), microbicidas y antiespumantes",
+          "Energía (20-30%): bombeo desde y hacia la PTAR, aireación en tanques biológicos, mezclado mecánico, deshidratación de lodos",
+          "Disposición de lodos (15-25%): transporte, tratamiento intermedio (deshidratación, secado) y disposición final en relleno autorizado (NOM-052-SEMARNAT)",
+          "Mano de obra y mantenimiento (10-20%): operador certificado, supervisor, técnico de laboratorio, repuestos, mantenimiento preventivo",
+        ],
+      },
+      {
+        heading: "Rangos típicos por tipo de tratamiento",
+        paragraphs: [
+          "El costo unitario por metro cúbico tratado varía mucho según la complejidad del efluente y la tecnología:",
+        ],
+        list: [
+          "Tratamiento físico-químico simple (coagulación + floculación + sedimentación): $4-$8 MXN/m³ — típico para aguas con sólidos suspendidos y carga orgánica baja",
+          "Tratamiento biológico (lodos activados, MBR): $7-$15 MXN/m³ — necesario para efluentes con DBO/DQO alto",
+          "Tratamiento avanzado (físico-químico + biológico + filtración terciaria): $12-$20 MXN/m³ — para reuso o descarga a cuerpos sensibles",
+          "Tratamientos especializados (ósmosis inversa, oxidación avanzada): $18-$25+ MXN/m³ — efluentes complejos o requisitos de reuso de alta calidad",
+        ],
+      },
+      {
+        heading: "Cómo reducir el costo: estrategias reales",
+        paragraphs: [
+          "Las plantas industriales mexicanas que más optimizan su costo de tratamiento siguen estas prácticas:",
+        ],
+        list: [
+          "Prueba de jarras periódica para ajustar dosis de coagulante a la realidad del efluente (ahorro típico 20-40% en químicos)",
+          "Reemplazo de sulfato de aluminio por PAC o coagulantes orgánicos en aguas con baja turbidez (menos lodos y menos químico)",
+          "Recuperación de energía: aprovechar el biogás de digestión anaerobia para generar electricidad",
+          "Pretratamiento eficiente para reducir carga al tratamiento principal (DAF previo, separación de aceites)",
+          "Sistema SCADA con control automático de dosificación (evita sobredosis en sistemas operados manualmente)",
+          "Monitoreo continuo de turbidez y pH para ajuste fino en tiempo real",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Cuánto cuesta construir una PTAR industrial nueva en México?",
+        a: "La inversión inicial (CAPEX) varía de $5 a $30 millones de MXN para plantas con capacidad de 10 a 100 m³/h. Plantas más grandes con tratamiento avanzado o reuso pueden superar los $100 millones. El payback típico considerando ahorros en descarga + cumplimiento normativo va de 3 a 7 años.",
+      },
+      {
+        q: "¿Es más barato tratar o pagar las multas?",
+        a: "No. Las multas de PROFEPA pueden alcanzar millones de pesos para infracciones graves, más el recargo del 20% en derechos de agua, más posibles clausuras temporales. El costo de no cumplir es 5-10x mayor que invertir en una PTAR adecuada en horizonte de 3 años.",
+      },
+      {
+        q: "¿Cómo sé si mi PTAR está sobrepagando en químicos?",
+        a: "Tres indicadores: (1) dosis de coagulante por encima de 200 ppm sostenida (probablemente subóptima), (2) lodos generados >2% del volumen tratado (sobredosis), (3) consumo de químico que crece más rápido que el caudal procesado. Un Jar Test fresco diagnostica en 2-3 días.",
+      },
+    ],
+    sources: [
+      {
+        name: "CONAGUA — Estadísticas del Agua en México",
+        url: "https://www.gob.mx/conagua",
+      },
+      {
+        name: "Ley Federal de Derechos — Sección Aguas Nacionales",
+        url: "https://www.diputados.gob.mx/LeyesBiblio/ref/lfd.htm",
+      },
+      {
+        name: "NOM-001-SEMARNAT-2021 — Descargas a cuerpos receptores",
+        url: "https://www.dof.gob.mx/",
+      },
+      {
+        name: "Consultoras del sector (rangos estimados)",
+      },
+    ],
+    internalLinks: [
+      {
+        text: "Coagulantes y floculantes — catálogo",
+        href: "/productos",
+        description: "PAC, poliaminas, poliacrilamidas para PTAR industriales.",
+      },
+      {
+        text: "Servicio de Prueba de Jarras sin costo",
+        href: "/servicios/pruebas-jarras",
+        description: "Optimizar tu dosificación con muestra real.",
+      },
+      {
+        text: "Artículo: Coagulante orgánico vs inorgánico",
+        href: "/recursos/coagulante-organico-vs-inorganico",
+        description: "Guía técnica de selección de coagulante.",
+      },
+      {
+        text: "Artículo: NOM-001-SEMARNAT checklist",
+        href: "/recursos/nom-001-semarnat-cumplimiento-checklist",
+        description: "Cumplimiento normativo paso a paso.",
+      },
+      {
+        text: "Datos: aguas residuales industriales en México",
+        href: "/datos/aguas-residuales-industriales-mexico",
+        description: "Contexto del sector y normativa.",
+      },
+    ],
+    updatedAt: "2026-05-14",
+    publishedAt: "2026-05-14",
+  },
+
+  // ══════════════════════════════════════════════
+  // 7. INDUSTRIA METALMECÁNICA EN MÉXICO
+  // ══════════════════════════════════════════════
+  {
+    slug: "industria-metalmecanica-mexico-tamano",
+    category: "Industria",
+    metaTitle: "¿Cuánto vale la industria metalmecánica en México?",
+    metaDescription:
+      "Tamaño de la industria metalmecánica mexicana: empresas, empleo, regiones clave (Nuevo León, Coahuila, Bajío) y vínculo con la cadena automotriz.",
+    question: "¿Cuánto vale la industria metalmecánica en México?",
+    shortAnswer:
+      "La industria metalmecánica mexicana incluye más de 60,000 empresas y genera más de 750,000 empleos directos, principalmente concentrados en el norte y Bajío del país. Es el segundo proveedor más importante de la cadena automotriz y aeroespacial.",
+    headlineStat: {
+      value: "≈ 60,000+",
+      unit: "empresas",
+      label:
+        "Establecimientos metalmecánicos registrados en México (DENUE INEGI)",
+      source: {
+        name: "INEGI — DENUE (Directorio Estadístico Nacional de Unidades Económicas)",
+        url: "https://www.inegi.org.mx/app/mapa/denue/",
+        year: "2024",
+      },
+    },
+    intro:
+      "La industria metalmecánica es la columna vertebral del ecosistema industrial mexicano. Incluye desde talleres de maquinado pequeños hasta grandes plantas tier 1 que abastecen a la cadena automotriz, aeroespacial, electrodomésticos y construcción. Su concentración geográfica en Nuevo León, Coahuila, Chihuahua y el Bajío refleja la lógica del nearshoring: estas regiones combinan proximidad con Estados Unidos, talento técnico y proveeduría química desarrollada.",
+    supportingStats: [
+      {
+        value: "≈ 750,000+",
+        label: "Empleos directos en la industria metalmecánica mexicana",
+        source: "INEGI / IMMEX",
+      },
+      {
+        value: "#2",
+        label:
+          "Posición de la metalmecánica como proveedor de la cadena automotriz (después de electrónica)",
+        source: "INA / AMIA",
+      },
+      {
+        value: "≈ 35%",
+        label:
+          "Porcentaje de las empresas metalmecánicas concentradas en NL, Coahuila y Chihuahua",
+        source: "DENUE INEGI",
+      },
+      {
+        value: "≈ 1,000+",
+        label:
+          "Empresas tier 1 y tier 2 de autopartes que pertenecen al sector metalmecánico",
+        source: "INA — Industria Nacional de Autopartes",
+      },
+      {
+        value: "USD 100B+",
+        label:
+          "Exportaciones anuales de autopartes (incluye metalmecánica de precisión)",
+        source: "Banxico / Secretaría de Economía",
+      },
+      {
+        value: "≈ 20",
+        label: "Parques industriales metalmecánicos en el Área Metropolitana de Monterrey",
+        source: "AMPIP / Gobierno de NL",
+      },
+    ],
+    context: [
+      {
+        heading: "Subsectores de la metalmecánica",
+        paragraphs: [
+          "La industria metalmecánica mexicana se divide en varios subsectores con dinámicas distintas:",
+        ],
+        list: [
+          "Maquinado de precisión (torneado, fresado, rectificado) — tier 1 y tier 2 automotriz",
+          "Estampado y troquelado — carrocerías, paneles, electrodomésticos línea blanca",
+          "Fundición de metales (hierro, aluminio, zinc) — bloques de motor, cabezas, herrajes",
+          "Soldadura y armado estructural — estructuras metálicas, equipo industrial",
+          "Tratamiento térmico — temple, revenido, cementado",
+          "Acabado superficial — galvanizado, fosfatado, pintura, anodizado, electrodepósito",
+        ],
+      },
+      {
+        heading: "Regiones clave",
+        paragraphs: [
+          "Geográficamente, la metalmecánica mexicana se concentra en cuatro grandes regiones:",
+        ],
+        list: [
+          "Noreste (Nuevo León, Coahuila, Tamaulipas): la mayor concentración de plantas tier 1 automotriz y maquinado de precisión. Monterrey es el corazón histórico de la metalmecánica mexicana.",
+          "Bajío (Guanajuato, Querétaro, San Luis Potosí, Aguascalientes): expansión reciente impulsada por OEMs automotrices (Mazda, Honda, Toyota, Nissan, Audi)",
+          "Norte (Chihuahua, Sonora): maquila de autopartes ligeras y componentes para EE.UU.",
+          "Centro (Estado de México, Puebla): proveeduría a Volkswagen, Audi y plantas históricas de manufactura general",
+        ],
+      },
+      {
+        heading: "Consumo de químicos industriales",
+        paragraphs: [
+          "La industria metalmecánica es uno de los mayores consumidores de químicos industriales en México por la naturaleza de sus procesos. Sus consumos típicos incluyen:",
+        ],
+        list: [
+          "Fluidos de corte y refrigerantes — para torneado, fresado, rectificado",
+          "Desoxidantes ácidos — antes de pintura, galvanizado o ensamble",
+          "Inhibidores de corrosión temporal (VCI) — para protección entre operaciones",
+          "Limpiadores alcalinos — desengrase de aceites de estampado",
+          "Aceites protectores — almacenamiento de piezas terminadas",
+          "Tratamiento de aguas residuales — coagulantes, floculantes para efluentes de pintura, fosfatado y maquinado",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Cuántas empresas metalmecánicas hay en Nuevo León?",
+        a: "Según el DENUE de INEGI, Nuevo León concentra aproximadamente 8,000-10,000 establecimientos metalmecánicos, lo que representa cerca del 15% del total nacional. Es el estado #1 en concentración de tier 1 automotriz.",
+      },
+      {
+        q: "¿Cuánto exporta la industria metalmecánica mexicana?",
+        a: "Las exportaciones de autopartes superan los 100 mil millones de USD anuales según Banxico, y una parte significativa proviene del sector metalmecánico (estampado, maquinado, fundición). El sector es superavitario en balanza comercial.",
+      },
+      {
+        q: "¿Cómo está afectando el nearshoring a la metalmecánica mexicana?",
+        a: "El nearshoring está incrementando la demanda de proveedores tier 1, tier 2 y tier 3 en México. Las empresas asiáticas que se relocalizan necesitan proveeduría local de estampado, maquinado y acabado superficial. Esto se traduce en expansión de capacidad y demanda creciente de químicos industriales.",
+      },
+      {
+        q: "¿Qué normas regulan la operación metalmecánica en México?",
+        a: "Las principales son: NOM-001-SEMARNAT (descargas de aguas residuales), NOM-018-STPS (etiquetado de químicos), NOM-052-SEMARNAT (residuos peligrosos como lodos de fosfatado), y normas específicas de seguridad como NOM-026-STPS para señalización y NOM-005-STPS para manejo de químicos peligrosos.",
+      },
+    ],
+    sources: [
+      {
+        name: "INEGI — DENUE",
+        url: "https://www.inegi.org.mx/app/mapa/denue/",
+      },
+      {
+        name: "INA — Industria Nacional de Autopartes",
+        url: "https://www.ina.com.mx/",
+      },
+      {
+        name: "AMIA — Asociación Mexicana de la Industria Automotriz",
+        url: "https://www.amia.com.mx/",
+      },
+      {
+        name: "AMPIP — Parques Industriales Privados",
+        url: "https://www.ampip.org.mx/",
+      },
+      {
+        name: "Banxico — Balanza comercial automotriz",
+        url: "https://www.banxico.org.mx/",
+      },
+    ],
+    internalLinks: [
+      {
+        text: "Industria metalmecánica — soluciones químicas",
+        href: "/industrias/metalmecanica",
+        description:
+          "Cómo Trevigo abastece a talleres y plantas metalmecánicas.",
+      },
+      {
+        text: "Datos: industria automotriz en México",
+        href: "/datos/industria-automotriz-mexico-tamano",
+        description:
+          "Tamaño del sector automotriz y su impacto en metalmecánica.",
+      },
+      {
+        text: "Datos: nearshoring en Nuevo León",
+        href: "/datos/nearshoring-nuevo-leon-cifras",
+        description:
+          "Cómo el nearshoring impulsa demanda de proveeduría tier 1 y tier 2.",
+      },
+      {
+        text: "Catálogo de desoxidantes e inhibidores",
+        href: "/productos",
+        description:
+          "Productos clave para procesos metalmecánicos en Monterrey.",
+      },
+      {
+        text: "Artículo: Fosfato de zinc vs hierro",
+        href: "/recursos/fosfato-zinc-vs-fosfato-hierro",
+        description:
+          "Comparativa de pretratamiento de pintura para tier 1 y tier 2.",
+      },
+    ],
+    updatedAt: "2026-05-14",
+    publishedAt: "2026-05-14",
+  },
 ];
 
 export function getDatoBySlug(slug: string): Dato | undefined {
