@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { COMPANY, PRODUCT_CATEGORIES } from "@/lib/data";
 import ProductCatalogFilter from "@/components/ProductCatalogFilter";
-import { SUBCATEGORY_CONTENT } from "@/lib/product-subcategories-content";
 import { CATEGORY_CONTENT } from "@/lib/product-categories-content";
 
 export const metadata: Metadata = {
@@ -105,45 +104,6 @@ export default function ProductosPage() {
                 </Link>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── LÍNEAS TÉCNICAS DESTACADAS (landing pages por subcategoría) ─── */}
-      <section className="bg-white py-12 border-b border-steel-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="bg-orange-500 w-1 h-8 rounded-full shrink-0" />
-            <div>
-              <p className="text-orange-500 text-[10px] font-black uppercase tracking-widest mb-0.5">
-                Líneas técnicas
-              </p>
-              <h2 className="text-lg sm:text-xl font-black text-steel-900 uppercase">
-                Conoce nuestras líneas químicas para tratamiento de metales
-              </h2>
-            </div>
-          </div>
-          <p className="text-steel-600 text-sm leading-relaxed mb-6 sm:ml-7 max-w-3xl">
-            Cada línea cuenta con su propia guía técnica: aplicación, química base, control de proceso y selección del producto correcto.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {Object.values(SUBCATEGORY_CONTENT).map((sc) => (
-              <Link
-                key={sc.id}
-                href={`/productos/categoria/${sc.id}`}
-                className="bg-steel-50 border border-steel-200 rounded-xl p-5 hover:shadow-md hover:border-orange-300 hover:bg-white transition-all group"
-              >
-                <h3 className="text-steel-900 font-black text-sm uppercase leading-tight mb-2 group-hover:text-orange-600 transition-colors">
-                  {sc.hero}
-                </h3>
-                <p className="text-steel-500 text-xs leading-relaxed mb-3 line-clamp-3">
-                  {sc.metaDescription}
-                </p>
-                <span className="text-navy-500 text-xs font-black uppercase tracking-wide">
-                  Ver línea →
-                </span>
-              </Link>
-            ))}
           </div>
         </div>
       </section>
