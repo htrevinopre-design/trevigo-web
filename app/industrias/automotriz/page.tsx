@@ -4,9 +4,9 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { COMPANY, PRODUCT_CATEGORIES } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Químicos para la Industria Automotriz en México | Fosfatado, Galvanizado, Tratamiento de Agua",
+  title: "Proveedor de Químicos para la Industria Automotriz en México",
   description:
-    "Industrias Trevigo es proveedor de productos químicos para la cadena automotriz en Nuevo León: fosfatado, inhibidores de corrosión, coagulantes y más. Cumplimiento con normas GM, Ford, Chrysler.",
+    "Proveedor y distribuidor de químicos industriales para la cadena automotriz mexicana: fosfatado, galvanizado, inhibidores y tratamiento de aguas. 35+ años en Nuevo León. Cumplimiento GM, Ford, Chrysler.",
   alternates: { canonical: `${COMPANY.url}/industrias/automotriz` },
 };
 
