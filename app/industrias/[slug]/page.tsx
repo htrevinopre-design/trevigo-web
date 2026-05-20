@@ -18,10 +18,20 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const industry = INDUSTRIES.find((i) => i.slug === params.slug);
   if (!industry) return {};
+  // industry.seoTitle/seoDescription pueden estar definidos en lib/data.ts
+  // para queries comerciales específicas (ej. "proveedor de químicos para
+  // industria aeroespacial"). Si no, usar el patrón por defecto.
+  const title = industry.seoTitle ?? `Químicos para ${industry.name}`;
+  const description = industry.seoDescription ?? industry.description;
   return {
-    title: `Químicos para ${industry.name}`,
-    description: industry.description,
+    title,
+    description,
     alternates: { canonical: `${COMPANY.url}/industrias/${industry.slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `${COMPANY.url}/industrias/${industry.slug}`,
+    },
   };
 }
 

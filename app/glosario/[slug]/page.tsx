@@ -23,13 +23,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const entry = getGlossaryEntry(params.slug);
   if (!entry) return { title: "Término no encontrado" };
+  const title = entry.seoTitle ?? `${entry.term}: Definición Técnica`;
+  const description = entry.seoDescription ?? entry.shortDef;
   return {
-    title: `${entry.term}: Definición Técnica`,
-    description: entry.shortDef,
+    title,
+    description,
     alternates: { canonical: `${COMPANY.url}/glosario/${entry.slug}` },
     openGraph: {
-      title: `${entry.term}: Definición Técnica`,
-      description: entry.shortDef,
+      title,
+      description,
       url: `${COMPANY.url}/glosario/${entry.slug}`,
     },
   };

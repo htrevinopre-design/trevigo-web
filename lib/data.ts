@@ -854,11 +854,19 @@ export interface IndustryDefinition {
   serviceIds: string[];              // IDs of services to feature (from SERVICES_METALES + SERVICES_AGUAS)
   stats: Array<{ value: string; label: string }>;
   faqs: Array<{ q: string; a: string }>;
+  /** Override del metaTitle para CTR-optimization en queries comerciales
+   * (ej. "proveedor de químicos para industria aeroespacial"). Si no se
+   * define, se usa el patrón por defecto. */
+  seoTitle?: string;
+  /** Override del metaDescription para SERP attractive. */
+  seoDescription?: string;
 }
 
 export const INDUSTRIES: IndustryDefinition[] = [
   {
     id: "automotriz", name: "Automotriz", slug: "automotriz", icon: "🚗",
+    seoTitle: "Proveedor de Químicos para la Industria Automotriz en México",
+    seoDescription: "Proveedor y distribuidor de químicos industriales para la cadena automotriz mexicana: fosfatado, galvanizado, inhibidores y tratamiento de aguas. 35+ años en Nuevo León.",
     description: "Soluciones para la cadena automotriz en Nuevo León: fosfatado, galvanizado, tratamiento de aguas residuales de taller y productos para fabricantes de autopartes.",
     heroText: "Nuevo León produce el 42% de las autopartes de México. Trevigo lleva 35 años siendo proveedor técnico de confianza para esta industria.",
     productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "sellos", "inhibidores", "aceites-metales", "coagulantes", "floculantes", "lubricantes-especializados"],
@@ -895,6 +903,8 @@ export const INDUSTRIES: IndustryDefinition[] = [
   },
   {
     id: "aeronautica", name: "Aeronáutica", slug: "aeronautica", icon: "✈️",
+    seoTitle: "Fabricante y Proveedor de Químicos para la Industria Aeroespacial",
+    seoDescription: "Fabricante mexicano de químicos industriales para la industria aeronáutica y aeroespacial: pasivados, fosfatados y compuestos para tratamiento de aleaciones aeroespaciales.",
     description: "Productos de alta precisión para el tratamiento de superficies aeroespaciales: fosfatados, pasivados, selladores y lubricantes de alto rendimiento.",
     heroText: "La industria aeronáutica exige los más altos estándares de calidad. Trevigo provee químicos de superficie que cumplen con las especificaciones más exigentes.",
     productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "sellos", "inhibidores", "pasivados", "aceites-metales", "lubricantes-especializados"],
@@ -1050,6 +1060,8 @@ export const INDUSTRIES: IndustryDefinition[] = [
   },
   {
     id: "cosmetica", name: "Cosmética", slug: "cosmetica", icon: "✨",
+    seoTitle: "Proveedor de Solventes y Materias Primas para la Industria Cosmética",
+    seoDescription: "Proveedor de solventes y materias primas para la industria cosmética en México: ácidos, bases, agentes secuestrantes y formulación con documentación técnica completa.",
     description: "Materias primas de alta pureza para formulación cosmética, tratamiento de aguas residuales y documentación técnica para plantas de cosméticos.",
     heroText: "La industria cosmética requiere materias primas con documentación completa. Trevigo provee ácidos, bases y otros insumos con trazabilidad y soporte técnico.",
     productSubcategoryIds: ["acidos-bases", "coagulantes", "floculantes", "agentes-secuestrantes", "microbicidas"],

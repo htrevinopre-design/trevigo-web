@@ -12,6 +12,12 @@ export type GlossaryEntry = {
   relatedProductIds?: string[];
   relatedArticleSlugs?: string[];
   relatedServiceSlugs?: string[];
+  /** Override del metaTitle para CTR-optimization. Si no se define,
+   * el page.tsx genera "{term}: Definición Técnica" por defecto. */
+  seoTitle?: string;
+  /** Override del metaDescription para SERP attractive. Si no se define
+   * usa shortDef. */
+  seoDescription?: string;
 };
 
 export const GLOSSARY: GlossaryEntry[] = [
@@ -19,6 +25,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "fosfatizado",
     term: "Fosfatizado",
+    seoTitle: "Fosfatizado: qué es, proceso y aplicaciones industriales",
+    seoDescription:
+      "Fosfatizado: proceso químico que mejora la adhesión de pintura sobre acero. Tipos (zinc, hierro, manganeso), aplicaciones automotrices e industriales.",
     shortDef:
       "Proceso de conversión química que forma una capa de fosfato cristalino sobre acero para mejorar adherencia de pintura y resistencia a corrosión.",
     longDef: [
@@ -50,6 +59,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "decapado",
     term: "Decapado",
+    seoTitle: "Decapado de metales: qué es, ácidos usados y proceso industrial",
+    seoDescription:
+      "Decapado industrial: proceso químico para remover óxidos y calamina con ácidos (clorhídrico, sulfúrico, fosfórico). Cuándo usarlo y qué ácido elegir.",
     shortDef:
       "Proceso químico que remueve óxidos, calamina y contaminantes superficiales de piezas metálicas con ácidos.",
     longDef: [
@@ -66,6 +78,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "tropicalizado",
     term: "Tropicalizado",
+    seoTitle: "Tropicalizado de metales: qué es, proceso y aplicaciones",
+    seoDescription:
+      "Tropicalizado: sistema multicapa de protección anticorrosión para acero y zinc en climas húmedos y zonas costeras. Proceso, pasos y normas industriales.",
     shortDef:
       "Sistema multicapa de protección anticorrosión para piezas metálicas en climas húmedos y zonas costeras.",
     longDef: [
@@ -155,6 +170,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "dqo",
     term: "DQO (Demanda Química de Oxígeno)",
+    seoTitle: "DQO (Demanda Química de Oxígeno): qué es y cómo se mide",
+    seoDescription:
+      "DQO: qué significa, cómo se mide, diferencia con DBO y por qué es clave para cumplir la NOM-001-SEMARNAT en tratamiento de aguas residuales industriales.",
     shortDef:
       "Cantidad de oxígeno equivalente requerido para oxidar químicamente toda la materia orgánica e inorgánica oxidable en agua.",
     longDef: [
@@ -170,6 +188,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "ptar",
     term: "PTAR (Planta de Tratamiento de Aguas Residuales)",
+    seoTitle: "PTAR: qué significa y cómo funciona una Planta de Tratamiento",
+    seoDescription:
+      "PTAR (Planta de Tratamiento de Aguas Residuales): qué es, etapas, equipos y normas que rigen su operación en México (NOM-001-SEMARNAT-2021).",
     shortDef:
       "Instalación industrial diseñada para tratar aguas residuales hasta cumplir parámetros de descarga normativos.",
     longDef: [
@@ -232,6 +253,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "jar-test",
     term: "Jar Test (Prueba de Jarras)",
+    seoTitle: "Jar Test (Prueba de Jarras): qué es y cómo se realiza paso a paso",
+    seoDescription:
+      "Jar Test o Prueba de Jarras: ensayo de laboratorio para encontrar la dosis óptima de coagulante en una PTAR. Protocolo, interpretación y errores comunes.",
     shortDef:
       "Prueba de laboratorio para determinar la dosis óptima de coagulante y floculante en una muestra real de agua a tratar.",
     longDef: [
@@ -319,6 +343,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "galvanizado",
     term: "Galvanizado",
+    seoTitle: "Galvanizado: qué es, tipos (en caliente y electrolítico) y proceso",
+    seoDescription:
+      "Galvanizado: proceso para proteger acero contra corrosión mediante recubrimiento de zinc. Tipos, aplicaciones industriales, costos y diferencias.",
     shortDef:
       "Recubrimiento de zinc sobre acero para protegerlo contra corrosión, por inmersión en zinc fundido o por deposición electrolítica.",
     longDef: [
