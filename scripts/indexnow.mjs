@@ -38,6 +38,8 @@ const articlesSrc = readFile("lib/articles.ts");
 const servicesSrc = readFile("lib/services-content.ts");
 const glossarySrc = readFile("lib/glossary.ts");
 const datosSrc = readFile("lib/datos.ts");
+const subcategorySrc = readFile("lib/product-subcategories-content.ts");
+const categorySrc = readFile("lib/product-categories-content.ts");
 
 // Product IDs: 12+ espacios de indent (dentro de subcategorías)
 const productIds = extractMatches(
@@ -75,6 +77,20 @@ const datosSlugs = extractMatches(
   /slug: "([a-z0-9-]+)"/g
 );
 
+// Product subcategory landing slugs (/productos/categoria/[id])
+// Detecta entradas `id: "...",` con la indentación de keys top-level
+const subcategorySlugs = extractMatches(
+  subcategorySrc,
+  /^ {4}id: "([a-z0-9-]+)",/gm
+);
+
+// Product category landing slugs (/productos/linea/[id])
+// Las 4 líneas top-level
+const categorySlugs = extractMatches(
+  categorySrc,
+  /^ {4}id: "([a-z0-9-]+)",/gm
+);
+
 // ── Construir lista de URLs ────────────────────────────────────────
 const staticPaths = [
   "/",
@@ -94,6 +110,8 @@ const staticPaths = [
 const urls = [
   ...staticPaths,
   ...productIds.map((id) => `/productos/${id}`),
+  ...categorySlugs.map((s) => `/productos/linea/${s}`),
+  ...subcategorySlugs.map((s) => `/productos/categoria/${s}`),
   ...industrySlugs.map((s) => `/industrias/${s}`),
   ...articleSlugs.map((s) => `/recursos/${s}`),
   ...serviceSlugs.map((s) => `/servicios/${s}`),

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { COMPANY, PRODUCT_CATEGORIES } from "@/lib/data";
 import ProductCatalogFilter from "@/components/ProductCatalogFilter";
+import { SUBCATEGORY_CONTENT } from "@/lib/product-subcategories-content";
+import { CATEGORY_CONTENT } from "@/lib/product-categories-content";
 
 export const metadata: Metadata = {
   title: "Catálogo de Productos Químicos Industriales",
@@ -62,20 +64,102 @@ export default function ProductosPage() {
           </p>
         </div>
 
-        {/* Category nav (anchors) */}
+        {/* Category nav — linkea a páginas dedicadas /productos/linea/[id] */}
         <div className="border-t border-white/10">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-4">
               {PRODUCT_CATEGORIES.map((cat) => (
-                <a
+                <Link
                   key={cat.id}
-                  href={`#${cat.id}`}
+                  href={`/productos/linea/${cat.id}`}
                   className="flex items-center justify-center px-12 py-6 text-steel-400 hover:text-white border-b-2 border-transparent hover:border-orange-500 transition-all text-center"
                 >
                   <span className="text-xs font-bold leading-snug">{cat.name}</span>
-                </a>
+                </Link>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── 4 LÍNEAS TOP-LEVEL ───────────────────────────────────── */}
+      <section className="bg-white py-12 border-b border-steel-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="bg-navy-500 w-1 h-8 rounded-full shrink-0" />
+            <div>
+              <p className="text-navy-500 text-[10px] font-black uppercase tracking-widest mb-0.5">
+                Líneas de producto
+              </p>
+              <h2 className="text-lg sm:text-xl font-black text-steel-900 uppercase">
+                4 líneas de químicos industriales de formulación propia
+              </h2>
+            </div>
+          </div>
+          <p className="text-steel-600 text-sm leading-relaxed mb-6 sm:ml-7 max-w-3xl">
+            Cada línea tiene su propia guía técnica con química, aplicaciones,
+            normativa y selección por proceso.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {PRODUCT_CATEGORIES.map((cat) => {
+              const content = CATEGORY_CONTENT[cat.id];
+              return (
+                <Link
+                  key={cat.id}
+                  href={`/productos/linea/${cat.id}`}
+                  className="bg-steel-50 border border-steel-200 rounded-xl p-6 hover:shadow-md hover:border-navy-300 hover:bg-white transition-all group"
+                >
+                  <h3 className="text-steel-900 font-black text-base sm:text-lg uppercase leading-tight mb-2 group-hover:text-navy-700 transition-colors">
+                    {cat.name}
+                  </h3>
+                  <p className="text-steel-500 text-xs leading-relaxed mb-3 line-clamp-3">
+                    {content?.metaDescription ?? cat.description}
+                  </p>
+                  <span className="text-orange-600 text-xs font-black uppercase tracking-wide">
+                    Ver línea completa →
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── LÍNEAS TÉCNICAS DESTACADAS (landing pages por subcategoría) ─── */}
+      <section className="bg-white py-12 border-b border-steel-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="bg-orange-500 w-1 h-8 rounded-full shrink-0" />
+            <div>
+              <p className="text-orange-500 text-[10px] font-black uppercase tracking-widest mb-0.5">
+                Líneas técnicas
+              </p>
+              <h2 className="text-lg sm:text-xl font-black text-steel-900 uppercase">
+                Conoce nuestras líneas químicas para tratamiento de metales
+              </h2>
+            </div>
+          </div>
+          <p className="text-steel-600 text-sm leading-relaxed mb-6 sm:ml-7 max-w-3xl">
+            Cada línea cuenta con su propia guía técnica: aplicación, química base, control de proceso y selección del producto correcto.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {Object.values(SUBCATEGORY_CONTENT).map((sc) => (
+              <Link
+                key={sc.id}
+                href={`/productos/categoria/${sc.id}`}
+                className="bg-steel-50 border border-steel-200 rounded-xl p-5 hover:shadow-md hover:border-orange-300 hover:bg-white transition-all group"
+              >
+                <h3 className="text-steel-900 font-black text-sm uppercase leading-tight mb-2 group-hover:text-orange-600 transition-colors">
+                  {sc.hero}
+                </h3>
+                <p className="text-steel-500 text-xs leading-relaxed mb-3 line-clamp-3">
+                  {sc.metaDescription}
+                </p>
+                <span className="text-navy-500 text-xs font-black uppercase tracking-wide">
+                  Ver línea →
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

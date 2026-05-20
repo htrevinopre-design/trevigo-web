@@ -4,6 +4,8 @@ import { ARTICLES } from "@/lib/articles";
 import { SERVICES_CONTENT } from "@/lib/services-content";
 import { GLOSSARY } from "@/lib/glossary";
 import { DATOS } from "@/lib/datos";
+import { getSubcategoryContentSlugs } from "@/lib/product-subcategories-content";
+import { getCategoryContentSlugs } from "@/lib/product-categories-content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = COMPANY.url;
@@ -71,6 +73,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // ── Category landing pages (/productos/linea/[id]) ──────────────
+  // 4 líneas top-level: tratamiento-metales, tratamiento-aguas,
+  // lubricantes-aceites, materias-primas. Captura queries de mayor
+  // volumen como "químicos para tratamiento de metales".
+  const categoryLineaPages: MetadataRoute.Sitemap = getCategoryContentSlugs().map(
+    (id) => ({
+      url: `${baseUrl}/productos/linea/${id}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.92,
+    })
+  );
+
+  // ── Subcategory landing pages (/productos/categoria/[id]) ───────
+  // Páginas dedicadas por línea de producto (sellos, inhibidores, etc.)
+  // Captura queries category-level con alto volumen y intent comercial.
+  const subcategoryPages: MetadataRoute.Sitemap = getSubcategoryContentSlugs().map(
+    (id) => ({
+      url: `${baseUrl}/productos/categoria/${id}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    })
+  );
+
   // ── Data pages (/datos/[slug]) ──────────────────────────────────
   // Reverse outreach SEO: páginas estadísticas que los periodistas
   // buscan en Google y citan como fuente.
@@ -86,6 +113,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...articlePages,
     ...industryPages,
     ...productDetailPages,
+    ...categoryLineaPages,
+    ...subcategoryPages,
     ...servicePages,
     ...glossaryPages,
     ...datoPages,
