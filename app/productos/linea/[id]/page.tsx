@@ -10,6 +10,7 @@ import {
 import { SUBCATEGORY_CONTENT } from "@/lib/product-subcategories-content";
 import FAQAccordion from "@/components/FAQAccordion";
 import { EmojiIcon } from "@/components/Icon";
+import ProductCard from "@/components/ProductCard";
 
 export async function generateStaticParams() {
   return getCategoryContentSlugs().map((id) => ({ id }));
@@ -356,23 +357,14 @@ export default function LineaPage({
                   </Link>
                 )}
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
                 {sub.products.map((p) => (
-                  <Link
+                  <ProductCard
                     key={p.id}
-                    href={`/productos/${p.id}`}
-                    className="bg-steel-50 border border-steel-200 rounded-lg p-4 hover:shadow-md hover:border-navy-300 hover:bg-white transition-all group"
-                  >
-                    <p className="text-navy-500 text-[10px] font-bold uppercase tracking-wider mb-1">
-                      SKU: {p.sku}
-                    </p>
-                    <h4 className="text-steel-900 font-black text-xs uppercase leading-tight mb-1 group-hover:text-navy-600 transition-colors">
-                      {p.name}
-                    </h4>
-                    <p className="text-steel-500 text-xs leading-snug line-clamp-2">
-                      {p.shortDescription}
-                    </p>
-                  </Link>
+                    product={p}
+                    subcategoryName={sub.name}
+                    categoryId={category.id}
+                  />
                 ))}
               </div>
             </div>

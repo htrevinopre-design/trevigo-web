@@ -11,6 +11,7 @@ import {
 } from "@/lib/product-subcategories-content";
 import FAQAccordion from "@/components/FAQAccordion";
 import { EmojiIcon } from "@/components/Icon";
+import ProductCard from "@/components/ProductCard";
 
 export async function generateStaticParams() {
   return getSubcategoryContentSlugs().map((id) => ({ id }));
@@ -303,26 +304,14 @@ export default function SubcategoryPage({
                 </h2>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
               {products.map((p) => (
-                <Link
+                <ProductCard
                   key={p.id}
-                  href={`/productos/${p.id}`}
-                  className="bg-white border border-steel-200 rounded-xl p-5 hover:shadow-md hover:border-navy-300 transition-all group"
-                >
-                  <p className="text-navy-500 text-[10px] font-bold uppercase tracking-wider mb-1">
-                    SKU: {p.sku}
-                  </p>
-                  <h3 className="text-steel-900 font-black text-sm uppercase leading-tight mb-2 group-hover:text-navy-600 transition-colors">
-                    {p.name}
-                  </h3>
-                  <p className="text-steel-500 text-xs leading-relaxed mb-3 line-clamp-3">
-                    {p.shortDescription}
-                  </p>
-                  <span className="text-navy-500 text-xs font-black uppercase tracking-wide">
-                    Ver producto →
-                  </span>
-                </Link>
+                  product={p}
+                  subcategoryName={subcategory?.name ?? content.hero}
+                  categoryId={content.categoryId}
+                />
               ))}
             </div>
           </div>
