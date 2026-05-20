@@ -64,22 +64,6 @@ export default function ProductosPage() {
           </p>
         </div>
 
-        {/* Category nav — linkea a páginas dedicadas /productos/linea/[id] */}
-        <div className="border-t border-white/10">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 sm:grid-cols-4">
-              {PRODUCT_CATEGORIES.map((cat) => (
-                <Link
-                  key={cat.id}
-                  href={`/productos/linea/${cat.id}`}
-                  className="flex items-center justify-center px-12 py-6 text-steel-400 hover:text-white border-b-2 border-transparent hover:border-orange-500 transition-all text-center"
-                >
-                  <span className="text-xs font-bold leading-snug">{cat.name}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* ─── 4 LÍNEAS TOP-LEVEL ───────────────────────────────────── */}
@@ -92,7 +76,7 @@ export default function ProductosPage() {
                 Líneas de producto
               </p>
               <h2 className="text-lg sm:text-xl font-black text-steel-900 uppercase">
-                4 líneas de químicos industriales de formulación propia
+                4 líneas de químicos industriales
               </h2>
             </div>
           </div>
