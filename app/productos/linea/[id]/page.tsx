@@ -297,7 +297,7 @@ export default function LineaPage({
                     {description}
                   </p>
 
-                  <p className="text-steel-400 text-[10px] font-bold uppercase tracking-wider mb-3">
+                  <p className="text-steel-800 text-sm font-black uppercase tracking-wide mb-3">
                     {sub.products.length}{" "}
                     {sub.products.length === 1 ? "producto" : "productos"}{" "}
                     disponibles
@@ -306,10 +306,10 @@ export default function LineaPage({
                   {/* Presentaciones disponibles */}
                   {uniqueFormats.length > 0 && (
                     <div className="border-t border-steel-200 pt-3 mb-3">
-                      <p className="text-steel-500 text-[10px] font-bold uppercase tracking-wider mb-2">
+                      <p className="text-steel-500 text-[10px] font-bold uppercase tracking-wider mb-2 text-center">
                         Presentaciones disponibles
                       </p>
-                      <div className="flex gap-3 flex-wrap">
+                      <div className="flex gap-4 flex-wrap justify-center">
                         {uniqueFormats.map((fmt) => (
                           <div
                             key={fmt.name}
