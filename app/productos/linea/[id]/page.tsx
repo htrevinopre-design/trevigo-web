@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { COMPANY, PRODUCT_CATEGORIES, INDUSTRIES } from "@/lib/data";
@@ -259,12 +260,27 @@ export default function LineaPage({
               const href = hasLanding
                 ? `/productos/categoria/${sub.id}`
                 : `/productos#${category.id}`;
+
+              // Descripción corta: primera oración del lead (o fallback)
+              const lead = SUBCATEGORY_CONTENT[sub.id]?.lead;
+              const description = lead
+                ? lead.split(/\.\s/)[0] + "."
+                : `${sub.products.length} ${sub.products.length === 1 ? "producto" : "productos"} disponibles en la línea ${sub.name.toLowerCase()}.`;
+
+              // Presentaciones únicas agregadas de todos los productos
+              const uniqueFormats = Array.from(
+                new Map(
+                  sub.products.flatMap((p) => p.formats).map((f) => [f.name, f])
+                ).values()
+              );
+
               return (
                 <Wrapper
                   key={sub.id}
                   href={href as string}
-                  className="bg-steel-50 border border-steel-200 rounded-xl p-5 hover:shadow-md hover:border-orange-300 hover:bg-white transition-all group block"
+                  className="bg-steel-50 border border-steel-200 rounded-xl p-5 hover:shadow-md hover:border-orange-300 hover:bg-white transition-all group flex flex-col"
                 >
+                  {/* Header: nombre + badge guía */}
                   <div className="flex items-start justify-between gap-2 mb-2">
                     <h3 className="text-steel-900 font-black text-sm uppercase leading-tight group-hover:text-orange-600 transition-colors">
                       {sub.name}
@@ -275,12 +291,52 @@ export default function LineaPage({
                       </span>
                     )}
                   </div>
-                  <p className="text-steel-500 text-xs leading-relaxed mb-3">
+
+                  {/* Descripción breve */}
+                  <p className="text-steel-600 text-xs leading-relaxed mb-3 line-clamp-3">
+                    {description}
+                  </p>
+
+                  <p className="text-steel-400 text-[10px] font-bold uppercase tracking-wider mb-3">
                     {sub.products.length}{" "}
                     {sub.products.length === 1 ? "producto" : "productos"}{" "}
                     disponibles
                   </p>
-                  <span className="text-navy-500 text-xs font-black uppercase tracking-wide">
+
+                  {/* Presentaciones disponibles */}
+                  {uniqueFormats.length > 0 && (
+                    <div className="border-t border-steel-200 pt-3 mb-3">
+                      <p className="text-steel-500 text-[10px] font-bold uppercase tracking-wider mb-2">
+                        Presentaciones disponibles
+                      </p>
+                      <div className="flex gap-3 flex-wrap">
+                        {uniqueFormats.map((fmt) => (
+                          <div
+                            key={fmt.name}
+                            className="flex flex-col items-center gap-0.5"
+                          >
+                            <div className="w-8 h-9 relative">
+                              <Image
+                                src={fmt.image}
+                                alt={fmt.label}
+                                fill
+                                className="object-contain"
+                              />
+                            </div>
+                            <span className="text-[9px] font-bold text-steel-700 uppercase">
+                              {fmt.label}
+                            </span>
+                            <span className="text-[9px] text-steel-500">
+                              {fmt.weight}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* CTA */}
+                  <span className="text-navy-500 text-xs font-black uppercase tracking-wide mt-auto">
                     {hasLanding ? "Ver guía técnica →" : "Ver productos →"}
                   </span>
                 </Wrapper>
