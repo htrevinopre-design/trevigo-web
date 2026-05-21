@@ -6,6 +6,7 @@ import { ARTICLES, getArticleBySlug } from "@/lib/articles";
 import { getAuthor, DEFAULT_AUTHOR_SLUG } from "@/lib/authors";
 import FAQAccordion from "@/components/FAQAccordion";
 import AuthorBlock from "@/components/AuthorBlock";
+import ShareButtons from "@/components/ShareButtons";
 
 const allProducts = PRODUCT_CATEGORIES.flatMap((cat) =>
   cat.subcategories.flatMap((sub) => sub.products)
@@ -161,6 +162,15 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
           {/* ── Byline del autor ── */}
           <AuthorBlock author={author} variant="byline" />
+
+          {/* ── Botones de compartir ── */}
+          <div className="mt-7 pt-6 border-t border-white/10">
+            <ShareButtons
+              url={`${COMPANY.url}/recursos/${article.slug}`}
+              title={article.title}
+              variant="dark"
+            />
+          </div>
         </div>
       </section>
 

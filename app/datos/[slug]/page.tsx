@@ -6,6 +6,7 @@ import { DATOS, getDatoBySlug } from "@/lib/datos";
 import { getAuthor, DEFAULT_AUTHOR_SLUG } from "@/lib/authors";
 import FAQAccordion from "@/components/FAQAccordion";
 import AuthorBlock from "@/components/AuthorBlock";
+import ShareButtons from "@/components/ShareButtons";
 import { Icon } from "@/components/Icon";
 
 export async function generateStaticParams() {
@@ -159,6 +160,15 @@ export default function DatoPage({ params }: { params: { slug: string } }) {
 
           {/* ── Byline del autor ── */}
           <AuthorBlock author={author} variant="byline" date={dato.updatedAt} />
+
+          {/* ── Botones de compartir ── */}
+          <div className="mt-7 pt-6 border-t border-white/10">
+            <ShareButtons
+              url={`${COMPANY.url}/datos/${dato.slug}`}
+              title={dato.question}
+              variant="dark"
+            />
+          </div>
         </div>
       </section>
 
