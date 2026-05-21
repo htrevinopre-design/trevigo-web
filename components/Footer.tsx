@@ -56,13 +56,13 @@ export default function Footer() {
             <h3 className="text-white font-bold mb-4 text-sm uppercase tracking-wider">Productos</h3>
             <ul className="space-y-2.5">
               {[
-                { label: "Tratamiento de Metales", href: "/productos#tratamiento-metales" },
-                { label: "Fosfatos y Fosfatado", href: "/productos#fosfatos" },
-                { label: "Desoxidantes", href: "/productos#desoxidantes" },
-                { label: "Inhibidores de Corrosión", href: "/productos#inhibidores-corrosion" },
-                { label: "Tratamiento de Aguas", href: "/productos#tratamiento-agua" },
-                { label: "Coagulantes y Floculantes", href: "/productos#coagulantes" },
-                { label: "Materias Primas", href: "/productos#materias-primas" },
+                { label: "Tratamiento de Metales", href: "/productos/linea/tratamiento-metales" },
+                { label: "Fosfatos y Fosfatado", href: "/productos/categoria/fosfatos" },
+                { label: "Desoxidantes", href: "/productos/categoria/desoxidantes" },
+                { label: "Inhibidores de Corrosión", href: "/productos/categoria/inhibidores" },
+                { label: "Tratamiento de Aguas", href: "/productos/linea/tratamiento-aguas" },
+                { label: "Coagulantes y Floculantes", href: "/productos/categoria/coagulantes" },
+                { label: "Materias Primas", href: "/productos/linea/materias-primas" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
