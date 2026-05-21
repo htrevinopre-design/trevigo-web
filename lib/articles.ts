@@ -1230,6 +1230,586 @@ export const ARTICLES: Article[] = [
         "Trae 5 litros de muestra a nuestro laboratorio en San Nicolás. Te entregamos el reporte completo con coagulante recomendado, dosis óptima y ahorro proyectado en 5 días hábiles.",
     },
   },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 12 — Sosa cáustica al 50% vs escamas (PRODUCTO — Blanca)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "sosa-caustica-50-vs-escamas-industrial",
+    authorSlug: "blanca-garza",
+    title:
+      "Sosa cáustica al 50% vs en escamas: cuál conviene para tu planta industrial",
+    metaTitle: "Sosa Cáustica al 50% vs Escamas: Guía de Compra Industrial",
+    metaDescription:
+      "Diferencias entre sosa cáustica líquida al 50% y en escamas (NaOH sólido): logística, costo total, dosificación y aplicaciones industriales. Proveedor en Monterrey.",
+    excerpt:
+      "Sosa al 50% líquida y sosa en escamas son el mismo químico en presentaciones distintas — pero la elección impacta directamente en costo logístico, riesgos de manejo y eficiencia operativa. Cuándo conviene cada una.",
+    category: "Materias Primas",
+    readingTime: "7 min",
+    publishedAt: "2026-05-19",
+    updatedAt: "2026-05-19",
+    keywords: [
+      "sosa caustica al 50",
+      "sosa caustica escamas",
+      "hidroxido de sodio industrial",
+      "naoh liquido",
+      "sosa caustica proveedor mexico",
+      "sosa caustica precio",
+    ],
+    intro:
+      "La sosa cáustica (hidróxido de sodio, NaOH) es una de las materias primas más consumidas en la industria mexicana: ajuste de pH en PTAR, formulación de detergentes, neutralización de ácidos, regeneración de resinas y mil aplicaciones más. Una pregunta recurrente de los compradores industriales es: ¿conviene comprar sosa al 50% líquida o en escamas sólidas? Ambas son el mismo compuesto químico, pero la decisión correcta depende del volumen de consumo, infraestructura disponible y costos logísticos. En esta guía técnica comercial analizamos cuándo conviene cada una y cómo seleccionar la presentación correcta para tu planta.",
+    sections: [
+      {
+        heading: "¿Qué es la sosa cáustica y por qué viene en dos presentaciones?",
+        paragraphs: [
+          "La sosa cáustica es hidróxido de sodio (NaOH) — una base fuerte que se produce industrialmente mediante electrólisis de salmuera (proceso cloro-soda). Es altamente higroscópica: absorbe humedad y CO₂ del aire rápidamente, formando una solución concentrada espontáneamente.",
+          "Esta propiedad determina las dos presentaciones comerciales principales: (1) en escamas sólidas (NaOH 99% pureza) que requiere envasado hermético y disolución en planta, y (2) en solución líquida al 50% — una concentración estable que se entrega lista para usar. Ambas son química y técnicamente equivalentes una vez en uso; la diferencia está en la logística y costos operativos.",
+        ],
+      },
+      {
+        heading: "Sosa al 50%: ventajas y limitaciones",
+        paragraphs: [
+          "La sosa al 50% líquida es la presentación preferida por plantas con consumo medio-alto (>500 kg/mes) y dosificación continua. Sus ventajas:",
+        ],
+        list: {
+          items: [
+            "Dosificación directa con bomba — sin necesidad de disolver, ahorra tiempo de operación y reduce errores",
+            "Manejo más seguro — no genera polvo aerosolizado al verter (el polvo de sosa en escamas es altamente corrosivo en ojos y vías respiratorias)",
+            "Concentración estable y verificada — no hay variación por absorción de humedad",
+            "Compatible con sistemas automatizados de tratamiento de aguas, CIP alimentario y procesos continuos",
+            "Disolución exotérmica ya ocurrió en fábrica — no hay riesgo de calentamiento en planta",
+          ],
+        },
+      },
+      {
+        heading: "Sosa en escamas: cuándo sigue siendo la mejor opción",
+        paragraphs: [
+          "La sosa en escamas tiene tres ventajas que la mantienen vigente en aplicaciones específicas: (1) el costo por kg de NaOH activo es menor (no pagas por agua), (2) no requiere tanque de almacenamiento — se guarda en sacos sellados ocupando menos volumen, y (3) permite preparar concentraciones específicas distintas al 50% según necesidad.",
+          "Es la opción correcta para: talleres pequeños con consumo <300 kg/mes, plantas que necesitan formular soluciones a 10%, 25% u otra concentración específica, almacenes con espacio limitado, y aplicaciones intermitentes donde un tanque de líquido se contaminaría o cristalizaría por baja rotación.",
+        ],
+      },
+      {
+        heading: "Cálculo de costo total: el factor que muchos compradores ignoran",
+        paragraphs: [
+          "El comprador novato suele comparar precio por kilogramo (la escama gana ~30-40%). Pero el costo total del NaOH usado debe incluir: (1) costo del químico, (2) costo logístico (transporte de agua al comprar líquido), (3) costo de mano de obra para disolver escamas, (4) costo del riesgo (incidentes con sosa sólida son más graves que con líquida).",
+          "Como regla práctica: si consumes >500 kg de NaOH activo al mes y tienes tanque + bomba, la sosa al 50% sale más barata en costo total. Si consumes <300 kg/mes y disuelves manualmente, las escamas siguen siendo más económicas. En el rango intermedio (300-500 kg/mes) depende del costo de mano de obra y disponibilidad de infraestructura.",
+        ],
+      },
+      {
+        heading: "Aplicaciones industriales más comunes para cada presentación",
+        paragraphs: [
+          "En nuestra experiencia atendiendo plantas en Nuevo León, las aplicaciones se distribuyen así:",
+        ],
+        list: {
+          items: [
+            "Sosa al 50% líquida: PTAR con dosificación continua, CIP alimentario, neutralización de efluentes ácidos, plantas de papel (proceso kraft), formulación de detergentes alcalinos industriales",
+            "Sosa en escamas: talleres metalmecánicos pequeños, laboratorios, plantas con consumo intermitente, formulación de detergentes en lote por kilogramos, regeneración de resinas en sistemas pequeños",
+            "Ambas: plantas con líneas múltiples, manufactura general — depende del volumen específico por área",
+          ],
+        },
+      },
+      {
+        heading: "Seguridad y almacenamiento: lo que debes saber antes de comprar",
+        paragraphs: [
+          "La sosa cáustica — en cualquier presentación — es un químico corrosivo categoría 1 conforme NOM-018-STPS-2015. Causa quemaduras químicas graves por contacto y ceguera permanente si entra a los ojos. El manejo requiere capacitación previa, EPP completo (lentes de seguridad química, careta facial, guantes de neopreno largo, mandil PVC, zapato de seguridad) y procedimientos documentados.",
+          "Almacenamiento: la sosa al 50% se almacena en tanques de polietileno de alta densidad, fibra de vidrio o acero inoxidable. No usar tanques de aluminio (reacción exotérmica que genera hidrógeno). Las escamas se almacenan en sus sacos originales sellados, en lugar fresco y seco lejos de ácidos y materiales orgánicos.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿La sosa al 50% se congela en invierno?",
+        a: "Sí. La sosa al 50% empieza a cristalizar por debajo de 12°C. Para climas con inviernos fríos (norte de México en diciembre-febrero), se recomienda almacenar en interior climatizado o usar resistencia térmica en el tanque. En Nuevo León rara vez es un problema; en climas más fríos sí. Como alternativa existe sosa al 32% que cristaliza por debajo de -10°C.",
+      },
+      {
+        q: "¿Cuánto tiempo dura la sosa cáustica almacenada?",
+        a: "En condiciones adecuadas: la sosa al 50% líquida en tanque sellado se mantiene estable por 1-2 años. Las escamas en saco sellado duran 2-3 años. La principal causa de degradación es la absorción de CO₂ del aire, que convierte parte del NaOH en carbonato de sodio (Na₂CO₃) — esto reduce la concentración efectiva pero no inutiliza el producto.",
+      },
+      {
+        q: "¿Qué presentaciones de sosa cáustica vende Trevigo?",
+        a: "Manejamos sosa cáustica al 50% en tambo de 250 kg, contenedor IBC de 1,300 kg y autotanque a granel para grandes consumidores. También distribuimos sosa cáustica en escamas en saco de 25 kg con calidad técnica industrial. Entregamos en 48 horas en el Área Metropolitana de Monterrey con SDS y COA actualizados.",
+      },
+    ],
+    relatedProducts: ["sosa-al-50", "sosa-caustica-escamas"],
+    cta: {
+      title: "¿Necesitas sosa cáustica para tu planta?",
+      description:
+        "Cotizamos sosa al 50% líquida y en escamas con entrega en 48 h en N.L. Incluye SDS, COA y asesoría técnica para seleccionar la presentación óptima según tu consumo.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 13 — Pasivado de acero inoxidable (PROCESO — Nohemí)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "pasivado-acero-inoxidable-astm-a967",
+    authorSlug: "nohemi-cervantes",
+    title:
+      "Pasivado de acero inoxidable: protocolo ASTM A967 y selección entre ácido nítrico y cítrico",
+    metaTitle: "Pasivado de Acero Inoxidable ASTM A967: Guía Completa",
+    metaDescription:
+      "Cómo pasivar acero inoxidable conforme ASTM A967 (método nítrico vs cítrico). Protocolo paso a paso, validación con prueba de ferroxyl y casos de uso industrial.",
+    excerpt:
+      "El pasivado no es opcional: el acero inoxidable recién maquinado o soldado tiene hierro libre incrustado que oxida en semanas. Te explicamos cuándo aplicar el método Nitric vs Citric de ASTM A967 y cómo validar el resultado.",
+    category: "Tratamiento de Metales",
+    readingTime: "9 min",
+    publishedAt: "2026-05-19",
+    updatedAt: "2026-05-19",
+    keywords: [
+      "pasivado acero inoxidable",
+      "ASTM A967",
+      "pasivado con acido citrico",
+      "pasivado con acido nitrico",
+      "prueba ferroxyl",
+      "passivation stainless steel mexico",
+    ],
+    intro:
+      "Una creencia común en talleres metalmecánicos es que el acero inoxidable 'no se oxida'. La realidad técnica es distinta: el acero inoxidable resiste corrosión gracias a una capa pasiva delgadísima de óxido de cromo (3-5 nanómetros) que se forma espontáneamente en su superficie. Durante maquinado, soldadura o estampado esa capa se daña y queda hierro libre incrustado — que sí oxida visiblemente en cuestión de días o semanas. El pasivado químico restaura la capa pasiva y elimina el hierro libre. En esta guía explicamos el protocolo conforme ASTM A967, cuándo elegir nítrico vs cítrico, y cómo validar que el pasivado quedó correcto.",
+    sections: [
+      {
+        heading: "¿Qué es el pasivado y por qué es necesario?",
+        paragraphs: [
+          "El pasivado es un tratamiento químico que remueve hierro libre y otros contaminantes ferrosos de la superficie del acero inoxidable, permitiendo que la capa natural de óxido de cromo (Cr₂O₃) se regenere uniformemente. El resultado: máxima resistencia a corrosión bajo condiciones de servicio.",
+          "Sin pasivado, las piezas de inoxidable recién mecanizadas, cortadas, soldadas o estampadas pueden mostrar puntos de óxido en 7-30 días — sobre todo en ambientes húmedos o con presencia de cloruros. En aplicaciones críticas (industria alimentaria, farmacéutica, médica, química) el pasivado no es opcional: es requisito normativo bajo FDA, FSMA, BPM y GMP.",
+        ],
+      },
+      {
+        heading: "ASTM A967: la norma estándar de pasivado en industria",
+        paragraphs: [
+          "ASTM A967 'Standard Specification for Chemical Passivation Treatments for Stainless Steel Parts' es la norma de referencia mundial para pasivado químico. Define 8 métodos numerados (Nitric 1 a 5, Citric 1 a 3) con parámetros específicos de concentración, temperatura, tiempo y validación.",
+          "Los métodos Nitric usan ácido nítrico (HNO₃) en concentraciones del 20-50% y temperaturas de 21-66°C, dependiendo del grado de acero. Los métodos Citric usan ácido cítrico al 4-10% a 49-71°C — son más recientes y se desarrollaron como alternativa segura al nítrico para industria alimentaria y aplicaciones donde los vapores NOₓ son problemáticos.",
+        ],
+      },
+      {
+        heading: "Nitric vs Citric: cómo elegir el método correcto",
+        paragraphs: [
+          "La selección entre ácido nítrico y cítrico depende de tres factores: tipo de acero inoxidable, exigencia normativa de la aplicación, y consideraciones de seguridad operativa.",
+        ],
+        list: {
+          items: [
+            "Usar Nitric: acero inoxidable austenítico (304, 316, 321) en aplicaciones aeroespaciales, defensa y química industrial pesada. AMS 2700 (aeroespacial) y MIL-STD-753 lo requieren específicamente",
+            "Usar Citric: industria alimentaria, farmacéutica, lácteos, bebidas, cosmética y dispositivos médicos. El cítrico no genera vapores NOₓ tóxicos, es biodegradable y compatible con CIP",
+            "Cualquiera de los dos: aplicaciones generales metalmecánicas, hardware de inoxidable, tanques de almacenamiento. El cítrico cuesta más pero su manejo es significativamente más seguro",
+            "Acero martensítico (410, 420): se prefiere nítrico — el cítrico puede dar resultados inconsistentes",
+            "Acero ferrítico (430): nítrico estándar; cítrico funciona con tiempo y temperatura mayores",
+          ],
+        },
+      },
+      {
+        heading: "Protocolo paso a paso para pasivado correcto",
+        paragraphs: [
+          "Un pasivado correcto sigue cinco pasos secuenciales. Saltarse alguno es la causa #1 de pasivados fallidos:",
+        ],
+        list: {
+          items: [
+            "1. Desengrase alcalino — eliminar aceites de corte, grasas y contaminantes orgánicos. Sin esta etapa, el ácido no contacta uniformemente con la superficie. Usar desengrasante alcalino 5-10% a 60-70°C, 10-20 minutos",
+            "2. Enjuague con agua de calidad — agua suave o desmineralizada para eliminar residuos alcalinos. Mínimo 2 enjuagues",
+            "3. Pasivado químico — inmersión en el ácido seleccionado conforme método ASTM A967. Tiempo y temperatura según método específico (Citric 4: 49-71°C, 20-30 min; Nitric 2: 21-32°C, 30 min)",
+            "4. Enjuague con agua desmineralizada — eliminar residuos de pasivador. Crítico para evitar manchas y depósitos secos",
+            "5. Secado con aire limpio o agua DI a alta temperatura — superficie seca uniformemente, sin gotas que dejen mancha",
+          ],
+        },
+      },
+      {
+        heading: "Validación: pruebas de aceptación post-pasivado",
+        paragraphs: [
+          "El pasivado no es completo hasta validar el resultado. La norma ASTM A967 acepta varias pruebas; las más usadas en industria son:",
+        ],
+        list: {
+          items: [
+            "Prueba de ferroxyl (Practice A) — gota de solución de ferricianuro de potasio sobre la pieza. Si aparece un punto azul, hay hierro libre residual y el pasivado falló. Es la prueba más rápida (minutos) y económica",
+            "Prueba de agua a alta humedad (Practice B) — 100% humedad relativa, 35°C, 24 horas. La pieza no debe mostrar manchas de óxido. Más representativa de condiciones reales que ferroxyl",
+            "Prueba de inmersión en agua destilada (Practice C) — sumergir 24-72 horas, observar aparición de manchas. Para aplicaciones críticas",
+            "Prueba de niebla salina ASTM B117 (Practice D) — 8 horas mínimo. Para industria aeroespacial y defensa",
+            "Prueba CASS (Practice E) — niebla salina acelerada con cobre. La más severa, para aplicaciones marítimas y defensa",
+          ],
+        },
+      },
+      {
+        heading: "Errores comunes que arruinan un pasivado",
+        paragraphs: [
+          "En nuestras visitas técnicas a clientes encontramos repetidamente los mismos errores. Los más frecuentes: (1) saltarse el desengrase previo — el ácido no penetra contaminación orgánica, (2) usar agua de la llave en enjuague final — los cloruros del agua municipal pueden manchar el inoxidable pasivado, (3) tiempo de inmersión insuficiente (especialmente con cítrico, que es más lento que nítrico), (4) mezclar piezas de diferentes grados de acero en el mismo baño sin verificar compatibilidad, y (5) no validar resultado — el cliente entrega piezas que se oxidarán en 2 semanas.",
+          "La buena práctica es: un protocolo escrito, registro por lote, prueba de ferroxyl en panel testigo de cada lote, y para aplicaciones críticas validación con cliente final usando paneles que aprueben las pruebas requeridas.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Puedo pasivar acero inoxidable con vinagre o limpiador de cocina?",
+        a: "No para uso industrial. El vinagre contiene ácido acético al 4-7% — concentración insuficiente para remover hierro libre incrustado. Los limpiadores comerciales contienen surfactantes y aditivos que pueden contaminar la superficie. Para pasivado conforme ASTM A967 se requiere ácido nítrico o ácido cítrico de grado técnico industrial con control de concentración, temperatura y tiempo.",
+      },
+      {
+        q: "¿Cada cuánto debo repasivar mis tanques de acero inoxidable?",
+        a: "Depende del servicio: tanques de proceso alimentario suelen repasivarse cada 6-12 meses como parte de validación. Tanques con servicio neutro y baja humedad pueden durar 3-5 años. Tanques expuestos a cloruros o ácidos requieren repasivado más frecuente. Si observas manchas de óxido o picaduras, es momento de repasivar. La prueba de ferroxyl semestral es buena práctica preventiva.",
+      },
+      {
+        q: "¿Trevigo ofrece servicio de pasivado en sitio?",
+        a: "Sí. Hacemos pasivado en planta del cliente para tanques fijos, tuberías y equipos que no pueden moverse. Incluye desengrase previo, pasivado con método ASTM A967 según especificación, validación con prueba de ferroxyl y certificado escrito del proceso. También distribuimos los químicos para clientes que pasivan internamente.",
+      },
+    ],
+    relatedProducts: [
+      "desoxidante-acero-inoxidable",
+      "acido-nitrico",
+      "acido-citrico",
+      "limpiador-neutro-pasivado",
+    ],
+    cta: {
+      title: "¿Necesitas pasivar piezas o equipos de acero inoxidable?",
+      description:
+        "Distribuimos químicos de pasivado conforme ASTM A967 (método Nitric y Citric) y ofrecemos servicio en planta del cliente. Validación incluida con prueba de ferroxyl.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 14 — Aceite hidráulico ISO VG (PROCESO — Nohemí)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "aceite-hidraulico-iso-vg-32-46-68-seleccion",
+    authorSlug: "nohemi-cervantes",
+    title:
+      "Aceite hidráulico ISO VG 32, 46 o 68: cómo seleccionar la viscosidad correcta",
+    metaTitle: "Aceite Hidráulico ISO VG 32, 46, 68: Guía de Selección",
+    metaDescription:
+      "Cómo elegir entre aceite hidráulico ISO VG 32, 46 y 68 según presión, temperatura y tipo de bomba. Cuándo usar HM, HV o HE. Errores comunes y análisis de aceite.",
+    excerpt:
+      "ISO VG 46 es la viscosidad más universal para sistemas hidráulicos industriales — pero hay casos donde 32 o 68 son la elección correcta. Te explicamos cómo decidirlo según presión, temperatura y bomba.",
+    category: "Lubricantes",
+    readingTime: "8 min",
+    publishedAt: "2026-05-19",
+    updatedAt: "2026-05-19",
+    keywords: [
+      "aceite hidraulico iso vg 46",
+      "aceite hidraulico iso vg 32",
+      "aceite hidraulico iso vg 68",
+      "seleccion aceite hidraulico",
+      "hm vs hv hidraulico",
+      "viscosidad aceite hidraulico",
+    ],
+    intro:
+      "Un sistema hidráulico mal lubricado puede acortar la vida útil de la bomba de 20,000 horas a menos de 5,000 — quintuplicando el costo de mantenimiento. La causa #1 de fallas prematuras en hidráulicos industriales es usar la viscosidad incorrecta de aceite. Esta guía técnica explica cómo seleccionar entre ISO VG 32, 46 y 68, cuándo necesitas variantes especializadas (HM, HV, HE), y los errores más comunes que vemos en visitas técnicas a plantas en el norte de México.",
+    sections: [
+      {
+        heading: "¿Qué significa ISO VG y por qué es importante?",
+        paragraphs: [
+          "ISO VG (Viscosity Grade) es la norma ISO 3448 que estandariza la viscosidad cinemática de aceites industriales a 40°C. El número indica la viscosidad nominal en centistokes (cSt): ISO VG 32 significa ~32 cSt @ 40°C, ISO VG 46 significa ~46 cSt, ISO VG 68 ~68 cSt.",
+          "La viscosidad del aceite es crítica en hidráulicos porque determina: (1) la capacidad de formar película lubricante en superficies con presión, (2) la eficiencia volumétrica de la bomba (pérdidas internas), (3) la generación de calor por fricción interna, y (4) la respuesta dinámica del sistema (tiempo de actuación de cilindros y válvulas).",
+        ],
+      },
+      {
+        heading: "Cómo elegir entre ISO VG 32, 46 y 68",
+        paragraphs: [
+          "La selección depende principalmente de la temperatura operativa, la presión del sistema y el tipo de bomba. Como guía técnica:",
+        ],
+        list: {
+          items: [
+            "ISO VG 32: para sistemas hidráulicos en clima frío (operación <30°C ambiente), baja presión (<140 bar), y sistemas con servoválvulas que requieren respuesta dinámica rápida. Común en maquinaria de plástico, prensas pequeñas y equipos de laboratorio",
+            "ISO VG 46: la viscosidad más universal para industria. Sistemas estándar a temperatura ambiente moderada (30-60°C operativo), presión media (140-210 bar), bombas de paletas o engranajes. Cubre 70-80% de aplicaciones hidráulicas en plantas mexicanas",
+            "ISO VG 68: para climas calientes (operación >40°C ambiente), alta presión (>210 bar), maquinaria pesada de alta carga, equipo móvil expuesto al sol, y aplicaciones con bombas de pistón axial que toleran viscosidad mayor. Necesario en prensas grandes, equipo de minería y construcción",
+            "ISO VG 100+: aplicaciones muy específicas con cargas extremas y velocidades bajas — engranajes, no típicamente hidráulicos",
+          ],
+        },
+      },
+      {
+        heading: "HM vs HV vs HE: variantes especializadas",
+        paragraphs: [
+          "Más allá del grado ISO VG, los aceites hidráulicos se clasifican por aditivos en familias funcionales. Las principales son:",
+        ],
+        list: {
+          items: [
+            "HM (Mineral con aditivos antidesgaste) — el estándar industrial. Aditivos zinc-fósforo para protección antidesgaste. Adecuado para sistemas estándar a presión media-alta",
+            "HV (High Viscosity Index) — índice de viscosidad >140, viscosidad más estable en rangos amplios de temperatura. Para equipo móvil expuesto a variaciones día/noche, y aplicaciones con arranques en frío",
+            "HE (Hydraulic Environmental / Biodegradable) — para equipos en zonas ambientalmente sensibles (forestal, marítimo, agrícola). Cumple normas OECD 301B de biodegradabilidad. Base de ésteres saturados",
+            "HL (Hydraulic Lubricant) — sin aditivos antidesgaste. Solo para sistemas de muy baja presión (<70 bar). Cada vez menos usado",
+            "HEES (Environmental Synthetic Ester) — variante de HE con base sintética. Excelente desempeño + biodegradable. Premium",
+          ],
+        },
+      },
+      {
+        heading: "Errores comunes en selección de aceite hidráulico",
+        paragraphs: [
+          "Los errores que más vemos en visitas técnicas son cuatro, y cualquiera puede acortar significativamente la vida útil del sistema:",
+          "(1) Usar la 'viscosidad que siempre se ha usado' sin verificar manual OEM — el fabricante de la bomba especifica viscosidad operativa óptima; ignorarlo causa cavitación o desgaste prematuro. (2) Mezclar marcas distintas sin verificar compatibilidad — diferentes paquetes de aditivos pueden reaccionar y formar lodos o precipitados. (3) No considerar temperatura real de operación — un sistema 'a 40°C ambiente' puede operar a 75°C internamente; ahí ISO VG 46 ya no es suficiente. (4) No cambiar aceite hasta que falla visible — el aceite degradado pierde aditivos antes que viscosidad y desgasta el sistema en silencio.",
+        ],
+      },
+      {
+        heading: "Análisis de aceite en uso: la práctica que ahorra millones",
+        paragraphs: [
+          "El análisis periódico del aceite hidráulico es la práctica de mantenimiento con mayor retorno de inversión en hidráulicos. Por 250-400 MXN por muestra, un laboratorio certificado entrega reporte con: viscosidad real, código de partículas ISO 4406 (contaminación), agua, TAN/TBN, espectrometría de elementos de desgaste (Fe, Cu, Cr, Pb, Si) y oxidación FTIR.",
+          "Indicadores de alerta: cambio de viscosidad >10% del nominal indica oxidación o contaminación; código ISO 4406 superior a 22/20/17 indica filtración deficiente; agua >0.1% indica problema de empaques o respiraderos; partículas de Fe altas indican desgaste anormal. Cualquier alerta permite intervención antes de falla catastrófica. Recomendamos análisis cada 250-500 horas en equipos críticos y cada 1,000 horas en equipos estándar.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Puedo cambiar de ISO VG 46 a ISO VG 68 sin drenar el sistema?",
+        a: "No es recomendable. La mezcla resultante tendrá viscosidad intermedia variable según proporción exacta — perdiendo las propiedades de ambos. Adicionalmente, los paquetes de aditivos pueden ser incompatibles entre marcas. Para cambiar viscosidad: drenado completo, flush con aceite nuevo si el sistema mostró contaminación, y llenado con la nueva viscosidad. Mantener registro del cambio.",
+      },
+      {
+        q: "¿Cada cuánto debo cambiar el aceite hidráulico?",
+        a: "Por calendario: 4,000-8,000 horas de operación (1-2 años en uso continuo). La mejor práctica es por análisis de laboratorio — extiende intervalos en sistemas bien mantenidos y detecta problemas temprano en sistemas con desgaste. Cambio anticipado si: viscosidad cambia >10%, TAN aumenta >0.5 mg KOH/g, agua >0.1%, código ISO 4406 supera 22/20/17, o se detecta oxidación significativa por FTIR.",
+      },
+      {
+        q: "¿Vale la pena pagar más por un aceite hidráulico sintético?",
+        a: "Depende del valor del equipo. En equipos críticos (prensas industriales, inyectoras grandes, sistemas con servoválvulas), un sintético dura 3-5x más, opera mejor en temperaturas extremas y reduce desgaste — ROI positivo en 12-24 meses. En equipos estándar de baja exigencia (cargadores, equipos pequeños), el mineral HM sigue siendo más económico en costo total. Recomendamos sintético solo donde el caso técnico lo justifica.",
+      },
+    ],
+    relatedProducts: ["aceite-hidraulico-iso-46", "aceite-hidraulico-premium"],
+    cta: {
+      title: "¿Necesitas asesoría técnica para tu sistema hidráulico?",
+      description:
+        "Ofrecemos análisis de aceite en uso con laboratorio certificado y recomendación técnica de viscosidad por equipo. Cotizamos aceites hidráulicos ISO VG 32-68 minerales y sintéticos.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 15 — Hipoclorito de sodio (PRODUCTO — Blanca)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "hipoclorito-sodio-industrial-tratamiento-aguas",
+    authorSlug: "blanca-garza",
+    title:
+      "Hipoclorito de sodio industrial: usos, dosificación y compra para tratamiento de aguas",
+    metaTitle: "Hipoclorito de Sodio Industrial: Usos y Venta en México",
+    metaDescription:
+      "Hipoclorito de sodio (NaClO) industrial para tratamiento de aguas, desinfección y oxidación. Concentraciones, dosificación, almacenamiento y proveedor en Monterrey.",
+    excerpt:
+      "El hipoclorito de sodio es el desinfectante químico más usado en la industria mexicana. Te explicamos las concentraciones disponibles, dosificaciones típicas y cómo elegir entre granel y envasado para tu planta.",
+    category: "Tratamiento de Aguas",
+    readingTime: "7 min",
+    publishedAt: "2026-05-19",
+    updatedAt: "2026-05-19",
+    keywords: [
+      "hipoclorito de sodio industrial",
+      "naclo industrial",
+      "hipoclorito tratamiento aguas",
+      "cloro liquido industrial",
+      "hipoclorito proveedor mexico",
+      "hipoclorito de sodio 13",
+    ],
+    intro:
+      "El hipoclorito de sodio (NaClO) es el químico desinfectante más versátil y económico del mercado industrial. Se usa para desinfección de agua potable, blanqueo en industria textil y papelera, oxidación de contaminantes en PTAR, control microbiológico en torres de enfriamiento y limpieza CIP en industria alimentaria. En esta guía técnica comercial analizamos las concentraciones disponibles, dosificaciones según aplicación, cuándo conviene granel vs envasado, y consideraciones críticas de almacenamiento y manejo.",
+    sections: [
+      {
+        heading: "¿Qué es el hipoclorito de sodio y cómo se produce?",
+        paragraphs: [
+          "El hipoclorito de sodio es un compuesto químico de fórmula NaClO, comercializado en solución acuosa de color amarillo verdoso. Se produce industrialmente por reacción de cloro gas con solución de sosa cáustica: Cl₂ + 2NaOH → NaClO + NaCl + H₂O.",
+          "La concentración comercial industrial estándar es 13% peso/volumen de cloro activo (130 g/L). El producto comercial 'cloro doméstico' (la marca Cloralex y similares) tiene 4-6%; el industrial concentrado puede llegar a 14-15%. La concentración determina el costo logístico (más concentrado = menos volumen de agua transportada) y la dosis requerida en aplicación.",
+        ],
+      },
+      {
+        heading: "Aplicaciones industriales más comunes",
+        paragraphs: [
+          "El hipoclorito de sodio es el insumo más versátil de tratamiento de aguas en industria. Las aplicaciones principales son:",
+        ],
+        list: {
+          items: [
+            "Desinfección de agua potable industrial — dosis típica 1-3 ppm de cloro residual libre. Cumple con NOM-127-SSA1 para agua potable",
+            "Tratamiento terciario en PTAR — desinfección final antes de descarga o reúso. Dosis 3-10 ppm según calidad del efluente y norma aplicable (NOM-001-SEMARNAT-2021)",
+            "Control microbiológico en torres de enfriamiento — choques periódicos a 5-15 ppm para prevenir biofouling y Legionella. Combinado con biocidas no-oxidantes",
+            "Limpieza CIP en industria alimentaria — desinfección de tuberías, tanques y equipos. Dosis 100-200 ppm cloro libre, contacto 10-15 min",
+            "Blanqueo en industria textil y papelera — dosis altas (1,000-3,000 ppm) para decolorar fibras",
+            "Oxidación de contaminantes en PTAR — oxidación de cianuros, sulfuros, fenoles. Dosis estequiométrica + exceso de seguridad",
+          ],
+        },
+      },
+      {
+        heading: "Concentraciones disponibles y selección",
+        paragraphs: [
+          "El hipoclorito de sodio se distribuye en varias concentraciones según el uso final:",
+        ],
+        list: {
+          items: [
+            "Hipoclorito al 13% industrial — el estándar para tratamiento de aguas y desinfección. Cloro activo 130 g/L. Es la presentación más usada en industria",
+            "Hipoclorito al 6-8% comercial — para limpieza, sanitización y aplicaciones de bajo consumo. Más estable en almacenamiento prolongado",
+            "Hipoclorito al 4-5% doméstico — productos terminados de marca (Cloralex y similares). NO usar en aplicaciones industriales por costo y trazabilidad",
+            "Hipoclorito de calcio sólido al 65-70% — alternativa cuando se requiere larga vida útil de almacén o transporte sin restricciones de líquidos. Más caro por kg de cloro activo",
+          ],
+        },
+      },
+      {
+        heading: "Dosificación correcta: el factor que muchos plantas ignoran",
+        paragraphs: [
+          "El error #1 en uso de hipoclorito industrial es subdosificar — el cloro residual no llega al nivel de protección microbiológica y se forman bacterias resistentes que requieren después choques masivos. El error #2 es sobredosificar — desperdicia químico, genera trihalometanos (THM) potencialmente cancerígenos, y consume alcalinidad del agua.",
+          "La buena práctica es controlar el cloro residual libre con kit colorimétrico DPD (medición rápida en planta) o con sonda continua amperométrica para sistemas grandes. Mantener: 0.5-1.0 ppm en agua potable, 2-5 ppm en torres de enfriamiento durante operación normal con choques periódicos de 10-20 ppm, y 100-200 ppm en CIP alimentario con enjuague posterior obligatorio.",
+        ],
+      },
+      {
+        heading: "Almacenamiento y vida útil: lo que pierde el hipoclorito",
+        paragraphs: [
+          "El hipoclorito de sodio se degrada naturalmente — esa es su característica más problemática logísticamente. Factores que aceleran degradación: (1) temperatura — a 20°C la degradación es lenta (~1% por mes), a 40°C es 5-10x más rápida, (2) luz solar directa — descompone NaClO en sales sódicas inactivas, (3) presencia de metales pesados (Fe, Cu, Ni, Mn) — catalizan descomposición, (4) pH bajo — el hipoclorito se descompone en HClO menos estable.",
+          "Mejores prácticas de almacenamiento: tanques de polietileno opaco o fibra de vidrio en interior climatizado o bajo techo (no sol directo), separado de ácidos (reacción peligrosa libera cloro gas), tubería de PVC o polipropileno (no metales), y rotar inventario para usar producto fresco. Vida útil práctica: 3 meses a 13% en condiciones adecuadas, después la concentración cae significativamente.",
+        ],
+      },
+      {
+        heading: "Seguridad: el manejo correcto del hipoclorito",
+        paragraphs: [
+          "El hipoclorito de sodio es clasificado como corrosivo categoría 1 conforme NOM-018-STPS-2015. Aunque su manejo es relativamente más seguro que ácidos fuertes, requiere atención específica: EPP completo (lentes químicos, careta facial, guantes de PVC o neopreno, mandil PVC, botas), ventilación adecuada en zonas de trasvase, y procedimiento documentado de emergencia para derrames.",
+          "El riesgo principal es mezclar accidentalmente con ácidos (incluyendo limpiadores ácidos comunes y ácido muriático) — la reacción libera cloro gas tóxico que puede causar daño respiratorio severo. Otro riesgo es mezcla con amoniaco o derivados (algunos limpiadores domésticos) que forma cloraminas tóxicas. En planta industrial, el etiquetado claro y la separación física de químicos es crítico.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Cuál es la diferencia entre hipoclorito y cloro?",
+        a: "Coloquialmente se usan como sinónimos pero técnicamente son distintos. 'Cloro' es el gas Cl₂ (peligroso, requiere infraestructura especial). 'Hipoclorito de sodio' (NaClO) es la solución acuosa estable que se distribuye en industria — más segura de manejar pero con la misma capacidad oxidante/desinfectante. En aplicaciones industriales generales, cuando se dice 'cloración' se está usando hipoclorito.",
+      },
+      {
+        q: "¿En qué presentaciones venden hipoclorito de sodio?",
+        a: "Trevigo distribuye hipoclorito al 13% industrial en porrón de 60 kg, tambor de 250 kg y contenedor IBC de 1,300 kg. Para grandes consumidores manejamos también pipas a granel. Entregamos en 48 h en el Área Metropolitana de Monterrey con SDS y COA actualizados conforme NOM-018-STPS-2015.",
+      },
+      {
+        q: "¿El hipoclorito de sodio es lo mismo que la lejía o cloro doméstico?",
+        a: "Sí, químicamente es el mismo compuesto. La diferencia es la concentración: el cloro doméstico (Cloralex, etc.) tiene 4-6% y trae aditivos (estabilizadores, perfume). El hipoclorito industrial al 13% es puro (sin aditivos), más concentrado y económico por kg de cloro activo. Para aplicaciones industriales, usar siempre el grado industrial.",
+      },
+    ],
+    relatedProducts: ["hipoclorito-sodio"],
+    cta: {
+      title: "¿Necesitas hipoclorito de sodio para tu planta?",
+      description:
+        "Distribuimos hipoclorito al 13% industrial con SDS y COA. Entrega en 48 h en N.L. Asesoría técnica para dosificación correcta según tu aplicación: agua potable, PTAR, torres de enfriamiento o CIP.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 16 — Niebla salina ASTM B117 (PROCESO — Nohemí)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "prueba-niebla-salina-astm-b117",
+    authorSlug: "nohemi-cervantes",
+    title:
+      "Prueba de niebla salina ASTM B117: cómo se hace y qué significan los resultados",
+    metaTitle: "Prueba de Niebla Salina ASTM B117: Guía Completa",
+    metaDescription:
+      "Protocolo de prueba de niebla salina (NSS) conforme ASTM B117: parámetros de cámara, criterios de aceptación, interpretación de resultados y aplicaciones automotrices.",
+    excerpt:
+      "Si tus piezas pintadas no superan 240 horas en niebla salina, el problema rara vez es la pintura — está en el pretratamiento. Te explicamos qué mide la prueba, qué horas necesitas según aplicación y cómo interpretar resultados.",
+    category: "Tratamiento de Metales",
+    readingTime: "9 min",
+    publishedAt: "2026-05-19",
+    updatedAt: "2026-05-19",
+    keywords: [
+      "niebla salina ASTM B117",
+      "prueba de niebla salina",
+      "salt spray test mexico",
+      "NSS automotriz",
+      "horas niebla salina",
+      "validacion anticorrosiva",
+    ],
+    intro:
+      "La prueba de niebla salina (Neutral Salt Spray, NSS) bajo ASTM B117 es la prueba de validación anticorrosiva más usada en industria — desde automotriz OEM hasta electrodomésticos y partes aeroespaciales. Pero la prueba es frecuentemente mal interpretada: las horas en niebla salina no equivalen directamente a años de servicio real, y el resultado depende tanto del sistema de pintura como del pretratamiento químico aplicado. En esta guía técnica explicamos cómo funciona la prueba, qué horas necesitas según la aplicación de tu producto, y cómo diagnosticar fallas comunes que vemos en clientes de manufactura mexicana.",
+    sections: [
+      {
+        heading: "¿Qué mide la prueba de niebla salina ASTM B117?",
+        paragraphs: [
+          "ASTM B117 'Standard Practice for Operating Salt Spray (Fog) Apparatus' establece condiciones aceleradas de corrosión: cámara cerrada con atmósfera de niebla salina al 5% NaCl, temperatura 35°C, pH 6.5-7.2, presión atmosférica controlada. La pieza de prueba se expone a esta atmósfera por períodos definidos (24, 96, 240, 500, 1000+ horas) y se inspecciona el grado de corrosión observado.",
+          "El propósito no es predecir la vida útil real del producto, sino comparar el desempeño relativo entre sistemas de recubrimiento. Es una prueba acelerada — las horas en cámara no corresponden a años calendario en servicio. La interpretación correcta es: 'el sistema A resistió 500 horas y el sistema B 1000 horas, por lo tanto B es más resistente en servicio similar'.",
+        ],
+      },
+      {
+        heading: "Parámetros de la cámara de niebla salina",
+        paragraphs: [
+          "Una cámara conforme ASTM B117 controla 6 parámetros específicos:",
+        ],
+        list: {
+          items: [
+            "Solución salina: NaCl al 5% peso/peso preparada con agua destilada o desmineralizada, pureza ACS",
+            "Temperatura: 35°C ± 1.7°C dentro de la cámara (medida con termómetro calibrado en zona de exposición)",
+            "pH del condensado: 6.5-7.2 medido en líquido recolectado por embudos durante la prueba",
+            "Tasa de niebla: 1.0-2.0 mL/hora por cada 80 cm² de área horizontal de recolección",
+            "Presión del aire atomizante: 12-18 psi con burbujeo en torre humidificadora",
+            "Posición de muestras: ángulo de 15-30° respecto a la vertical, evitando que goteen entre sí",
+          ],
+        },
+      },
+      {
+        heading: "Horas requeridas según aplicación industrial",
+        paragraphs: [
+          "Las horas mínimas de aceptación varían según industria y aplicación. Como referencia técnica:",
+        ],
+        list: {
+          items: [
+            "Servicio interior básico (muebles, electrónica): 96-240 horas mínimas",
+            "Servicio exterior moderado (hardware general, equipo agrícola): 240-500 horas",
+            "Automotriz OEM tier 1 — pintura primaria + e-coat: 500-720 horas (GMW3179, WSS-M3P18-A)",
+            "Aplicaciones costeras y tropicales: 500-1,000 horas",
+            "Aeronáutica civil: 500-1,500 horas según componente",
+            "Aplicaciones marítimas: 1,000-2,000+ horas",
+            "Defensa y aeroespacial militar: 2,000-3,000+ horas (con pruebas cíclicas adicionales)",
+          ],
+        },
+      },
+      {
+        heading: "Criterios de aceptación: qué se evalúa",
+        paragraphs: [
+          "Al terminar las horas de exposición, la pieza se evalúa según criterios documentados en ASTM D1654 (Standard Test Method for Evaluation of Painted or Coated Specimens). Los criterios principales son:",
+        ],
+        list: {
+          items: [
+            "Rust creepage — propagación de oxidación desde una incisión de prueba (scribe). Se mide en mm a partir del scribe. Aceptación típica: <2 mm para automotriz, <5 mm para servicio interior",
+            "Blistering — formación de ampollas bajo la pintura. Se evalúa por densidad (frecuencia) y tamaño (escala ASTM D714). Para automotriz: 'no blistering' o 'pocas pequeñas'",
+            "Field corrosion — corrosión en áreas no rayadas. Aceptación: <1% del área expuesta",
+            "Coating loss — pérdida de adherencia de pintura. Inspección visual + prueba de adherencia cross-hatch después de NSS",
+            "Edge corrosion — corrosión en bordes (zonas críticas). Evaluación específica por aplicación",
+          ],
+        },
+      },
+      {
+        heading: "Diagnóstico de fallas comunes",
+        paragraphs: [
+          "Cuando una pieza no pasa niebla salina, el problema rara vez es 'la pintura'. En 80% de los casos que diagnosticamos, la causa raíz está en el pretratamiento químico o en la preparación de la superficie:",
+        ],
+        list: {
+          items: [
+            "Fosfatado inadecuado — peso de fosfato fuera de rango, cristalinidad irregular o presencia de smut por reactivos contaminados. Verificar baño con análisis y panel testigo",
+            "Sellado inadecuado o ausente — sin sellador post-fosfato, los microporos permiten penetración de cloruros. Causa #1 en piezas para exterior",
+            "Desengrase deficiente — aceite residual impide adhesión uniforme de fosfato. Verificar break-time del agua sobre la pieza limpia",
+            "Enjuague final con agua contaminada — cloruros del agua de la llave (típico en Monterrey, 50-100 ppm Cl⁻) causan corrosión bajo pintura. Usar agua desmineralizada en último enjuague",
+            "Espesor de pintura insuficiente — verificar con galga digital ANCHURA o cross-section. Mínimos típicos: 30-50 μm para servicio interior, 60-100 μm para exterior",
+            "Hornos de curado fuera de rango — pintura sub-curada o sobre-curada pierde propiedades anticorrosivas. Verificar con cintas testigo de temperatura",
+          ],
+        },
+      },
+      {
+        heading: "Pruebas relacionadas y cuándo usarlas",
+        paragraphs: [
+          "ASTM B117 (NSS estándar) es la prueba más usada pero no la más representativa de condiciones reales. Para aplicaciones más críticas existen pruebas adicionales:",
+        ],
+        list: {
+          items: [
+            "Cyclical Corrosion Test SAE J2334 — ciclo de niebla salina + humedad + secado. Más representativo que NSS estándar. Usado en automotriz moderno",
+            "ASTM B368 (CASS) — niebla salina con cobre, más severa. Para aplicaciones marítimas y decorativas chrome",
+            "ASTM G85 Annex 4 (SO₂ Salt Spray) — niebla salina con dióxido de azufre. Simula contaminación industrial",
+            "ASTM D1735 (Water Fog) — humedad sin sal. Para sistemas que protegen contra humedad sin exposición salina",
+            "Filiform corrosion ASTM D2803 — corrosión filiforme. Específico para aluminio pintado",
+          ],
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: "¿1,000 horas de niebla salina equivalen a cuántos años de servicio real?",
+        a: "No hay equivalencia universal — depende del ambiente real de servicio. Como referencia muy general usada en industria: 240 hrs NSS ≈ 1-3 años en servicio interior templado, 500 hrs NSS ≈ 3-7 años en servicio exterior moderado, 1,000 hrs NSS ≈ 7-15 años. Pero ambientes costeros, tropicales o industriales severos pueden reducir estos números 50% o más. NSS sirve para comparar sistemas, no para predecir tiempo exacto de servicio.",
+      },
+      {
+        q: "¿Trevigo hace pruebas de niebla salina para sus clientes?",
+        a: "Sí, ofrecemos servicio de prueba en cámara conforme ASTM B117 con duración solicitada por el cliente. Entregamos reporte con fotografías antes/durante/después, evaluación conforme ASTM D1654, y diagnóstico técnico si la prueba falla. Tiempo de servicio: depende de horas solicitadas (24 hrs a 1,500 hrs típicamente). Servicio incluido sin costo para clientes activos que evalúan nuevas formulaciones de pretratamiento.",
+      },
+      {
+        q: "¿Por qué dos piezas idénticas pueden tener resultados muy distintos en NSS?",
+        a: "Variabilidad típica en NSS es 20-30% entre piezas del mismo lote — por eso ASTM B117 requiere mínimo 3 réplicas por evaluación. Causas: variación en espesor de pintura (±10%), defectos microscópicos en el sustrato, variación en preparación de la pieza, y posición dentro de la cámara (zonas con más concentración de niebla). Para evaluación válida estadísticamente, mínimo 5 réplicas y análisis de variabilidad.",
+      },
+    ],
+    relatedProducts: [
+      "fosfato-zinc-tricationico",
+      "sellador-zirconio-anticorrosivo",
+      "pasivado-libre-cromo",
+    ],
+    cta: {
+      title: "¿Tus piezas pintadas no pasan niebla salina?",
+      description:
+        "Hacemos diagnóstico técnico de tu línea de pintura: análisis de baños, paneles testigo en cámara NSS y recomendaciones para alcanzar las horas requeridas. Servicio incluido para clientes con consumo regular.",
+    },
+  },
 ];
 
 export const getArticleBySlug = (slug: string) =>

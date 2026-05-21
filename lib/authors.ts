@@ -41,6 +41,24 @@ export const AUTHORS: Record<string, Author> = {
       "https://www.linkedin.com/in/blanca-esthela-garza-alvarado-25ba79a9/",
     gender: "femenino",
   },
+  "nohemi-cervantes": {
+    slug: "nohemi-cervantes",
+    name: "Nohemí Cervantes",
+    role: "Ingeniera de Procesos Químicos",
+    company: "Industrias Trevigo",
+    shortBio:
+      "Ingeniera química especializada en procesos industriales: pretratamiento de metales, tratamiento de aguas y control de calidad de baños.",
+    longBio:
+      "Nohemí Cervantes es ingeniera química con experiencia técnica en procesos industriales aplicados a manufactura. En Industrias Trevigo apoya el diagnóstico de líneas de pintura, control de baños de fosfatado y decapado, análisis de efluentes y diseño de protocolos de prueba en planta. Su trabajo cotidiano incluye visitas técnicas a clientes en Nuevo León y norte de México para optimizar procesos de pretratamiento, validar pasivado conforme ASTM A967 y diseñar programas de tratamiento de agua para calderas y torres de enfriamiento.",
+    expertise: [
+      "Procesos químicos industriales",
+      "Pasivado y decapado de acero inoxidable",
+      "Control de calidad de baños de fosfatado",
+      "Pruebas de niebla salina y validación anticorrosiva",
+      "Tratamiento químico de agua de calderas",
+    ],
+    gender: "femenino",
+  },
   "arturo-trevino": {
     slug: "arturo-trevino",
     name: "Arturo Treviño",
