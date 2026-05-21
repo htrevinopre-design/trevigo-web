@@ -346,45 +346,8 @@ export default function LineaPage({
         </div>
       </section>
 
-      {/* ─── CONTENIDO EDUCATIVO ─────────────────────────────── */}
-      <section className="bg-steel-50 py-14 border-b border-steel-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {content.sections.map((sec, i) => (
-            <div key={i} className="mb-10 last:mb-0">
-              <h2 className="text-xl sm:text-2xl font-black text-steel-900 uppercase tracking-tight mb-4">
-                {sec.heading}
-              </h2>
-              <div className="w-10 h-1 bg-orange-500 mb-5" />
-              {sec.paragraphs.map((p, j) => (
-                <p
-                  key={j}
-                  className="text-steel-700 text-base leading-relaxed mb-4 last:mb-0"
-                >
-                  {p}
-                </p>
-              ))}
-              {sec.list && sec.list.length > 0 && (
-                <ul className="space-y-2 mt-4">
-                  {sec.list.map((item, k) => (
-                    <li
-                      key={k}
-                      className="flex items-start gap-3 text-steel-700 text-sm sm:text-base leading-relaxed"
-                    >
-                      <span className="text-orange-500 font-black mt-1 shrink-0">
-                        ✓
-                      </span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ─── CATÁLOGO COMPLETO ────────────────────────────────── */}
-      <section className="py-14 bg-white border-b border-steel-200">
+      <section className="py-14 bg-steel-50 border-b border-steel-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-8">
             <div className="bg-navy-500 w-1 h-8 rounded-full shrink-0" />
@@ -423,6 +386,43 @@ export default function LineaPage({
                   />
                 ))}
               </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ─── CONTENIDO EDUCATIVO ─────────────────────────────── */}
+      <section className="bg-white py-14 border-b border-steel-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {content.sections.map((sec, i) => (
+            <div key={i} className="mb-10 last:mb-0">
+              <h2 className="text-xl sm:text-2xl font-black text-steel-900 uppercase tracking-tight mb-4">
+                {sec.heading}
+              </h2>
+              <div className="w-10 h-1 bg-orange-500 mb-5" />
+              {sec.paragraphs.map((p, j) => (
+                <p
+                  key={j}
+                  className="text-steel-700 text-base leading-relaxed mb-4 last:mb-0"
+                >
+                  {p}
+                </p>
+              ))}
+              {sec.list && sec.list.length > 0 && (
+                <ul className="space-y-2 mt-4">
+                  {sec.list.map((item, k) => (
+                    <li
+                      key={k}
+                      className="flex items-start gap-3 text-steel-700 text-sm sm:text-base leading-relaxed"
+                    >
+                      <span className="text-orange-500 font-black mt-1 shrink-0">
+                        ✓
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
