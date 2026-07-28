@@ -1810,6 +1810,457 @@ export const ARTICLES: Article[] = [
         "Hacemos diagnóstico técnico de tu línea de pintura: análisis de baños, paneles testigo en cámara NSS y recomendaciones para alcanzar las horas requeridas. Servicio incluido para clientes con consumo regular.",
     },
   },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 17 — PAC policloruro de aluminio (PRODUCTO — Blanca)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "pac-policloruro-aluminio-coagulante",
+    authorSlug: "blanca-garza",
+    title:
+      "PAC (policloruro de aluminio): qué es, dosis típicas y cómo comprarlo en México",
+    metaTitle: "PAC Policloruro de Aluminio: Dosis, Usos y Venta en México",
+    metaDescription:
+      "Guía del PAC (policloruro de aluminio): ventajas vs sulfato de aluminio, dosis típicas por tipo de efluente, presentaciones y proveedor en Monterrey con Jar Test sin costo.",
+    excerpt:
+      "El PAC desplazó al sulfato de aluminio como el coagulante estándar en PTAR industriales: genera menos lodo, trabaja en un rango de pH más amplio y reduce el costo total de tratamiento. Te explicamos cómo dosificarlo y comprarlo.",
+    category: "Tratamiento de Aguas",
+    readingTime: "8 min",
+    publishedAt: "2026-06-10",
+    updatedAt: "2026-06-10",
+    keywords: [
+      "policloruro de aluminio",
+      "PAC coagulante",
+      "PAC tratamiento de agua",
+      "policloruro de aluminio dosis",
+      "PAC vs sulfato de aluminio",
+      "policloruro de aluminio proveedor mexico",
+      "PAC precio",
+    ],
+    intro:
+      "El policloruro de aluminio — conocido en industria simplemente como PAC — es hoy el coagulante más usado en plantas de tratamiento de aguas residuales industriales en México. Reemplazó gradualmente al sulfato de aluminio (alumbre) porque genera entre 30 y 50% menos lodo, funciona en un rango de pH mucho más amplio y forma flóculos más densos que sedimentan más rápido. En esta guía técnica comercial explicamos qué es exactamente el PAC, cómo se dosifica según el tipo de efluente, cuánto cuesta tratar un metro cúbico con él, y qué validar al elegir proveedor.",
+    sections: [
+      {
+        heading: "¿Qué es el PAC y en qué se diferencia del sulfato de aluminio?",
+        paragraphs: [
+          "El policloruro de aluminio es un coagulante inorgánico pre-polimerizado de fórmula general Al₂(OH)ₙCl₆₋ₙ. La palabra clave es 'pre-polimerizado': mientras el sulfato de aluminio debe hidrolizarse dentro del agua a tratar (consumiendo alcalinidad y bajando el pH), el PAC ya viene parcialmente hidrolizado de fábrica. Su parámetro característico es la basicidad — típicamente 40-85% — que indica qué tan avanzada viene esa pre-polimerización.",
+          "Esta diferencia química se traduce en ventajas operativas concretas: el PAC coagula eficientemente entre pH 5 y 9 (el alumbre solo entre 6 y 7), consume mucha menos alcalinidad del agua (menos gasto en sosa o cal para reponer pH), forma flóculos más grandes y densos a igual dosis, y deja menos aluminio residual disuelto en el agua tratada.",
+        ],
+      },
+      {
+        heading: "Ventajas del PAC en números",
+        paragraphs: [
+          "En las pruebas de jarras comparativas que realizamos para clientes, el cambio de sulfato de aluminio a PAC muestra consistentemente estos resultados:",
+        ],
+        list: {
+          items: [
+            "30-50% menos volumen de lodo generado — el ahorro más importante, porque la disposición de lodos cuesta típicamente más que el coagulante mismo",
+            "20-40% menos dosis en peso para la misma remoción de turbidez",
+            "Menor consumo de álcali para corrección de pH — en muchos efluentes se elimina por completo la etapa de ajuste",
+            "Sedimentación más rápida — flóculos más densos permiten operar el sedimentador a mayor carga hidráulica",
+            "Funciona en agua fría — la coagulación con alumbre se degrada notablemente debajo de 15°C; el PAC mantiene desempeño",
+            "Menos aluminio residual en el efluente tratado — relevante si el agua se reutiliza o descarga con límite de Al",
+          ],
+        },
+      },
+      {
+        heading: "Dosis típicas de PAC según el tipo de efluente",
+        paragraphs: [
+          "La dosis óptima de PAC siempre debe determinarse con prueba de jarras sobre el efluente real — pero como referencia de arranque, estos son los rangos típicos que manejamos en planta:",
+        ],
+        list: {
+          items: [
+            "Agua de proceso con turbidez moderada (clarificación): 20-80 ppm de PAC líquido",
+            "Efluente metalmecánico con aceites emulsionados: 100-300 ppm, frecuentemente combinado con ajuste de pH y floculante aniónico",
+            "Efluente de pintura y fosfatado (automotriz): 150-400 ppm con precipitación previa de metales a pH 8.5-9.5",
+            "Efluente alimentario con carga orgánica (DQO alta): 100-250 ppm, a veces en esquema dual con coagulante orgánico",
+            "Efluente textil con color: 200-500 ppm — el PAC es particularmente bueno removiendo colorantes dispersos",
+            "Lavado de arenas y agregados: 30-100 ppm con floculante de alto peso molecular",
+          ],
+        },
+      },
+      {
+        heading: "PAC líquido vs PAC en polvo: cuál conviene",
+        paragraphs: [
+          "El PAC se comercializa en dos presentaciones. El PAC líquido (solución al 10-18% de Al₂O₃) es la opción estándar para plantas con dosificación continua: se bombea directo del contenedor con bomba dosificadora, sin preparación. El PAC en polvo (28-30% Al₂O₃) concentra más aluminio activo por kilogramo — conviene cuando el flete es caro (plantas lejanas), el consumo es bajo e intermitente, o el almacenamiento de líquidos es limitado.",
+          "Para la mayoría de plantas en el área metropolitana de Monterrey recomendamos líquido: el costo de flete es bajo por cercanía y la operación se simplifica. Para plantas foráneas con consumos menores a 200 kg/mes, el polvo suele ganar en costo total a pesar de requerir tanque de preparación.",
+        ],
+      },
+      {
+        heading: "Cuánto cuesta tratar con PAC: economía real",
+        paragraphs: [
+          "El costo del coagulante por metro cúbico tratado depende de la dosis: a 150 ppm de PAC líquido, el costo químico de coagulación ronda entre $0.80 y $2.00 MXN por m³ según volumen de compra. Pero el número que importa es el costo total de tratamiento, que incluye ajuste de pH, floculante, manejo de lodos y disposición.",
+          "Aquí es donde el PAC gana: aunque su precio por kilogramo es mayor que el del sulfato de aluminio, el costo total por m³ tratado resulta típicamente 15-35% menor por la reducción de lodos y la eliminación del ajuste de pH. Recomendamos siempre evaluar con prueba de jarras comparativa y calcular el costo completo — es un análisis que hacemos sin costo para plantas interesadas.",
+        ],
+      },
+      {
+        heading: "Qué validar al comprar PAC en México",
+        paragraphs: [
+          "No todos los PAC son iguales. Al cotizar, valida estos cuatro puntos: (1) contenido de Al₂O₃ — es la base de comparación real entre proveedores; un PAC 'barato' al 8% sale más caro que uno al 17% a mejor precio por aluminio activo, (2) basicidad — para efluentes industriales generales, 40-70% es el rango versátil, (3) certificado de análisis (COA) por lote y hoja de seguridad (SDS) conforme NOM-018-STPS-2015, y (4) metales pesados — un PAC de mala calidad puede aportar Fe, Cr o Pb al efluente que después no cumples en descarga.",
+          "Industrias Trevigo distribuye PAC líquido y en polvo con COA por lote desde San Nicolás de los Garza, con entrega en 48 horas en el área metropolitana de Monterrey. Incluimos prueba de jarras del efluente del cliente para entregar la dosis óptima y el costo proyectado por m³ antes de que compres el primer kilogramo.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿El PAC sirve para agua potable o solo para residuales?",
+        a: "Sirve para ambas. De hecho el PAC grado potable es el coagulante más usado en potabilizadoras municipales modernas porque deja menos aluminio residual que el alumbre. Para uso en agua potable verifica que el producto cumpla la certificación NSF/ANSI 60 o su equivalente y que el COA lo declare grado potable; el PAC industrial estándar es para efluentes y agua de proceso.",
+      },
+      {
+        q: "¿Puedo cambiar de sulfato de aluminio a PAC sin modificar mi PTAR?",
+        a: "En la mayoría de los casos sí — se usa la misma bomba dosificadora y el mismo punto de inyección. Los ajustes típicos son: recalibrar la dosis (el PAC requiere 20-40% menos), verificar si la etapa de ajuste de pH sigue siendo necesaria (frecuentemente se elimina), y re-optimizar la dosis de floculante. Una prueba de jarras comparativa antes del cambio define los nuevos parámetros en una semana.",
+      },
+      {
+        q: "¿Cómo se almacena el PAC y cuánto dura?",
+        a: "El PAC líquido se almacena en tanques de polietileno, fibra de vidrio o acero recubierto — nunca acero al carbón desnudo ni aluminio, porque es corrosivo para metales. Vida útil típica: 6-12 meses en líquido y 1-2 años en polvo en saco cerrado. A temperaturas bajo 0°C el líquido puede cristalizar; se redisuelve con agitación suave sin perder propiedades.",
+      },
+    ],
+    relatedProducts: [
+      "coagulante-inorganico-clarificacion",
+      "coagulante-organico-liquido",
+      "floculante-anionico-alto-peso",
+    ],
+    cta: {
+      title: "¿Quieres saber cuánto PAC necesita tu efluente?",
+      description:
+        "Trae una muestra de 5 litros y te entregamos prueba de jarras sin costo: dosis óptima, costo por m³ y comparativa contra tu coagulante actual. Distribuimos PAC líquido y en polvo con entrega en 48 h en N.L.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 18 — Torres de enfriamiento (PROCESO — Nohemí)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "tratamiento-agua-torres-enfriamiento",
+    authorSlug: "nohemi-cervantes",
+    title:
+      "Tratamiento de agua para torres de enfriamiento: incrustación, corrosión y control de Legionella",
+    metaTitle: "Tratamiento de Agua para Torres de Enfriamiento: Guía Completa",
+    metaDescription:
+      "Programa químico completo para torres de enfriamiento: inhibidores de incrustación, control de corrosión, biocidas y prevención de Legionella conforme NOM-013-SSA1.",
+    excerpt:
+      "Una torre de enfriamiento sin tratamiento químico pierde 20-40% de eficiencia térmica en meses y puede convertirse en foco de Legionella. Te explicamos el programa completo: incrustación, corrosión, biológico y purga.",
+    category: "Tratamiento de Aguas",
+    readingTime: "10 min",
+    publishedAt: "2026-06-10",
+    updatedAt: "2026-06-10",
+    keywords: [
+      "tratamiento agua torres de enfriamiento",
+      "quimicos para torre de enfriamiento",
+      "control legionella torre enfriamiento",
+      "NOM-013-SSA1",
+      "inhibidor incrustacion torre enfriamiento",
+      "ciclos de concentracion torre",
+    ],
+    intro:
+      "Las torres de enfriamiento son el equipo de agua industrial más descuidado en plantas mexicanas — hasta que fallan. El agua que recircula en una torre se concentra continuamente por evaporación: las sales disueltas se multiplican, los microorganismos encuentran temperatura ideal (25-40°C) y el oxígeno disuelto ataca la tubería. Sin un programa químico, el resultado es predecible: incrustación que roba eficiencia térmica, corrosión que perfora intercambiadores, y biopelícula que puede albergar Legionella — un riesgo de salud pública regulado por la NOM-013-SSA1. En esta guía explico el programa de tratamiento completo: las cuatro líneas de defensa química y los parámetros de control que toda torre debe monitorear.",
+    sections: [
+      {
+        heading: "Por qué el agua de una torre se vuelve agresiva: ciclos de concentración",
+        paragraphs: [
+          "Una torre de enfriamiento extrae calor evaporando una fracción del agua que recircula. El agua evaporada sale pura — las sales se quedan. Si la reposición trae 300 ppm de dureza y operas a 5 ciclos de concentración, el agua de la torre carga 1,500 ppm: cinco veces más incrustante y más conductiva (corrosiva) que el agua original.",
+          "Los ciclos de concentración se controlan con la purga: una descarga continua o intermitente de agua concentrada que se repone con agua fresca. Más ciclos = menos consumo de agua pero química más agresiva; menos ciclos = agua más benigna pero mayor consumo y costo. El punto óptimo típico está entre 3 y 6 ciclos, y es la primera decisión de diseño de cualquier programa de tratamiento — los químicos se dosifican alrededor de ese punto, no al revés.",
+        ],
+      },
+      {
+        heading: "Línea de defensa 1: inhibidores de incrustación",
+        paragraphs: [
+          "La incrustación de carbonato de calcio es el problema número uno. Una capa de apenas 0.6 mm de CaCO₃ sobre los tubos de un intercambiador reduce la transferencia de calor alrededor de 12%; con 1.5 mm la pérdida supera el 25% — que se paga en consumo eléctrico de chillers y compresores.",
+          "El control químico se hace con inhibidores de incrustación dosificados de forma continua a 5-15 ppm: fosfonatos (HEDP, ATMP, PBTC) que distorsionan el crecimiento del cristal de carbonato, combinados con dispersantes poliacrílicos que mantienen las partículas en suspensión hasta que salen por la purga. El índice de saturación de Langelier (LSI) del agua concentrada define la agresividad del programa: con LSI mayor a +2.5, ni el mejor inhibidor compensa — hay que bajar ciclos o ablandar la reposición.",
+        ],
+      },
+      {
+        heading: "Línea de defensa 2: inhibidores de corrosión",
+        paragraphs: [
+          "El agua de torre es un electrolito aireado a temperatura templada: condiciones ideales para corroer acero al carbón. Sin inhibidor, las velocidades de corrosión típicas superan 10 mpy (milésimas de pulgada por año) — suficiente para perforar tubería estándar en 3-5 años y para sembrar el sistema de óxido que a su vez alimenta incrustación y bacterias.",
+          "Los programas modernos usan mezclas de fosfonatos con azoles (tolitriazol o benzotriazol para proteger cobre y sus aleaciones) y en algunos casos zinc o molibdato para acero. La meta operativa: mantener corrosión de acero al carbón debajo de 3 mpy y de cobre debajo de 0.3 mpy, verificado con cupones de corrosión instalados en un rack lateral que se pesan cada 60-90 días.",
+        ],
+      },
+      {
+        heading: "Línea de defensa 3: control microbiológico y Legionella",
+        paragraphs: [
+          "El relleno de una torre es un reactor biológico perfecto: agua tibia, oxígeno abundante, nutrientes y superficies de adhesión. La biopelícula resultante aísla térmicamente (es 4 veces más aislante que el carbonato), genera corrosión bajo depósito por bacterias sulfato-reductoras, y crea el hábitat donde prolifera Legionella pneumophila — la bacteria que causa legionelosis y que se dispersa precisamente por el aerosol que toda torre emite.",
+          "En México, la NOM-013-SSA1 y las guías ANSI/ASHRAE 188 exigen un plan documentado de gestión del agua para sistemas con potencial de aerosolización. El programa químico estándar combina dos familias de biocidas en alternancia para evitar resistencias:",
+        ],
+        list: {
+          items: [
+            "Biocida oxidante en dosificación continua o diaria: hipoclorito de sodio manteniendo 0.5-1.0 ppm de cloro residual libre, o bromo activado (BCDMH) a 0.2-0.4 ppm — más estable a pH alcalino típico de torres",
+            "Biocida no-oxidante en choque semanal o quincenal: glutaraldehído o isotiazolinonas a 100-300 ppm — penetran la biopelícula que el oxidante no alcanza",
+            "Biodispersante opcional antes del choque: despega la biopelícula para exponer las bacterias al biocida",
+            "Monitoreo: recuento de bacterias heterótrofas semanal o quincenal (mantener debajo de 10⁴ UFC/mL) y análisis de Legionella en laboratorio acreditado cada trimestre",
+            "Limpieza física periódica: la biopelícula establecida y el sedimento en la bandeja no se eliminan solo con químico — requieren limpieza mecánica de relleno y bandeja durante paros programados",
+          ],
+        },
+      },
+      {
+        heading: "Línea de defensa 4: control de purga y monitoreo",
+        paragraphs: [
+          "Ninguna dosificación química funciona sin control de la purga. La purga (blowdown) mantiene los ciclos de concentración en el rango de diseño descargando agua concentrada y reponiendo con fresca. Se controla automáticamente con un controlador de conductividad: cuando la conductividad del agua de torre supera el setpoint, abre la válvula de purga hasta volver al rango.",
+          "El monitoreo mínimo de una torre bien operada incluye: conductividad (diaria o continua), pH (mantener 7.5-8.5), cloro/bromo residual (diario durante operación), niveles de inhibidor de incrustación y corrosión (semanal por titulación o trazador), cupones de corrosión (cada 60-90 días) y recuentos microbiológicos (semanal o quincenal). Sin registro de estos parámetros, el programa químico opera a ciegas y las fallas aparecen sin aviso.",
+        ],
+      },
+      {
+        heading: "Cumplimiento normativo: NOM-013-SSA1 y gestión documentada",
+        paragraphs: [
+          "En México, las torres de enfriamiento con potencial de generar aerosoles están sujetas a la NOM-013-SSA1, que exige un programa documentado de gestión del agua para prevenir la proliferación y dispersión de Legionella. Esto no es opcional para hospitales, hoteles, edificios con población vulnerable ni plantas industriales con torres cercanas a zonas ocupadas.",
+          "El cumplimiento exige: un plan escrito con responsable técnico designado, registros de dosificación y purga, análisis microbiológicos periódicos incluyendo Legionella, inspección física trimestral del sistema, y un procedimiento de respuesta ante resultados positivos. Un programa de tratamiento bien diseñado no solo protege el equipo y ahorra energía — es la evidencia documental de que la instalación cumple con su responsabilidad sanitaria.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Cuántos ciclos de concentración debe operar mi torre de enfriamiento?",
+        a: "Depende de la calidad del agua de reposición. Aguas blandas permiten más ciclos (6-8), aguas duras requieren menos (3-4) para evitar precipitación. El punto óptimo típico está entre 3 y 6 ciclos. Se calcula a partir del índice de saturación de Langelier (LSI) y otros índices del agua concentrada. Más ciclos ahorran agua pero aumentan el riesgo de incrustación; el balance correcto se define con un análisis de agua.",
+      },
+      {
+        q: "¿Cada cuánto debo hacer choque biocida en mi torre?",
+        a: "Mínimo 1-2 veces por semana con biocida no-oxidante durante operación normal, además del oxidante en dosificación continua. Choques intensivos (dosis 2-3x) tras paros prolongados, cuando el recuento bacteriano supere 10⁴ UFC/mL, o si hay biopelícula visible. La alternancia oxidante/no-oxidante evita que las bacterias desarrollen resistencia.",
+      },
+      {
+        q: "¿Trevigo ofrece el programa completo de tratamiento de torres?",
+        a: "Sí. Manejamos toda la línea de químicos (inhibidores de incrustación, dispersantes, inhibidores de corrosión, biocidas oxidantes y no-oxidantes) y ofrecemos análisis de agua, diseño de programa personalizado y seguimiento técnico con monitoreo de parámetros. Para clientes con consumo regular el seguimiento está incluido sin costo adicional.",
+      },
+    ],
+    relatedProducts: [
+      "microbicida-amplio-espectro",
+      "agente-secuestrante",
+      "inhibidor-oxigeno-calderas",
+    ],
+    cta: {
+      title: "¿Tu torre de enfriamiento necesita un programa de tratamiento?",
+      description:
+        "Analizamos tu agua y diseñamos el programa completo: incrustación, corrosión, biológico y cumplimiento NOM-013-SSA1. Seguimiento técnico incluido para clientes con consumo regular.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 19 — Aceite soluble CNC/torno (PROCESO — Nohemí)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "aceite-soluble-cnc-torno-control-bano",
+    authorSlug: "nohemi-cervantes",
+    title:
+      "Aceite soluble para CNC y torno: cómo controlar tu baño de corte y evitar que se eche a perder",
+    metaTitle: "Aceite Soluble para CNC y Torno: Control del Baño de Corte",
+    metaDescription:
+      "Cómo seleccionar y controlar aceite soluble para maquinado CNC y torno: concentración, pH, control bacteriano y solución al olor a podrido. Guía técnica para talleres.",
+    excerpt:
+      "Si tu refrigerante de torno huele a huevo podrido o se separa, el problema tiene solución sin tirar todo el baño. Te explicamos cómo controlar concentración, pH y bacterias para que tu aceite soluble dure semanas en vez de días.",
+    category: "Lubricantes",
+    readingTime: "9 min",
+    publishedAt: "2026-06-13",
+    updatedAt: "2026-06-13",
+    keywords: [
+      "aceite soluble torno",
+      "refrigerante CNC",
+      "aceite soluble para maquinado",
+      "aceite soluble olor podrido",
+      "concentracion aceite soluble",
+      "fluido de corte soluble",
+    ],
+    intro:
+      "El aceite soluble — también llamado refrigerante o fluido de corte emulsionable — es el insumo más usado en talleres de maquinado: tornos CNC, fresadoras, taladros y rectificadoras. Bien manejado, lubrica y refrigera el corte, extiende la vida de las herramientas y mejora el acabado de la pieza. Mal manejado, se descompone en días, genera olor pútrido a huevo podrido, mancha las piezas y se convierte en un gasto recurrente frustrante. La diferencia entre un baño que dura semanas y uno que se echa a perder en días no es el producto — es el control. En esta guía técnica explicamos cómo seleccionar y, sobre todo, controlar tu baño de aceite soluble.",
+    sections: [
+      {
+        heading: "¿Qué es el aceite soluble y cómo funciona?",
+        paragraphs: [
+          "El aceite soluble es un concentrado que se mezcla con agua para formar una emulsión lechosa estable. Combina aceite mineral o sintético con emulsificantes (que permiten que se mezcle con agua), aditivos de lubricación de extrema presión (EP), inhibidores de corrosión (para proteger la pieza y la máquina) y biocidas (para resistir el crecimiento bacteriano).",
+          "Durante el maquinado cumple cuatro funciones simultáneas: refrigera la zona de corte disipando el calor de fricción, lubrica la interfaz herramienta-pieza reduciendo desgaste, evacúa la viruta del área de trabajo, y protege contra corrosión la pieza recién mecanizada y la máquina. La concentración correcta de la emulsión es lo que determina qué tan bien cumple cada función.",
+        ],
+      },
+      {
+        heading: "Tipos de aceite soluble: cuál usar",
+        paragraphs: [
+          "Los fluidos de corte emulsionables se clasifican según su contenido de aceite mineral, cada uno con su mejor aplicación:",
+        ],
+        list: {
+          items: [
+            "Solubles convencionales (60-80% aceite mineral): emulsión lechosa, buena lubricación. Para maquinado general de acero y hierro con operaciones de carga media-alta",
+            "Semi-sintéticos (10-40% aceite mineral): translúcidos, balance entre lubricación y limpieza. Resisten mejor las bacterias y dan buena visibilidad de la zona de corte. La opción más popular hoy",
+            "Sintéticos (sin aceite mineral): solución transparente, máxima refrigeración y resistencia bacteriana. Ideal para rectificado y alta velocidad, pero menor lubricación para cargas pesadas",
+            "Para aluminio: formulaciones sin cloro ni aminas agresivas que mancharían o atacarían el aluminio y sus aleaciones",
+          ],
+        },
+      },
+      {
+        heading: "La concentración correcta: el parámetro #1",
+        paragraphs: [
+          "La concentración de la emulsión es el factor que más afecta el desempeño y la vida del baño. Se mide con un refractómetro — un instrumento económico que da una lectura en grados Brix, que multiplicada por el factor del producto da la concentración real.",
+          "Concentraciones típicas: 5-8% para maquinado general, 8-10% para operaciones de alta carga (brochado, roscado), 3-5% para rectificado. Concentración baja causa mala lubricación, corrosión de piezas y crecimiento bacteriano acelerado (las bacterias prosperan en emulsiones diluidas). Concentración alta desperdicia producto, genera residuo espumoso y puede irritar la piel de los operadores. La medición diaria con refractómetro y la reposición con emulsión preparada — nunca agua sola — es la práctica que más extiende la vida del baño.",
+        ],
+      },
+      {
+        heading: "El problema del olor a podrido: causa y solución",
+        paragraphs: [
+          "El olor a huevo podrido es la queja número uno en talleres y tiene una causa específica: crecimiento de bacterias anaeróbicas reductoras de sulfato, que producen sulfuro de hidrógeno (H₂S). Ocurre típicamente los lunes por la mañana, después de que el baño estuvo sin circular el fin de semana — las bacterias prosperan en ausencia de oxígeno.",
+          "Las causas raíz son: contaminación con aceite de fugas de la máquina (tramping oil, que alimenta las bacterias), concentración baja de la emulsión, falta de circulación o aireación, acumulación de viruta y lodo en el tanque, y agotamiento del biocida. La solución no siempre es tirar el baño: ajustar concentración, remover el tramping oil con un desnatador (skimmer), airear el baño, limpiar el tanque y dosificar biocida puede recuperar un baño con olor incipiente.",
+        ],
+      },
+      {
+        heading: "Control diario del baño: la rutina que ahorra dinero",
+        paragraphs: [
+          "Un baño de aceite soluble bien controlado dura 3-6 meses; uno descuidado se echa a perder en 1-3 semanas. La diferencia es una rutina simple de control:",
+        ],
+        list: {
+          items: [
+            "Concentración (diario): medir con refractómetro y reponer con emulsión preparada para mantener el rango operativo",
+            "pH (semanal): mantener entre 8.8 y 9.5. Un pH descendente indica acidificación por bacterias — señal de alerta temprana",
+            "Tramping oil (continuo): remover el aceite de fugas que flota en la superficie con un desnatador; es la principal fuente de alimento bacteriano",
+            "Viruta y lodo (semanal): limpiar el fondo del tanque, donde la viruta acumulada alberga bacterias y consume biocida",
+            "Biocida (cada 2-4 semanas o según monitoreo): dosificar para mantener el control microbiológico antes de que el olor aparezca",
+            "Aireación: mantener el baño en movimiento o airearlo en paros prolongados para evitar condiciones anaeróbicas",
+          ],
+        },
+      },
+      {
+        heading: "Cuándo cambiar el baño y cómo hacerlo bien",
+        paragraphs: [
+          "Un baño debe cambiarse cuando: el olor pútrido persiste a pesar del tratamiento, la concentración no se mantiene estable, hay separación irreversible de la emulsión, o el pH cae por debajo de 8.5 de forma sostenida. Cuando llega ese momento, el cambio debe hacerse correctamente para que el baño nuevo no se contamine de inmediato.",
+          "El procedimiento correcto: drenar completamente el baño viejo, limpiar el tanque con un limpiador de sistema (system cleaner) para remover biofilm y lodo adheridos, enjuagar, y recién entonces cargar la emulsión nueva. Saltarse la limpieza del tanque es el error más común: el biofilm residual inocula el baño nuevo y la descomposición vuelve a empezar en días. La disposición del baño agotado debe seguir la normativa de residuos (NOM-052-SEMARNAT) mediante empresa autorizada.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Por qué mi aceite soluble huele a podrido los lunes?",
+        a: "Es crecimiento de bacterias anaeróbicas que producen sulfuro de hidrógeno (H₂S) durante el fin de semana, cuando el baño está sin circular y sin oxígeno. La solución de fondo es: mantener concentración correcta, remover el tramping oil (aceite de fugas que alimenta bacterias), airear el baño en paros, y dosificar biocida preventivamente. Si el olor es incipiente, un choque de biocida más aireación puede recuperar el baño sin tirarlo.",
+      },
+      {
+        q: "¿Cómo mido la concentración del aceite soluble?",
+        a: "Con un refractómetro de mano — un instrumento económico (300-800 MXN) que da una lectura en grados Brix. Multiplicas la lectura por el factor del producto (que indica la ficha técnica, típicamente 1.0-1.5) para obtener la concentración real. La medición diaria es la práctica más importante para extender la vida del baño. Incluimos asesoría de uso del refractómetro con nuestros productos.",
+      },
+      {
+        q: "¿Cuánto debe durar un baño de aceite soluble?",
+        a: "Un baño bien controlado dura 3-6 meses; uno descuidado se echa a perder en 1-3 semanas. La diferencia está en el control diario: concentración, remoción de tramping oil, limpieza de viruta y dosificación de biocida. Con buen manejo, el costo del fluido de corte por pieza maquinada baja significativamente porque cambias el baño mucho menos seguido.",
+      },
+    ],
+    relatedProducts: [
+      "lubricante-metalworking",
+      "lubricantes-sinteticos",
+      "aceite-protector-piezas-metalicas",
+    ],
+    cta: {
+      title: "¿Tu refrigerante de corte se echa a perder muy seguido?",
+      description:
+        "Distribuimos aceite soluble convencional, semi-sintético y sintético para CNC y torno. Te asesoramos en el control del baño para que dure meses, no días. Cotización y entrega en 48 h en N.L.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 20 — Ácido clorhídrico/muriático (PRODUCTO — Blanca)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "acido-clorhidrico-muriatico-industrial",
+    authorSlug: "blanca-garza",
+    title:
+      "Ácido clorhídrico (muriático) industrial: usos, concentraciones y cómo comprarlo en México",
+    metaTitle: "Ácido Clorhídrico (Muriático) Industrial: Usos y Venta",
+    metaDescription:
+      "Guía del ácido clorhídrico (muriático) industrial: decapado de metales, ajuste de pH, regeneración de resinas. Concentraciones, manejo seguro y proveedor en Monterrey.",
+    excerpt:
+      "El ácido clorhídrico — o muriático — es el ácido más potente y económico para decapado de acero. Te explicamos sus aplicaciones industriales, concentraciones, qué metales NO debe tocar y cómo comprarlo con seguridad.",
+    category: "Materias Primas",
+    readingTime: "8 min",
+    publishedAt: "2026-06-13",
+    updatedAt: "2026-06-13",
+    keywords: [
+      "acido clorhidrico industrial",
+      "acido muriatico industrial",
+      "acido clorhidrico decapado",
+      "HCl industrial mexico",
+      "acido muriatico precio",
+      "acido clorhidrico proveedor",
+    ],
+    intro:
+      "El ácido clorhídrico — conocido comúnmente como ácido muriático en su grado técnico industrial — es uno de los ácidos minerales más usados en la industria mexicana. Es el más potente y económico para remover óxido pesado y escamas de laminación del acero, lo que lo convierte en el reactivo estándar para decapado (pickling). También se usa para ajuste de pH, regeneración de resinas de intercambio iónico y múltiples procesos químicos. Pero su potencia conlleva riesgos: genera vapores corrosivos y ataca selectivamente ciertos metales. En esta guía técnica comercial explicamos sus aplicaciones, concentraciones, precauciones críticas y cómo seleccionar un proveedor confiable.",
+    sections: [
+      {
+        heading: "¿Qué es el ácido clorhídrico industrial?",
+        paragraphs: [
+          "El ácido clorhídrico es una solución acuosa de cloruro de hidrógeno (HCl), un ácido mineral fuerte. En su grado industrial se distribuye típicamente al 31-33% de concentración (conocido comercialmente como '20° Baumé') y al 36-37% (grado reactivo más concentrado). El término 'ácido muriático' se refiere al grado técnico industrial, que tiene un ligero color amarillento por trazas de hierro.",
+          "Es un ácido fuerte y volátil: a temperatura ambiente libera vapores de HCl gaseoso que son corrosivos e irritantes para las vías respiratorias. Esta volatilidad es su principal diferencia operativa frente al ácido fosfórico o sulfúrico, y determina los requisitos de ventilación y manejo. A cambio, su potencia y bajo costo lo hacen insuperable para remover óxido pesado.",
+        ],
+      },
+      {
+        heading: "Aplicaciones industriales del ácido clorhídrico",
+        paragraphs: [
+          "El ácido clorhídrico es un reactivo versátil con aplicaciones en múltiples industrias. Las más comunes son:",
+        ],
+        list: {
+          items: [
+            "Decapado (pickling) de acero — remoción de óxido pesado, calamina y escamas de laminación antes de galvanizado, recubrimiento o trefilado. Es la aplicación número uno del HCl industrial",
+            "Ajuste de pH — neutralización de efluentes alcalinos en PTAR y ajuste de pH en procesos industriales",
+            "Regeneración de resinas de intercambio iónico — regeneración de resinas catiónicas en sistemas de desmineralización y ablandamiento de agua",
+            "Limpieza de incrustaciones — desincrustación de intercambiadores de calor, tuberías y equipos con depósitos de carbonatos",
+            "Procesos químicos — producción de cloruros metálicos y ajuste de procesos en industria química",
+            "Tratamiento de pozos de agua — rehabilitación de pozos con incrustación mineral",
+          ],
+        },
+      },
+      {
+        heading: "Concentraciones y presentaciones",
+        paragraphs: [
+          "El ácido clorhídrico industrial se distribuye principalmente en dos concentraciones, y la elección depende de la aplicación:",
+        ],
+        list: {
+          items: [
+            "31-33% (20° Baumé) — el grado industrial estándar, el más usado para decapado, ajuste de pH y regeneración de resinas. El mejor balance costo-desempeño",
+            "36-37% (grado concentrado) — para aplicaciones que requieren máxima concentración o donde el costo logístico de transportar agua es crítico",
+            "Diluciones de proceso (5-15%) — preparadas en planta a partir del concentrado, para baños de decapado controlados y limpiezas menos agresivas",
+          ],
+        },
+      },
+      {
+        heading: "Qué metales NO debe tocar el ácido clorhídrico",
+        paragraphs: [
+          "Una advertencia técnica crítica: el ácido clorhídrico ataca selectivamente ciertos metales y aleaciones, por lo que su uso debe limitarse a sustratos compatibles. Usarlo en el metal equivocado causa daño severo e irreversible.",
+        ],
+        list: {
+          items: [
+            "NO usar en acero inoxidable — el cloruro del HCl causa picaduras (pitting) severas y corrosión por cloruros en la matriz cromo-níquel. Para inoxidable usar ácido nítrico o cítrico",
+            "NO usar en aluminio — reacción violenta que disuelve el aluminio rápidamente",
+            "NO usar en metales galvanizados sin control estricto — disuelve el recubrimiento de zinc",
+            "SÍ usar en acero al carbón y hierro — es su aplicación ideal para decapado, con inhibidor de decapado para proteger el metal base de sobreataque",
+            "Precaución con cobre y latón — reacciona en presencia de oxígeno; requiere evaluación específica",
+          ],
+        },
+      },
+      {
+        heading: "Manejo seguro y almacenamiento",
+        paragraphs: [
+          "El ácido clorhídrico es un químico corrosivo categoría 1 conforme NOM-018-STPS-2015 que requiere manejo cuidadoso por su corrosividad y sus vapores. El manejo seguro exige: EPP completo (lentes de seguridad química, careta facial, guantes resistentes a ácidos, mandil PVC, botas), ventilación forzada en zonas de uso y trasvase (los vapores de HCl son irritantes respiratorios), y procedimiento documentado de respuesta ante derrames.",
+          "Almacenamiento: en tanques de polietileno de alta densidad, fibra de vidrio (FRP) o materiales recubiertos resistentes — nunca en metal. Lejos de bases (sosa cáustica) y de oxidantes como el hipoclorito de sodio: la mezcla de ácido clorhídrico con hipoclorito libera cloro gas tóxico. Área techada y ventilada, con muro de contención y piso impermeable. La separación física de químicos incompatibles es la medida de seguridad más importante.",
+        ],
+      },
+      {
+        heading: "Cómo elegir un proveedor de ácido clorhídrico",
+        paragraphs: [
+          "Al elegir proveedor de ácido clorhídrico industrial, los aspectos a validar son: concentración garantizada y consistente (verificable en el COA), disponibilidad de hoja de seguridad SDS actualizada, presentaciones adecuadas al consumo de tu planta, y capacidad de entrega confiable.",
+          "Industrias Trevigo distribuye ácido clorhídrico industrial al 31-33% desde nuestra planta en San Nicolás de los Garza, con SDS y COA por lote. Atendemos plantas de decapado, galvanizado, tratamiento de aguas y manufactura general en todo Nuevo León y el norte de México, con entrega en 48 horas en el Área Metropolitana de Monterrey y asesoría técnica para el manejo seguro.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿El ácido muriático es lo mismo que el ácido clorhídrico?",
+        a: "Sí, químicamente son el mismo compuesto (HCl en solución acuosa). 'Ácido muriático' es el nombre comercial del grado técnico industrial, que suele tener un ligero color amarillo por trazas de hierro. 'Ácido clorhídrico' es el nombre químico formal, usado para grados más puros. Para aplicaciones industriales de decapado y ajuste de pH, el grado muriático técnico es el estándar.",
+      },
+      {
+        q: "¿Por qué no puedo usar ácido clorhídrico en acero inoxidable?",
+        a: "Porque el ion cloruro del HCl ataca selectivamente la matriz cromo-níquel del acero inoxidable, causando picaduras (pitting) severas y corrosión por cloruros que destruyen el material. Para decapar o limpiar acero inoxidable se usan ácido nítrico, ácido cítrico o mezclas específicas que pasivan en lugar de atacar. Usar HCl en inoxidable es uno de los errores más costosos en talleres.",
+      },
+      {
+        q: "¿En qué presentaciones venden ácido clorhídrico industrial?",
+        a: "Trevigo distribuye ácido clorhídrico al 31-33% en porrón de 60 kg, tambor de 250 kg y contenedor IBC de 1,200-1,300 kg. Para grandes consumidores manejamos entrega a granel en pipa. Todas las presentaciones incluyen SDS y COA actualizados conforme NOM-018-STPS-2015, con entrega en 48 h en el Área Metropolitana de Monterrey.",
+      },
+    ],
+    relatedProducts: ["acido-clorhidrico", "limpiador-acido-desincrustante"],
+    cta: {
+      title: "¿Necesitas ácido clorhídrico para tu proceso?",
+      description:
+        "Distribuimos ácido clorhídrico (muriático) industrial al 31-33% con SDS y COA incluidos. Entrega en 48 h en N.L. y asesoría técnica para manejo seguro y selección de concentración.",
+    },
+  },
 ];
 
 export const getArticleBySlug = (slug: string) =>
