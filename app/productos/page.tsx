@@ -75,7 +75,7 @@ export default function ProductosPage() {
                 Líneas de producto
               </p>
               <h2 className="text-lg sm:text-xl font-black text-steel-900 uppercase">
-                4 líneas de químicos industriales
+                5 líneas de químicos industriales
               </h2>
             </div>
           </div>

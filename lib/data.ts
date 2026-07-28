@@ -39,7 +39,7 @@ export const COMPANY = {
 // ---- TIPOS DE PRODUCTOS ----
 
 export interface ProductFormat {
-  name: 'porron' | 'tambo' | 'tote' | 'saco';
+  name: 'porron' | 'tambo' | 'tote' | 'saco' | 'cubeta';
   label: string;
   weight: string;
   image: string;
@@ -79,6 +79,12 @@ const FORMATS_LIQUID: ProductFormat[] = [
 
 const FORMATS_POWDER: ProductFormat[] = [
   { name: 'saco', label: 'Saco', weight: '25 Kg', image: '/formatos/saco.png' },
+];
+
+// Aditivos para lubricantes: cubeta (19 L) y tambo (208 L)
+const FORMATS_ADITIVOS: ProductFormat[] = [
+  { name: 'cubeta', label: 'Cubeta', weight: '19 L',  image: '/formatos/cubeta.png' },
+  { name: 'tambo',  label: 'Tambo',  weight: '208 L', image: '/formatos/tambo.png'  },
 ];
 
 // ---- PRODUCTOS ----
@@ -717,6 +723,231 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
             shortDescription:
               "Hipoclorito de sodio para desinfección, blanqueo y control microbiológico en procesos industriales.",
             formats: FORMATS_LIQUID,
+          },
+        ],
+      },
+    ],
+    get products() {
+      return this.subcategories.flatMap((sc) => sc.products);
+    },
+  },
+
+  // ══════════════════════════════════════════════
+  // CATEGORÍA 5: ADITIVOS PARA LUBRICANTES
+  // Concentrados para FORMULAR lubricantes terminados.
+  // Cliente: formuladores y envasadores de lubricantes.
+  // Presentaciones: cubeta (19 L) y tambo (208 L).
+  // ══════════════════════════════════════════════
+  {
+    id: "aditivos-lubricantes",
+    name: "Aditivos para Lubricantes",
+    icon: "⚗️",
+    description:
+      "Paquetes de aditivos concentrados para formular lubricantes terminados: aceites de motor, transmisión, hidráulicos, engranes, corte y grasas. Para formuladores y envasadores.",
+    subcategories: [
+      {
+        id: "aditivos-motor",
+        name: "Aditivos para Aceite de Motor",
+        products: [
+          {
+            id: "bta-2000-diesel-cf-cg4",
+            name: "Aditivo para Formular Lubricantes Motor Diesel CF-CG4",
+            sku: "BTA-2000",
+            shortDescription:
+              "Paquete de aditivos para formular aceites de motor a Diesel con desempeño API CF/CG-4. Dosificación en aceite base según nivel de servicio.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2000p-diesel-ci4-plus",
+            name: "Aditivo para Formular Lubricantes Motor Diesel CI4 Plus",
+            sku: "BTA-2000P",
+            shortDescription:
+              "Paquete de aditivos para formular aceites de motor a Diesel de alto desempeño API CI-4 Plus. Detergencia, dispersancia y control de hollín.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2000p1-diesel-ck4-plus",
+            name: "Aditivo para Formular Lubricantes Motor Diesel CK4 Plus",
+            sku: "BTA-2000P-1",
+            shortDescription:
+              "Paquete de aditivos para formular aceites de motor a Diesel de última generación API CK-4 Plus. Protección para motores Diesel modernos con postratamiento.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2000p1-diesel-cj4-plus",
+            name: "Aditivo para Formular Lubricantes Motor Diesel CJ4 Plus",
+            sku: "BTA-2000P-1",
+            shortDescription:
+              "Paquete de aditivos para formular aceites de motor a Diesel API CJ-4 Plus. Compatible con sistemas de tratamiento de gases de escape (DPF/SCR).",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2010-gasolina",
+            name: "Aditivo Multifuncional para Formular Aceites de Motor a Gasolina",
+            sku: "BTA-2010",
+            shortDescription:
+              "Paquete multifuncional para formular aceites de motor a gasolina. Detergencia, antidesgaste y control de depósitos para motores de ciclo Otto.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2010s-gasolina-sl",
+            name: "Aditivo Multifuncional para Formular Aceites de Motor a Gasolina (SL)",
+            sku: "BTA-2010-S",
+            shortDescription:
+              "Paquete multifuncional para formular aceites de motor a gasolina con desempeño API SL. Protección para motores modernos a gasolina.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2091-gasolina-sm-sn",
+            name: "Aditivo Multifuncional para Elaborar Aceites Motores Gasolina (SM-SN)",
+            sku: "BTA-2091",
+            shortDescription:
+              "Paquete de aditivos para elaborar aceites de motor a gasolina API SM/SN. Alta protección contra depósitos, oxidación y desgaste.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2095-diesel-cj4",
+            name: "Aditivo Multifuncional para Elaborar Aceites Motores Diesel (CJ4)",
+            sku: "BTA-2095",
+            shortDescription:
+              "Paquete de aditivos para elaborar aceites de motor a Diesel API CJ-4. Control de hollín, dispersancia y protección de motores Diesel de servicio pesado.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2105-gas",
+            name: "Aditivo Multifuncional para Elaborar Aceites Motores a Gas",
+            sku: "BTA-2105",
+            shortDescription:
+              "Paquete de aditivos para elaborar aceites de motor a gas natural (GNC/GNV/GLP). Formulado para las condiciones de combustión de motores a gas.",
+            formats: FORMATS_ADITIVOS,
+          },
+        ],
+      },
+      {
+        id: "aditivos-transmision-fluidos",
+        name: "Aditivos para Transmisión y Fluidos",
+        products: [
+          {
+            id: "bta-2001-transmision-automatica",
+            name: "Aditivo para Formular Lubricantes Transmisión Automática",
+            sku: "BTA-2001",
+            shortDescription:
+              "Paquete de aditivos para formular fluidos de transmisión automática (ATF). Modificación de fricción, estabilidad térmica y protección de engranes.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2002-fluidos-tractor",
+            name: "Aditivo para Formular Fluidos para Tractor",
+            sku: "BTA-2002",
+            shortDescription:
+              "Paquete de aditivos para formular fluidos universales de tractor (UTTO/STOU). Compatible con transmisión, hidráulico y frenos húmedos.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2004-hidraulicos",
+            name: "Aditivo Multifuncional para Formular Fluidos Hidráulicos",
+            sku: "BTA-2004",
+            shortDescription:
+              "Paquete multifuncional para formular fluidos hidráulicos antidesgaste (AW). Protección de bombas, estabilidad y control de espuma.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2005-hidraulicos-sin-cenizas",
+            name: "Aditivo Multifuncional para Formular Fluidos Hidráulicos sin Cenizas",
+            sku: "BTA-2005",
+            shortDescription:
+              "Paquete multifuncional para formular fluidos hidráulicos sin cenizas (ashless). Ideal para sistemas que requieren aditivos libres de zinc.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2035-to4-allison-c4",
+            name: "Aditivo Multifuncional para Elaborar Aceites TO4 Allison C-4",
+            sku: "BTA-2035",
+            shortDescription:
+              "Paquete de aditivos para elaborar aceites de transmisión y mando final tipo TO-4 / Allison C-4. Fricción controlada para frenos húmedos y embragues.",
+            formats: FORMATS_ADITIVOS,
+          },
+        ],
+      },
+      {
+        id: "aditivos-industriales",
+        name: "Aditivos para Aceites Industriales",
+        products: [
+          {
+            id: "bta-2006-corte-no-manchante",
+            name: "Aditivo Multifuncional para Formular Aceites de Corte No Manchantes",
+            sku: "BTA-2006",
+            shortDescription:
+              "Paquete multifuncional para formular aceites de corte no manchantes. Lubricación de extrema presión sin manchar metales no ferrosos.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2006sa-corte-no-manchante",
+            name: "Aditivo Multifuncional para Formular Aceites de Corte No Manchantes (SA)",
+            sku: "BTA-2006SA",
+            shortDescription:
+              "Variante SA del paquete de aditivos para formular aceites de corte no manchantes. Formulado para operaciones de maquinado exigentes.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2007-2-tiempos",
+            name: "Aditivo Multifuncional para Formular Aceites de 2 Tiempos",
+            sku: "BTA-2007",
+            shortDescription:
+              "Paquete multifuncional para formular aceites de motor de 2 tiempos. Lubricación, limpieza y baja formación de humo y depósitos.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2008-engranes",
+            name: "Aditivo Multifuncional para Formular Aceites de Engranes",
+            sku: "BTA-2008",
+            shortDescription:
+              "Paquete multifuncional para formular aceites de engranes industriales y automotrices con desempeño de extrema presión (EP).",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2014-maquinas-herramientas",
+            name: "Aditivo Multifuncional para Máquinas y Herramientas",
+            sku: "BTA-2014",
+            shortDescription:
+              "Paquete multifuncional para formular lubricantes de máquinas-herramienta: guías, husillos y sistemas combinados de lubricación.",
+            formats: FORMATS_ADITIVOS,
+          },
+        ],
+      },
+      {
+        id: "aditivos-grasas",
+        name: "Aditivos para Grasas",
+        products: [
+          {
+            id: "bta-2017-ep-grasas",
+            name: "Aditivo EP para Grasas",
+            sku: "BTA-2017",
+            shortDescription:
+              "Aditivo de extrema presión (EP) para formular grasas lubricantes. Mejora la capacidad de carga y la protección antidesgaste bajo cargas altas.",
+            formats: FORMATS_ADITIVOS,
+          },
+        ],
+      },
+      {
+        id: "aditivos-modificadores",
+        name: "Modificadores y Mejoradores",
+        products: [
+          {
+            id: "bta-2012-modificador-viscosidad",
+            name: "Aditivo Modificador de Índice de Viscosidad",
+            sku: "BTA-2012",
+            shortDescription:
+              "Mejorador de índice de viscosidad (VI) para formular lubricantes multigrado. Estabiliza la viscosidad a través del rango de temperatura de operación.",
+            formats: FORMATS_ADITIVOS,
+          },
+          {
+            id: "bta-2050-antifriccionante",
+            name: "Aditivo Antifriccionante",
+            sku: "BTA-2050",
+            shortDescription:
+              "Aditivo modificador de fricción para formular lubricantes de baja fricción. Reduce el coeficiente de fricción y mejora la eficiencia energética.",
+            formats: FORMATS_ADITIVOS,
           },
         ],
       },

@@ -2261,6 +2261,213 @@ export const ARTICLES: Article[] = [
         "Distribuimos ácido clorhídrico (muriático) industrial al 31-33% con SDS y COA incluidos. Entrega en 48 h en N.L. y asesoría técnica para manejo seguro y selección de concentración.",
     },
   },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 21 — Aditivos para formular lubricantes (PRODUCTO — Blanca)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "aditivos-para-formular-lubricantes-guia",
+    authorSlug: "blanca-garza",
+    title:
+      "Aditivos para formular lubricantes: qué son y cómo elegir el paquete correcto",
+    metaTitle: "Aditivos para Formular Lubricantes: Guía de Selección",
+    metaDescription:
+      "Qué son los paquetes de aditivos para formular lubricantes, cómo elegirlos por tipo de aceite (motor, transmisión, hidráulico, engranes, grasa) y niveles API. Proveedor en México.",
+    excerpt:
+      "Un lubricante terminado es aceite base más un paquete de aditivos — y el paquete define el desempeño. Te explicamos qué hace cada tipo de aditivo, cómo elegir el correcto por aplicación y nivel de servicio API, y cómo dosificarlo.",
+    category: "Lubricantes",
+    readingTime: "9 min",
+    publishedAt: "2026-06-14",
+    updatedAt: "2026-06-14",
+    keywords: [
+      "aditivos para formular lubricantes",
+      "paquete de aditivos lubricantes",
+      "aditivo para aceite de motor",
+      "formular aceite de motor diesel",
+      "aditivos para lubricantes mexico",
+      "additive package lubricantes",
+    ],
+    intro:
+      "Un lubricante terminado no es solo aceite: es una fórmula de aceite base más un paquete de aditivos que le da su desempeño real. Los aditivos representan entre 5% y 30% de la formulación y son los responsables de casi todo lo que hace útil a un lubricante — la detergencia, la protección antidesgaste, la resistencia a la oxidación, el control de espuma y la modificación de fricción. Para un formulador o envasador de lubricantes, elegir el paquete de aditivos correcto es la decisión más importante del producto. En esta guía explicamos qué hace cada familia de aditivos, cómo seleccionar el paquete según el tipo de aceite y el nivel de servicio objetivo, y cómo dosificarlo correctamente.",
+    sections: [
+      {
+        heading: "¿Qué es un paquete de aditivos y por qué importa tanto?",
+        paragraphs: [
+          "El aceite base — mineral o sintético — aporta la película lubricante y las propiedades de viscosidad, pero por sí solo no cumple las especificaciones de un lubricante moderno. Los aditivos son los componentes químicos que se dosifican sobre el aceite base para darle desempeño: sin ellos, un aceite de motor se degradaría en horas y no protegería el motor.",
+          "Un 'paquete de aditivos' (additive package) es una mezcla ya balanceada de esos componentes, formulada para alcanzar un nivel de servicio específico (por ejemplo, API CK-4 para Diesel) con una dosificación porcentual definida. Comprar el paquete en lugar de cada aditivo por separado garantiza el balance correcto entre componentes — algo crítico, porque los aditivos interactúan entre sí y un desbalance puede anular el desempeño.",
+        ],
+      },
+      {
+        heading: "Qué hace cada familia de aditivos",
+        paragraphs: [
+          "Un paquete completo combina varias funciones químicas. Las principales son:",
+        ],
+        list: {
+          items: [
+            "Detergentes: neutralizan ácidos de la combustión y mantienen limpias las superficies calientes del motor. Aportan la reserva alcalina (TBN)",
+            "Dispersantes: mantienen en suspensión el hollín y los contaminantes para que no formen lodos ni depósitos",
+            "Antidesgaste (AW) y extrema presión (EP): forman una película protectora que evita el contacto metal-metal bajo carga. El ZDDP es el más común",
+            "Antioxidantes: retrasan la degradación del aceite por oxidación, extendiendo la vida útil del lubricante",
+            "Inhibidores de corrosión y herrumbre: protegen las superficies metálicas durante operación y paros",
+            "Modificadores de fricción: reducen el coeficiente de fricción para mejorar eficiencia energética",
+            "Antiespumantes: controlan la formación de espuma que interferiría con la lubricación",
+            "Mejoradores de índice de viscosidad (VI): permiten formular lubricantes multigrado con viscosidad estable en frío y en caliente",
+          ],
+        },
+      },
+      {
+        heading: "Cómo elegir el paquete según el tipo de lubricante",
+        paragraphs: [
+          "El paquete correcto depende de qué lubricante vas a formular. Cada aplicación tiene requisitos químicos distintos:",
+        ],
+        list: {
+          items: [
+            "Aceite de motor a Diesel: requiere alta detergencia/dispersancia y control de hollín. El nivel API (CF-CG4, CI-4 Plus, CK-4 Plus, CJ-4) define el tratamiento y el desempeño",
+            "Aceite de motor a gasolina: balance de detergencia, antidesgaste y protección contra depósitos. Niveles API SL, SM, SN",
+            "Transmisión automática (ATF): modificación de fricción precisa para el desempeño de embragues, más estabilidad térmica",
+            "Fluidos hidráulicos: antidesgaste, antiespuma y demulsibilidad. Versiones con o sin cenizas (ashless) según el sistema",
+            "Aceites de engranes: extrema presión (EP) para soportar las cargas de contacto de los dientes",
+            "Grasas: aditivos EP y antidesgaste compatibles con el espesante y el aceite base de la grasa",
+          ],
+        },
+      },
+      {
+        heading: "Dosificación: el porcentaje de tratamiento",
+        paragraphs: [
+          "Cada paquete se dosifica en un porcentaje específico sobre el aceite base — lo que se llama 'tratamiento'. La ficha técnica del paquete indica el porcentaje recomendado y el nivel de desempeño alcanzable a ese tratamiento. Los aceites de motor de alto desempeño requieren tratamientos mayores (por ejemplo 12-15%), mientras que un hidráulico puede necesitar solo 0.5-1%.",
+          "Para formular un lubricante multigrado (por ejemplo 15W-40) se combina el paquete de desempeño con un mejorador de índice de viscosidad y, si es necesario, un depresor del punto de fluidez. El costo del tratamiento es una parte significativa del costo del lubricante terminado, por lo que optimizar la formulación — alcanzar la especificación con el menor tratamiento posible — tiene impacto directo en el margen.",
+        ],
+      },
+      {
+        heading: "Errores comunes al formular con aditivos",
+        paragraphs: [
+          "Los errores más frecuentes que vemos en formuladores nuevos son: (1) mezclar aditivos individuales sin conocer sus interacciones — el resultado suele ser peor que un paquete balanceado, (2) sub-dosificar para ahorrar costo, sacrificando el nivel de servicio real del producto, (3) usar un aceite base de calidad inferior a la que el paquete asume, lo que impide alcanzar la especificación, y (4) no verificar la formulación con pruebas de laboratorio antes de producir a escala.",
+          "La buena práctica es partir del nivel de servicio objetivo, seleccionar un paquete diseñado para ese nivel, usar el aceite base especificado y validar la formulación con las pruebas correspondientes. En Trevigo ofrecemos asesoría técnica de formulación para ayudarte a alcanzar tu especificación objetivo con el mejor balance costo-desempeño.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Puedo comprar aditivos individuales en lugar de un paquete?",
+        a: "Para la mayoría de formuladores no se recomienda. Los aditivos interactúan químicamente entre sí — un detergente, un dispersante y un antidesgaste mal balanceados pueden anular su desempeño mutuo o generar incompatibilidades. Un paquete ya viene balanceado para un nivel de servicio específico. Solo formuladores muy avanzados con laboratorio propio formulan desde componentes individuales.",
+      },
+      {
+        q: "¿Qué nivel API puedo alcanzar con sus aditivos?",
+        a: "Nuestros paquetes BTA cubren los niveles de servicio más usados: Diesel API CF-CG4, CI-4 Plus, CK-4 Plus y CJ-4; gasolina API SL, SM-SN; más aplicaciones específicas como TO-4/Allison C-4. El nivel final depende de la combinación paquete + aceite base + viscosidad. Damos asesoría técnica para asegurar que tu formulación cumpla la especificación objetivo.",
+      },
+      {
+        q: "¿En qué presentaciones venden los aditivos para lubricantes?",
+        a: "Manejamos cubeta (19 L) para lotes pequeños y desarrollo de formulaciones, y tambo de 208 L para producción a escala. Todas las presentaciones incluyen ficha técnica y hoja de seguridad (SDS), con asesoría de formulación. Para grandes volúmenes coordinamos entrega programada.",
+      },
+    ],
+    relatedProducts: [
+      "bta-2000p1-diesel-ck4-plus",
+      "bta-2091-gasolina-sm-sn",
+      "bta-2012-modificador-viscosidad",
+    ],
+    cta: {
+      title: "¿Formulas lubricantes y buscas un proveedor de aditivos?",
+      description:
+        "Distribuimos paquetes de aditivos BTA para formular aceites de motor, transmisión, hidráulicos, engranes y grasas. Cubeta y tambo de 208 L, con asesoría técnica de formulación. Cotización en 24 h.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 22 — Modificador de índice de viscosidad (PROCESO — Nohemí)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "modificador-indice-viscosidad-vi-lubricantes",
+    authorSlug: "nohemi-cervantes",
+    title:
+      "Modificador de índice de viscosidad (VI): qué es y cómo funciona en un lubricante",
+    metaTitle: "Modificador de Índice de Viscosidad (VI): Guía Técnica",
+    metaDescription:
+      "Qué es un mejorador de índice de viscosidad (VI), cómo permite formular lubricantes multigrado, tipos de polímeros VI y consideraciones de shear stability. Guía técnica.",
+    excerpt:
+      "El mejorador de índice de viscosidad es lo que hace posible un aceite multigrado como el 15W-40. Te explicamos cómo funciona el polímero VI, por qué estabiliza la viscosidad con la temperatura y qué es la estabilidad al corte.",
+    category: "Lubricantes",
+    readingTime: "8 min",
+    publishedAt: "2026-06-14",
+    updatedAt: "2026-06-14",
+    keywords: [
+      "modificador de indice de viscosidad",
+      "mejorador de indice de viscosidad",
+      "VI improver",
+      "aceite multigrado como funciona",
+      "indice de viscosidad lubricante",
+      "polimero VI lubricante",
+    ],
+    intro:
+      "¿Por qué un aceite 15W-40 puede fluir en frío como un aceite ligero y proteger en caliente como uno pesado? La respuesta es un aditivo específico: el mejorador de índice de viscosidad (VI improver). Es el componente que hace posibles los lubricantes multigrado modernos, y entender cómo funciona es clave para cualquiera que formule aceites de motor, hidráulicos o de engranes multigrado. En esta guía técnica explicamos qué es el índice de viscosidad, cómo actúa el polímero VI a nivel molecular, los tipos disponibles y la consideración crítica de estabilidad al corte.",
+    sections: [
+      {
+        heading: "¿Qué es el índice de viscosidad?",
+        paragraphs: [
+          "Todo aceite se adelgaza al calentarse y se espesa al enfriarse — pero unos lo hacen más que otros. El índice de viscosidad (IV o VI) es un número adimensional que mide qué tan estable es la viscosidad de un aceite frente a los cambios de temperatura: mientras mayor es el VI, menos cambia la viscosidad con la temperatura.",
+          "Un aceite base mineral típico tiene un VI de 90-105. Para aplicaciones que operan en un rango amplio de temperatura — un motor que arranca en frío y opera caliente, o maquinaria expuesta a la intemperie — se necesita un VI mucho más alto. Ahí entra el mejorador de índice de viscosidad, que puede elevar el VI de una formulación a 150 o más.",
+        ],
+      },
+      {
+        heading: "Cómo funciona el polímero VI a nivel molecular",
+        paragraphs: [
+          "El mejorador de índice de viscosidad es un polímero de cadena larga que se disuelve en el aceite base. Su comportamiento depende de la temperatura de una forma muy útil: en frío, las moléculas del polímero están contraídas (ovilladas) y contribuyen poco a la viscosidad, permitiendo que el aceite fluya fácilmente. Al calentarse, las cadenas del polímero se expanden y se despliegan, aumentando su contribución a la viscosidad — compensando el adelgazamiento natural del aceite base.",
+          "El resultado neto es un aceite cuya viscosidad cambia mucho menos con la temperatura que el aceite base solo: fluye en frío (facilitando el arranque y la lubricación inmediata) y mantiene película en caliente (protegiendo bajo carga térmica). Este mecanismo es lo que permite formular un multigrado como 15W-40 o 5W-30 a partir de un aceite base ligero.",
+        ],
+      },
+      {
+        heading: "Tipos de polímeros mejoradores de VI",
+        paragraphs: [
+          "Existen varias familias de polímeros VI, cada una con un balance distinto entre desempeño, costo y estabilidad al corte:",
+        ],
+        list: {
+          items: [
+            "Copolímeros de olefina (OCP): los más usados por su buen balance costo-desempeño. Comunes en aceites de motor",
+            "Polimetacrilatos (PMA): excelente desempeño a baja temperatura y buenas propiedades de flujo en frío. Usados en hidráulicos y ATF",
+            "Copolímeros estireno-diénicos hidrogenados: alto engrosamiento y buena estabilidad al corte. Para formulaciones de alto desempeño",
+            "Copolímeros estireno-éster: multifuncionales, combinan mejora de VI con propiedades dispersantes o de flujo en frío",
+          ],
+        },
+      },
+      {
+        heading: "La consideración crítica: estabilidad al corte (shear stability)",
+        paragraphs: [
+          "El talón de Aquiles de los polímeros VI es la estabilidad al corte. Bajo el esfuerzo mecánico intenso de un motor o una bomba — donde el aceite pasa por holguras estrechas a alta velocidad — las cadenas largas del polímero pueden romperse permanentemente. Cuando eso ocurre, el polímero pierde su capacidad de engrosar y la viscosidad del aceite cae de forma permanente: el aceite 'pierde grado'.",
+          "Por eso, al formular con un mejorador de VI, no basta con alcanzar la viscosidad objetivo cuando el aceite es nuevo — hay que asegurar que la mantenga después del corte. Esto se mide con pruebas de estabilidad al corte (como el ensayo de inyector Bosch o KRL). Un polímero de mayor estabilidad al corte cuesta más pero mantiene el grado de viscosidad durante toda la vida útil del lubricante, lo que es crítico en aceites de motor de servicio pesado y drenados extendidos.",
+        ],
+      },
+      {
+        heading: "Cómo se usa en una formulación multigrado",
+        paragraphs: [
+          "Formular un multigrado combina tres elementos: un aceite base de baja viscosidad (que da el buen flujo en frío del grado 'W'), el mejorador de índice de viscosidad (que aporta el engrosamiento en caliente para alcanzar el grado alto), y el paquete de aditivos de desempeño. La dosificación del VI improver se ajusta para alcanzar exactamente la viscosidad objetivo a 100°C.",
+          "La selección del polímero VI correcto depende del tipo de lubricante, el rango de grados a cubrir y la severidad del servicio. Para un aceite de motor de servicio pesado con drenados largos, se prioriza la estabilidad al corte; para un hidráulico, las propiedades de flujo en frío. En Trevigo ofrecemos el mejorador de índice de viscosidad y asesoría de formulación para integrarlo correctamente en tu producto multigrado.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Qué pasa si uso demasiado mejorador de índice de viscosidad?",
+        a: "Sobredosificar el polímero VI encarece la formulación y, más importante, aumenta el riesgo de pérdida de viscosidad por corte — porque hay más polímero que puede romperse bajo esfuerzo mecánico. También puede afectar la volatilidad y el desempeño a baja temperatura. La práctica correcta es usar la mínima cantidad de VI que alcance la viscosidad objetivo, apoyándose en un aceite base de VI adecuado.",
+      },
+      {
+        q: "¿Por qué mi aceite multigrado 'pierde grado' con el uso?",
+        a: "Es degradación por corte del polímero VI. Bajo el esfuerzo mecánico del motor o la bomba, las cadenas largas del polímero se rompen permanentemente y pierden su capacidad de engrosar — la viscosidad cae y el aceite baja de grado (por ejemplo, un 15W-40 se comporta como 15W-30). La solución es formular con un polímero VI de mayor estabilidad al corte, adecuado a la severidad del servicio.",
+      },
+      {
+        q: "¿Venden el mejorador de índice de viscosidad por separado?",
+        a: "Sí. Distribuimos el aditivo modificador de índice de viscosidad para que lo integres en tus formulaciones multigrado, junto con los paquetes de aditivos de desempeño. Lo manejamos en cubeta y tambo de 208 L, con asesoría técnica para determinar el tipo y la dosificación correcta según tu lubricante y nivel de servicio.",
+      },
+    ],
+    relatedProducts: [
+      "bta-2012-modificador-viscosidad",
+      "bta-2050-antifriccionante",
+      "bta-2004-hidraulicos",
+    ],
+    cta: {
+      title: "¿Formulas lubricantes multigrado?",
+      description:
+        "Distribuimos mejoradores de índice de viscosidad y paquetes de aditivos para formular lubricantes multigrado. Cubeta y tambo de 208 L, con asesoría técnica de formulación.",
+    },
+  },
 ];
 
 export const getArticleBySlug = (slug: string) =>

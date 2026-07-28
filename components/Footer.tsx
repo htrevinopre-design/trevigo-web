@@ -63,6 +63,7 @@ export default function Footer() {
                 { label: "Tratamiento de Aguas", href: "/productos/linea/tratamiento-aguas" },
                 { label: "Coagulantes y Floculantes", href: "/productos/categoria/coagulantes" },
                 { label: "Materias Primas", href: "/productos/linea/materias-primas" },
+                { label: "Aditivos para Lubricantes", href: "/productos/linea/aditivos-lubricantes" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

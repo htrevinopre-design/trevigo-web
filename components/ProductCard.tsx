@@ -36,6 +36,12 @@ const CATEGORY_THEME: Record<
     cta: "border-emerald-600 text-emerald-700 group-hover:bg-emerald-700 group-hover:text-white group-hover:border-emerald-700",
     textHover: "group-hover:text-emerald-700",
   },
+  "aditivos-lubricantes": {
+    header: "bg-purple-700",
+    cardHover: "hover:border-purple-300 hover:shadow-purple-100",
+    cta: "border-purple-600 text-purple-700 group-hover:bg-purple-700 group-hover:text-white group-hover:border-purple-700",
+    textHover: "group-hover:text-purple-700",
+  },
 };
 
 interface ProductCardProps {

@@ -336,6 +336,75 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
     relatedIndustries: ["alimenticia", "metalmecanica", "automotriz", "papel-derivados", "textil", "farmaceutica", "lavanderias"],
     relatedServices: ["ingenieria-asesoria", "mantenimiento"],
   },
+
+  // ══════════════════════════════════════════════════════════════
+  // ADITIVOS PARA LUBRICANTES
+  // ══════════════════════════════════════════════════════════════
+  "aditivos-lubricantes": {
+    id: "aditivos-lubricantes",
+    pageTitle: "Aditivos para Formular Lubricantes",
+    metaTitle: "Aditivos para Formular Lubricantes Industriales en México | Trevigo",
+    metaDescription:
+      "Proveedor mexicano de aditivos y paquetes para formular lubricantes: aceites de motor (Diesel CK4/CJ4, gasolina SM-SN), transmisión, hidráulicos, engranes, corte y grasas. Cubeta y tambo.",
+    hero: "Aditivos para lubricantes",
+    lead: "Industrias Trevigo es proveedor mexicano de aditivos y paquetes concentrados para formular lubricantes terminados. Nuestra línea BTA cubre todas las familias: aceites de motor a Diesel (CF-CG4 hasta CK-4 Plus), gasolina (SL, SM-SN) y gas, fluidos de transmisión y tractor, hidráulicos (con y sin cenizas), engranes, aceites de corte, grasas EP, modificadores de índice de viscosidad y antifriccionantes. Presentaciones en cubeta y tambo de 208 L.",
+    sections: [
+      {
+        heading: "¿Qué son los aditivos para lubricantes y para qué sirven?",
+        paragraphs: [
+          "Un lubricante terminado no es solo aceite base: es una mezcla de aceite base (mineral o sintético) más un paquete de aditivos que le da su desempeño real. Los aditivos representan típicamente entre 5% y 30% de la formulación y son los responsables de la detergencia, la dispersancia, la protección antidesgaste, la resistencia a la oxidación, el control de espuma y la modificación de fricción.",
+          "Los aditivos para formular lubricantes se venden a formuladores y envasadores de aceites: empresas que compran aceite base y paquetes de aditivos para producir sus propias marcas de lubricante terminado. Un paquete correcto permite alcanzar las especificaciones de servicio (API, ACEA, JASO, especificaciones OEM) con dosificación controlada sobre el aceite base seleccionado.",
+        ],
+      },
+      {
+        heading: "Familias de aditivos en esta línea",
+        paragraphs: [
+          "Nuestra línea de aditivos BTA cubre todas las aplicaciones de formulación de lubricantes:",
+        ],
+        list: [
+          "Aditivos para aceite de motor — Diesel (API CF-CG4, CI-4 Plus, CK-4 Plus, CJ-4), gasolina (SL, SM-SN) y motores a gas",
+          "Aditivos para transmisión y fluidos — transmisión automática (ATF), fluidos universales de tractor (UTTO/STOU), hidráulicos con y sin cenizas, TO-4/Allison C-4",
+          "Aditivos para aceites industriales — engranes EP, aceites de corte no manchantes, 2 tiempos, máquinas-herramienta",
+          "Aditivos para grasas — aditivos de extrema presión (EP) para grasas lubricantes",
+          "Modificadores y mejoradores — mejoradores de índice de viscosidad (VI) y aditivos antifriccionantes",
+        ],
+      },
+      {
+        heading: "Cómo elegir el paquete de aditivos correcto",
+        paragraphs: [
+          "La selección del paquete depende de tres variables: (1) el tipo de lubricante a formular (motor, transmisión, hidráulico, engranes, grasa), (2) el nivel de servicio objetivo (la especificación API/ACEA/OEM que debe cumplir el producto terminado), y (3) el aceite base disponible (grupo I, II, III o sintético, y su viscosidad).",
+          "Cada paquete de aditivos se dosifica en un porcentaje específico sobre el aceite base — la ficha técnica indica el tratamiento recomendado y el nivel de desempeño alcanzable. Para formulaciones multigrado se combina el paquete de desempeño con un mejorador de índice de viscosidad. En Trevigo damos asesoría técnica de formulación para ayudarte a alcanzar la especificación objetivo con el menor costo de tratamiento.",
+        ],
+      },
+      {
+        heading: "Presentaciones y quién usa esta línea",
+        paragraphs: [
+          "Los aditivos para lubricantes se distribuyen en cubeta (19 L) para producción de lotes pequeños y desarrollo de formulaciones, y en tambo de 208 L para producción a escala. Para grandes consumidores manejamos entrega programada según el volumen de producción.",
+          "Esta línea es insumo para: formuladores y envasadores de lubricantes de marca propia, plantas de blending, distribuidores que producen sus líneas privadas, y talleres especializados que elaboran lubricantes para aplicaciones específicas. Si produces lubricante terminado, esta es la línea que determina el desempeño y el costo de tu producto.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Qué es un paquete de aditivos para lubricantes?",
+        a: "Es una mezcla concentrada de componentes químicos (detergentes, dispersantes, antidesgaste, antioxidantes, modificadores de fricción, etc.) que se dosifica sobre un aceite base para producir un lubricante terminado con un nivel de desempeño definido. En lugar de comprar cada aditivo por separado, el paquete ya viene balanceado para alcanzar una especificación de servicio (por ejemplo API CK-4) con un tratamiento porcentual indicado.",
+      },
+      {
+        q: "¿Cuánto aditivo debo dosificar en el aceite base?",
+        a: "Depende del paquete y del nivel de desempeño objetivo. El tratamiento típico va de 5% a 30% en peso según la aplicación: los aceites de motor de alto desempeño requieren mayor tratamiento que los hidráulicos. La ficha técnica de cada producto BTA indica el porcentaje recomendado y la especificación alcanzable. Damos asesoría de formulación para optimizar el tratamiento según tu aceite base.",
+      },
+      {
+        q: "¿En qué presentaciones venden los aditivos para lubricantes?",
+        a: "Manejamos cubeta (19 L) para lotes pequeños y desarrollo de formulaciones, y tambo de 208 L para producción a escala. Para grandes volúmenes coordinamos entrega programada. Todas las presentaciones incluyen ficha técnica y hoja de seguridad (SDS), con asesoría técnica de formulación.",
+      },
+      {
+        q: "¿Puedo formular un lubricante que cumpla especificación API con sus aditivos?",
+        a: "Sí. Nuestros paquetes BTA están diseñados para alcanzar niveles de servicio API específicos (CF-CG4, CI-4 Plus, CK-4 Plus, CJ-4 para Diesel; SL, SM-SN para gasolina) cuando se dosifican correctamente sobre un aceite base adecuado. El desempeño final depende de la combinación paquete + aceite base + viscosidad; ofrecemos asesoría técnica para asegurar que tu formulación cumpla la especificación objetivo.",
+      },
+    ],
+    relatedIndustries: ["metalmecanica", "automotriz", "minera", "agroindustria"],
+    relatedServices: ["ingenieria-asesoria", "mantenimiento"],
+  },
 };
 
 export function getCategoryContent(id: string): CategoryContent | undefined {

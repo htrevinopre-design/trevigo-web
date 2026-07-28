@@ -60,6 +60,16 @@ const CATEGORY_THEME: Record<
     subCount: "bg-emerald-100 text-emerald-700",
     pill: "bg-emerald-600 hover:bg-emerald-700 text-white",
   },
+  "aditivos-lubricantes": {
+    header: "bg-purple-700",
+    cardHover: "hover:border-purple-300 hover:shadow-purple-100",
+    cta: "border-purple-600 text-purple-700 group-hover:bg-purple-700 group-hover:text-white group-hover:border-purple-700",
+    textHover: "group-hover:text-purple-700",
+    subBanner: "border-purple-600 bg-purple-50",
+    subText: "text-purple-800",
+    subCount: "bg-purple-100 text-purple-700",
+    pill: "bg-purple-600 hover:bg-purple-700 text-white",
+  },
 };
 
 interface Props {

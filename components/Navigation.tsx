@@ -66,6 +66,19 @@ const PRODUCTOS_MENU = [
       { label: "Sosa Cáustica en Escamas", href: "/productos/sosa-caustica-escamas" },
     ],
   },
+  {
+    title: "Aditivos para Lubricantes",
+    href: "/productos/linea/aditivos-lubricantes",
+    image: "/imagenes/mega-lubricantes.png",
+    cta: "Ver línea completa",
+    items: [
+      { label: "Aditivos para Aceite de Motor", href: "/productos#aditivos-motor" },
+      { label: "Transmisión y Fluidos",         href: "/productos#aditivos-transmision-fluidos" },
+      { label: "Aceites Industriales",          href: "/productos#aditivos-industriales" },
+      { label: "Aditivos para Grasas",          href: "/productos#aditivos-grasas" },
+      { label: "Modificadores y Mejoradores",   href: "/productos#aditivos-modificadores" },
+    ],
+  },
 ];
 
 export default function Navigation() {
