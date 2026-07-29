@@ -1317,6 +1317,280 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     relatedServices: ["mantenimiento", "optimizacion-procesos"],
     relatedGlossary: ["viscosidad", "iso-vg", "indice-de-viscosidad", "punto-de-inflamacion", "ep-extreme-pressure"],
   },
+
+  // ══════════════════════════════════════════════════════════════
+  // ADITIVOS PARA ACEITE DE MOTOR
+  // ══════════════════════════════════════════════════════════════
+  "aditivos-motor": {
+    id: "aditivos-motor",
+    categoryId: "aditivos-lubricantes",
+    pageTitle: "Aditivos para Formular Aceite de Motor (Diesel, Gasolina, Gas)",
+    metaTitle: "Aditivos para Formular Aceite de Motor en México | Trevigo",
+    metaDescription:
+      "Paquetes de aditivos para formular aceites de motor: Diesel (API CF-CG4, CI-4 Plus, CK-4 Plus, CJ-4), gasolina (SL, SM-SN) y gas. Cubeta y tambo de 208 L. Asesoría de formulación.",
+    hero: "Aditivos para aceite de motor",
+    lead: "Los paquetes de aditivos para aceite de motor son el corazón químico de cualquier lubricante automotriz. Determinan el nivel de servicio API que alcanza tu producto terminado, la protección del motor y la vida útil del aceite. Industrias Trevigo distribuye paquetes BTA para formular aceites de motor a Diesel (CF-CG4 hasta CK-4 Plus), gasolina (SL, SM-SN) y motores a gas, en cubeta y tambo de 208 L.",
+    sections: [
+      {
+        heading: "¿Qué hace un paquete de aditivos para aceite de motor?",
+        paragraphs: [
+          "El aceite base — mineral o sintético — aporta la película lubricante, pero no protege el motor por sí solo. El paquete de aditivos es lo que convierte un aceite base en un lubricante de motor real: aporta la detergencia que mantiene limpias las superficies calientes, la dispersancia que suspende el hollín, la protección antidesgaste, la resistencia a la oxidación y la reserva alcalina (TBN) que neutraliza los ácidos de la combustión.",
+          "En un aceite de motor, el paquete representa típicamente entre 10% y 18% de la formulación. El nivel de tratamiento y la química del paquete definen el nivel de servicio API que alcanza el producto: no es lo mismo un CF-CG4 básico que un CK-4 Plus de última generación para motores Diesel con postratamiento de gases.",
+        ],
+      },
+      {
+        heading: "Paquetes por tipo de motor y nivel de servicio",
+        paragraphs: [
+          "Nuestra línea BTA cubre los niveles de servicio más demandados en el mercado mexicano:",
+        ],
+        list: [
+          "Diesel API CF-CG4 (BTA-2000): para motores Diesel de aspiración natural y turbo de generación anterior",
+          "Diesel API CI-4 Plus (BTA-2000P): alto desempeño con control de hollín para motores con recirculación de gases (EGR)",
+          "Diesel API CK-4 Plus (BTA-2000P-1): última generación, compatible con motores modernos y postratamiento (DPF/SCR)",
+          "Diesel API CJ-4 (BTA-2095): para motores de servicio pesado con bajo contenido de cenizas sulfatadas",
+          "Gasolina API SL / SM-SN (BTA-2010, BTA-2010-S, BTA-2091): protección contra depósitos y desgaste en motores de ciclo Otto",
+          "Motores a gas (BTA-2105): formulado para las condiciones de combustión de GNC/GNV/GLP",
+        ],
+      },
+      {
+        heading: "Cómo elegir el paquete correcto",
+        paragraphs: [
+          "La selección parte del nivel de servicio API objetivo de tu producto terminado. Un blender que produce aceite para flotillas de camiones modernos necesita CK-4; uno que atiende maquinaria agrícola vieja puede formular con CF-CG4 a menor costo. El paquete correcto es el que alcanza la especificación objetivo con el menor tratamiento posible.",
+          "Después del nivel API, considera el aceite base disponible (grupo I, II o III) y la viscosidad objetivo. Para multigrados (15W-40, 20W-50) se combina el paquete de desempeño con un mejorador de índice de viscosidad. Damos asesoría técnica de formulación para ayudarte a alcanzar la especificación con el mejor balance costo-desempeño.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Qué diferencia hay entre API CJ-4 y CK-4?",
+        a: "CK-4 es la categoría más reciente (2016) y supera a CJ-4 en resistencia a la oxidación, estabilidad al corte y protección contra desgaste, manteniendo compatibilidad con sistemas de postratamiento (DPF/SCR). Un aceite CK-4 puede usarse donde se especifica CJ-4, pero no al revés en motores nuevos. Para formular aceite de servicio pesado moderno, CK-4 es el estándar actual.",
+      },
+      {
+        q: "¿Cuánto paquete de aditivo lleva un aceite de motor?",
+        a: "Depende del nivel de servicio: un aceite de motor a gasolina básico puede llevar 8-12% de tratamiento, mientras que un Diesel CK-4 de servicio pesado requiere 12-18%. La ficha técnica de cada paquete BTA indica el porcentaje exacto y la especificación alcanzable. Sub-dosificar para ahorrar costo compromete el nivel de servicio real del producto.",
+      },
+      {
+        q: "¿Sus aditivos alcanzan especificación para motores a gas natural?",
+        a: "Sí. El BTA-2105 está formulado específicamente para aceites de motor a gas (GNC/GNV/GLP), cuyas condiciones de combustión difieren de los motores a Diesel o gasolina (menos hollín, más nitración y necesidad de control de cenizas). Damos asesoría para ajustar la formulación a tu aplicación de gas específica.",
+      },
+    ],
+    relatedIndustries: ["automotriz", "metalmecanica", "minera", "agroindustria"],
+    relatedServices: ["ingenieria-asesoria", "mantenimiento"],
+    relatedGlossary: ["viscosidad", "iso-vg", "sae", "indice-de-viscosidad"],
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // ADITIVOS PARA TRANSMISIÓN Y FLUIDOS
+  // ══════════════════════════════════════════════════════════════
+  "aditivos-transmision-fluidos": {
+    id: "aditivos-transmision-fluidos",
+    categoryId: "aditivos-lubricantes",
+    pageTitle: "Aditivos para Formular Fluidos de Transmisión e Hidráulicos",
+    metaTitle: "Aditivos para Transmisión Automática, Tractor e Hidráulicos | Trevigo",
+    metaDescription:
+      "Paquetes de aditivos para formular fluidos de transmisión automática (ATF), tractor (UTTO/STOU), hidráulicos con y sin cenizas y TO-4/Allison C-4. Cubeta y tambo de 208 L.",
+    hero: "Aditivos para transmisión y fluidos",
+    lead: "Los fluidos de transmisión e hidráulicos requieren paquetes de aditivos con química de fricción precisa y protección antidesgaste específica. Industrias Trevigo distribuye paquetes BTA para formular fluidos de transmisión automática (ATF), fluidos universales de tractor (UTTO/STOU), hidráulicos con y sin cenizas, y aceites TO-4/Allison C-4.",
+    sections: [
+      {
+        heading: "¿Por qué los fluidos de transmisión necesitan aditivos especiales?",
+        paragraphs: [
+          "A diferencia de un aceite de motor, un fluido de transmisión debe tener un coeficiente de fricción controlado con precisión: demasiada fricción y los embragues patinan; muy poca y no transmiten par. El paquete de aditivos de un ATF incluye modificadores de fricción específicos, además de protección antidesgaste para engranes y estabilidad térmica para soportar las temperaturas de la caja.",
+          "Los fluidos hidráulicos, por su parte, priorizan la protección antidesgaste de bombas (de paletas, engranes o pistones), el control de espuma, la demulsibilidad (separación del agua) y la estabilidad ante oxidación. Cada aplicación — transmisión, tractor, hidráulico — tiene su química óptima.",
+        ],
+      },
+      {
+        heading: "Paquetes por tipo de fluido",
+        paragraphs: [
+          "Nuestra línea BTA para transmisión y fluidos cubre:",
+        ],
+        list: [
+          "Transmisión automática / ATF (BTA-2001): modificación de fricción precisa, estabilidad térmica y protección de engranes",
+          "Fluidos universales de tractor / UTTO-STOU (BTA-2002): compatibles con transmisión, hidráulico y frenos húmedos en un solo fluido",
+          "Hidráulicos antidesgaste (BTA-2004): protección de bombas, antiespuma y demulsibilidad para sistemas estándar",
+          "Hidráulicos sin cenizas / ashless (BTA-2005): para sistemas que requieren aditivos libres de zinc",
+          "TO-4 / Allison C-4 (BTA-2035): fricción controlada para transmisiones y mandos finales de maquinaria pesada",
+        ],
+      },
+      {
+        heading: "Cómo elegir el paquete correcto",
+        paragraphs: [
+          "La selección depende de la especificación objetivo del fluido: ¿es un ATF para transmisiones automáticas, un fluido universal de tractor, un hidráulico AW estándar o uno sin cenizas? Cada especificación (Dexron, Allison, JDM, etc.) define la química de fricción y el nivel de protección requerido.",
+          "Considera también el sistema donde operará: los hidráulicos sin cenizas se usan donde el zinc del paquete AW convencional sería problemático (por ejemplo, sistemas con filtros finos o requisitos ambientales). Ofrecemos asesoría técnica de formulación para alcanzar la especificación OEM objetivo.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Qué es un fluido universal de tractor (UTTO/STOU)?",
+        a: "Un UTTO (Universal Tractor Transmission Oil) es un fluido que sirve simultáneamente para la transmisión, el sistema hidráulico y los frenos húmedos de un tractor. Un STOU (Super Tractor Oil Universal) va más allá e incluye también el motor. El paquete de aditivos debe balancear la modificación de fricción para frenos húmedos con protección de engranes e hidráulica — química compleja que un paquete dedicado resuelve.",
+      },
+      {
+        q: "¿Cuándo debo usar un hidráulico sin cenizas (ashless)?",
+        a: "Los hidráulicos sin cenizas se usan cuando el zinc del paquete antidesgaste convencional (ZDDP) causa problemas: sistemas con filtración muy fina que el zinc puede tapar, aplicaciones con requisitos ambientales estrictos, o sistemas con metales amarillos sensibles al zinc. Dan protección antidesgaste con química alternativa sin cenizas metálicas.",
+      },
+      {
+        q: "¿El aditivo TO-4 sirve para cualquier transmisión de maquinaria pesada?",
+        a: "TO-4 (Caterpillar) y Allison C-4 son especificaciones con requisitos de fricción específicos para transmisiones powershift, convertidores de par y mandos finales de maquinaria pesada. El BTA-2035 está formulado para esas especificaciones. Verifica siempre la especificación exacta que requiere el OEM del equipo, porque una fricción incorrecta afecta el desempeño de embragues y frenos.",
+      },
+    ],
+    relatedIndustries: ["automotriz", "metalmecanica", "minera", "agroindustria"],
+    relatedServices: ["ingenieria-asesoria", "mantenimiento"],
+    relatedGlossary: ["viscosidad", "iso-vg", "indice-de-viscosidad", "ep-extreme-pressure"],
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // ADITIVOS PARA ACEITES INDUSTRIALES
+  // ══════════════════════════════════════════════════════════════
+  "aditivos-industriales": {
+    id: "aditivos-industriales",
+    categoryId: "aditivos-lubricantes",
+    pageTitle: "Aditivos para Formular Aceites Industriales (Engranes, Corte, 2 Tiempos)",
+    metaTitle: "Aditivos para Aceites de Engranes, Corte y Máquinas | Trevigo",
+    metaDescription:
+      "Paquetes de aditivos para formular aceites industriales: engranes EP, aceites de corte no manchantes, 2 tiempos y máquinas-herramienta. Cubeta y tambo de 208 L en México.",
+    hero: "Aditivos para aceites industriales",
+    lead: "Los aceites industriales — engranes, corte, 2 tiempos, máquinas-herramienta — requieren paquetes de aditivos con desempeño de extrema presión (EP) y química específica por aplicación. Industrias Trevigo distribuye paquetes BTA para formular estos aceites, en cubeta y tambo de 208 L, con asesoría técnica de formulación.",
+    sections: [
+      {
+        heading: "Aditivos EP: la base de los aceites industriales",
+        paragraphs: [
+          "La mayoría de los aceites industriales operan bajo cargas de contacto altas: los dientes de un engrane, el filo de una herramienta de corte, el punto de contacto de una máquina-herramienta. Ahí la película hidrodinámica normal no basta — se necesitan aditivos de extrema presión (EP) que reaccionan químicamente con la superficie metálica bajo carga, formando una capa protectora que evita el micro-soldado y el desgaste.",
+          "Los aditivos EP (típicamente compuestos de azufre-fósforo) son el componente distintivo de estos paquetes. Su balance debe ajustarse a la aplicación: demasiado agresivos atacan metales amarillos; insuficientes no protegen bajo carga. Cada aplicación industrial tiene su química EP óptima.",
+        ],
+      },
+      {
+        heading: "Paquetes por aplicación industrial",
+        paragraphs: [
+          "Nuestra línea BTA para aceites industriales incluye:",
+        ],
+        list: [
+          "Aceites de engranes EP (BTA-2008): para reductores industriales y automotrices con cargas de contacto altas",
+          "Aceites de corte no manchantes (BTA-2006, BTA-2006SA): lubricación EP para maquinado sin manchar metales no ferrosos",
+          "Aceites de 2 tiempos (BTA-2007): lubricación con baja formación de humo y depósitos para motores de mezcla",
+          "Máquinas-herramienta (BTA-2014): para guías, husillos y sistemas combinados de lubricación",
+        ],
+      },
+      {
+        heading: "Cómo elegir el paquete correcto",
+        paragraphs: [
+          "La selección depende del tipo de aceite y de la severidad de la aplicación. Para aceites de engranes, el nivel EP (medido por ejemplo con la prueba Timken o FZG) define la capacidad de carga. Para aceites de corte, la clave es el balance entre lubricación EP y que no manche los metales no ferrosos de la pieza maquinada.",
+          "Considera también la compatibilidad con los metales del sistema: los aditivos EP azufrados pueden atacar cobre y latón, por lo que en aplicaciones con metales amarillos se usan químicas EP menos corrosivas. Damos asesoría de formulación para equilibrar desempeño y compatibilidad.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Qué significa que un aceite de corte sea 'no manchante'?",
+        a: "Significa que su química EP no reacciona con los metales no ferrosos (cobre, latón, aluminio) de la pieza maquinada dejando manchas o coloración. Los aditivos EP azufrados activos pueden manchar estos metales; un aceite de corte no manchante usa azufre inactivo o química alternativa que da lubricación EP sin atacar el sustrato. Es crítico al maquinar piezas de latón, bronce o aluminio.",
+      },
+      {
+        q: "¿Puedo usar un aditivo de engranes para máquinas-herramienta?",
+        a: "No es óptimo. Aunque ambos requieren desempeño EP, los aceites de máquinas-herramienta (guías, husillos) necesitan además propiedades antdeslizamiento (stick-slip) y compatibilidad con el refrigerante de corte, mientras que los de engranes priorizan capacidad de carga pura. Usar el paquete correcto por aplicación asegura el desempeño y evita problemas como el stick-slip en guías.",
+      },
+      {
+        q: "¿Los aditivos EP dañan los engranes de bronce?",
+        a: "Los aditivos EP azufre-fósforo activos pueden corroer bronce y metales amarillos, especialmente a alta temperatura. Para reductores con engranes de bronce (por ejemplo, sinfín-corona) se usan aceites con aditivos EP suaves o compuestos (con grasa animal) menos agresivos. Verifica siempre la compatibilidad del paquete con los metales del reductor.",
+      },
+    ],
+    relatedIndustries: ["metalmecanica", "automotriz", "minera", "papel-derivados"],
+    relatedServices: ["ingenieria-asesoria", "mantenimiento"],
+    relatedGlossary: ["ep-extreme-pressure", "viscosidad", "iso-vg", "indice-de-viscosidad"],
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // ADITIVOS PARA GRASAS
+  // ══════════════════════════════════════════════════════════════
+  "aditivos-grasas": {
+    id: "aditivos-grasas",
+    categoryId: "aditivos-lubricantes",
+    pageTitle: "Aditivos EP para Formular Grasas Lubricantes",
+    metaTitle: "Aditivo EP para Grasas Lubricantes Industriales | Trevigo",
+    metaDescription:
+      "Aditivo de extrema presión (EP) para formular grasas lubricantes industriales. Mejora la capacidad de carga y protección antidesgaste bajo cargas altas. Cubeta y tambo de 208 L.",
+    hero: "Aditivos para grasas",
+    lead: "Las grasas lubricantes que operan bajo cargas altas o impactos requieren aditivos de extrema presión (EP) que mejoran su capacidad de carga y protección antidesgaste. Industrias Trevigo distribuye aditivo EP (BTA-2017) para formular grasas industriales, compatible con distintos espesantes y aceites base, en cubeta y tambo de 208 L.",
+    sections: [
+      {
+        heading: "¿Por qué una grasa necesita aditivo EP?",
+        paragraphs: [
+          "Una grasa lubricante es aceite base retenido en un espesante (jabón de litio, calcio, poliurea, etc.). El espesante retiene el aceite en su lugar, pero la lubricación real la aporta el aceite base y los aditivos. Bajo cargas altas o impactos — rodamientos pesados, engranes abiertos, juntas universales — la película de aceite se rompe y se necesita un aditivo EP que forme una capa protectora química sobre el metal.",
+          "El aditivo EP se incorpora durante la fabricación de la grasa, junto con el espesante y el aceite base. Su dosificación y compatibilidad con el sistema de espesante determinan el desempeño final de la grasa bajo carga (medido por ejemplo con la prueba de cuatro bolas o Timken).",
+        ],
+      },
+      {
+        heading: "Cómo se usa el aditivo EP en la formulación de grasas",
+        paragraphs: [
+          "El aditivo EP (BTA-2017) se dosifica en la grasa durante su fabricación para elevar su capacidad de carga a niveles EP. Es compatible con los espesantes más comunes (litio, complejo de litio, calcio), pero siempre debe validarse la compatibilidad con el sistema específico y verificar que no afecte la estabilidad mecánica ni el punto de goteo de la grasa.",
+          "La dosificación depende del nivel EP objetivo: grasas multipropósito estándar requieren menos aditivo que grasas para engranes abiertos o servicio de impacto. Damos asesoría técnica para integrar el aditivo EP en tu formulación de grasa manteniendo el balance con las demás propiedades.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿El aditivo EP es compatible con cualquier grasa?",
+        a: "Es compatible con la mayoría de espesantes comunes (litio, complejo de litio, calcio), pero siempre debe validarse: algunos aditivos EP pueden afectar la estabilidad mecánica, el punto de goteo o la compatibilidad con ciertos espesantes especiales. La práctica correcta es hacer pruebas de laboratorio antes de producir a escala. Damos asesoría para tu sistema de grasa específico.",
+      },
+      {
+        q: "¿Qué prueba mide el desempeño EP de una grasa?",
+        a: "Las más comunes son la prueba de cuatro bolas (ASTM D2596, mide la carga de soldadura) y la prueba Timken (ASTM D2509, mide la carga OK). Una grasa con buen aditivo EP muestra cargas de soldadura altas y protege bajo impacto. Estas pruebas validan que la dosificación de aditivo EP alcanzó el nivel de desempeño objetivo.",
+      },
+      {
+        q: "¿En qué presentaciones venden el aditivo EP para grasas?",
+        a: "Manejamos el aditivo EP (BTA-2017) en cubeta (19 L) para lotes pequeños y desarrollo de formulaciones, y tambo de 208 L para producción a escala. Incluye ficha técnica y hoja de seguridad (SDS), con asesoría técnica de formulación de grasas.",
+      },
+    ],
+    relatedIndustries: ["metalmecanica", "automotriz", "minera", "agroindustria"],
+    relatedServices: ["ingenieria-asesoria", "mantenimiento"],
+    relatedGlossary: ["ep-extreme-pressure", "nlgi", "viscosidad"],
+  },
+
+  // ══════════════════════════════════════════════════════════════
+  // MODIFICADORES Y MEJORADORES
+  // ══════════════════════════════════════════════════════════════
+  "aditivos-modificadores": {
+    id: "aditivos-modificadores",
+    categoryId: "aditivos-lubricantes",
+    pageTitle: "Modificadores de Viscosidad y Aditivos Antifriccionantes",
+    metaTitle: "Modificador de Índice de Viscosidad y Antifriccionante | Trevigo",
+    metaDescription:
+      "Mejorador de índice de viscosidad (VI) para formular lubricantes multigrado y aditivo antifriccionante para lubricantes de baja fricción. Cubeta y tambo de 208 L en México.",
+    hero: "Modificadores y mejoradores",
+    lead: "Los modificadores y mejoradores ajustan propiedades específicas del lubricante: el mejorador de índice de viscosidad (VI) hace posibles los aceites multigrado, y el aditivo antifriccionante reduce el coeficiente de fricción para mejorar la eficiencia energética. Industrias Trevigo distribuye ambos (BTA-2012 y BTA-2050) en cubeta y tambo de 208 L.",
+    sections: [
+      {
+        heading: "Mejorador de índice de viscosidad (VI): la base del multigrado",
+        paragraphs: [
+          "El mejorador de índice de viscosidad es un polímero que hace posible un aceite multigrado como el 15W-40: en frío las moléculas están contraídas y el aceite fluye fácil (buen arranque), en caliente se expanden y compensan el adelgazamiento del aceite base (protección bajo carga térmica). Sin él, no existirían los lubricantes multigrado modernos.",
+          "La consideración crítica al formular con VI es la estabilidad al corte: bajo el esfuerzo mecánico del motor o la bomba, las cadenas del polímero pueden romperse y el aceite 'pierde grado'. Elegir el polímero VI correcto y la dosificación adecuada asegura que el aceite mantenga su viscosidad durante toda su vida útil.",
+        ],
+      },
+      {
+        heading: "Aditivo antifriccionante: eficiencia energética",
+        paragraphs: [
+          "El aditivo antifriccionante (modificador de fricción) reduce el coeficiente de fricción del lubricante en el régimen de lubricación límite, donde las superficies casi se tocan. Esto se traduce en menor consumo de energía, menor generación de calor y, en motores, mejor economía de combustible.",
+          "Es un componente clave en los aceites de motor modernos de baja viscosidad (0W-20, 5W-30) diseñados para eficiencia energética, y también en aplicaciones industriales donde reducir la fricción impacta directamente el consumo eléctrico. Su dosificación debe balancearse con el resto del paquete para no afectar la fricción en aplicaciones que la requieren (como frenos húmedos).",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Qué pasa si uso demasiado mejorador de índice de viscosidad?",
+        a: "Sobredosificar encarece la formulación y aumenta el riesgo de pérdida de viscosidad por corte, porque hay más polímero que puede romperse bajo esfuerzo mecánico. También puede afectar la volatilidad y el desempeño a baja temperatura. La práctica correcta es usar la mínima cantidad que alcance la viscosidad objetivo, apoyándose en un aceite base de índice de viscosidad adecuado.",
+      },
+      {
+        q: "¿El aditivo antifriccionante sirve para cualquier lubricante?",
+        a: "No en todos. En aceites de motor y muchas aplicaciones industriales reduce fricción y mejora eficiencia, pero en fluidos que requieren fricción controlada — como los ATF con frenos húmedos o los fluidos de tractor — un antifriccionante mal aplicado haría patinar los embragues. Su uso debe ajustarse a la aplicación específica.",
+      },
+      {
+        q: "¿Cómo sé cuánto modificador de viscosidad necesito?",
+        a: "Depende del aceite base y del grado multigrado objetivo. Se dosifica para alcanzar exactamente la viscosidad objetivo a 100 °C, partiendo de un aceite base ligero. La cantidad se determina por formulación y prueba; damos asesoría técnica para calcular la dosificación correcta según tu aceite base y el rango de grados que quieras cubrir.",
+      },
+    ],
+    relatedIndustries: ["automotriz", "metalmecanica", "minera", "agroindustria"],
+    relatedServices: ["ingenieria-asesoria", "mantenimiento"],
+    relatedGlossary: ["indice-de-viscosidad", "viscosidad", "iso-vg", "sae"],
+  },
 };
 
 export function getSubcategoryContent(id: string): SubcategoryContent | undefined {

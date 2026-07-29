@@ -72,11 +72,11 @@ const PRODUCTOS_MENU = [
     image: "/imagenes/mega-lubricantes.png",
     cta: "Ver línea completa",
     items: [
-      { label: "Aditivos para Aceite de Motor", href: "/productos#aditivos-motor" },
-      { label: "Transmisión y Fluidos",         href: "/productos#aditivos-transmision-fluidos" },
-      { label: "Aceites Industriales",          href: "/productos#aditivos-industriales" },
-      { label: "Aditivos para Grasas",          href: "/productos#aditivos-grasas" },
-      { label: "Modificadores y Mejoradores",   href: "/productos#aditivos-modificadores" },
+      { label: "Aditivos para Aceite de Motor", href: "/productos/categoria/aditivos-motor" },
+      { label: "Transmisión y Fluidos",         href: "/productos/categoria/aditivos-transmision-fluidos" },
+      { label: "Aceites Industriales",          href: "/productos/categoria/aditivos-industriales" },
+      { label: "Aditivos para Grasas",          href: "/productos/categoria/aditivos-grasas" },
+      { label: "Modificadores y Mejoradores",   href: "/productos/categoria/aditivos-modificadores" },
     ],
   },
 ];

@@ -2468,6 +2468,281 @@ export const ARTICLES: Article[] = [
         "Distribuimos mejoradores de índice de viscosidad y paquetes de aditivos para formular lubricantes multigrado. Cubeta y tambo de 208 L, con asesoría técnica de formulación.",
     },
   },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 23 — Clasificación API aceites de motor (PROCESO — Nohemí)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "clasificacion-api-aceite-motor-diesel-gasolina",
+    authorSlug: "nohemi-cervantes",
+    title:
+      "Clasificación API de aceites de motor: qué significan CK-4, CJ-4, SN y cómo elegir",
+    metaTitle: "Clasificación API de Aceites de Motor (CK-4, CJ-4, SN): Guía",
+    metaDescription:
+      "Qué significan las clasificaciones API de aceites de motor: categorías C (Diesel) y S (gasolina), CK-4 vs CJ-4, SM-SN, compatibilidad y cómo elegir la correcta para formular.",
+    excerpt:
+      "CK-4, CJ-4, SM, SN... la nomenclatura API confunde a muchos. Te explicamos qué significa cada letra y número, la diferencia entre categorías Diesel y gasolina, y cómo saber cuál necesitas para formular tu aceite.",
+    category: "Lubricantes",
+    readingTime: "8 min",
+    publishedAt: "2026-06-15",
+    updatedAt: "2026-06-15",
+    keywords: [
+      "clasificacion API aceite de motor",
+      "que significa API CK-4",
+      "API CJ-4 vs CK-4",
+      "API SN gasolina",
+      "categorias API aceite motor",
+      "niveles de servicio API",
+    ],
+    intro:
+      "Si formulas o vendes aceites de motor, entender la clasificación API (American Petroleum Institute) no es opcional: es el lenguaje con el que se define el nivel de servicio de un lubricante. La nomenclatura — CK-4, CJ-4, SN, SP — parece un código arbitrario, pero cada letra y número tiene un significado preciso que determina para qué motor sirve el aceite y qué desempeño garantiza. En esta guía explicamos cómo leer la clasificación API, la diferencia entre las categorías para Diesel y gasolina, y cómo saber qué nivel necesitas al formular.",
+    sections: [
+      {
+        heading: "Cómo se lee la clasificación API",
+        paragraphs: [
+          "La clasificación API para aceites de motor usa dos letras. La primera indica el tipo de motor: 'C' (Commercial) para motores a Diesel, 'S' (Service/Spark) para motores a gasolina. La segunda letra indica el nivel de desempeño, avanzando alfabéticamente con cada generación: cuanto más avanzada la letra, más reciente y exigente la categoría.",
+          "Así, API CK-4 es una categoría para Diesel (C) de nivel K, más reciente que CJ-4 (nivel J). API SN es para gasolina (S) de nivel N, más reciente que SM. El número que a veces aparece (CK-4, CJ-4) se refiere a la aplicación de motor de 4 tiempos. Las categorías más nuevas generalmente son compatibles hacia atrás — un CK-4 puede usarse donde se pedía CJ-4 — pero no al revés en motores modernos.",
+        ],
+      },
+      {
+        heading: "Categorías para motores a Diesel (serie C)",
+        paragraphs: [
+          "Las categorías Diesel han evolucionado siguiendo las normas de emisiones y la tecnología de postratamiento de gases. Las relevantes hoy:",
+        ],
+        list: {
+          items: [
+            "CF-4 / CG-4: categorías de generación anterior para motores Diesel de aspiración natural y turbo sin postratamiento",
+            "CI-4 Plus: para motores con recirculación de gases (EGR); control reforzado de hollín",
+            "CJ-4: bajo contenido de cenizas sulfatadas (low SAPS); protege el filtro de partículas Diesel (DPF)",
+            "CK-4: la categoría vigente (2016+); mejor estabilidad al corte y oxidación, compatible con DPF/SCR",
+            "FA-4: subcategoría CK-4 de menor viscosidad (HTHS) para economía de combustible en motores específicos — NO intercambiable con CK-4",
+          ],
+        },
+      },
+      {
+        heading: "Categorías para motores a gasolina (serie S)",
+        paragraphs: [
+          "Las categorías de gasolina han evolucionado hacia mayor protección de sistemas de emisiones, economía de combustible y protección de motores turbo modernos:",
+        ],
+        list: {
+          items: [
+            "SL: protección contra depósitos y compatibilidad con catalizador; vehículos de principios de los 2000",
+            "SM: mayor resistencia a la oxidación y protección de depósitos a alta temperatura",
+            "SN: control de LSPI reducido, protección de turbo y compatibilidad con biocombustibles (E85)",
+            "SP: la más reciente; máxima protección LSPI para motores turbo de inyección directa y economía de combustible",
+          ],
+        },
+      },
+      {
+        heading: "Cómo elegir la categoría al formular",
+        paragraphs: [
+          "La regla es formular al nivel de servicio que exige el parque de motores objetivo. Si produces aceite para flotillas de camiones modernos (2017+) con postratamiento, necesitas CK-4. Si atiendes maquinaria agrícola vieja, un CF-4/CG-4 cumple a menor costo. Formular por encima de lo necesario encarece el producto; formular por debajo deja motores desprotegidos y expone a reclamos.",
+          "El nivel API se alcanza combinando el paquete de aditivos correcto, el aceite base adecuado (grupo I, II o III) y la viscosidad objetivo. Un mismo paquete puede alcanzar distintos grados de viscosidad (15W-40, 10W-30) con el mejorador de índice de viscosidad apropiado. En Trevigo ofrecemos paquetes BTA para cada nivel API y asesoría de formulación para alcanzar la especificación con el mejor balance costo-desempeño.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Un aceite CK-4 puede reemplazar a uno CJ-4?",
+        a: "Sí, en la mayoría de los casos. CK-4 es compatible hacia atrás con CJ-4 y categorías anteriores, con mejor estabilidad al corte y oxidación. La excepción a vigilar es FA-4, una subcategoría de menor viscosidad HTHS que NO es intercambiable con CK-4 y solo debe usarse en motores específicamente diseñados para ella.",
+      },
+      {
+        q: "¿Qué significa 'low SAPS' en un aceite Diesel?",
+        a: "SAPS son las siglas de Sulfated Ash, Phosphorus and Sulfur (cenizas sulfatadas, fósforo y azufre). Un aceite 'low SAPS' tiene niveles reducidos de estos componentes para proteger los sistemas de postratamiento de gases (filtro de partículas DPF y catalizador SCR) de los motores Diesel modernos. Las categorías CJ-4 y CK-4 son low SAPS.",
+      },
+      {
+        q: "¿La clasificación API es lo mismo que la especificación del fabricante?",
+        a: "No exactamente. API define un nivel de servicio genérico de la industria. Los fabricantes (OEM) como Mack, Volvo, Cummins, Mercedes o GM tienen además sus propias especificaciones que pueden ser más exigentes o específicas que la categoría API equivalente. Para aprobación OEM formal se requiere cumplir la especificación del fabricante, no solo la categoría API.",
+      },
+    ],
+    relatedProducts: [
+      "bta-2000p1-diesel-ck4-plus",
+      "bta-2095-diesel-cj4",
+      "bta-2091-gasolina-sm-sn",
+    ],
+    cta: {
+      title: "¿Formulas aceites de motor a distintos niveles API?",
+      description:
+        "Distribuimos paquetes de aditivos BTA para cada nivel de servicio API — Diesel CF-CG4 a CK-4 Plus, gasolina SL a SM-SN. Asesoría de formulación y entrega en cubeta y tambo de 208 L.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 24 — Grupos de aceite base (PROCESO — Nohemí)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "grupos-aceite-base-api-i-ii-iii-iv-v",
+    authorSlug: "nohemi-cervantes",
+    title:
+      "Grupos de aceite base (I, II, III, IV, V): cuál usar para formular tu lubricante",
+    metaTitle: "Grupos de Aceite Base API (I, II, III, IV, V): Guía de Selección",
+    metaDescription:
+      "Qué son los grupos de aceite base API (I, II, III, IV PAO, V), sus diferencias en índice de viscosidad y pureza, y cómo elegir el correcto para formular lubricantes.",
+    excerpt:
+      "El aceite base es la mitad de la ecuación en un lubricante. Te explicamos los cinco grupos API de aceites base, en qué se diferencian (VI, azufre, saturados) y cómo elegir el correcto según el lubricante que formulas.",
+    category: "Lubricantes",
+    readingTime: "8 min",
+    publishedAt: "2026-06-15",
+    updatedAt: "2026-06-15",
+    keywords: [
+      "grupos de aceite base",
+      "aceite base grupo II",
+      "aceite base grupo III",
+      "PAO grupo IV",
+      "aceite base API",
+      "base oil groups",
+    ],
+    intro:
+      "Un lubricante terminado es aceite base más un paquete de aditivos — y la calidad del aceite base determina buena parte del desempeño final. El API clasifica los aceites base en cinco grupos según su método de refinación y sus propiedades. Elegir el grupo correcto es tan importante como elegir el paquete de aditivos: un paquete de alto desempeño sobre un aceite base pobre no alcanza la especificación. En esta guía explicamos los cinco grupos de aceite base, sus diferencias y cómo seleccionarlos al formular.",
+    sections: [
+      {
+        heading: "Qué define a un grupo de aceite base",
+        paragraphs: [
+          "El API clasifica los aceites base según tres parámetros: el porcentaje de hidrocarburos saturados, el contenido de azufre y el índice de viscosidad (VI). Estos parámetros reflejan qué tan refinado y estable es el aceite: más saturados y menos azufre significan mayor resistencia a la oxidación y mejor desempeño; un VI más alto significa que la viscosidad cambia menos con la temperatura.",
+          "La clasificación va del grupo I (el menos refinado, mineral convencional) al grupo V (bases especiales como ésteres). Entre ellos, los grupos II y III (minerales de alto refinamiento por hidroprocesamiento) y el IV (sintéticos PAO) dominan la formulación moderna de lubricantes de alto desempeño.",
+        ],
+      },
+      {
+        heading: "Los cinco grupos de aceite base",
+        paragraphs: [
+          "Cada grupo tiene un perfil de propiedades y un rango de aplicaciones:",
+        ],
+        list: {
+          items: [
+            "Grupo I: mineral por refinación con solvente. Menos del 90% de saturados, más de 0.03% de azufre, VI 80-120. El más económico; para lubricantes industriales y de motor de gama básica",
+            "Grupo II: mineral hidroprocesado. Más del 90% de saturados, menos de 0.03% de azufre, VI 80-120. Mejor estabilidad y color; el estándar actual para aceites de motor",
+            "Grupo III: mineral severamente hidroprocesado. VI mayor a 120. Muy alto desempeño, se comercializa a veces como 'sintético'; para aceites de motor premium y de baja viscosidad",
+            "Grupo IV: polialfaolefinas (PAO), sintético verdadero. Excelente VI, estabilidad térmica y desempeño a baja temperatura; para lubricantes sintéticos de alto desempeño",
+            "Grupo V: todas las demás bases (ésteres, poliglicoles, nafténicos, etc.). Se usan como complemento o para aplicaciones especiales que requieren propiedades específicas",
+          ],
+        },
+      },
+      {
+        heading: "Cómo elegir el grupo según el lubricante",
+        paragraphs: [
+          "La selección del grupo de aceite base depende del nivel de desempeño objetivo y del costo aceptable. Como guía general: para lubricantes industriales básicos y aceites de motor de gama económica, el grupo I sigue siendo válido y económico. Para aceites de motor modernos (API SN, CK-4), el grupo II es el estándar. Para multigrados de baja viscosidad y larga vida (5W-30, 0W-20), el grupo III o mezclas con PAO permiten alcanzar el VI y la volatilidad requeridos.",
+          "El aceite base y el paquete de aditivos deben elegirse en conjunto: un paquete API CK-4 asume cierta calidad de base. Formular ese paquete sobre grupo I probablemente no alcance la especificación de oxidación. En Trevigo damos asesoría de formulación considerando el aceite base disponible para asegurar que la combinación alcance tu especificación objetivo.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Un aceite grupo III es realmente sintético?",
+        a: "Es un tema debatido. Técnicamente el grupo III es un aceite mineral severamente hidroprocesado, no un sintético 'construido' molecularmente como el PAO (grupo IV). Sin embargo, en muchos mercados — incluido México y Estados Unidos — se permite comercializarlo como 'sintético' por su desempeño equivalente. En rigor técnico, solo el grupo IV (PAO) y ciertas bases del grupo V son sintéticos verdaderos.",
+      },
+      {
+        q: "¿Puedo mezclar aceites base de distintos grupos?",
+        a: "Sí, y es una práctica común en formulación. Por ejemplo, mezclar grupo III con PAO (grupo IV) o con un éster (grupo V) para alcanzar un balance de VI, solubilidad de aditivos y desempeño a baja temperatura. La clave es validar la compatibilidad y que la mezcla alcance las propiedades objetivo. La solubilidad de aditivos es una razón común para añadir un éster del grupo V a formulaciones con PAO.",
+      },
+      {
+        q: "¿Por qué importa el índice de viscosidad del aceite base?",
+        a: "Porque determina cuánto mejorador de índice de viscosidad (VI) necesitas para alcanzar un multigrado. Un aceite base de VI alto (grupo III) requiere menos polímero VI para formular un 5W-30, lo que mejora la estabilidad al corte del producto final. Un aceite base de VI bajo (grupo I) necesita más polímero, con mayor riesgo de pérdida de grado por corte.",
+      },
+    ],
+    relatedProducts: [
+      "bta-2012-modificador-viscosidad",
+      "bta-2000p1-diesel-ck4-plus",
+      "bta-2091-gasolina-sm-sn",
+    ],
+    cta: {
+      title: "¿Formulas lubricantes y necesitas asesoría de aceite base?",
+      description:
+        "Damos asesoría de formulación considerando tu aceite base disponible y el paquete de aditivos objetivo. Distribuimos aditivos BTA para todos los niveles de servicio. Cubeta y tambo de 208 L.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 25 — Cómo formular aceite de motor (PROCESO — Nohemí)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "como-formular-aceite-motor-multigrado",
+    authorSlug: "nohemi-cervantes",
+    title:
+      "Cómo formular un aceite de motor multigrado: aceite base, paquete de aditivos y VI",
+    metaTitle: "Cómo Formular Aceite de Motor Multigrado: Guía Paso a Paso",
+    metaDescription:
+      "Guía para formular un aceite de motor multigrado (15W-40, 5W-30): selección de aceite base, paquete de aditivos, mejorador de índice de viscosidad y validación de la fórmula.",
+    excerpt:
+      "Formular un 15W-40 no es mezclar al azar: es combinar aceite base, paquete de aditivos y mejorador de VI en las proporciones correctas. Te explicamos el proceso paso a paso y los errores que arruinan una formulación.",
+    category: "Lubricantes",
+    readingTime: "9 min",
+    publishedAt: "2026-06-15",
+    updatedAt: "2026-06-15",
+    keywords: [
+      "como formular aceite de motor",
+      "formular aceite multigrado",
+      "formulacion 15W-40",
+      "blending aceite de motor",
+      "tratamiento de aditivos aceite motor",
+      "como hacer aceite de motor",
+    ],
+    intro:
+      "Formular un aceite de motor multigrado — un 15W-40, un 5W-30 — combina tres elementos en proporciones precisas: el aceite base, el paquete de aditivos de desempeño y el mejorador de índice de viscosidad. No es una mezcla al azar: cada componente cumple una función y la proporción determina si el producto alcanza el grado de viscosidad y el nivel de servicio API objetivo. En esta guía explicamos el proceso de formulación paso a paso, desde la selección de componentes hasta la validación de la fórmula, y los errores más comunes que hay que evitar.",
+    sections: [
+      {
+        heading: "Los tres componentes de un aceite multigrado",
+        paragraphs: [
+          "Un aceite de motor multigrado se construye con: (1) el aceite base, que aporta la película lubricante y la mayor parte del volumen (70-90%); (2) el paquete de aditivos, que aporta el desempeño — detergencia, dispersancia, antidesgaste, antioxidación — y define el nivel API (10-18%); y (3) el mejorador de índice de viscosidad, el polímero que permite el comportamiento multigrado (unos pocos por ciento).",
+          "El grado de viscosidad SAE (el '15W-40') describe el comportamiento: el número con 'W' (Winter) indica el flujo en frío, y el número sin W la viscosidad a 100 °C. Un multigrado cumple ambos: fluye en frío como un grado ligero y protege en caliente como uno pesado, gracias al mejorador de VI.",
+        ],
+      },
+      {
+        heading: "Paso a paso de la formulación",
+        paragraphs: [
+          "El proceso de formulación sigue una secuencia lógica:",
+        ],
+        list: {
+          items: [
+            "1. Definir el objetivo: grado SAE (ej. 15W-40) y nivel de servicio API (ej. CK-4). Esto determina todos los componentes",
+            "2. Seleccionar el aceite base: grupo y viscosidad según el objetivo. Para un 15W-40 CK-4, típicamente grupo II de viscosidad adecuada",
+            "3. Seleccionar y dosificar el paquete de aditivos: el paquete del nivel API objetivo, al porcentaje de tratamiento indicado en ficha técnica",
+            "4. Añadir el mejorador de índice de viscosidad: dosificar hasta alcanzar la viscosidad objetivo a 100 °C",
+            "5. Ajustar el flujo en frío: si es necesario, un depresor del punto de fluidez para el grado 'W'",
+            "6. Mezclar (blending): homogeneizar a temperatura controlada según el procedimiento",
+            "7. Validar: verificar viscosidad (40 y 100 °C), índice de viscosidad, TBN y demás propiedades en laboratorio antes de producir a escala",
+          ],
+        },
+      },
+      {
+        heading: "Cómo se alcanza el grado de viscosidad",
+        paragraphs: [
+          "El grado de viscosidad se alcanza combinando la viscosidad del aceite base con el aporte del mejorador de VI. Se parte de un aceite base más ligero de lo que sería el grado final, y el polímero VI aporta el engrosamiento en caliente para llegar a la viscosidad objetivo a 100 °C. Cuanto más ligero el aceite base y mayor la brecha entre los grados (por ejemplo 5W-40 vs 15W-40), más mejorador de VI se necesita.",
+          "Aquí está el equilibrio clave: más polímero VI permite grados más amplios, pero aumenta el riesgo de pérdida de viscosidad por corte en servicio. Por eso, para grados exigentes se usa un aceite base de VI alto (grupo III) que requiere menos polímero, o un polímero VI de alta estabilidad al corte. La formulación óptima alcanza el grado con la mínima cantidad de VI necesaria.",
+        ],
+      },
+      {
+        heading: "Errores comunes al formular",
+        paragraphs: [
+          "Los errores que más comprometen una formulación son: (1) sub-dosificar el paquete de aditivos para ahorrar costo, lo que baja el nivel de servicio real por debajo de lo etiquetado; (2) usar un aceite base de calidad inferior a la que el paquete asume, impidiendo alcanzar la especificación de oxidación; (3) sobredosificar el mejorador de VI, aumentando el riesgo de pérdida de grado por corte; y (4) no validar la fórmula en laboratorio antes de producir a escala.",
+          "La buena práctica es partir del objetivo (grado + nivel API), seleccionar componentes compatibles con ese objetivo, y validar cada lote con pruebas de viscosidad, VI y TBN. En Trevigo ofrecemos los paquetes de aditivos, el mejorador de índice de viscosidad y asesoría técnica de formulación para ayudarte a construir tu producto con el balance correcto de costo y desempeño.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Qué proporción de aditivos lleva un aceite de motor multigrado?",
+        a: "Depende del nivel de servicio. Un aceite de motor a gasolina básico puede llevar 8-12% de paquete de aditivos; un Diesel de servicio pesado API CK-4 requiere 12-18%. A eso se suma el mejorador de índice de viscosidad (unos pocos por ciento) para lograr el comportamiento multigrado. El resto — 70-90% — es aceite base. Las proporciones exactas las indica la ficha técnica del paquete.",
+      },
+      {
+        q: "¿Puedo formular un aceite multigrado sin mejorador de índice de viscosidad?",
+        a: "En general no para grados amplios. El mejorador de VI es lo que permite el comportamiento multigrado (fluir en frío y proteger en caliente). Sin él, tendrías un monogrado. La única excepción parcial son ciertos aceites base de muy alto índice de viscosidad (grupo III/IV) que pueden alcanzar grados multigrado estrechos con poco o ningún polímero, pero para la mayoría de multigrados comerciales el mejorador de VI es necesario.",
+      },
+      {
+        q: "¿Trevigo ayuda con la formulación completa o solo vende los aditivos?",
+        a: "Ambas cosas. Distribuimos los paquetes de aditivos BTA, el mejorador de índice de viscosidad y demás componentes, y ofrecemos asesoría técnica de formulación: te ayudamos a seleccionar el aceite base, calcular el tratamiento y ajustar la fórmula para alcanzar tu grado y nivel API objetivo. La validación final de laboratorio es responsabilidad del formulador, pero te orientamos en el proceso.",
+      },
+    ],
+    relatedProducts: [
+      "bta-2000p1-diesel-ck4-plus",
+      "bta-2012-modificador-viscosidad",
+      "bta-2091-gasolina-sm-sn",
+    ],
+    cta: {
+      title: "¿Vas a formular tu propia línea de lubricantes?",
+      description:
+        "Te damos los paquetes de aditivos, el mejorador de índice de viscosidad y la asesoría técnica de formulación para construir tu producto. Cubeta y tambo de 208 L, entrega en N.L.",
+    },
+  },
 ];
 
 export const getArticleBySlug = (slug: string) =>
