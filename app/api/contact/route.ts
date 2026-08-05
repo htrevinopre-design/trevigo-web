@@ -24,6 +24,31 @@ function row(label: string, value: string | undefined) {
     </tr>`;
 }
 
+// Normaliza un teléfono a formato wa.me (solo dígitos, con lada de país).
+// Asume México (52) cuando el número llega con 10 dígitos locales.
+function waNumber(phone: string): string {
+  const digits = phone.replace(/\D/g, "");
+  if (digits.length === 10) return `52${digits}`;                       // local MX → +52
+  if (digits.length === 11 && digits.startsWith("1")) return `52${digits.slice(1)}`; // 1 + 10
+  return digits;                                                        // ya trae lada (ej. 52…)
+}
+
+// Fila de teléfono con botón de WhatsApp a un lado que abre el chat.
+function phoneRow(phone: string | undefined) {
+  if (!phone) return "";
+  const link = `https://wa.me/${waNumber(phone)}`;
+  return `
+    <tr>
+      <td style="padding:8px 12px;background:#f8f9fa;font-size:12px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;width:1%;border-bottom:1px solid #e5e7eb;">Teléfono</td>
+      <td style="padding:8px 12px;font-size:14px;color:#111827;border-bottom:1px solid #e5e7eb;">
+        <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;"><tr>
+          <td style="font-size:14px;color:#111827;padding-right:14px;white-space:nowrap;">${phone}</td>
+          <td><a href="${link}" target="_blank" style="display:inline-block;background:#25D366;color:#ffffff;font-size:12px;font-weight:700;text-decoration:none;padding:7px 14px;border-radius:6px;white-space:nowrap;">WhatsApp &rarr;</a></td>
+        </tr></table>
+      </td>
+    </tr>`;
+}
+
 function emailWrapper(title: string, badge: string, body: string) {
   return `<!DOCTYPE html>
 <html lang="es">
@@ -77,7 +102,7 @@ function buildContactHtml(f: Record<string, string>) {
       ${row("Nombre", f.nombre)}
       ${row("Empresa", f.empresa)}
       ${row("Correo", f.email)}
-      ${row("Teléfono", f.telefono)}
+      ${phoneRow(f.telefono)}
       ${row("Industria", f.industria)}
       ${row("Asunto", f.asunto)}
     </table>`;
@@ -104,7 +129,7 @@ function buildQuoteHtml(f: Record<string, string>) {
       ${row("Nombre", f.nombre)}
       ${row("Empresa", f.empresa)}
       ${row("Correo", f.email)}
-      ${row("Teléfono", f.telefono)}
+      ${phoneRow(f.telefono)}
       ${row("Ciudad", f.ciudad)}
       ${row("Categoría de interés", f.categoria)}
       ${row("Producto de interés", f.producto)}
@@ -137,7 +162,7 @@ function buildProductoHtml(f: Record<string, string>) {
       ${row("Nombre", f.nombre)}
       ${row("Empresa", f.empresa)}
       ${row("Correo", f.correo)}
-      ${row("Teléfono", f.telefono)}
+      ${phoneRow(f.telefono)}
       ${row("Estado", f.estado)}
       ${row("Puesto", f.puesto)}
       ${row("¿Ya es cliente?", f.yaCliente === "true" ? "Sí" : "No")}
@@ -159,7 +184,7 @@ function buildServiceHtml(f: Record<string, string>) {
       ${row("Nombre", f.nombre)}
       ${row("Empresa", f.empresa)}
       ${row("Correo", f.correo)}
-      ${row("Teléfono", f.telefono)}
+      ${phoneRow(f.telefono)}
       ${row("Estado", f.estado)}
       ${row("Puesto", f.puesto)}
       ${row("Tipo de pieza / aplicación", f.aplicacion)}
