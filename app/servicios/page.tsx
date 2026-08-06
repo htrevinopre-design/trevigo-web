@@ -173,6 +173,7 @@ export default function ServiciosPage() {
               { label: "Decapado", href: "#decapado" },
               { label: "Pasivado", href: "#pasivado" },
               { label: "Pintura Electrostática", href: "#pintura-electrostatica" },
+              { label: "Cadenas y Bastidores", href: "#cadenas-pintura" },
             ].map((p) => (
               <a key={p.href} href={p.href}
                 className="inline-flex items-center px-4 py-1.5 bg-steel-50 border border-steel-200 hover:border-navy-400 hover:bg-navy-50 text-steel-700 hover:text-navy-700 text-xs font-bold uppercase tracking-wide transition-all">
@@ -688,6 +689,58 @@ export default function ServiciosPage() {
             linkLabel="Solicitar auditoría de línea →"
             linkHref="/contacto"
             detailSlug="pintura-electrostatica"
+          />
+        </div>
+      </section>
+
+      {/* ─── DESPINTADO DE CADENAS Y BASTIDORES ───────────────────── */}
+      <section id="cadenas-pintura" className="py-20 bg-white border-t border-steel-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader label="Servicio · Tratamiento de Metales" title="Despintado de Cadenas y Bastidores" accent="navy" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
+            <div>
+              <p className="text-steel-600 text-sm leading-relaxed mb-4">
+                Los bastidores, ganchos y cadenas transportadoras de una línea de pintura electrostática acumulan pintura horneada con cada ciclo de producción. Después de 50 a 200 ciclos, ese espesor aísla eléctricamente el bastidor: se pierde el contacto a tierra que necesita el efecto Faraday, cae la calidad del recubrimiento y aumenta el rechazo.
+              </p>
+              <p className="text-steel-600 text-sm leading-relaxed mb-6">
+                El despintado periódico restaura la conductividad original de cadenas y bastidores. Trevigo suministra los removedores alcalinos especializados y la asesoría de proceso para hacerlo de forma eficiente y segura, sin dañar el metal ni los puntos de contacto.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {["Bastidores y ganchos", "Cadenas transportadoras", "Powder / e-coat", "Despintado alcalino 60–90°C"].map((tag) => (
+                  <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <div className="relative w-full h-48">
+                <Image src="/servicios/rack.png" alt="Despintado de bastidores y cadenas de pintura" fill className="object-contain" />
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                { tipo: "El problema: pérdida de conductividad", uso: "Calidad de recubrimiento", desc: "Cada ciclo de horneado deja una capa de pintura sobre el bastidor. Al acumularse, la pintura aísla eléctricamente: la pieza deja de aterrizar bien, el depósito de polvo se vuelve irregular y sube el rechazo.", border: "border-l-orange-500" },
+                { tipo: "El proceso: despintado alcalino por inmersión", uso: "60–90°C · 30 min–4 h", desc: "Los bastidores se sumergen en removedor alcalino caliente que disuelve powder, e-coat y primers epóxicos acumulados sin deformar el metal. Enjuague, secado, y regresan a la línea con la conductividad restaurada.", border: "border-l-navy-500" },
+                { tipo: "La frecuencia: mantenimiento preventivo", uso: "Cada 50–200 ciclos", desc: "Líneas de alta producción despintan cada 1–2 semanas; líneas medianas cada 1–2 meses. Un programa preventivo por conteo de ciclos evita el rechazo por bastidores saturados y el costo de despintar de más.", border: "border-l-steel-400" },
+              ].map((item) => (
+                <div key={item.tipo} className={`bg-white border border-steel-200 border-l-4 ${item.border} rounded-xl p-5`}>
+                  <div className="flex items-start justify-between gap-3 mb-1">
+                    <h4 className="text-steel-900 font-black text-sm uppercase">{item.tipo}</h4>
+                    <span className="text-[10px] font-bold text-steel-400 uppercase tracking-wide text-right shrink-0">{item.uso}</span>
+                  </div>
+                  <p className="text-steel-500 text-xs leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <ServiceCTA
+            title="¿Tus bastidores de pintura están perdiendo conductividad?"
+            body="Suministramos los removedores alcalinos especializados y la asesoría de proceso para despintar cadenas y bastidores. Recupera la calidad del recubrimiento y reduce el rechazo."
+            linkLabel="Solicitar cotización →"
+            linkHref="/contacto"
+            detailSlug="cadenas-pintura"
           />
         </div>
       </section>

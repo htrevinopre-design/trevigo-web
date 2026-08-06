@@ -388,6 +388,7 @@ export default function Navigation() {
                       { id: "decapado", name: "Decapado", icon: "⚗️" },
                       { id: "pasivado", name: "Pasivado", icon: "✨" },
                       { id: "pintura-electrostatica", name: "Pintura Electrostática", icon: "🎨" },
+                      { id: "cadenas-pintura", name: "Cadenas y Bastidores", icon: "🔗" },
                     ].map((svc) => (
                       <li key={svc.id}>
                         <Link
