@@ -15,6 +15,9 @@ export type ServiceContent = {
   metaDescription: string;
   category: "metales" | "aguas";
   intro: string;
+  // Imagen banner opcional (mostrada entre el hero y el contenido)
+  heroImage?: string;
+  heroImageAlt?: string;
   sections: ServiceSection[];
   faqs: { q: string; a: string }[];
   // IDs from PRODUCT_CATEGORIES → subcategories → products
@@ -205,6 +208,9 @@ export const SERVICES_CONTENT: ServiceContent[] = [
     metaDescription:
       "Removedores y asesoría para despintar cadenas, ganchos y bastidores de líneas de pintura electrostática. Recupera la conductividad y la calidad del recubrimiento. Monterrey, N.L.",
     category: "metales",
+    heroImage: "/servicios/cadena-pintura.png",
+    heroImageAlt:
+      "Cadena transportadora con bastidores entrando a una cabina de pintura electrostática",
     intro:
       "Los bastidores, ganchos y cadenas transportadoras de una línea de pintura electrostática acumulan pintura horneada con cada ciclo de producción. Después de 50 a 200 ciclos, ese espesor de pintura acumulado aísla eléctricamente el bastidor: se pierde el contacto a tierra necesario para el efecto Faraday, cae la calidad del recubrimiento y aumenta el rechazo. El despintado periódico de cadenas y bastidores los restaura a su condición conductiva original. Trevigo suministra los removedores alcalinos especializados y la asesoría de proceso para hacerlo de forma eficiente y segura.",
     sections: [

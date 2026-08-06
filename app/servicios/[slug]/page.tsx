@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -142,6 +143,23 @@ export default function ServicioPage({ params }: { params: { slug: string } }) {
           </p>
         </div>
       </section>
+
+      {/* BANNER IMAGE (opcional) */}
+      {content.heroImage && (
+        <section className="bg-navy-950 pb-14">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-56 sm:h-72 lg:h-80 rounded-xl overflow-hidden border border-white/10 shadow-xl">
+              <Image
+                src={content.heroImage}
+                alt={content.heroImageAlt ?? content.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* BODY SECTIONS + COTIZA SIDEBAR */}
       <article className="bg-white py-16">
