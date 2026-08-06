@@ -1025,6 +1025,14 @@ export const SERVICES_METALES: ServiceItem[] = [
     description:
       "Nuestro servicio de pintura electrostática proporciona recubrimientos de alta calidad, duraderos y uniformes para superficies metálicas. Este proceso garantiza una excelente adherencia, resistencia a la abrasión y un acabado estético que protege las piezas contra impactos y condiciones climáticas adversas.",
   },
+  {
+    id: "cadenas-pintura",
+    name: "Despintado de Cadenas y Bastidores",
+    icon: "🔗",
+    category: "metales",
+    description:
+      "Removedores especializados y asesoría de proceso para despintar las cadenas, ganchos y bastidores de líneas de pintura electrostática. Tras cientos de ciclos, los bastidores acumulan pintura horneada que reduce la conductividad eléctrica y afecta la calidad del recubrimiento; el despintado periódico los restaura a su condición original.",
+  },
 ];
 
 export const SERVICES_AGUAS: ServiceItem[] = [

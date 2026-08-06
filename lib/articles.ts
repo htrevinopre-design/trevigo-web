@@ -2743,6 +2743,188 @@ export const ARTICLES: Article[] = [
         "Te damos los paquetes de aditivos, el mejorador de índice de viscosidad y la asesoría técnica de formulación para construir tu producto. Cubeta y tambo de 208 L, entrega en N.L.",
     },
   },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 26 — Despintado de bastidores y cadenas (PROCESO — Nohemí)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "despintado-bastidores-cadenas-pintura-electrostatica",
+    authorSlug: "nohemi-cervantes",
+    title:
+      "Despintado de bastidores y cadenas de pintura electrostática: por qué, cómo y cada cuánto",
+    metaTitle: "Despintado de Bastidores de Pintura Electrostática: Guía",
+    metaDescription:
+      "Por qué los bastidores y cadenas de una línea de pintura electrostática deben despintarse, el proceso de despintado alcalino por inmersión y cómo definir la frecuencia correcta.",
+    excerpt:
+      "Los bastidores saturados de pintura pierden conductividad y arruinan la calidad del recubrimiento — sin que la pistola ni la pintura tengan la culpa. Te explicamos por qué, cómo despintarlos y cada cuánto hacerlo.",
+    category: "Tratamiento de Metales",
+    readingTime: "8 min",
+    publishedAt: "2026-06-15",
+    updatedAt: "2026-06-15",
+    keywords: [
+      "despintado de bastidores",
+      "despintado de racks pintura",
+      "despintado cadenas de pintura",
+      "bastidores pintura electrostatica",
+      "recuperar conductividad bastidores",
+      "removedor de pintura bastidores",
+    ],
+    intro:
+      "En una línea de pintura electrostática, los bastidores, ganchos y cadenas transportadoras son componentes críticos que suelen pasar desapercibidos — hasta que la calidad del recubrimiento cae y nadie sabe por qué. La causa, muchas veces, no es la pintura ni la pistola ni el horno: son los bastidores saturados de pintura acumulada, que pierden la conductividad eléctrica necesaria para un buen depósito. En esta guía técnica explicamos por qué hay que despintar los bastidores y cadenas periódicamente, cómo se hace el despintado alcalino por inmersión, y cómo definir la frecuencia correcta para tu línea.",
+    sections: [
+      {
+        heading: "Por qué los bastidores pierden conductividad",
+        paragraphs: [
+          "La pintura electrostática funciona cargando eléctricamente el polvo y conectando la pieza a tierra a través del bastidor: las partículas cargadas son atraídas a la superficie aterrizada y se depositan de forma uniforme, incluso envolviendo bordes y geometrías complejas (el llamado efecto Faraday). Para que esto funcione, la continuidad eléctrica entre la pieza, el bastidor y la línea debe ser buena.",
+          "El problema es que cada ciclo de horneado deja una capa de pintura curada sobre el bastidor. La pintura es un aislante eléctrico: al acumularse ciclo tras ciclo, rompe el contacto a tierra. El bastidor deja de aterrizar correctamente la pieza, el depósito de polvo se vuelve irregular y la calidad cae. Es un deterioro gradual y silencioso que se confunde fácilmente con problemas de equipo.",
+        ],
+      },
+      {
+        heading: "Síntomas de bastidores saturados",
+        paragraphs: [
+          "Antes de reajustar pistolas o cambiar pintura, vale la pena revisar los bastidores. Los síntomas típicos de saturación son:",
+        ],
+        list: {
+          items: [
+            "Caída gradual del espesor de recubrimiento sin cambios en el proceso",
+            "Mal cubrimiento en geometrías complejas, esquinas y zonas internas (pérdida del efecto Faraday)",
+            "Aumento del rechazo y del reproceso sin causa aparente en pistola u horno",
+            "Necesidad de subir el voltaje o acercar las pistolas para lograr el mismo resultado",
+            "Puntos de contacto del bastidor visiblemente cubiertos de pintura",
+          ],
+        },
+      },
+      {
+        heading: "El proceso de despintado alcalino por inmersión",
+        paragraphs: [
+          "El método estándar para recuperar bastidores y cadenas es el despintado alcalino por inmersión. Los bastidores se sumergen en tinas calefaccionadas a 60-90°C con un removedor alcalino que disuelve la pintura en polvo, el e-coat y los primers epóxicos acumulados, en tiempos de 30 minutos a 4 horas según el espesor. Tras retirar la pintura levantada se enjuaga con agua y se seca.",
+          "Es el método preferido para bastidores de acero al carbón porque cuesta menos por kilo de pintura removida, permite alta rotación y no ataca el metal base ni deforma los puntos de contacto. La clave está en usar el removedor formulado para el tipo de pintura de la planta y controlar temperatura y tiempo de inmersión. El bastidor regresa a la línea con su conductividad restaurada.",
+        ],
+      },
+      {
+        heading: "Cómo definir la frecuencia de despintado",
+        paragraphs: [
+          "No hay un número universal: la frecuencia óptima depende del volumen de producción y del tipo de pintura. Como referencia, las líneas de alta producción despintan cada 1-2 semanas (o cada 50-100 ciclos), mientras que las líneas medianas lo hacen cada 1-2 meses (100-200 ciclos). La señal práctica es la caída de calidad del recubrimiento por pérdida de conductividad.",
+          "Despintar demasiado tarde genera rechazo y reproceso; despintar demasiado seguido es un costo innecesario. Lo ideal es establecer un programa preventivo basado en el conteo de ciclos y el monitoreo de calidad, no esperar a que aparezca el problema. Un baño de despintado bien controlado — midiendo concentración del agente activo y carga de pintura disuelta — mantiene su eficiencia lote tras lote.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Por qué cae la calidad de mi pintura en polvo si no cambié nada del proceso?",
+        a: "La causa más común y menos revisada son los bastidores saturados de pintura acumulada, que pierden conductividad y rompen el contacto a tierra necesario para el efecto Faraday. Antes de reajustar pistolas u horno, revisa el estado de los bastidores: si los puntos de contacto están cubiertos de pintura, necesitan despintado. Recuperan la calidad al restaurar la conductividad.",
+      },
+      {
+        q: "¿El despintado por inmersión daña los bastidores?",
+        a: "No, si se usa el removedor y los parámetros correctos. Los removedores alcalinos calientes disuelven la pintura sin atacar el acero al carbón ni deformar los puntos de contacto. El control de temperatura (60-90°C) y tiempo de inmersión es clave. Por eso conviene formular el removedor a la medida del tipo de pintura y controlar el baño.",
+      },
+      {
+        q: "¿Cada cuánto conviene despintar los bastidores?",
+        a: "Depende del volumen y el tipo de pintura: líneas de alta producción cada 1-2 semanas (50-100 ciclos), líneas medianas cada 1-2 meses (100-200 ciclos). Lo mejor es un programa preventivo basado en conteo de ciclos y monitoreo de calidad, en lugar de esperar a que aparezca el rechazo.",
+      },
+    ],
+    relatedProducts: [
+      "removedor-alcalino-pinturas",
+      "removedor-intensivo-superficies",
+      "removedor-pintura-cloruro-metileno",
+    ],
+    cta: {
+      title: "¿Tus bastidores de pintura están perdiendo conductividad?",
+      description:
+        "Suministramos los removedores alcalinos especializados y la asesoría de proceso para despintar cadenas y bastidores de tu línea de pintura. Recupera la calidad del recubrimiento. Cotización en 24 h.",
+    },
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // ARTÍCULO 27 — Fallas de calidad en pintura en polvo (PROCESO — Nohemí)
+  // ═══════════════════════════════════════════════════════════════
+  {
+    slug: "fallas-calidad-pintura-polvo-bastidores",
+    authorSlug: "nohemi-cervantes",
+    title:
+      "Fallas de calidad en pintura en polvo: cuándo el problema son los bastidores",
+    metaTitle: "Fallas de Calidad en Pintura en Polvo: Diagnóstico",
+    metaDescription:
+      "Cómo diagnosticar fallas de calidad en pintura electrostática en polvo: mal cubrimiento, bajo espesor y rechazo. Cuándo la causa raíz son los bastidores saturados y cómo resolverlo.",
+    excerpt:
+      "Antes de culpar a la pistola, la pintura o el horno, revisa los bastidores. Te damos un árbol de diagnóstico para fallas de pintura en polvo y explicamos por qué los bastidores saturados son una causa raíz frecuente y subestimada.",
+    category: "Tratamiento de Metales",
+    readingTime: "8 min",
+    publishedAt: "2026-06-15",
+    updatedAt: "2026-06-15",
+    keywords: [
+      "fallas pintura en polvo",
+      "problemas pintura electrostatica",
+      "mal cubrimiento pintura en polvo",
+      "bajo espesor pintura electrostatica",
+      "efecto faraday pintura",
+      "rechazo pintura en polvo",
+    ],
+    intro:
+      "Cuando aumenta el rechazo en una línea de pintura electrostática, la reacción habitual es reajustar las pistolas, revisar el horno o cambiar de pintura. Muchas veces, después de horas de ajustes, el problema persiste — porque la causa raíz estaba en un componente que casi nadie revisa: los bastidores. En esta guía técnica ofrecemos un árbol de diagnóstico para las fallas más comunes de pintura en polvo y explicamos por qué los bastidores saturados son una causa raíz frecuente y subestimada.",
+    sections: [
+      {
+        heading: "Las fallas de calidad más comunes y sus causas",
+        paragraphs: [
+          "Las fallas de pintura en polvo suelen agruparse en unas pocas categorías, cada una con varias causas posibles:",
+        ],
+        list: {
+          items: [
+            "Bajo espesor o cubrimiento irregular: presión de pistola, distancia, voltaje, o pérdida de conductividad del bastidor",
+            "Mal cubrimiento en esquinas y zonas internas: pérdida del efecto Faraday, frecuentemente por aterrizaje deficiente del bastidor",
+            "Cráteres y contaminación: contaminación del polvo, aire con aceite, o mala limpieza previa de la pieza",
+            "Mala adherencia: pretratamiento (desengrase/fosfatado) deficiente o curado incorrecto en horno",
+            "Variación de color o brillo: curado fuera de rango de temperatura o tiempo",
+          ],
+        },
+      },
+      {
+        heading: "El árbol de diagnóstico: aísla la variable",
+        paragraphs: [
+          "El error más costoso es cambiar varias cosas a la vez. El diagnóstico correcto aísla una variable a la vez. Un orden lógico: (1) verificar el pretratamiento con una pieza testigo — si la adherencia falla, el problema está antes de la pintura; (2) verificar el curado con cintas testigo de temperatura en el horno; (3) verificar la aplicación (pistola, voltaje, distancia) con parámetros documentados; y (4) verificar la conductividad de los bastidores.",
+          "Si los parámetros de pistola, horno y pretratamiento están en especificación pero el cubrimiento sigue siendo irregular — sobre todo en geometrías complejas — la conductividad del bastidor es el sospechoso principal. Es la variable que más se pasa por alto porque se deteriora de forma gradual y no aparece en ningún parámetro de proceso.",
+        ],
+      },
+      {
+        heading: "Por qué los bastidores saturados causan mal cubrimiento",
+        paragraphs: [
+          "La pintura en polvo se deposita porque las partículas cargadas eléctricamente son atraídas por la pieza conectada a tierra. Esa conexión a tierra pasa por el bastidor. Cuando el bastidor acumula capas de pintura curada (un aislante), el contacto a tierra se degrada: la pieza aterriza mal, el campo eléctrico se debilita y el polvo ya no envuelve bordes ni penetra en cavidades. El resultado es exactamente el patrón de 'mal cubrimiento en geometrías complejas' que tanto frustra a los operadores.",
+          "La prueba es simple: si al colgar la misma pieza en un bastidor recién despintado el cubrimiento mejora notablemente, el problema eran los bastidores. Por eso el despintado periódico de bastidores y cadenas no es solo mantenimiento — es control de calidad de la línea de pintura.",
+        ],
+      },
+      {
+        heading: "La solución: despintado periódico como control de calidad",
+        paragraphs: [
+          "Integrar el despintado de bastidores al programa de mantenimiento preventivo — basado en conteo de ciclos, no en esperar el rechazo — estabiliza la calidad de toda la línea. El despintado alcalino por inmersión restaura la conductividad de los bastidores sin dañar el metal, y un baño bien controlado procesa múltiples lotes antes de agotarse.",
+          "El retorno es directo: menos rechazo, menos reproceso, menor consumo de pintura (un bastidor conductivo deposita más eficientemente) y calidad consistente. Trevigo suministra los removedores alcalinos especializados y la asesoría de proceso para implementar el despintado de cadenas y bastidores como parte del control de calidad de tu línea de pintura.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Cómo sé si el problema de mi pintura son los bastidores y no la pistola?",
+        a: "Haz la prueba de la pieza testigo: cuelga la misma pieza en un bastidor recién despintado y compárala con el resultado en un bastidor de uso normal. Si el cubrimiento mejora notablemente con el bastidor despintado, la causa raíz era la pérdida de conductividad por saturación. Es la forma más rápida de aislar esa variable.",
+      },
+      {
+        q: "¿El mal cubrimiento en esquinas siempre es problema de bastidores?",
+        a: "No siempre, pero es una causa frecuente y subestimada. El mal cubrimiento en esquinas y cavidades (pérdida del efecto Faraday) puede deberse a parámetros de pistola/voltaje o a pérdida de conductividad del bastidor. Si los parámetros de aplicación están en especificación y el problema persiste, revisa los bastidores: suelen ser el culpable.",
+      },
+      {
+        q: "¿Despintar los bastidores reduce el consumo de pintura?",
+        a: "Sí, indirectamente. Un bastidor con buena conductividad aterriza correctamente la pieza y el polvo se deposita de forma más eficiente, con mejor transferencia. Los bastidores saturados obligan a subir voltaje o acercar pistolas para compensar, lo que desperdicia polvo. Mantener los bastidores despintados mejora la eficiencia de transferencia y reduce el rechazo.",
+      },
+    ],
+    relatedProducts: [
+      "removedor-alcalino-pinturas",
+      "removedor-intensivo-superficies",
+      "removedor-pintura-cloruro-metileno",
+    ],
+    cta: {
+      title: "¿Rechazo alto en tu línea de pintura en polvo?",
+      description:
+        "Te ayudamos a diagnosticar si la causa son los bastidores y suministramos los removedores para despintarlos. Recupera la conductividad y estabiliza la calidad. Cotización en 24 h.",
+    },
+  },
 ];
 
 export const getArticleBySlug = (slug: string) =>

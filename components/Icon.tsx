@@ -45,6 +45,7 @@ export type IconName =
   | "palette"        // Pintura electrostática (🎨)
   | "ruler"          // Ingeniería y asesoría (📐)
   | "hammer"         // Mantenimiento (🔨)
+  | "link"           // Despintado de cadenas y bastidores (🔗)
   // Industrias
   | "car"            // Automotriz (🚗)
   | "factory"        // Manufactura general (🏭)
@@ -265,6 +266,12 @@ const PATHS: Record<IconName, JSX.Element> = {
       <path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91" />
     </>
   ),
+  link: (
+    <>
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+    </>
+  ),
   // ── Industrias ──────────────────────────────────────────────────
   car: (
     <>
@@ -410,6 +417,7 @@ const EMOJI_TO_ICON: Record<string, IconName> = {
   "🎨": "palette",
   "📐": "ruler",
   "🔨": "hammer",
+  "🔗": "link",
   "🧫": "flask",
   "📊": "chart-bar",
   // Industrias

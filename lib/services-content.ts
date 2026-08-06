@@ -199,6 +199,71 @@ export const SERVICES_CONTENT: ServiceContent[] = [
   },
 
   {
+    slug: "cadenas-pintura",
+    title: "Despintado de Cadenas y Bastidores de Líneas de Pintura",
+    metaTitle: "Despintado de Bastidores y Cadenas de Pintura",
+    metaDescription:
+      "Removedores y asesoría para despintar cadenas, ganchos y bastidores de líneas de pintura electrostática. Recupera la conductividad y la calidad del recubrimiento. Monterrey, N.L.",
+    category: "metales",
+    intro:
+      "Los bastidores, ganchos y cadenas transportadoras de una línea de pintura electrostática acumulan pintura horneada con cada ciclo de producción. Después de 50 a 200 ciclos, ese espesor de pintura acumulado aísla eléctricamente el bastidor: se pierde el contacto a tierra necesario para el efecto Faraday, cae la calidad del recubrimiento y aumenta el rechazo. El despintado periódico de cadenas y bastidores los restaura a su condición conductiva original. Trevigo suministra los removedores alcalinos especializados y la asesoría de proceso para hacerlo de forma eficiente y segura.",
+    sections: [
+      {
+        heading: "Por qué hay que despintar los bastidores periódicamente",
+        paragraphs: [
+          "En la pintura electrostática, la pieza y el bastidor deben estar conectados a tierra para que el polvo cargado eléctricamente se deposite de manera uniforme (efecto Faraday). Cada ciclo de horneado deja una capa de pintura sobre el bastidor; al acumularse, esa pintura actúa como aislante y rompe la continuidad eléctrica entre la pieza y la línea.",
+          "El síntoma clásico es una caída gradual de la calidad del recubrimiento: zonas con menor espesor, mal cubrimiento en geometrías complejas y aumento del rechazo. La causa raíz no es la pintura ni la pistola — son los bastidores saturados. El despintado periódico (típicamente cada 50-200 ciclos según la producción) es mantenimiento preventivo que sostiene la calidad de toda la línea.",
+        ],
+      },
+      {
+        heading: "El proceso: despintado alcalino por inmersión",
+        paragraphs: [
+          "El método estándar para cadenas y bastidores es el despintado alcalino por inmersión en tinas calefaccionadas a 60-90°C. Los removedores alcalinos calientes disuelven la pintura en polvo, el e-coat y los primers epóxicos acumulados sin deformar el metal ni dañar los puntos de contacto, en tiempos de 30 minutos a 4 horas según el espesor.",
+          "Es el método preferido para bastidores de acero al carbón porque cuesta menos por kilo de pintura removida, permite alta rotación y no ataca el sustrato base. Tras el despintado se enjuaga y se seca, y el bastidor regresa a la línea con su conductividad restaurada. Trevigo formula el removedor a la medida del tipo de pintura (powder, e-coat, líquida) de tu planta.",
+        ],
+      },
+      {
+        heading: "Control del baño y frecuencia de despintado",
+        paragraphs: [
+          "Un baño de despintado bien controlado mantiene su eficiencia monitoreando la concentración del agente activo y la carga de pintura disuelta. A medida que se satura, el tiempo de despintado aumenta — es la señal para reponer químico o programar el cambio de baño. Con buen control, un baño alcalino puede procesar varios lotes de bastidores antes de agotarse.",
+          "La frecuencia óptima de despintado depende del volumen de producción y del tipo de pintura: líneas de alta producción despintan bastidores cada 1-2 semanas; líneas más pequeñas cada 1-2 meses. Definir la frecuencia correcta evita tanto el rechazo por bastidores saturados como el costo innecesario de despintar demasiado seguido.",
+        ],
+      },
+      {
+        heading: "Seguridad y disposición de residuos",
+        paragraphs: [
+          "Los removedores alcalinos son cáusticos y requieren equipo de protección personal completo (mandil de PVC, lentes, careta, guantes resistentes a alcalinos), extracción de vapores y área dedicada con contención. Los baños agotados y la pintura removida se clasifican como residuo peligroso y deben disponerse conforme a NOM-052-SEMARNAT mediante empresa autorizada.",
+          "Asesoramos en la implementación segura del proceso: diseño del área de despintado, procedimientos de manejo, control del baño y disposición de residuos. Para plantas que prefieren externalizar, te conectamos con talleres de despintado en Monterrey.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Cada cuánto debo despintar los bastidores de mi línea de pintura?",
+        a: "Depende del volumen de producción y el tipo de pintura. Como referencia: líneas de alta producción despintan cada 1-2 semanas (o cada 50-100 ciclos), líneas medianas cada 1-2 meses (100-200 ciclos). La señal práctica es la caída de calidad del recubrimiento por pérdida de conductividad. Te ayudamos a definir la frecuencia óptima para tu operación.",
+      },
+      {
+        q: "¿El despintado daña los bastidores o los puntos de contacto?",
+        a: "No, si se hace con el removedor y los parámetros correctos. Los removedores alcalinos calientes disuelven la pintura sin atacar el acero al carbón del bastidor ni deformar los puntos de contacto. El control de temperatura y tiempo de inmersión es clave; por eso formulamos el removedor a la medida de tu tipo de pintura y damos asesoría de proceso.",
+      },
+      {
+        q: "¿Ofrecen el servicio de despintado o solo los químicos?",
+        a: "Trevigo es proveedor químico y de asesoría técnica: suministramos los removedores especializados y te apoyamos en la implementación y control del proceso de despintado de cadenas y bastidores en tu planta. Si prefieres externalizar, te conectamos con talleres de despintado en Monterrey.",
+      },
+      {
+        q: "¿Sirve para e-coat y pintura en polvo acumulados?",
+        a: "Sí. Los removedores alcalinos calientes retiran pintura en polvo curada, e-coat, primers epóxicos y pintura líquida acumulados sobre los bastidores. Para pinturas epóxicas curadas a muy alta temperatura puede requerirse mayor tiempo de inmersión o un removedor intensivo, que también formulamos.",
+      },
+    ],
+    relatedProductIds: [
+      "removedor-alcalino-pinturas",
+      "removedor-intensivo-superficies",
+      "removedor-pintura-cloruro-metileno",
+    ],
+    relatedIndustrySlugs: ["automotriz", "metalmecanica", "tratamiento-superficies-metalicas", "electrica-electronica"],
+  },
+
+  {
     slug: "decapado",
     title: "Servicio de Decapado: Remoción Química de Óxidos",
     metaTitle: "Servicio de Decapado de Metales en Monterrey",
