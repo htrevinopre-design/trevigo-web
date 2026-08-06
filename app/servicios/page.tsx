@@ -713,8 +713,8 @@ export default function ServiciosPage() {
                   </span>
                 ))}
               </div>
-              <div className="relative w-full h-48">
-                <Image src="/servicios/rack.png" alt="Despintado de bastidores y cadenas de pintura" fill className="object-contain" />
+              <div className="relative w-full h-56 rounded-xl overflow-hidden border border-steel-200">
+                <Image src="/servicios/cadena-pintura.png" alt="Cadena transportadora con bastidores en una línea de pintura electrostática" fill className="object-cover" />
               </div>
             </div>
 
