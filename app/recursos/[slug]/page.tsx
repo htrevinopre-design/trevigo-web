@@ -7,9 +7,16 @@ import { getAuthor, DEFAULT_AUTHOR_SLUG } from "@/lib/authors";
 import FAQAccordion from "@/components/FAQAccordion";
 import AuthorBlock from "@/components/AuthorBlock";
 import ShareButtons from "@/components/ShareButtons";
+import ProductCard from "@/components/ProductCard";
 
 const allProducts = PRODUCT_CATEGORIES.flatMap((cat) =>
-  cat.subcategories.flatMap((sub) => sub.products)
+  cat.subcategories.flatMap((sub) =>
+    sub.products.map((p) => ({
+      ...p,
+      categoryId: cat.id,
+      subcategoryName: sub.name,
+    }))
+  )
 );
 
 export async function generateStaticParams() {
@@ -174,13 +181,43 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         </div>
       </section>
 
-      {/* BODY */}
-      <article className="bg-white py-16">
+      {/* BODY — Intro */}
+      <article className="bg-white pt-16 pb-10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-steel-700 text-lg leading-relaxed mb-12 font-medium">
+          <p className="text-steel-700 text-lg leading-relaxed font-medium">
             {article.intro}
           </p>
+        </div>
+      </article>
 
+      {/* RELATED PRODUCTS — colocado arriba (después del intro) para que el
+          cliente vea rápido las soluciones químicas que ofrecemos */}
+      {relatedProducts.length > 0 && (
+        <section className="bg-steel-50 border-y border-steel-200 py-14">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p className="text-navy-500 text-xs font-black uppercase tracking-[0.2em] mb-2">
+              Productos relacionados
+            </p>
+            <h2 className="text-xl sm:text-2xl font-black text-steel-900 uppercase mb-8">
+              Soluciones químicas Trevigo para este proceso
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {relatedProducts.map((p) => (
+                <ProductCard
+                  key={p.id}
+                  product={p}
+                  subcategoryName={p.subcategoryName}
+                  categoryId={p.categoryId}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* BODY — Secciones */}
+      <article className="bg-white py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {article.sections.map((section, idx) => (
             <section key={idx} className="mb-12">
               <h2 className="text-2xl sm:text-3xl font-black text-steel-900 uppercase mb-5 leading-tight">
@@ -206,39 +243,6 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           ))}
         </div>
       </article>
-
-      {/* RELATED PRODUCTS */}
-      {relatedProducts.length > 0 && (
-        <section className="bg-steel-50 border-y border-steel-200 py-14">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-navy-500 text-xs font-black uppercase tracking-[0.2em] mb-2">
-              Productos relacionados
-            </p>
-            <h2 className="text-xl sm:text-2xl font-black text-steel-900 uppercase mb-8">
-              Soluciones químicas Trevigo para este proceso
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {relatedProducts.map((p) => (
-                <Link
-                  key={p.id}
-                  href={`/productos/${p.id}`}
-                  className="bg-white border border-steel-200 rounded-xl p-5 hover:shadow-md hover:border-navy-300 transition-all group"
-                >
-                  <h3 className="text-steel-900 font-black text-sm uppercase leading-tight mb-2 group-hover:text-navy-700">
-                    {p.name}
-                  </h3>
-                  <p className="text-steel-500 text-sm leading-relaxed line-clamp-3 mb-3">
-                    {p.shortDescription}
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-navy-500 text-xs font-black uppercase tracking-wide">
-                    Ver ficha técnica →
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* FAQ */}
       {article.faqs && article.faqs.length > 0 && (
