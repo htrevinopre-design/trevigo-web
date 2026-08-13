@@ -332,6 +332,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "despintado",
     term: "Despintado",
+    seoTitle: "Despintado Industrial: Qué Es y Métodos de Remoción",
+    seoDescription:
+      "Despintado: remoción de pintura curada en piezas y racks metálicos. Métodos químicos y térmicos, cuándo usar cada uno y errores que dañan el sustrato.",
     shortDef:
       "Proceso de remoción química o mecánica de capas de pintura, recubrimientos o barnices sobre piezas metálicas para reprocesarlas o reacondicionarlas.",
     longDef: [

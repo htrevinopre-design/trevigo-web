@@ -30,6 +30,89 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "sandblast-vs-decapado-quimico",
+    title: "Sandblast vs decapado químico: cuál conviene para remover óxido y pintura",
+    metaTitle: "Sandblast vs Decapado Químico: ¿Cuál Conviene?",
+    metaDescription:
+      "Sandblast o decapado químico: comparamos costo, acabado, velocidad y cuándo conviene cada método para remover óxido y pintura de metal en tu planta.",
+    excerpt:
+      "El sandblast remueve por impacto abrasivo; el decapado químico disuelve el óxido con ácidos. Cada método tiene su terreno: te explicamos cuándo conviene cada uno y cuándo combinarlos.",
+    category: "Tratamiento de Metales",
+    readingTime: "7 min",
+    publishedAt: "2026-08-13",
+    updatedAt: "2026-08-13",
+    keywords: [
+      "sandblast",
+      "sandblasteo",
+      "decapado quimico",
+      "sandblast vs decapado",
+      "remover oxido de metal",
+      "limpieza de superficies metalicas",
+    ],
+    intro:
+      "Cuando una pieza metálica llega con óxido, calamina o pintura vieja, hay dos caminos dominantes en la industria mexicana: el sandblast (limpieza abrasiva por impacto) y el decapado químico (disolución con ácidos). Elegir mal cuesta dinero — en abrasivo desperdiciado, en horas-hombre o en piezas dañadas. Esta guía compara ambos métodos con criterios de planta: costo, velocidad, acabado, geometría de pieza y regulación.",
+    sections: [
+      {
+        heading: "¿Qué es el sandblast y cómo funciona?",
+        paragraphs: [
+          "El sandblast (también llamado sandblasteo o granallado cuando usa granalla metálica) proyecta partículas abrasivas a alta presión contra la superficie: arena sílica (cada vez más restringida por salud ocupacional), óxido de aluminio, granalla de acero o abrasivos plásticos. El impacto arranca mecánicamente óxido, pintura y contaminantes, dejando un perfil de anclaje rugoso que favorece la adherencia de recubrimientos gruesos.",
+          "Sus límites: es línea de vista (no entra a tubos, cavidades ni geometrías interiores), puede deformar lámina delgada, genera polvo que exige cabina y equipo de protección respiratoria, y el acabado rugoso no es apto para todas las aplicaciones.",
+        ],
+      },
+      {
+        heading: "¿Qué es el decapado químico?",
+        paragraphs: [
+          "El decapado químico sumerge la pieza en ácido formulado (clorhídrico, sulfúrico o fosfórico según el sustrato) que disuelve óxidos y calamina sin tocar la geometría de la pieza. Al ser un proceso de inmersión, limpia interiores, roscas, cavidades y lotes completos de piezas pequeñas de una sola vez.",
+          "Sus límites: requiere tinas, control químico del baño y manejo de residuos peligrosos; no genera perfil de anclaje rugoso (para eso se complementa con fosfatizado), y piezas muy grandes pueden no caber en las tinas disponibles.",
+        ],
+      },
+      {
+        heading: "Comparativa directa: sandblast vs decapado químico",
+        paragraphs: [
+          "Los criterios que definen la elección en planta:",
+        ],
+        list: {
+          items: [
+            "Geometría compleja (tubos, cavidades, roscas): gana el decapado químico — el ácido llega a donde el abrasivo no.",
+            "Lotes grandes de piezas pequeñas: decapado químico por inmersión, cientos de piezas por canastilla.",
+            "Estructuras grandes o piezas únicas en campo: sandblast — no hay tina que las contenga.",
+            "Perfil de anclaje para recubrimientos gruesos (primarios epóxicos, recubrimiento industrial): sandblast deja la rugosidad ideal.",
+            "Lámina delgada o piezas de precisión: decapado químico — cero deformación mecánica.",
+            "Preparación para fosfatizado y pintura electrostática: decapado + fosfatizado es la ruta estándar automotriz.",
+            "Costo por pieza en producción continua: decapado químico suele ganar en volumen; sandblast en trabajos puntuales.",
+          ],
+        },
+      },
+      {
+        heading: "¿Y cuándo conviene combinarlos?",
+        paragraphs: [
+          "En la práctica muchas plantas usan ambos: sandblast para remover pintura gruesa o corrosión severa en la primera pasada, y decapado o desoxidación química como acabado fino antes del pretratamiento. En reacondicionamiento de racks y estructuras, el orden inverso también aparece: baño químico para levantar la pintura y granallado ligero para el perfil final.",
+          "La decisión correcta se toma con una prueba: en Trevigo evaluamos tu pieza real y te decimos con datos si tu caso es químico, mecánico o combinado — y qué química exacta usar si es lo primero.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿El sandblast quita el óxido mejor que el ácido?",
+        a: "Ninguno es universalmente mejor. El sandblast remueve corrosión severa y deja perfil de anclaje, pero no entra a cavidades y puede deformar lámina delgada. El decapado químico disuelve el óxido de manera uniforme incluso en geometrías complejas, pero requiere infraestructura de tinas y control de baño.",
+      },
+      {
+        q: "¿Cuál es más barato: sandblast o decapado químico?",
+        a: "En producción continua y lotes grandes de piezas medianas o pequeñas, el decapado químico suele tener menor costo por pieza. Para trabajos puntuales, piezas muy grandes o en campo, el sandblast evita la inversión en tinas y química. El cruce exacto depende de tu volumen mensual: podemos ayudarte a calcularlo.",
+      },
+      {
+        q: "¿Sirven estos métodos para aluminio o acero inoxidable?",
+        a: "Con precauciones. El sandblast sobre aluminio exige abrasivos suaves (plástico, bicarbonato) para no deformar. El decapado de aluminio usa sosa cáustica con desmutado posterior, y el de inoxidable mezclas nítrico-fosfóricas; el clorhídrico está prohibido en inoxidable porque induce corrosión por picadura.",
+      },
+    ],
+    cta: {
+      title: "¿Óxido o pintura vieja en tus piezas?",
+      description:
+        "Suministramos los químicos de decapado y desoxidación con asesoría de proceso incluida. Envíanos una pieza de muestra y te recomendamos el método con una prueba real, sin costo.",
+    },
+  },
+
+  {
     slug: "acido-fosforico-limpieza-metales",
     title: "Ácido fosfórico para limpieza de metales: usos, concentraciones y proveedores en México",
     metaTitle: "Ácido Fosfórico: Usos, Dosis y Venta en México",

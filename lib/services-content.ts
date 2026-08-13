@@ -148,9 +148,9 @@ export const SERVICES_CONTENT: ServiceContent[] = [
   {
     slug: "despintado",
     title: "Servicio de Despintado Industrial: Removedores y Procesos",
-    metaTitle: "Despintado Industrial de Piezas",
+    metaTitle: "Despintado Industrial y Removedor de Pintura",
     metaDescription:
-      "Servicio de despintado industrial con removedores químicos para racks, ganchos y piezas con pintura curada. Eficiencia y seguridad operativa.",
+      "Removedores de pintura industrial para racks, ganchos y piezas con pintura curada: alcalinos y formulados. Te ayudamos a elegir el correcto. Monterrey.",
     category: "metales",
     intro:
       "El despintado es el proceso de remoción de pintura curada en piezas metálicas, racks, ganchos y herramienta de línea. Es indispensable cuando se necesita re-trabajar piezas con defectos de pintura, recuperar racks de cabinas de pintura electrostática o reciclar herramienta para nuevos lotes de producción.",
@@ -173,6 +173,18 @@ export const SERVICES_CONTENT: ServiceContent[] = [
         ],
       },
       {
+        heading: "¿Qué removedor de pintura industrial necesitas?",
+        paragraphs: [
+          "La elección del removedor de pintura industrial correcto depende de tres variables: el tipo de pintura (polvo, e-coat, líquida), el sustrato (acero al carbón tolera alcalinos calientes; aluminio no) y tu restricción operativa (velocidad vs costo vs regulación ambiental).",
+        ],
+        list: [
+          "Pintura en polvo o e-coat sobre acero: removedor alcalino caliente — el mejor costo por kilo de pintura removida.",
+          "Necesidad de velocidad máxima o pinturas epóxicas muy curadas: removedor intensivo formulado con cosolventes.",
+          "Piezas de aluminio o aleaciones sensibles: removedores formulados de pH controlado que no atacan el sustrato.",
+          "¿No estás seguro? Envíanos una pieza de muestra: hacemos la prueba de remoción sin costo y te recomendamos el producto con datos.",
+        ],
+      },
+      {
         heading: "Manejo seguro de removedores químicos",
         paragraphs: [
           "Los removedores requieren equipo de protección personal completo (mandil, lentes, guantes resistentes a alcalinos o solventes), extracción adecuada de vapores y protocolos de almacenamiento estricto. Asesoramos en la implementación de procedimientos seguros y disposición de baños agotados como residuo peligroso conforme a NOM-052-SEMARNAT.",
@@ -180,6 +192,10 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       },
     ],
     faqs: [
+      {
+        q: "¿Cuál es el mejor removedor de pintura industrial?",
+        a: "No hay un removedor universal: el mejor es el que remueve TU pintura sin dañar TU sustrato al menor costo total. Para powder coating sobre acero, un alcalino caliente suele ganar; para epóxicos curados o tiempos cortos, un formulado intensivo. Hacemos pruebas con tus piezas reales antes de recomendarte uno.",
+      },
       {
         q: "¿Cuál removedor es mejor para racks de pintura electrostática?",
         a: "Removedores alcalinos calientes son la opción estándar: cuestan menos por kilo de pintura removida, son seguros para acero al carbón y permiten alta rotación de racks. Los formulamos a la medida según el tipo de e-coat o powder coating de tu planta.",
@@ -272,9 +288,9 @@ export const SERVICES_CONTENT: ServiceContent[] = [
   {
     slug: "decapado",
     title: "Servicio de Decapado: Remoción Química de Óxidos",
-    metaTitle: "Servicio de Decapado de Metales en Monterrey",
+    metaTitle: "Decapado Químico por Inmersión: Servicio y Químicos",
     metaDescription:
-      "Servicio técnico para procesos de decapado: ácidos formulados, asesoría de baño y optimización de tiempos en plantas metalmecánicas y de pretratamiento.",
+      "Decapado químico por inmersión: ácidos formulados con inhibidor, control de baño y suministro continuo de químicos para tu planta. Asesoría en Monterrey.",
     category: "metales",
     intro:
       "El decapado o pickling es el proceso químico mediante el cual se remueven óxidos, calamina y contaminantes superficiales de piezas metálicas con ácidos formulados. Es paso obligado antes de fosfatizado, galvanizado, pintura y operaciones de soldadura crítica. En Trevigo damos soporte completo: ácidos técnicos, mezclas con inhibidor y asesoría de optimización.",
@@ -289,6 +305,26 @@ export const SERVICES_CONTENT: ServiceContent[] = [
           "Acero galvanizado: ácidos especialmente formulados con inhibidor para no consumir el zinc.",
           "Acero inoxidable: nítrico-fluorhídrico o nítrico-fosfórico para remover residuos de hierro libre.",
           "Aluminio: sosa cáustica seguida de desmutado nítrico para retirar smut superficial.",
+        ],
+      },
+      {
+        heading: "Decapado químico por inmersión: cómo se ejecuta",
+        paragraphs: [
+          "El decapado químico por inmersión es el método estándar en plantas de galvanizado y pretratamiento: las piezas se sumergen en tinas con ácido formulado durante 5 a 45 minutos según la severidad del óxido, con agitación o movimiento de la carga para uniformar el ataque.",
+          "El control del baño es lo que separa un decapado rentable de uno caro: concentración de ácido, hierro disuelto, temperatura y dosis de inhibidor se monitorean semanalmente. Para piezas que no pueden sumergirse, el decapado por aspersión o con gel localizado son las alternativas.",
+        ],
+      },
+      {
+        heading: "Inhibidores de decapado: protegen el metal base",
+        paragraphs: [
+          "Un inhibidor de decapado es un aditivo que frena el ataque del ácido sobre el metal ya limpio, sin frenar la disolución del óxido. El resultado: menos consumo de ácido, menos pérdida de metal base, menos hidrógeno absorbido (crítico en piezas de alta resistencia) y baños que duran más.",
+          "Nuestras mezclas ácidas ya vienen formuladas con inhibidor, o podemos dosificarlo por separado en tu baño actual tras un diagnóstico de proceso.",
+        ],
+      },
+      {
+        heading: "Suministro de químicos para decapado",
+        paragraphs: [
+          "Suministramos los productos para decapado de forma continua: ácido clorhídrico, sulfúrico y fosfórico en grado industrial, mezclas formuladas con inhibidor y desoxidantes específicos por sustrato. Presentaciones en porrón de 50 kg, tambo de 200 kg y tote de 1,000 kg, con entrega en Nuevo León y envíos a toda la República.",
         ],
       },
       {
@@ -314,6 +350,14 @@ export const SERVICES_CONTENT: ServiceContent[] = [
         a: "Cuando el hierro disuelto supera 30-50 g/L (depende del ácido) la velocidad de decapado cae al 20-30% del óptimo. Algunas plantas regeneran por intercambio iónico o cristalización para extender la vida del baño.",
       },
       {
+        q: "¿Qué es un inhibidor de decapado y por qué debo usarlo?",
+        a: "Es un aditivo que protege el metal base del ataque del ácido una vez removido el óxido. Sin inhibidor, el baño consume metal bueno: pierdes peso de pieza, gastas más ácido y generas más hidrógeno (riesgo de fragilización en aceros de alta resistencia). Con inhibidor el baño rinde 20-40% más.",
+      },
+      {
+        q: "¿Suministran químicos para decapado fuera de Monterrey?",
+        a: "Sí. Entregamos en toda la República Mexicana. En Nuevo León y área metropolitana manejamos entregas programadas semanales; para el resto del país coordinamos embarques por tarima o pipa según tu consumo.",
+      },
+      {
         q: "¿Pueden formular un mix ácido específico para mi proceso?",
         a: "Sí. Formulamos mezclas con inhibidor según el tipo de pieza, la velocidad de línea y los requerimientos de acabado. Hacemos diagnóstico en planta sin costo y entregamos propuesta con consumo proyectado y costo por kilo de óxido removido.",
       },
@@ -331,12 +375,12 @@ export const SERVICES_CONTENT: ServiceContent[] = [
   {
     slug: "pasivado",
     title: "Servicio de Pasivado: Capa Pasiva Anticorrosión Temporal y Permanente",
-    metaTitle: "Pasivado de Metales Industrial",
+    metaTitle: "Servicio de Pasivado Acero Inoxidable | ASTM A967",
     metaDescription:
-      "Servicio técnico para pasivado de acero, acero inoxidable y aluminio. Cumplimiento ASTM A967 y validación documental para auditorías OEM.",
+      "¿Buscas servicio de pasivado de acero inoxidable? Química ASTM A967, parámetros validados y certificado por lote para auditorías OEM. Monterrey, NL.",
     category: "metales",
     intro:
-      "El pasivado es el proceso químico mediante el cual se forma una capa protectora delgada y estable sobre la superficie metálica para proteger contra la corrosión. En acero inoxidable es indispensable para activar la capa pasiva natural; en acero al carbón es protección temporal entre etapas; en aluminio es preparación para anodizado o pintura.",
+      "El pasivado es el proceso químico mediante el cual se forma una capa protectora delgada y estable sobre la superficie metálica para proteger contra la corrosión. En acero inoxidable es indispensable para activar la capa pasiva natural; en acero al carbón es protección temporal entre etapas; en aluminio es preparación para anodizado o pintura. También llamado pasivación, es un requisito frecuente en auditorías de clientes aeronáuticos, médicos y alimenticios.",
     sections: [
       {
         heading: "Tipos de pasivado por sustrato",
@@ -358,6 +402,19 @@ export const SERVICES_CONTENT: ServiceContent[] = [
         ],
       },
       {
+        heading: "Cómo funciona nuestro servicio de pasivado",
+        paragraphs: [
+          "Si buscas un servicio de pasivado de acero inoxidable confiable, nuestro modelo cubre el proceso completo para que lo ejecutes en tu propia planta con resultados auditables:",
+        ],
+        list: [
+          "Diagnóstico sin costo: evaluamos tus piezas, grado de acero (304, 316, 17-4 PH) y la especificación que te exige tu cliente.",
+          "Química formulada: suministramos el pasivador correcto (nítrico o cítrico según ASTM A967) en la concentración validada para tu caso.",
+          "Parámetros de proceso: tiempo, temperatura y secuencia de enjuagues documentados para tu equipo de operación.",
+          "Validación y certificado: prueba de sulfato de cobre o ferroxilo por lote, con registro documental listo para auditorías OEM.",
+          "Si prefieres maquilar el proceso, te conectamos con aplicadores confiables en Nuevo León que trabajan con nuestra química.",
+        ],
+      },
+      {
         heading: "Pasivado libre de cromo hexavalente",
         paragraphs: [
           "Las regulaciones RoHS, REACH y los estándares de proveeduría automotriz exigen eliminar cromo hexavalente. Tenemos formulaciones de pasivado a base de cromo trivalente y alternativas libres de cromo a base de zirconio que igualan o superan el desempeño anticorrosión del cromato clásico.",
@@ -365,6 +422,10 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       },
     ],
     faqs: [
+      {
+        q: "¿Ofrecen servicio de pasivado de acero inoxidable en Monterrey?",
+        a: "Sí. Damos el soporte completo del proceso: química ASTM A967, parámetros validados, capacitación de tu equipo y certificado por lote — para que ejecutes el pasivado en tu planta con calidad auditable. Si necesitas externalizar la aplicación, te conectamos con aplicadores en Nuevo León que operan con nuestros productos.",
+      },
       {
         q: "¿Cumplen sus pasivados con ASTM A967?",
         a: "Sí. Nuestros productos para pasivado de acero inoxidable cumplen los métodos C, D y E de ASTM A967, validados con prueba de sulfato de cobre. Entregamos COA por lote y guía de proceso para que tu equipo de calidad documente el procedimiento.",
@@ -406,6 +467,13 @@ export const SERVICES_CONTENT: ServiceContent[] = [
           "Fosfato al hierro: capa amorfa, peso 0.4-0.8 g/m². Económico, simple de operar. Ideal para muebles metálicos, estanterías, racks y piezas con baja exigencia de corrosión.",
           "Fosfato al zinc: capa cristalina, peso 1.8-3.0 g/m². Estándar automotriz y línea blanca. Da resistencia 500-1000 horas de niebla salina con pintura.",
           "Fosfato tricatiónico (zinc-níquel-manganeso): capa cristalina fina y uniforme, peso 2.0-3.5 g/m². Alta resistencia, exigencias OEM Tier 1, automotriz y aeronáutico. Niebla salina 1000+ horas.",
+        ],
+      },
+      {
+        heading: "¿Fosfatizado, fosfatado o fosfatación? Son lo mismo",
+        paragraphs: [
+          "En la industria mexicana el mismo proceso recibe tres nombres: fosfatizado (el más común en el norte), fosfatado (frecuente en el centro del país y en literatura técnica) y fosfatación (traducción directa del inglés phosphating). Los tres se refieren al tratamiento de conversión química que deposita cristales de fosfato de zinc, hierro o manganeso sobre el metal.",
+          "Sea cual sea el término que use tu planta o tu cliente OEM, el proceso, la química y los controles de calidad son los mismos — y todo lo que describimos en esta página aplica igual.",
         ],
       },
       {
