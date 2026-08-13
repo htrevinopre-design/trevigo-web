@@ -44,6 +44,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "pasivado",
     term: "Pasivado",
+    seoTitle: "Pasivado de Metales: Qué Es, Tipos y Cómo Funciona",
+    seoDescription:
+      "El pasivado protege acero inoxidable, aluminio y zinc contra corrosión. Tipos de pasivado, cuándo aplicarlo y qué normas lo exigen, en lenguaje claro.",
     shortDef:
       "Proceso químico que forma una capa pasiva delgada sobre el metal para protegerlo contra la corrosión.",
     longDef: [
@@ -188,9 +191,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "ptar",
     term: "PTAR (Planta de Tratamiento de Aguas Residuales)",
-    seoTitle: "PTAR: qué significa y cómo funciona una Planta de Tratamiento",
+    seoTitle: "¿Qué es una PTAR? Etapas, Equipos y NOM-001",
     seoDescription:
-      "PTAR (Planta de Tratamiento de Aguas Residuales): qué es, etapas, equipos y normas que rigen su operación en México (NOM-001-SEMARNAT-2021).",
+      "PTAR = Planta de Tratamiento de Aguas Residuales. Sus 4 etapas, equipos clave y la NOM-001-SEMARNAT-2021 explicados con claridad. Guía mexicana actualizada.",
     shortDef:
       "Instalación industrial diseñada para tratar aguas residuales hasta cumplir parámetros de descarga normativos.",
     longDef: [
@@ -253,9 +256,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "jar-test",
     term: "Jar Test (Prueba de Jarras)",
-    seoTitle: "Jar Test (Prueba de Jarras): qué es y cómo se realiza paso a paso",
+    seoTitle: "Prueba de Jarras (Jar Test): Qué Es y Cómo Se Usa",
     seoDescription:
-      "Jar Test o Prueba de Jarras: ensayo de laboratorio para encontrar la dosis óptima de coagulante en una PTAR. Protocolo, interpretación y errores comunes.",
+      "La prueba de jarras determina la dosis óptima de coagulante en tu PTAR. Qué es, cómo se interpreta y los 5 errores que arruinan el resultado del ensayo.",
     shortDef:
       "Prueba de laboratorio para determinar la dosis óptima de coagulante y floculante en una muestra real de agua a tratar.",
     longDef: [
@@ -594,6 +597,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "ibc",
     term: "IBC (Intermediate Bulk Container)",
+    seoTitle: "¿Qué es un IBC? Medidas, Capacidad y Usos",
+    seoDescription:
+      "IBC (Intermediate Bulk Container): capacidad, medidas, clasificación ONU y cuándo conviene frente a tambos. Guía rápida para compras industriales.",
     shortDef:
       "Contenedor industrial reutilizable de 1000-1500 litros para transporte y almacenamiento de líquidos químicos.",
     longDef: [
@@ -620,6 +626,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "reach",
     term: "REACH",
+    seoTitle: "Reglamento REACH: Qué Es y a Quién Afecta",
+    seoDescription:
+      "¿Exportas a Europa? El reglamento REACH restringe sustancias en tus procesos químicos. Qué es, a quién aplica y cómo cumplir desde México.",
     shortDef:
       "Reglamento europeo de registro, evaluación, autorización y restricción de sustancias químicas que impacta exportaciones industriales a Europa.",
     longDef: [

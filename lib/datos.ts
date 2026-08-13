@@ -78,9 +78,9 @@ export const DATOS: Dato[] = [
   {
     slug: "industria-automotriz-mexico-tamano",
     category: "Industria",
-    metaTitle: "¿Cuántos vehículos produce México al año? Cifras de la industria automotriz",
+    metaTitle: "¿Cuántos Autos Produce México? Cifras 2024–2026",
     metaDescription:
-      "Producción anual de vehículos en México (récord histórico 2024: 3.99 millones), exportaciones, empleos y posición global según AMIA, INA, INEGI y OICA.",
+      "México produjo 3.99 millones de vehículos en 2024, récord histórico. Exportaciones, empleos y ranking mundial con datos de AMIA, INEGI y OICA.",
     question: "¿Cuántos vehículos produce México al año?",
     shortAnswer:
       "México produjo 3,989,403 vehículos ligeros en 2024 (récord histórico) y se ubica entre los primeros cinco productores automotrices del mundo, según AMIA y la OICA.",

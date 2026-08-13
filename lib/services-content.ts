@@ -390,9 +390,9 @@ export const SERVICES_CONTENT: ServiceContent[] = [
   {
     slug: "fosfatizado",
     title: "Servicio de Fosfatizado: Pretratamiento Anticorrosivo para Pintura",
-    metaTitle: "Fosfatizado Industrial",
+    metaTitle: "Servicio de Fosfatizado Zinc y Tricatiónico en NL",
     metaDescription:
-      "Servicio técnico para líneas de fosfatizado al zinc, hierro y tricatiónico: químicos formulados, asesoría de baño y validación de peso de capa. Plantas en Nuevo León.",
+      "¿Problemas de adherencia o peso de capa? Operamos y optimizamos tu línea de fosfatizado: químicos formulados, asesoría de baño y validación. Nuevo León.",
     category: "metales",
     intro:
       "El fosfatizado es el tratamiento de conversión química más usado en pretratamiento previo a pintura electrostática y e-coat. Forma una capa de cristales de fosfato sobre el acero que mejora dramáticamente la adherencia de pinturas y la resistencia a corrosión. En Industrias Trevigo damos soporte integral a líneas de fosfatizado: químicos formulados, asesoría técnica de baño y validación de calidad por lote.",

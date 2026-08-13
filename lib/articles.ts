@@ -32,9 +32,9 @@ export const ARTICLES: Article[] = [
   {
     slug: "acido-fosforico-limpieza-metales",
     title: "Ácido fosfórico para limpieza de metales: usos, concentraciones y proveedores en México",
-    metaTitle: "Ácido Fosfórico para Limpieza de Metales",
+    metaTitle: "Ácido Fosfórico: Usos, Dosis y Venta en México",
     metaDescription:
-      "Guía técnica del ácido fosfórico industrial para limpieza, desoxidación y fosfatizado de metales. Concentraciones, aplicaciones y proveedor en Monterrey.",
+      "Cómo usar ácido fosfórico para desoxidar y fosfatizar metal: concentraciones recomendadas, errores comunes y dónde comprarlo en Monterrey con asesoría.",
     excerpt:
       "El ácido fosfórico es uno de los reactivos más usados en la limpieza y preparación de superficies metálicas. Conoce sus aplicaciones industriales, concentraciones recomendadas y cómo elegir el grado correcto para tu proceso.",
     category: "Tratamiento de Metales",
@@ -214,9 +214,9 @@ export const ARTICLES: Article[] = [
   {
     slug: "fosfatizado-zinc-pretratamiento-pintura",
     title: "Fosfatizado de zinc: el paso clave en el pretratamiento antes de pintar",
-    metaTitle: "Fosfatizado de Zinc: Pretratamiento para Pintura",
+    metaTitle: "Fosfatizado de Zinc Antes de Pintar: Guía Completa",
     metaDescription:
-      "Guía técnica del fosfatizado de zinc: cómo funciona, por qué se usa antes de la pintura, etapas del proceso y normas automotrices. Proveedor en Monterrey.",
+      "Por qué el fosfatizado de zinc multiplica la vida de la pintura: etapas del proceso, control del baño y normas automotrices. Guía técnica mexicana.",
     excerpt:
       "El fosfatizado de zinc es el tratamiento más importante para garantizar adherencia y resistencia a la corrosión en piezas pintadas. Aprende cómo funciona, qué etapas tiene y qué normas debe cumplir.",
     category: "Tratamiento de Metales",
@@ -1123,9 +1123,9 @@ export const ARTICLES: Article[] = [
   {
     slug: "prueba-de-jarras-jar-test-protocolo",
     title: "Prueba de jarras (Jar Test): protocolo paso a paso para optimizar coagulación",
-    metaTitle: "Prueba de Jarras (Jar Test): Protocolo Completo",
+    metaTitle: "Cómo Hacer una Prueba de Jarras: Protocolo",
     metaDescription:
-      "Protocolo paso a paso de la Prueba de Jarras (Jar Test) para determinar el coagulante óptimo, dosis exacta y pH de trabajo en plantas de tratamiento de aguas industriales.",
+      "Protocolo completo de jar test: velocidades de agitación, tiempos, dosis y cómo leer resultados para elegir coagulante y pH óptimos en tu planta.",
     excerpt:
       "La Prueba de Jarras (Jar Test) es el ensayo de laboratorio más importante en tratamiento de aguas. Permite determinar el coagulante correcto, la dosis exacta y el pH óptimo antes de hacer cambios en planta — ahorrando semanas de ensayo-error.",
     category: "Tratamiento de Aguas",
@@ -1468,9 +1468,9 @@ export const ARTICLES: Article[] = [
     authorSlug: "nohemi-cervantes",
     title:
       "Aceite hidráulico ISO VG 32, 46 o 68: cómo seleccionar la viscosidad correcta",
-    metaTitle: "Aceite Hidráulico ISO VG 32, 46, 68: Guía de Selección",
+    metaTitle: "Aceite ISO VG 32 vs 46 vs 68: ¿Cuál Elegir? (2026)",
     metaDescription:
-      "Cómo elegir entre aceite hidráulico ISO VG 32, 46 y 68 según presión, temperatura y tipo de bomba. Cuándo usar HM, HV o HE. Errores comunes y análisis de aceite.",
+      "Tabla comparativa ISO VG 32, 46 y 68: presión, temperatura y tipo de bomba. Elige la viscosidad correcta en 2 minutos y evita fallas en tu sistema hidráulico.",
     excerpt:
       "ISO VG 46 es la viscosidad más universal para sistemas hidráulicos industriales — pero hay casos donde 32 o 68 son la elección correcta. Te explicamos cómo decidirlo según presión, temperatura y bomba.",
     category: "Lubricantes",
@@ -1569,9 +1569,9 @@ export const ARTICLES: Article[] = [
     authorSlug: "blanca-garza",
     title:
       "Hipoclorito de sodio industrial: usos, dosificación y compra para tratamiento de aguas",
-    metaTitle: "Hipoclorito de Sodio Industrial: Usos y Venta en México",
+    metaTitle: "Hipoclorito de Sodio: Dosis, Usos y Venta MX",
     metaDescription:
-      "Hipoclorito de sodio (NaClO) industrial para tratamiento de aguas, desinfección y oxidación. Concentraciones, dosificación, almacenamiento y proveedor en Monterrey.",
+      "Guía de hipoclorito de sodio industrial: dosificación para tratamiento de aguas, almacenamiento seguro y venta por tambo o tote en Monterrey.",
     excerpt:
       "El hipoclorito de sodio es el desinfectante químico más usado en la industria mexicana. Te explicamos las concentraciones disponibles, dosificaciones típicas y cómo elegir entre granel y envasado para tu planta.",
     category: "Tratamiento de Aguas",
