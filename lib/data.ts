@@ -1103,6 +1103,46 @@ export interface IndustryDefinition {
 
 export const INDUSTRIES: IndustryDefinition[] = [
   {
+    id: "agua-medio-ambiente", name: "Agua y Medio Ambiente", slug: "agua-medio-ambiente", icon: "💧",
+    seoTitle: "Químicos para Tratamiento de Aguas Residuales | PTAR",
+    seoDescription: "Coagulantes, floculantes y microbicidas para plantas de tratamiento de aguas residuales. Jar test sin costo y cumplimiento NOM-001-SEMARNAT. Monterrey.",
+    description: "Soluciones químicas para plantas tratadoras de aguas residuales municipales e industriales: coagulación, floculación, control microbiológico y cumplimiento normativo.",
+    heroText: "Toda descarga industrial en México debe cumplir la NOM-001-SEMARNAT-2021. Ayudamos a PTARs municipales e industriales a lograrlo con química optimizada por Jar Test.",
+    productSubcategoryIds: ["coagulantes", "floculantes", "poliacrilamidas", "agentes-secuestrantes", "microbicidas", "acidos-bases"],
+    serviceIds: ["pruebas-jarras", "optimizacion-procesos", "ingenieria-asesoria", "mantenimiento"],
+    stats: [
+      { value: "NOM-001", label: "Cumplimiento SEMARNAT-2021 en descargas" },
+      { value: "Jar Test", label: "Prueba de jarras con tu efluente, sin costo" },
+      { value: "35+", label: "años formulando química para aguas" },
+      { value: "48 h", label: "entrega de coagulantes y floculantes en NL" },
+    ],
+    faqs: [
+      { q: "¿Qué químicos necesita una planta de tratamiento de aguas residuales?", a: "El tren fisicoquímico típico usa: coagulante (inorgánico u orgánico) para desestabilizar sólidos, floculante de poliacrilamida para agrupar los flóculos, ajustadores de pH (sosa o ácido) y microbicidas para control biológico. La combinación y dosis exactas se determinan con una prueba de jarras sobre tu efluente real." },
+      { q: "¿Cómo sé qué coagulante y dosis usar en mi PTAR?", a: "Con un Jar Test. Trevigo lo realiza sin costo con una muestra de tu agua: probamos varios coagulantes y dosis, medimos turbidez, sólidos y pH resultantes, y te entregamos la receta con costo por metro cúbico tratado." },
+      { q: "¿Ayudan a cumplir la NOM-001-SEMARNAT-2021?", a: "Sí. Evaluamos los parámetros fuera de norma de tu descarga (SST, DBO, DQO, metales, grasas) y proponemos el esquema químico para corregirlos, con seguimiento analítico hasta lograr el cumplimiento sostenido." },
+    ],
+  },
+  {
+    id: "manufactura-general", name: "Manufactura General", slug: "manufactura-general", icon: "🏭",
+    seoTitle: "Químicos Industriales para Plantas de Manufactura",
+    seoDescription: "Proveedor de químicos para manufactura: limpieza de piezas, pretratamiento de metales, lubricantes y tratamiento de aguas de proceso. Monterrey, NL.",
+    description: "Química de proceso para plantas de manufactura: limpieza y desengrase de piezas, pretratamiento antes de pintura, lubricación industrial y tratamiento de aguas de proceso.",
+    heroText: "De la limpieza de piezas al tratamiento del agua de descarga: un solo proveedor técnico para la química de tu planta de manufactura.",
+    productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "inhibidores", "aceites-metales", "coagulantes", "floculantes"],
+    serviceIds: ["fosfatizado", "decapado", "pasivado", "ingenieria-asesoria", "optimizacion-procesos"],
+    stats: [
+      { value: "80+", label: "productos químicos de línea para manufactura" },
+      { value: "35+", label: "años atendiendo plantas en el norte de México" },
+      { value: "1,000 kg", label: "presentaciones desde porrón hasta tote" },
+      { value: "En planta", label: "diagnóstico técnico de proceso sin costo" },
+    ],
+    faqs: [
+      { q: "¿Qué químicos son básicos en una planta de manufactura metalmecánica?", a: "Los cinco frentes típicos: desengrasantes para limpieza de piezas, desoxidantes y fosfatos para pretratamiento antes de pintura, inhibidores para protección entre procesos, lubricantes y aceites de corte para maquinado, y coagulantes-floculantes para el agua de descarga." },
+      { q: "¿Pueden surtir toda la química de mi planta con un solo proveedor?", a: "Ese es nuestro modelo: consolidar la química de proceso con soporte técnico incluido. Reduces proveedores, unificas fichas técnicas y SDS, y tienes un solo responsable del desempeño químico de la línea." },
+      { q: "¿Atienden plantas fuera de Monterrey?", a: "Sí. La base está en Nuevo León con entregas programadas locales, y embarcamos a toda la República por tarima o tote según tu consumo." },
+    ],
+  },
+  {
     id: "automotriz", name: "Automotriz", slug: "automotriz", icon: "🚗",
     seoTitle: "Proveedor de Químicos para la Industria Automotriz en México",
     seoDescription: "Proveedor y distribuidor de químicos industriales para la cadena automotriz mexicana: fosfatado, galvanizado, inhibidores y tratamiento de aguas. 35+ años en Nuevo León.",
