@@ -30,6 +30,93 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "inhibidor-de-oxido-base-agua",
+    title: "Inhibidor de óxido base agua: qué es, cuánto protege y cómo elegirlo",
+    metaTitle: "Inhibidor de Óxido Base Agua: Qué Es y Cuál Elegir",
+    metaDescription:
+      "Inhibidor de óxido base agua: cuánto dura la protección (30-90 días), diferencias vs convertidor de óxido y recubrimientos, y cómo elegir el correcto.",
+    excerpt:
+      "Un inhibidor de óxido base agua protege piezas de acero entre procesos sin aceites ni solventes. Te explicamos cuánto dura la protección, cuándo conviene frente a un convertidor de óxido y cómo elegir el producto correcto.",
+    category: "Tratamiento de Metales",
+    readingTime: "6 min",
+    publishedAt: "2026-08-18",
+    updatedAt: "2026-08-18",
+    keywords: [
+      "inhibidor de oxido base agua",
+      "inhibidor de oxido",
+      "inhibidor de corrosion",
+      "antioxidante para metal",
+      "proteccion anticorrosiva temporal",
+      "convertidor de oxido",
+    ],
+    intro:
+      "Entre el maquinado y la pintura, entre el decapado y el ensamble, o durante el almacenamiento y el embarque, el acero desnudo empieza a oxidarse en horas — especialmente en ambientes húmedos como los de las plantas del norte y costa de México. El inhibidor de óxido base agua es la protección temporal estándar para ese periodo: una película delgada que detiene la corrosión semanas o meses, sin aceites que después haya que desengrasar. En esta guía explicamos cómo funciona, cuánto protege realmente y cómo elegir entre inhibidor, convertidor de óxido y recubrimiento anticorrosivo.",
+    sections: [
+      {
+        heading: "¿Qué es un inhibidor de óxido base agua y cómo funciona?",
+        paragraphs: [
+          "Es una solución acuosa de inhibidores de corrosión (típicamente aminas, nitritos orgánicos o química libre de nitritos en formulaciones modernas) que se aplica por inmersión, aspersión o brocha sobre la pieza limpia. Al secar deja una película invisible o ligeramente ámbar que bloquea el contacto del oxígeno y la humedad con el metal.",
+          "La ventaja del sistema base agua frente a los protectores base aceite o solvente: no deja residuo graso, en la mayoría de los casos no requiere desengrase antes del siguiente proceso (soldadura ligera, pintura, ensamble), no genera vapores inflamables y simplifica el manejo ambiental en planta.",
+        ],
+      },
+      {
+        heading: "¿Cuánto dura la protección? Los rangos reales",
+        paragraphs: [
+          "La duración depende de la formulación, el espesor de película y el ambiente de almacenamiento. Los rangos típicos en la práctica industrial:",
+        ],
+        list: {
+          items: [
+            "Almacén techado y seco (humedad < 60%): 60 a 90 días con una sola aplicación.",
+            "Ambiente industrial con humedad media (60-75%): 30 a 60 días.",
+            "Ambiente húmedo o costero, o piezas embaladas con poca ventilación: 15 a 30 días — considera reaplicación o embalaje con inhibidor VCI complementario.",
+            "Regla práctica: si la pieza va a esperar más de 90 días, el inhibidor temporal no es la herramienta; evalúa tropicalizado o un recubrimiento anticorrosivo formal.",
+          ],
+        },
+      },
+      {
+        heading: "Inhibidor vs convertidor de óxido vs recubrimiento: cuál necesitas",
+        paragraphs: [
+          "Estos tres productos se confunden constantemente y no son intercambiables:",
+        ],
+        list: {
+          items: [
+            "Inhibidor de óxido: PREVIENE. Se aplica sobre metal limpio (sin óxido) para que no se oxide durante un periodo definido. Es protección temporal entre procesos.",
+            "Convertidor de óxido: CORRIGE. Se aplica sobre metal ya oxidado; transforma químicamente el óxido rojo en una capa estable (tanato o fosfato de hierro) que puede pintarse. No sustituye al decapado en piezas de calidad crítica.",
+            "Recubrimiento anticorrosivo: PROTEGE A LARGO PLAZO. Primarios ricos en zinc, esmaltes epóxicos o sistemas de pintura completos para exposición permanente. Es la solución definitiva, no la temporal.",
+          ],
+        },
+      },
+      {
+        heading: "Cómo elegir el inhibidor correcto para tu proceso",
+        paragraphs: [
+          "Las cuatro preguntas que definen la elección: ¿cuánto tiempo debe proteger la pieza? ¿en qué ambiente esperará? ¿qué proceso sigue después (pintura, soldadura, ensamble)? ¿necesitas que la película sea removible o puede quedarse?",
+          "En Trevigo formulamos inhibidores de oxidación temporal base agua según estas variables, y lo validamos de la manera correcta: con piezas reales de tu producción en prueba de cámara húmeda o niebla salina antes de que cambies tu proceso. Así sabes cuántos días de protección tienes con datos, no con la etiqueta del proveedor.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Cuánto dura la protección de un inhibidor de óxido base agua?",
+        a: "Entre 15 y 90 días según la formulación y el ambiente: hasta 90 días en almacén seco y techado, 30-60 en ambiente industrial típico, y 15-30 en ambientes húmedos o costeros. Para almacenamientos mayores a 90 días conviene tropicalizado o un recubrimiento anticorrosivo formal.",
+      },
+      {
+        q: "¿Qué diferencia hay entre un inhibidor y un convertidor de óxido?",
+        a: "El inhibidor previene: se aplica sobre metal limpio para que no se oxide. El convertidor corrige: se aplica sobre óxido existente y lo transforma en una capa estable pintable. Si la pieza ya tiene óxido y la calidad es crítica, lo correcto es decapar primero y luego proteger con inhibidor.",
+      },
+      {
+        q: "¿Se puede pintar sobre una pieza tratada con inhibidor de óxido?",
+        a: "Depende de la formulación. Los inhibidores base agua de película ligera generalmente aceptan pintura directa o con un enjuague simple; los de película cerosa o aceitosa requieren desengrase previo. Confirma compatibilidad con una prueba de adherencia antes de correr producción — nosotros la hacemos sin costo con tu sistema de pintura.",
+      },
+    ],
+    relatedProducts: ["inhibidor-oxidacion-temporal"],
+    cta: {
+      title: "¿Tus piezas se oxidan entre procesos?",
+      description:
+        "Formulamos el inhibidor de oxidación temporal para tu caso: tiempo de protección, ambiente y proceso posterior. Prueba con tus piezas reales sin costo, con validación en cámara húmeda.",
+    },
+  },
+
+  {
     slug: "sandblast-vs-decapado-quimico",
     title: "Sandblast vs decapado químico: cuál conviene para remover óxido y pintura",
     metaTitle: "Sandblast vs Decapado Químico: ¿Cuál Conviene?",
