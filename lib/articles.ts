@@ -115,9 +115,9 @@ export const ARTICLES: Article[] = [
   {
     slug: "acido-fosforico-limpieza-metales",
     title: "Ácido fosfórico para limpieza de metales: usos, concentraciones y proveedores en México",
-    metaTitle: "Ácido Fosfórico: Usos, Dosis y Venta en México",
+    metaTitle: "Ácido Fosfórico para Quitar Óxido y Limpiar Metal",
     metaDescription:
-      "Cómo usar ácido fosfórico para desoxidar y fosfatizar metal: concentraciones recomendadas, errores comunes y dónde comprarlo en Monterrey con asesoría.",
+      "Cómo quitar óxido con ácido fosfórico: concentración correcta, tiempos, paso a paso y errores comunes. Guía industrial y venta en México con asesoría.",
     excerpt:
       "El ácido fosfórico es uno de los reactivos más usados en la limpieza y preparación de superficies metálicas. Conoce sus aplicaciones industriales, concentraciones recomendadas y cómo elegir el grado correcto para tu proceso.",
     category: "Tratamiento de Metales",
@@ -125,6 +125,8 @@ export const ARTICLES: Article[] = [
     publishedAt: "2026-04-20",
     updatedAt: "2026-04-27",
     keywords: [
+      "acido fosforico para quitar oxido",
+      "acido fosforico para eliminar oxido",
       "acido fosforico limpieza metales",
       "acido fosforico industrial Mexico",
       "acido fosforico desoxidante",
@@ -152,6 +154,21 @@ export const ARTICLES: Article[] = [
             "Fosfatizado al hierro: forma una capa de fosfato amorfo que mejora la adherencia de pinturas y recubrimientos en polvo.",
             "Pasivado: deja una capa pasiva temporal que protege contra corrosión durante el almacenamiento entre etapas del proceso.",
             "Limpieza de equipos: se utiliza en circuitos de enfriamiento, intercambiadores de calor y tuberías para remover incrustaciones de óxidos y carbonatos.",
+          ],
+        },
+      },
+      {
+        heading: "Cómo quitar óxido con ácido fosfórico: paso a paso",
+        paragraphs: [
+          "El ácido fosfórico es el método químico más controlable para quitar óxido de piezas de acero: disuelve el óxido de hierro y, a diferencia del clorhídrico, deja una capa ligera de fosfato de hierro que protege temporalmente la superficie. El procedimiento industrial típico:",
+        ],
+        list: {
+          items: [
+            "Desengrasa primero la pieza: el ácido no penetra grasa ni aceite. Un baño alcalino o desengrasante previo es obligatorio.",
+            "Prepara la solución al 10-15% de ácido fosfórico en agua para óxido ligero-medio, o 20-25% para corrosión severa. Siempre agrega el ácido al agua, nunca al revés.",
+            "Sumerge la pieza de 10 a 30 minutos según el grado de óxido, o aplica con brocha/aspersión en piezas que no caben en tina.",
+            "Verifica visualmente: el óxido rojo desaparece y la superficie toma un tono gris mate (fosfato de hierro). Si queda óxido, extiende el tiempo, no la concentración.",
+            "Enjuaga con agua y seca de inmediato. Si la pieza va a pintarse, ese tono gris es una excelente base de adherencia; si va a almacenarse, aplica inhibidor de corrosión.",
           ],
         },
       },
@@ -185,6 +202,14 @@ export const ARTICLES: Article[] = [
       },
     ],
     faqs: [
+      {
+        q: "¿El ácido fosfórico sí quita el óxido?",
+        a: "Sí. Disuelve el óxido de hierro (Fe₂O₃) convirtiéndolo en fosfato de hierro soluble, y es el ácido preferido en la industria para eliminar óxido porque ataca menos el metal base que el clorhídrico y deja una capa fosfatada que protege temporalmente y mejora la adherencia de pintura.",
+      },
+      {
+        q: "¿Qué concentración de ácido fosfórico se usa para quitar óxido?",
+        a: "Para óxido ligero a medio, solución al 10-15% en agua durante 10-30 minutos de inmersión. Para corrosión severa, 20-25%. Concentraciones mayores no aceleran proporcionalmente la remoción y sí aumentan el ataque al metal base y el costo por pieza.",
+      },
       {
         q: "¿Cuál es la diferencia entre ácido fosfórico grado alimenticio y grado técnico?",
         a: "El grado alimenticio cumple con especificaciones FCC (Food Chemicals Codex) y se usa en bebidas y alimentos. El grado técnico tiene impurezas tolerables para procesos industriales y es significativamente más económico. Para limpieza de metales, fosfatizado y desoxidación, el grado técnico al 85% es la opción estándar.",
