@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/track";
 import Link from "next/link";
 
 const ESTADOS = [
@@ -74,6 +75,7 @@ export default function ServiceCotizaForm({ serviceName }: Props) {
     const formEl = e.currentTarget.closest("form") as HTMLFormElement;
     if (!isFormValid(formEl)) return;
     const msg = buildWhatsAppMessage();
+    track("whatsapp_click", { source: "form_servicio" });
     window.open(`https://wa.me/528120403135?text=${msg}`, "_blank");
     setWaSent(true);
     setTimeout(() => setWaSent(false), 4000);
@@ -103,6 +105,7 @@ export default function ServiceCotizaForm({ serviceName }: Props) {
       });
       if (!res.ok) throw new Error("Error al enviar");
       setEmailStatus("success");
+      track("generate_lead", { form: "servicio" });
     } catch {
       setEmailStatus("error");
     }

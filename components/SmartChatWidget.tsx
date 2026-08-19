@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import { track } from "@/lib/track";
 import Image from "next/image";
 import { Icon, type IconName } from "@/components/Icon";
 
@@ -138,8 +139,10 @@ export default function SmartChatWidget() {
   }, [stage]);
 
   // ── Helpers ─────────────────────────────────────────────────────────────────
-  const openWA = (msg: string) =>
+  const openWA = (msg: string) => {
+    track("whatsapp_click", { source: "chat_widget" });
     window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank");
+  };
 
   // Etiqueta usada en el mensaje de WhatsApp ("Servicio" o "Producto")
   const typeLabel = cotizarType === "producto" ? "Producto" : "Servicio";

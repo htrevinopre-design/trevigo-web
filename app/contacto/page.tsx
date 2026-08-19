@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { COMPANY } from "@/lib/data";
+import { track } from "@/lib/track";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -164,6 +165,10 @@ export default function ContactoPage() {
                   <a
                     key={item.label}
                     href={item.href}
+                    onClick={() => {
+                      if (item.href.startsWith("tel:")) track("phone_click", { source: "contacto" });
+                      else if (item.href.startsWith("mailto:")) track("email_click", { source: "contacto" });
+                    }}
                     target={item.icon === "📍" ? "_blank" : undefined}
                     rel={item.icon === "📍" ? "noopener noreferrer" : undefined}
                     className="flex gap-4 p-4 bg-white border border-steel-200 rounded-xl hover:border-navy-300 hover:shadow-sm transition-all group"

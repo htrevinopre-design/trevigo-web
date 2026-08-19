@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { track } from "@/lib/track";
 
 const TABS = [
   { id: "Tratamiento de Metales",   label: "Tratamiento de Metales" },
@@ -46,6 +47,7 @@ export default function QuoteForm() {
 
       if (!res.ok) throw new Error("Error al enviar");
       setStatus("success");
+      track("generate_lead", { form: "cotizacion_general", categoria: activeTab });
     } catch {
       setStatus("error");
     }
