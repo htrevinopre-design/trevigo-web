@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   title: `${COMPANY.name} | Químicos Industriales & Tratamientos | Monterrey, México`,
   description:
     "Industrias Trevigo: 35+ años fabricando productos químicos para tratamiento de metales, limpieza industrial y tratamiento de aguas en Monterrey, N.L.",
-  alternates: { canonical: COMPANY.url },
+  alternates: {
+    canonical: COMPANY.url,
+    languages: { "es-MX": COMPANY.url, en: `${COMPANY.url}/en`, "x-default": COMPANY.url },
+  },
 };
 
 const homepageFAQSchema = {

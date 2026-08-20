@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { COMPANY, PRODUCT_CATEGORIES, INDUSTRIES } from "@/lib/data";
 import { ARTICLES } from "@/lib/articles";
 import { SERVICES_CONTENT } from "@/lib/services-content";
+import { SERVICES_EN } from "@/lib/services-content-en";
 import { GLOSSARY } from "@/lib/glossary";
 import { DATOS } from "@/lib/datos";
 import { getSubcategoryContentSlugs } from "@/lib/product-subcategories-content";
@@ -25,7 +26,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/casos-de-exito`,    lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/glosario`,          lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/datos`,             lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/en`,                lastModified: now, changeFrequency: "monthly", priority: 0.8 },
   ];
+
+  // ── English section (/en) ───────────────────────────────────────
+  const enServicePages: MetadataRoute.Sitemap = SERVICES_EN.map((s) => ({
+    url: `${baseUrl}/en/services/${s.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
 
   // ── Artículos técnicos / blog ────────────────────────────────────
   const articlePages: MetadataRoute.Sitemap = ARTICLES.map((a) => ({
@@ -116,6 +126,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...categoryLineaPages,
     ...subcategoryPages,
     ...servicePages,
+    ...enServicePages,
     ...glossaryPages,
     ...datoPages,
   ];

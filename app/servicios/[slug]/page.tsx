@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { SERVICES_EN } from "@/lib/services-content-en";
 import {
   COMPANY,
   PRODUCT_CATEGORIES,
@@ -41,7 +42,17 @@ export async function generateMetadata({
   return {
     title: content.metaTitle,
     description: content.metaDescription,
-    alternates: { canonical: `${COMPANY.url}/servicios/${content.slug}` },
+    alternates: {
+      canonical: `${COMPANY.url}/servicios/${content.slug}`,
+      ...(SERVICES_EN.some((s) => s.esSlug === content.slug)
+        ? {
+            languages: {
+              "es-MX": `${COMPANY.url}/servicios/${content.slug}`,
+              en: `${COMPANY.url}/en/services/${SERVICES_EN.find((s) => s.esSlug === content.slug)!.slug}`,
+            },
+          }
+        : {}),
+    },
     openGraph: {
       title: content.metaTitle,
       description: content.metaDescription,
