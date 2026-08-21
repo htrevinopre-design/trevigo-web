@@ -30,6 +30,112 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "decapantes-industriales-tipos",
+    title: "Decapantes industriales: tipos, usos y cómo elegir el correcto",
+    metaTitle: "Decapantes Industriales: Tipos y Cuál Necesitas",
+    metaDescription:
+      "Decapantes para metal: ácidos para óxido y calamina, removedores de pintura industriales y gel para soldadura de inoxidable. Qué tipo necesitas y dónde comprarlo.",
+    excerpt:
+      "La palabra decapante cubre tres productos muy distintos: el ácido que quita óxido, el removedor que quita pintura y el gel que limpia soldaduras de inoxidable. Te explicamos cuál necesitas según tu trabajo.",
+    category: "Tratamiento de Metales",
+    readingTime: "6 min",
+    publishedAt: "2026-08-21",
+    updatedAt: "2026-08-21",
+    keywords: [
+      "decapante",
+      "decapantes",
+      "decapante industrial",
+      "decapante para metal",
+      "gel decapante",
+      "decapante de pintura",
+    ],
+    intro:
+      "Pocas palabras generan tanta confusión en la compra de químicos industriales como decapante. Bajo ese nombre se venden productos completamente distintos: ácidos que disuelven óxido y calamina, removedores que levantan pintura curada, y geles que limpian cordones de soldadura en acero inoxidable. Comprar el equivocado desperdicia dinero y puede dañar la pieza. Esta guía separa los tipos, te dice cuál necesitas según el trabajo, y aclara cuándo el decapante ni siquiera es la herramienta correcta.",
+    sections: [
+      {
+        heading: "¿Qué es un decapante? (y por qué la palabra confunde)",
+        paragraphs: [
+          "Decapar significa retirar la capa superficial de un material — pero esa capa puede ser óxido, pintura, barniz o contaminación de soldadura, y cada una requiere química diferente. Por eso el término abarca familias de productos que no son intercambiables. La primera pregunta antes de comprar nunca es qué decapante, sino qué quiero quitar y de qué material.",
+        ],
+      },
+      {
+        heading: "Decapantes ácidos: para óxido, calamina y escamas de laminación",
+        paragraphs: [
+          "Cuando lo que estorba es óxido rojo, calamina azul de laminación o residuos inorgánicos sobre metal, el decapante correcto es un ácido formulado — lo que en la industria también se llama desoxidante o solución de pickling:",
+        ],
+        list: {
+          items: [
+            "Acero al carbón: ácido clorhídrico o sulfúrico con inhibidor, o ácido fosfórico cuando se busca dejar base fosfatada lista para pintura.",
+            "Acero inoxidable: mezclas nítrico-fosfóricas para remover hierro libre sin dañar la capa pasiva (el clorhídrico está prohibido: pica el inoxidable).",
+            "Aluminio: decapado alcalino con sosa seguido de desmutado ácido.",
+            "En Trevigo formulamos estos decapantes con inhibidor incluido y los suministramos de porrón de 50 kg a tote de 1,000 kg, con la receta de proceso para tu línea.",
+          ],
+        },
+      },
+      {
+        heading: "Decapantes de pintura industriales: para recubrimientos curados",
+        paragraphs: [
+          "Si lo que hay que retirar es pintura en polvo, e-coat o esmalte curado — de racks de pintura, ganchos o piezas para retrabajo — el producto correcto es un removedor de pintura industrial: alcalino caliente para acero (el mejor costo por kilo de pintura removida) o formulado con cosolventes para epóxicos difíciles y aleaciones sensibles.",
+          "Importante: los decapantes de pintura domésticos de tlapalería (para muebles y madera) no están formulados para pintura industrial curada en horno — se quedan cortos en poder y en seguridad de manejo para uso productivo.",
+        ],
+      },
+      {
+        heading: "Gel decapante para soldadura de acero inoxidable",
+        paragraphs: [
+          "El tercer tipo es el más específico: un gel ácido que se aplica con brocha sobre cordones de soldadura de acero inoxidable para eliminar el quemado (heat tint) y restaurar la capa pasiva. Se usa en fabricación de equipo alimenticio, farmacéutico y sanitario, donde la norma exige soldaduras pasivadas.",
+          "En México este producto llega casi todo importado. Si tu operación consume gel decapante en volumen, o prefieres resolver el pasivado de soldaduras por inmersión con química de proceso, contáctanos: el decapado y pasivado de inoxidable conforme a ASTM A967 es una de nuestras especialidades.",
+        ],
+      },
+      {
+        heading: "¿Y el decapante para madera?",
+        paragraphs: [
+          "Si llegaste buscando decapante para restaurar muebles o quitar barniz de madera, ese es un producto doméstico distinto que encontrarás en tlapalerías y tiendas de pinturas — no es nuestra especialidad. Esta guía cubre los decapantes de uso industrial para metal.",
+        ],
+      },
+      {
+        heading: "Cómo elegir en 30 segundos",
+        paragraphs: [
+          "La tabla mental que usamos con nuestros clientes:",
+        ],
+        list: {
+          items: [
+            "¿Óxido o calamina sobre metal? → Decapante ácido / desoxidante, elegido según el sustrato.",
+            "¿Pintura curada sobre piezas o racks? → Removedor de pintura industrial, alcalino o formulado.",
+            "¿Quemado de soldadura en inoxidable? → Gel decapante y pasivado posterior, o proceso por inmersión si el volumen lo justifica.",
+            "¿Barniz en madera? → Producto doméstico de tlapalería; no aplica esta guía.",
+            "¿No estás seguro? Mándanos foto de la pieza y te decimos qué química usar — el diagnóstico no cuesta.",
+          ],
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Decapante y desoxidante son lo mismo?",
+        a: "Para metal, en la práctica sí: el desoxidante es el decapante ácido que remueve óxido y calamina. La diferencia es de uso comercial de la palabra — decapante es el término genérico y también abarca los removedores de pintura, por eso conviene especificar qué vas a quitar antes de comprar.",
+      },
+      {
+        q: "¿Qué decapante sirve para quitar pintura de metal?",
+        a: "Para pintura industrial curada (polvo, e-coat, esmaltes horneados) necesitas un removedor de pintura industrial: alcalino caliente para acero al carbón, o formulado con cosolventes para epóxicos duros y piezas de aluminio. Los decapantes ácidos no quitan pintura — atacan el óxido, no el recubrimiento orgánico.",
+      },
+      {
+        q: "¿Puedo usar el mismo decapante en acero al carbón y en inoxidable?",
+        a: "No. El clorhídrico que funciona bien en acero al carbón provoca corrosión por picadura en inoxidable. Para inoxidable se usan mezclas nítrico-fosfóricas o nítrico-fluorhídricas que remueven contaminación sin destruir la capa pasiva. Usar el ácido equivocado arruina la pieza.",
+      },
+    ],
+    relatedProducts: [
+      "limpiador-acido-fosforico-hierro-acero",
+      "desoxidante-acero-inoxidable",
+      "removedor-alcalino-pinturas",
+      "removedor-intensivo-superficies",
+    ],
+    cta: {
+      title: "¿Necesitas decapantes para tu operación?",
+      description:
+        "Fabricamos decapantes ácidos y removedores de pintura industriales en Monterrey, con asesoría de proceso incluida. Cuéntanos qué necesitas quitar y de qué material — te recomendamos la química con una prueba real, sin costo.",
+    },
+  },
+
+  {
     slug: "inhibidor-de-oxido-base-agua",
     title: "Inhibidor de óxido base agua: qué es, cuánto protege y cómo elegirlo",
     metaTitle: "Inhibidor de Óxido Base Agua: Qué Es y Cuál Elegir",
