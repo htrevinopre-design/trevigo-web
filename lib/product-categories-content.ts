@@ -40,7 +40,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   "tratamiento-metales": {
     id: "tratamiento-metales",
     pageTitle: "Químicos para Tratamiento de Metales",
-    metaTitle: "Químicos para Tratamiento de Metales Industriales en México | Trevigo",
+    metaTitle: "Químicos para Tratamiento de Metales Industriales en México",
     metaDescription:
       "Proveedor mexicano de químicos para tratamiento de metales: detergentes alcalinos, desoxidantes, fosfato de zinc, removedores, selladores Cr-free e inhibidores VCI. 35+ años en N.L. Cotización 24 h.",
     hero: "Tratamiento de metales",
@@ -116,7 +116,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   "tratamiento-aguas": {
     id: "tratamiento-aguas",
     pageTitle: "Químicos para Tratamiento de Aguas Residuales Industriales",
-    metaTitle: "Químicos para Tratamiento de Aguas Residuales Industriales en México | Trevigo",
+    metaTitle: "Químicos para Tratamiento de Aguas Residuales Industriales en México",
     metaDescription:
       "Proveedor mexicano de químicos para PTAR industrial: coagulantes (PAC), floculantes, poliacrilamidas, secuestrantes y microbicidas. Cumplimiento NOM-001-SEMARNAT-2021. Jar Test sin costo.",
     hero: "Tratamiento de aguas",
@@ -192,7 +192,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   "lubricantes-aceites": {
     id: "lubricantes-aceites",
     pageTitle: "Lubricantes y Aceites Industriales",
-    metaTitle: "Lubricantes Industriales y Aceites para Maquinaria en México | Trevigo",
+    metaTitle: "Lubricantes Industriales y Aceites para Maquinaria en México",
     metaDescription:
       "Proveedor mexicano de lubricantes industriales: aceite hidráulico ISO VG 46, grasas EP NLGI 2, aceites de corte, engranajes y compresores. Formulaciones técnicas. Cotización 24 h.",
     hero: "Lubricantes y aceites",
@@ -268,7 +268,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   "materias-primas": {
     id: "materias-primas",
     pageTitle: "Materias Primas Químicas Industriales",
-    metaTitle: "Materias Primas Químicas Industriales en México: Ácidos, Sosa | Trevigo",
+    metaTitle: "Materias Primas Químicas Industriales en México: Ácidos, Sosa",
     metaDescription:
       "Proveedor mexicano de materias primas químicas: ácido cítrico, nítrico, clorhídrico, fosfórico 85%, sosa cáustica escamas y al 50%, hipoclorito de sodio. SDS y COA por lote. Entrega 48 h.",
     hero: "Materias primas químicas",
@@ -343,7 +343,7 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
   "aditivos-lubricantes": {
     id: "aditivos-lubricantes",
     pageTitle: "Aditivos para Formular Lubricantes",
-    metaTitle: "Aditivos para Formular Lubricantes Industriales en México | Trevigo",
+    metaTitle: "Aditivos para Formular Lubricantes Industriales en México",
     metaDescription:
       "Proveedor mexicano de aditivos y paquetes para formular lubricantes: aceites de motor (Diesel CK4/CJ4, gasolina SM-SN), transmisión, hidráulicos, engranes, corte y grasas. Cubeta y tambo.",
     hero: "Aditivos para lubricantes",

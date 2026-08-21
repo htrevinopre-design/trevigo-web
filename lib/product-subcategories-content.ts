@@ -45,7 +45,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "sellos",
     categoryId: "tratamiento-metales",
     pageTitle: "Selladores Anticorrosivos para Pretratamiento de Pintura",
-    metaTitle: "Selladores Anticorrosivos Industriales en México (Cr-free) | Trevigo",
+    metaTitle: "Selladores Anticorrosivos Industriales en México (Cr-free)",
     metaDescription:
       "Proveedor de selladores anticorrosivos libres de cromo en México: zirconio, silanos y química de última generación para post-fosfatado de líneas de pintura industrial. Cotización 24 h.",
     hero: "Selladores anticorrosivos",
@@ -115,7 +115,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "inhibidores",
     categoryId: "tratamiento-metales",
     pageTitle: "Inhibidores de Corrosión Industriales",
-    metaTitle: "Inhibidores de Corrosión Industriales (VCI) en México | Trevigo",
+    metaTitle: "Inhibidores de Corrosión Industriales (VCI) en México",
     metaDescription:
       "Proveedor de inhibidores de corrosión temporal VCI, en fase vapor y para aceites en México. Protección de piezas metálicas entre operaciones, exportación marítima y almacenamiento. Cotización 24 h.",
     hero: "Inhibidores de corrosión",
@@ -185,11 +185,11 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "desoxidantes",
     categoryId: "tratamiento-metales",
     pageTitle: "Desoxidantes Industriales para Metales",
-    metaTitle: "Desoxidantes Industriales en México: Ácidos Inhibidos para Metales | Trevigo",
+    metaTitle: "Desoxidantes y Decapantes Ácidos para Metales",
     metaDescription:
-      "Proveedor de desoxidantes ácidos en México: fosfórico, clorhídrico y cítrico para remover óxido, calamina y escamas de laminación. Pretratamiento de pintura industrial. Cotización 24 h.",
+      "Desoxidantes ácidos (también llamados decapantes) para óxido, calamina y escamas: fosfórico, clorhídrico y cítrico con inhibidor. Fabricante en Monterrey.",
     hero: "Desoxidantes industriales",
-    lead: "Los desoxidantes son ácidos formulados que remueven óxido, calamina, escamas de laminación y contaminación oxidada de superficies metálicas — preparándolas para fosfatado, galvanizado, pintura, soldadura o ensamble. Bien usados, eliminan el rechazo por oxidación residual en piezas reprocesadas.",
+    lead: "Los desoxidantes — también llamados decapantes ácidos o soluciones de pickling — son ácidos formulados que remueven óxido, calamina, escamas de laminación y contaminación oxidada de superficies metálicas — preparándolas para fosfatado, galvanizado, pintura, soldadura o ensamble. Bien usados, eliminan el rechazo por oxidación residual en piezas reprocesadas.",
     sections: [
       {
         heading: "¿Qué es un desoxidante industrial y para qué sirve?",
@@ -227,6 +227,11 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     ],
     faqs: [
       {
+        q: "¿Desoxidante y decapante son lo mismo?",
+        a: "Para metal, sí: el decapante ácido que remueve óxido y calamina es lo que la industria llama desoxidante (o solución de pickling). Si buscas decapante para quitar pintura, ese es otro producto — visita nuestra categoría de removedores.",
+      },
+
+      {
         q: "¿Cuál es la diferencia entre un desoxidante y un decapante?",
         a: "Son términos relacionados pero no idénticos. El desoxidante remueve óxido superficial principalmente; el decapante (pickling) es más agresivo y remueve también escamas de laminación gruesas, residuos de soldadura y contaminación profunda. En la práctica industrial los términos se usan indistintamente, aunque 'decapado' tiende a referirse a procesos más intensivos.",
       },
@@ -255,7 +260,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "fosfatos",
     categoryId: "tratamiento-metales",
     pageTitle: "Fosfatos Industriales para Pretratamiento de Pintura",
-    metaTitle: "Fosfato de Zinc y Hierro para Pintura Industrial en México | Trevigo",
+    metaTitle: "Fosfato de Zinc y Hierro para Pintura Industrial en México",
     metaDescription:
       "Proveedor de fosfatos industriales en México: fosfato de zinc tricatiónico para automotriz (GMW3179, WSS-M3P18-A), fosfato de hierro amorfo y multimetálicos. Cotización 24 h.",
     hero: "Fosfatos industriales",
@@ -326,7 +331,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "removedores",
     categoryId: "tratamiento-metales",
     pageTitle: "Removedores de Pintura Industrial",
-    metaTitle: "Removedores de Pintura Industrial en México: Alcalinos y Solventes | Trevigo",
+    metaTitle: "Removedores de Pintura Industrial en México: Alcalinos y Solventes",
     metaDescription:
       "Proveedor de removedores de pintura industrial en México: alcalinos para despintado de bastidores, base solvente y formulaciones intensivas para epóxicos y poliuretanos. Cotización 24 h.",
     hero: "Removedores de pintura",
@@ -395,7 +400,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "detergentes",
     categoryId: "tratamiento-metales",
     pageTitle: "Detergentes y Desengrasantes Industriales para Metales",
-    metaTitle: "Desengrasantes Alcalinos Industriales para Metales en México | Trevigo",
+    metaTitle: "Desengrasantes Alcalinos Industriales para Metales en México",
     metaDescription:
       "Proveedor de desengrasantes y detergentes alcalinos en México: limpieza profunda de metales para piezas mecanizadas, estampadas y previo a fosfatado. Líquidos, polvo y multimetálicos. Cotización 24 h.",
     hero: "Detergentes y desengrasantes industriales",
@@ -466,7 +471,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "pasivados",
     categoryId: "tratamiento-metales",
     pageTitle: "Pasivadores para Acero Inoxidable y Metales",
-    metaTitle: "Pasivadores para Acero Inoxidable en México (ASTM A967) | Trevigo",
+    metaTitle: "Pasivadores para Acero Inoxidable en México (ASTM A967)",
     metaDescription:
       "Proveedor de pasivadores químicos para acero inoxidable en México conforme ASTM A967 (Nitric y Citric). Eliminación de hierro libre y restauración de capa pasiva. Cotización 24 h.",
     hero: "Pasivadores químicos",
@@ -536,7 +541,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "aceites-metales",
     categoryId: "tratamiento-metales",
     pageTitle: "Aceites Industriales para Metales: Corte, Desmoldado y Protección",
-    metaTitle: "Aceites Industriales para Metales en México: Corte, Desmoldado | Trevigo",
+    metaTitle: "Aceites Industriales para Metales en México: Corte, Desmoldado",
     metaDescription:
       "Proveedor de aceites de corte solubles, desmoldantes de fundición y anticorrosivos temporales en México. Formulaciones técnicas para maquinado CNC, fundición y almacén. Cotización 24 h.",
     hero: "Aceites para metales",
@@ -607,7 +612,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "coagulantes",
     categoryId: "tratamiento-aguas",
     pageTitle: "Coagulantes para Tratamiento de Aguas Residuales Industriales",
-    metaTitle: "Coagulantes Industriales en México: PAC, Sulfato de Aluminio | Trevigo",
+    metaTitle: "Coagulantes Industriales en México: PAC, Sulfato de Aluminio",
     metaDescription:
       "Proveedor de coagulantes industriales en México: PAC (policloruro de aluminio), sulfato de aluminio, cloruro férrico y orgánicos. Cumplimiento NOM-001-SEMARNAT-2021. Jar Test sin costo.",
     hero: "Coagulantes industriales",
@@ -678,7 +683,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "floculantes",
     categoryId: "tratamiento-aguas",
     pageTitle: "Floculantes para Tratamiento de Aguas Industriales",
-    metaTitle: "Floculantes Industriales en México: Aniónicos, Catiónicos | Trevigo",
+    metaTitle: "Floculantes Industriales en México: Aniónicos, Catiónicos",
     metaDescription:
       "Proveedor de floculantes industriales en México: aniónicos, catiónicos y no-iónicos de alto peso molecular para PTAR. Sedimentación rápida y cumplimiento NOM-001. Cotización 24 h.",
     hero: "Floculantes industriales",
@@ -748,7 +753,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "poliacrilamidas",
     categoryId: "tratamiento-aguas",
     pageTitle: "Poliacrilamidas para Deshidratación de Lodos y Floculación",
-    metaTitle: "Poliacrilamidas en Polvo y Emulsión para PTAR en México | Trevigo",
+    metaTitle: "Poliacrilamidas en Polvo y Emulsión para PTAR en México",
     metaDescription:
       "Proveedor de poliacrilamidas (PAM) en México: polvo y emulsión para deshidratación de lodos en filtros prensa, centrífugas y bandas. Aniónicas, catiónicas y no-iónicas. Cotización 24 h.",
     hero: "Poliacrilamidas industriales",
@@ -818,7 +823,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "agentes-secuestrantes",
     categoryId: "tratamiento-aguas",
     pageTitle: "Agentes Secuestrantes y Quelantes para Metales en Aguas",
-    metaTitle: "Agentes Secuestrantes en México: EDTA, Quelantes, Fosfonatos | Trevigo",
+    metaTitle: "Agentes Secuestrantes en México: EDTA, Quelantes, Fosfonatos",
     metaDescription:
       "Proveedor de agentes secuestrantes y quelantes en México: EDTA tetrasódico, fosfonatos (HEDP, ATMP), ácido cítrico y gluconato. Tratamiento de metales pesados e incrustaciones. Cotización 24 h.",
     hero: "Agentes secuestrantes",
@@ -889,7 +894,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "inhibidores-oxigeno",
     categoryId: "tratamiento-aguas",
     pageTitle: "Inhibidores de Oxígeno para Calderas y Sistemas Cerrados",
-    metaTitle: "Inhibidores de Oxígeno para Calderas Industriales en México | Trevigo",
+    metaTitle: "Inhibidores de Oxígeno para Calderas Industriales en México",
     metaDescription:
       "Proveedor de inhibidores de oxígeno para calderas industriales en México: sulfito catalizado, eritorbato de sodio y aminas. Prevención de corrosión por picadura en vapor. Cotización 24 h.",
     hero: "Inhibidores de oxígeno",
@@ -960,7 +965,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "microbicidas",
     categoryId: "tratamiento-aguas",
     pageTitle: "Microbicidas Industriales para Aguas y Torres de Enfriamiento",
-    metaTitle: "Microbicidas para Torres de Enfriamiento en México (Legionella) | Trevigo",
+    metaTitle: "Microbicidas para Torres de Enfriamiento en México (Legionella)",
     metaDescription:
       "Proveedor de microbicidas industriales en México: oxidantes (cloro, bromo) y no-oxidantes (glutaraldehído, isotiazolinonas). Control de Legionella, biofouling y NOM-013-SSA1. Cotización 24 h.",
     hero: "Microbicidas industriales",
@@ -1029,7 +1034,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "lubricantes-especializados",
     categoryId: "lubricantes-aceites",
     pageTitle: "Lubricantes Especializados Industriales",
-    metaTitle: "Lubricantes Especializados en México: Sintéticos PAO, PAG, H1 NSF | Trevigo",
+    metaTitle: "Lubricantes Especializados en México: Sintéticos PAO, PAG, H1 NSF",
     metaDescription:
       "Proveedor de lubricantes especializados en México: sintéticos PAO, PAG, ésteres, alimenticios H1 NSF y de alta temperatura. Para aplicaciones críticas en industria. Cotización 24 h.",
     hero: "Lubricantes especializados",
@@ -1101,7 +1106,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "grasas-lubricantes",
     categoryId: "lubricantes-aceites",
     pageTitle: "Grasas Lubricantes Industriales",
-    metaTitle: "Grasas Lubricantes Industriales en México: Litio, EP, NLGI 2 | Trevigo",
+    metaTitle: "Grasas Lubricantes Industriales en México: Litio, EP, NLGI 2",
     metaDescription:
       "Proveedor de grasas lubricantes industriales en México: litio multipropósito, EP para cargas extremas, poliurea de alta temperatura y alimenticias H1 NSF. NLGI 0-3. Cotización 24 h.",
     hero: "Grasas lubricantes",
@@ -1174,7 +1179,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "lubricantes-formato-especial",
     categoryId: "lubricantes-aceites",
     pageTitle: "Lubricantes en Aerosol, Spray y Formato Especial",
-    metaTitle: "Lubricantes en Aerosol y Spray Industriales en México | Trevigo",
+    metaTitle: "Lubricantes en Aerosol y Spray Industriales en México",
     metaDescription:
       "Proveedor de lubricantes en aerosol y spray industriales en México: penetrantes (alternativa WD-40), lubricantes de cadena, anti-óxidos, desmoldantes y secos (PTFE, MoS₂). Cotización 24 h.",
     hero: "Lubricantes en formato especial",
@@ -1247,7 +1252,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "aceites-generales",
     categoryId: "lubricantes-aceites",
     pageTitle: "Aceites Industriales Generales: Hidráulicos, Engranajes, Compresores",
-    metaTitle: "Aceite Hidráulico ISO VG 46, Engranajes y Compresores en México | Trevigo",
+    metaTitle: "Aceite Hidráulico ISO VG 46, Engranajes y Compresores en México",
     metaDescription:
       "Proveedor de aceites industriales en México: hidráulicos ISO VG 32, 46, 68; aceites de engranajes ISO VG 220-460 y aceites de compresor (tornillo, pistón). Formulación técnica. Cotización 24 h.",
     hero: "Aceites industriales generales",
@@ -1325,7 +1330,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "aditivos-motor",
     categoryId: "aditivos-lubricantes",
     pageTitle: "Aditivos para Formular Aceite de Motor (Diesel, Gasolina, Gas)",
-    metaTitle: "Aditivos para Formular Aceite de Motor en México | Trevigo",
+    metaTitle: "Aditivos para Formular Aceite de Motor en México",
     metaDescription:
       "Paquetes de aditivos para formular aceites de motor: Diesel (API CF-CG4, CI-4 Plus, CK-4 Plus, CJ-4), gasolina (SL, SM-SN) y gas. Cubeta y tambo de 208 L. Asesoría de formulación.",
     hero: "Aditivos para aceite de motor",
@@ -1386,7 +1391,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "aditivos-transmision-fluidos",
     categoryId: "aditivos-lubricantes",
     pageTitle: "Aditivos para Formular Fluidos de Transmisión e Hidráulicos",
-    metaTitle: "Aditivos para Transmisión Automática, Tractor e Hidráulicos | Trevigo",
+    metaTitle: "Aditivos para Transmisión Automática, Tractor e Hidráulicos",
     metaDescription:
       "Paquetes de aditivos para formular fluidos de transmisión automática (ATF), tractor (UTTO/STOU), hidráulicos con y sin cenizas y TO-4/Allison C-4. Cubeta y tambo de 208 L.",
     hero: "Aditivos para transmisión y fluidos",
@@ -1446,7 +1451,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "aditivos-industriales",
     categoryId: "aditivos-lubricantes",
     pageTitle: "Aditivos para Formular Aceites Industriales (Engranes, Corte, 2 Tiempos)",
-    metaTitle: "Aditivos para Aceites de Engranes, Corte y Máquinas | Trevigo",
+    metaTitle: "Aditivos para Aceites de Engranes, Corte y Máquinas",
     metaDescription:
       "Paquetes de aditivos para formular aceites industriales: engranes EP, aceites de corte no manchantes, 2 tiempos y máquinas-herramienta. Cubeta y tambo de 208 L en México.",
     hero: "Aditivos para aceites industriales",
@@ -1505,7 +1510,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "aditivos-grasas",
     categoryId: "aditivos-lubricantes",
     pageTitle: "Aditivos EP para Formular Grasas Lubricantes",
-    metaTitle: "Aditivo EP para Grasas Lubricantes Industriales | Trevigo",
+    metaTitle: "Aditivo EP para Grasas Lubricantes Industriales",
     metaDescription:
       "Aditivo de extrema presión (EP) para formular grasas lubricantes industriales. Mejora la capacidad de carga y protección antidesgaste bajo cargas altas. Cubeta y tambo de 208 L.",
     hero: "Aditivos para grasas",
@@ -1552,7 +1557,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "aditivos-modificadores",
     categoryId: "aditivos-lubricantes",
     pageTitle: "Modificadores de Viscosidad y Aditivos Antifriccionantes",
-    metaTitle: "Modificador de Índice de Viscosidad y Antifriccionante | Trevigo",
+    metaTitle: "Modificador de Índice de Viscosidad y Antifriccionante",
     metaDescription:
       "Mejorador de índice de viscosidad (VI) para formular lubricantes multigrado y aditivo antifriccionante para lubricantes de baja fricción. Cubeta y tambo de 208 L en México.",
     hero: "Modificadores y mejoradores",
