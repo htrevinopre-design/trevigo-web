@@ -321,7 +321,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
             name: "Pasivador en Frío Libre de Ácido para Inoxidable",
             sku: "MX-PAS-002",
             shortDescription:
-              "Pasivador acuoso libre de ácido nítrico para acero inoxidable: elimina smut y manchas tras el decapado de soldaduras, restaura la capa pasiva en frío y su efluente es neutro.",
+              "Pasivador acuoso libre de ácido nítrico para acero inoxidable: elimina marcas y quemado de soldadura, smut y manchas post-decapado, y restaura la capa pasiva en frío. Efluente neutro.",
             formats: FORMATS_LIQUID,
           },
           {

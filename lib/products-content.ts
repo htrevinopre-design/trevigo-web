@@ -330,13 +330,14 @@ export const PRODUCT_CONTENT: Record<string, ProductContent> = {
   // ══════════════════════════════════════════════
   "pasivador-frio-libre-acido-inoxidable": {
     description:
-      "Pasivador acuoso libre de ácido nítrico para acero inoxidable, de aplicación en frío por aspersión. Tras el decapado de soldaduras o después de tratamientos mecánicos (esmerilado, cepillado, granallado), la superficie del inoxidable puede quedar con smut, manchas cafés o hierro libre que comprometen la capa pasiva. Este producto los elimina y restaura la pasivación aplicándose húmedo sobre húmedo, con 10-15 minutos de reacción y enjuague final con agua. Al no contener ácido nítrico, no genera humos nítricos, el enjuague resultante es neutro y no requiere tratamiento como residuo peligroso, y el producto se maneja y transporta como mercancía no peligrosa — una alternativa de seguridad superior frente a los pasivadores ácidos tradicionales.",
+      "Pasivador acuoso libre de ácido nítrico para acero inoxidable, de aplicación en frío por aspersión. Al soldar inoxidable (TIG, MIG o electrodo), el cordón y su zona afectada quedan con marcas de soldadura: el quemado o colores de temple (heat tint), y — tras el decapado o después de tratamientos mecánicos como esmerilado, cepillado o granallado — con smut, manchas cafés o hierro libre que comprometen la capa pasiva y provocan que el inoxidable se oxide justo donde se soldó. Este producto los elimina y restaura la pasivación aplicándose húmedo sobre húmedo, con 10-15 minutos de reacción y enjuague final con agua. Al no contener ácido nítrico, no genera humos nítricos, el enjuague resultante es neutro y no requiere tratamiento como residuo peligroso, y el producto se maneja y transporta como mercancía no peligrosa — una alternativa de seguridad superior frente a los pasivadores ácidos tradicionales.",
     applications: [
+      "Eliminación de marcas, quemado y colores de temple en cordones de soldadura TIG y MIG",
       "Pasivado de soldaduras de acero inoxidable después del decapado (gel o inmersión)",
       "Pasivado tras tratamiento mecánico: esmerilado, cepillado o granallado de inoxidable",
       "Remoción de hierro libre (smut) y manchas cafés post-decapado",
       "Aplicación en niebla durante el decapado para suprimir la formación de humos",
-      "Prevención de manchas por agua de enjuague de mala calidad",
+      "Prevención de manchas por agua de enjuague de mala calidad y de la oxidación que aparece después de soldar",
       "Fabricación de equipo alimenticio, farmacéutico y sanitario en inoxidable",
     ],
     notes:
