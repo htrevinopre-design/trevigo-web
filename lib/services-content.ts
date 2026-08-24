@@ -440,6 +440,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       },
     ],
     relatedProductIds: [
+      "pasivador-frio-libre-acido-inoxidable",
       "pasivador-aluminio-cromo",
       "desoxidante-acero-inoxidable",
       "inhibidor-oxidacion-temporal",

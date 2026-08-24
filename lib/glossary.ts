@@ -56,7 +56,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     ],
     category: "metales",
     relatedTerms: ["fosfatizado", "tropicalizado", "astm-a967", "cromo-hexavalente"],
-    relatedProductIds: ["pasivador-aluminio-cromo", "desoxidante-acero-inoxidable", "inhibidor-oxidacion-temporal"],
+    relatedProductIds: ["pasivador-frio-libre-acido-inoxidable", "pasivador-aluminio-cromo", "desoxidante-acero-inoxidable", "inhibidor-oxidacion-temporal"],
     relatedServiceSlugs: ["pasivado", "tropicalizado"],
   },
   {

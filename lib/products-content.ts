@@ -328,6 +328,21 @@ export const PRODUCT_CONTENT: Record<string, ProductContent> = {
   // ══════════════════════════════════════════════
   // PASIVADOS
   // ══════════════════════════════════════════════
+  "pasivador-frio-libre-acido-inoxidable": {
+    description:
+      "Pasivador acuoso libre de ácido nítrico para acero inoxidable, de aplicación en frío por aspersión. Tras el decapado de soldaduras o después de tratamientos mecánicos (esmerilado, cepillado, granallado), la superficie del inoxidable puede quedar con smut, manchas cafés o hierro libre que comprometen la capa pasiva. Este producto los elimina y restaura la pasivación aplicándose húmedo sobre húmedo, con 10-15 minutos de reacción y enjuague final con agua. Al no contener ácido nítrico, no genera humos nítricos, el enjuague resultante es neutro y no requiere tratamiento como residuo peligroso, y el producto se maneja y transporta como mercancía no peligrosa — una alternativa de seguridad superior frente a los pasivadores ácidos tradicionales.",
+    applications: [
+      "Pasivado de soldaduras de acero inoxidable después del decapado (gel o inmersión)",
+      "Pasivado tras tratamiento mecánico: esmerilado, cepillado o granallado de inoxidable",
+      "Remoción de hierro libre (smut) y manchas cafés post-decapado",
+      "Aplicación en niebla durante el decapado para suprimir la formación de humos",
+      "Prevención de manchas por agua de enjuague de mala calidad",
+      "Fabricación de equipo alimenticio, farmacéutico y sanitario en inoxidable",
+    ],
+    notes:
+      "Aplicar con equipo de aspersión resistente a químicos y enjuagar con agua, idealmente a presión. Usar guantes y protección ocular; almacenar cerrado, en lugar fresco y protegido de la luz.",
+  },
+
   "pasivador-aluminio-cromo": {
     description:
       "Pasivado cromático para aluminio y sus aleaciones que genera una capa de conversión amarilla-dorada (cromato amarillo) o transparente (cromato MIL-DTL-5541) altamente protectora. Es el estándar histórico de la industria aerospacial y militar para acabado de aluminio aeronáutico (2024, 7075, 6061). Mejora la resistencia a la corrosión de la aleación tratada en pruebas de niebla salina hasta 168 horas (cromato amarillo) y proporciona excelente base para pintura, primer y adhesivos estructurales. Cumple con MIL-DTL-5541 Tipo I Clase 1A y Class 3 para conductividad eléctrica conservada.",

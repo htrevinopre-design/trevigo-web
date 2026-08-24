@@ -317,6 +317,14 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
         name: "Pasivados",
         products: [
           {
+            id: "pasivador-frio-libre-acido-inoxidable",
+            name: "Pasivador en Frío Libre de Ácido para Inoxidable",
+            sku: "MX-PAS-002",
+            shortDescription:
+              "Pasivador acuoso libre de ácido nítrico para acero inoxidable: elimina smut y manchas tras el decapado de soldaduras, restaura la capa pasiva en frío y su efluente es neutro.",
+            formats: FORMATS_LIQUID,
+          },
+          {
             id: "pasivador-aluminio-cromo",
             name: "Pasivador de Aluminio con Cromo",
             sku: "MX-PAS-001",
