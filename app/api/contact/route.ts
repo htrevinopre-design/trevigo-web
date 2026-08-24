@@ -11,7 +11,7 @@ function getResend() {
 
 const FROM =
   process.env.RESEND_FROM_EMAIL ?? "Industrias Trevigo <noreply@trevigo.com.mx>";
-const TO = ["ventas@trevigo.com.mx", "htrevinopre@gmail.com", "Andress.trevi@gmail.com", "andres.trevino@trevigo.com.mx"];
+const TO = ["ventas@trevigo.com.mx", "htrevinopre@gmail.com", "Andress.trevi@gmail.com", "andres.trevino@trevigo.com.mx", "arturo@trevigo.com.mx"];
 
 // ─── HTML helpers ──────────────────────────────────────────────────────────
 
