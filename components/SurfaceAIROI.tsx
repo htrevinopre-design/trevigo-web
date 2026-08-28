@@ -4,8 +4,6 @@ import { useState, useMemo } from "react";
 
 // ─── ROI Assumptions ─────────────────────────────────────────────────────────
 const POWDER_EFFICIENCY = 0.10; // 10% = ahorro MÍNIMO publicado por coatingAI (usuarios reportan 16-30%)
-const REWORK_REDUCTION  = 0.50; // conservador vs caso documentado de 61% de mejora de calidad
-const KG_PER_PART       = 0.80; // kg/pieza promedio
 const CO2_PER_KG        = 5.5;  // kg CO₂ por kg de polvo
 const USD_TO_MXN        = 17;   // tipo de cambio de referencia
 
@@ -18,20 +16,16 @@ function formatMXN(n: number) {
 }
 
 export default function SurfaceAIROI() {
-  const [powderKg,   setPowderKg]   = useState(800);
-  const [rejectRate, setRejectRate] = useState(8);
-  const [powderUsd,  setPowderUsd]  = useState(8);
-  const [reworkCost, setReworkCost] = useState(100);
+  const [powderKg,  setPowderKg]  = useState(800);
+  const [powderUsd, setPowderUsd] = useState(8);
 
   const roi = useMemo(() => {
     const powderCostMxn = powderUsd * USD_TO_MXN;
-    const annualPowder = powderKg * 12 * POWDER_EFFICIENCY * powderCostMxn;
-    const monthlyParts = powderKg / KG_PER_PART;
-    const annualRework = monthlyParts * (rejectRate / 100) * REWORK_REDUCTION * reworkCost * 12;
-    const total        = annualPowder + annualRework;
-    const co2Tonnes    = (powderKg * 12 * POWDER_EFFICIENCY * CO2_PER_KG) / 1000;
-    return { annualPowder, annualRework, total, co2Tonnes };
-  }, [powderKg, rejectRate, powderUsd, reworkCost]);
+    const total     = powderKg * 12 * POWDER_EFFICIENCY * powderCostMxn;
+    const monthlyKg = powderKg * POWDER_EFFICIENCY;
+    const co2Tonnes = (powderKg * 12 * POWDER_EFFICIENCY * CO2_PER_KG) / 1000;
+    return { total, monthlyKg, co2Tonnes };
+  }, [powderKg, powderUsd]);
 
   return (
     <div className="bg-white border border-steel-200 rounded-2xl overflow-hidden shadow-sm">
@@ -93,52 +87,6 @@ export default function SurfaceAIROI() {
             </div>
           </div>
 
-          {/* Slider 3: rechazo */}
-          <div>
-            <div className="flex justify-between items-baseline mb-3">
-              <label className="text-steel-700 text-sm font-bold">
-                Tasa de rechazo / retrabajo actual
-              </label>
-              <span className="text-navy-950 font-black text-xl tabular-nums">
-                {rejectRate}
-                <span className="text-steel-400 text-sm font-normal ml-0.5">%</span>
-              </span>
-            </div>
-            <input
-              type="range" min={1} max={30} step={1}
-              value={rejectRate}
-              onChange={(e) => setRejectRate(Number(e.target.value))}
-              className="w-full h-1.5 rounded-full appearance-none bg-steel-200 accent-emerald-500 cursor-pointer"
-            />
-            <div className="flex justify-between mt-1.5">
-              <span className="text-steel-400 text-[10px]">1%</span>
-              <span className="text-steel-400 text-[10px]">30%</span>
-            </div>
-          </div>
-
-          {/* Slider 4: costo retrabajo */}
-          <div>
-            <div className="flex justify-between items-baseline mb-3">
-              <label className="text-steel-700 text-sm font-bold">
-                Costo por pieza retrabajada
-              </label>
-              <span className="text-navy-950 font-black text-xl tabular-nums">
-                ${reworkCost.toLocaleString("es-MX")}
-                <span className="text-steel-400 text-sm font-normal ml-1">MXN</span>
-              </span>
-            </div>
-            <input
-              type="range" min={20} max={2000} step={10}
-              value={reworkCost}
-              onChange={(e) => setReworkCost(Number(e.target.value))}
-              className="w-full h-1.5 rounded-full appearance-none bg-steel-200 accent-emerald-500 cursor-pointer"
-            />
-            <div className="flex justify-between mt-1.5">
-              <span className="text-steel-400 text-[10px]">$20 MXN</span>
-              <span className="text-steel-400 text-[10px]">$2,000 MXN</span>
-            </div>
-          </div>
-
           {/* Assumptions */}
           <div className="border border-steel-100 rounded-xl p-4 bg-steel-50">
             <p className="text-steel-400 text-[10px] font-black uppercase tracking-widest mb-2">
@@ -147,8 +95,6 @@ export default function SurfaceAIROI() {
             <ul className="space-y-1">
               {[
                 `Ahorro de polvo: ${POWDER_EFFICIENCY * 100}% (el mínimo publicado; usuarios reportan 16-30%)`,
-                `Reducción de retrabajo: ${REWORK_REDUCTION * 100}% (conservador)`,
-                `Piezas estimadas a ${KG_PER_PART} kg de polvo por pieza`,
                 `Tipo de cambio de referencia: $${USD_TO_MXN} MXN/USD`,
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-steel-500 text-[11px]">
@@ -176,41 +122,26 @@ export default function SurfaceAIROI() {
             </p>
           </div>
 
-          {/* Breakdown */}
-          <div className="space-y-3">
-            {[
-              {
-                label: "Ahorro en polvo (eficiencia de transferencia)",
-                value: roi.annualPowder,
-                barClass: "bg-emerald-500",
-                textClass: "text-emerald-700",
-                bar: roi.total > 0 ? roi.annualPowder / roi.total : 0,
-              },
-              {
-                label: "Ahorro en retrabajo y rechazo de piezas",
-                value: roi.annualRework,
-                barClass: "bg-blue-500",
-                textClass: "text-blue-700",
-                bar: roi.total > 0 ? roi.annualRework / roi.total : 0,
-              },
-            ].map((row) => (
-              <div key={row.label} className="bg-white border border-steel-200 rounded-lg p-4">
-                <div className="flex justify-between items-baseline mb-2">
-                  <span className="text-steel-500 text-[11px] leading-tight max-w-[60%]">
-                    {row.label}
-                  </span>
-                  <span className={`${row.textClass} font-black text-sm tabular-nums`}>
-                    {formatMXN(row.value)}
-                  </span>
-                </div>
-                <div className="h-1.5 rounded-full bg-steel-100 overflow-hidden">
-                  <div
-                    className={`h-full rounded-full transition-all duration-500 ${row.barClass}`}
-                    style={{ width: `${row.bar * 100}%` }}
-                  />
-                </div>
-              </div>
-            ))}
+          {/* Powder saved */}
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-white border border-steel-200 rounded-lg p-4 text-center">
+              <p className="text-steel-400 text-[10px] font-black uppercase tracking-widest mb-1">
+                Polvo ahorrado / mes
+              </p>
+              <p className="text-emerald-700 font-black text-xl tabular-nums">
+                {Math.round(roi.monthlyKg).toLocaleString("es-MX")}{" "}
+                <span className="text-steel-400 font-normal text-sm">kg</span>
+              </p>
+            </div>
+            <div className="bg-white border border-steel-200 rounded-lg p-4 text-center">
+              <p className="text-steel-400 text-[10px] font-black uppercase tracking-widest mb-1">
+                Polvo ahorrado / año
+              </p>
+              <p className="text-emerald-700 font-black text-xl tabular-nums">
+                {Math.round(roi.monthlyKg * 12).toLocaleString("es-MX")}{" "}
+                <span className="text-steel-400 font-normal text-sm">kg</span>
+              </p>
+            </div>
           </div>
 
           {/* Carbon footprint */}
