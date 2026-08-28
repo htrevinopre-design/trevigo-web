@@ -9,11 +9,14 @@ const REWORK_REDUCTION  = 0.50; // conservador vs caso documentado de 61% de mej
 const REWORK_COST_MXN   = 650;  // $/pieza retrabajada
 const KG_PER_PART       = 0.80; // kg/pieza promedio
 const CO2_PER_KG        = 5.5;  // kg CO₂ por kg de polvo
+const SERVICE_RATE      = 0.06; // tarifa de servicio sobre el valor del consumo base
 
 function formatMXN(n: number) {
-  if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(2)} M MXN`;
-  if (n >= 1_000)     return `$${Math.round(n / 1_000).toLocaleString("es-MX")} K MXN`;
-  return `$${Math.round(n).toLocaleString("es-MX")} MXN`;
+  const sign = n < 0 ? "−" : "";
+  const abs = Math.abs(n);
+  if (abs >= 1_000_000) return `${sign}$${(abs / 1_000_000).toFixed(2)} M MXN`;
+  if (abs >= 1_000)     return `${sign}$${Math.round(abs / 1_000).toLocaleString("es-MX")} K MXN`;
+  return `${sign}$${Math.round(abs).toLocaleString("es-MX")} MXN`;
 }
 
 export default function SurfaceAIROI() {
@@ -21,13 +24,16 @@ export default function SurfaceAIROI() {
   const [rejectRate, setRejectRate] = useState(8);
 
   const roi = useMemo(() => {
-    const annualPowder = powderKg * 12 * POWDER_EFFICIENCY * POWDER_COST_MXN;
+    const annualPowderValue = powderKg * 12 * POWDER_COST_MXN;
+    const annualPowder = annualPowderValue * POWDER_EFFICIENCY;
     const monthlyParts = powderKg / KG_PER_PART;
     const annualRework = monthlyParts * (rejectRate / 100) * REWORK_REDUCTION * REWORK_COST_MXN * 12;
     const total        = annualPowder + annualRework;
+    const serviceCost  = annualPowderValue * SERVICE_RATE;
+    const net          = total - serviceCost;
+    const ratio        = serviceCost > 0 ? total / serviceCost : 0;
     const co2Tonnes    = (powderKg * 12 * POWDER_EFFICIENCY * CO2_PER_KG) / 1000;
-    const payback      = total > 0 ? Math.max(3, Math.round(480_000 / (total / 12))) : 0;
-    return { annualPowder, annualRework, total, co2Tonnes, payback };
+    return { annualPowder, annualRework, total, serviceCost, net, ratio, co2Tonnes };
   }, [powderKg, rejectRate]);
 
   return (
@@ -56,14 +62,14 @@ export default function SurfaceAIROI() {
               </span>
             </div>
             <input
-              type="range" min={100} max={5000} step={50}
+              type="range" min={100} max={100000} step={100}
               value={powderKg}
               onChange={(e) => setPowderKg(Number(e.target.value))}
               className="w-full h-1.5 rounded-full appearance-none bg-steel-200 accent-emerald-500 cursor-pointer"
             />
             <div className="flex justify-between mt-1.5">
               <span className="text-steel-400 text-[10px]">100 kg</span>
-              <span className="text-steel-400 text-[10px]">5,000 kg</span>
+              <span className="text-steel-400 text-[10px]">100 t (100,000 kg)</span>
             </div>
           </div>
 
@@ -98,9 +104,10 @@ export default function SurfaceAIROI() {
             <ul className="space-y-1">
               {[
                 `Costo polvo: $${POWDER_COST_MXN}/kg`,
-                `Mejora en transferencia: +${POWDER_EFFICIENCY * 100}%`,
-                `Reducción de retrabajo: ${REWORK_REDUCTION * 100}%`,
+                `Ahorro de polvo: ${POWDER_EFFICIENCY * 100}% (el mínimo publicado; usuarios reportan 16-30%)`,
+                `Reducción de retrabajo: ${REWORK_REDUCTION * 100}% (conservador)`,
                 `Costo por retrabajo: $${REWORK_COST_MXN}/pieza`,
+                "El costo del servicio ya está descontado del resultado",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-steel-500 text-[11px]">
                   <span className="w-1 h-1 rounded-full bg-emerald-400 shrink-0" />
@@ -116,14 +123,14 @@ export default function SurfaceAIROI() {
           {/* Total saving */}
           <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 text-center">
             <p className="text-emerald-700 text-[10px] font-black uppercase tracking-widest mb-2">
-              Ahorro anual estimado
+              Ahorro neto anual estimado
             </p>
             <p className="text-4xl sm:text-5xl font-black text-navy-950 tabular-nums leading-none mb-1">
-              {formatMXN(roi.total)}
+              {formatMXN(roi.net)}
             </p>
             <p className="text-steel-500 text-xs mt-2">
-              recuperación de inversión en{" "}
-              <span className="text-emerald-600 font-black">{roi.payback} meses</span>
+              con el costo del servicio ya descontado · cada $1 invertido regresa{" "}
+              <span className="text-emerald-600 font-black">${roi.ratio.toFixed(1)}</span>
             </p>
           </div>
 
@@ -143,6 +150,13 @@ export default function SurfaceAIROI() {
                 barClass: "bg-blue-500",
                 textClass: "text-blue-700",
                 bar: roi.total > 0 ? roi.annualRework / roi.total : 0,
+              },
+              {
+                label: "(−) Costo anual del servicio",
+                value: -roi.serviceCost,
+                barClass: "bg-steel-400",
+                textClass: "text-steel-600",
+                bar: roi.total > 0 ? roi.serviceCost / roi.total : 0,
               },
             ].map((row) => (
               <div key={row.label} className="bg-white border border-steel-200 rounded-lg p-4">
