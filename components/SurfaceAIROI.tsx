@@ -3,13 +3,11 @@
 import { useState, useMemo } from "react";
 
 // ─── ROI Assumptions ─────────────────────────────────────────────────────────
-const POWDER_COST_MXN   = 85;   // $/kg promedio polvo recubrimiento
 const POWDER_EFFICIENCY = 0.10; // 10% = ahorro MÍNIMO publicado por coatingAI (usuarios reportan 16-30%)
 const REWORK_REDUCTION  = 0.50; // conservador vs caso documentado de 61% de mejora de calidad
-const REWORK_COST_MXN   = 650;  // $/pieza retrabajada
 const KG_PER_PART       = 0.80; // kg/pieza promedio
 const CO2_PER_KG        = 5.5;  // kg CO₂ por kg de polvo
-const SERVICE_RATE      = 0.06; // tarifa de servicio sobre el valor del consumo base
+const USD_TO_MXN        = 17;   // tipo de cambio de referencia
 
 function formatMXN(n: number) {
   const sign = n < 0 ? "−" : "";
@@ -22,19 +20,18 @@ function formatMXN(n: number) {
 export default function SurfaceAIROI() {
   const [powderKg,   setPowderKg]   = useState(800);
   const [rejectRate, setRejectRate] = useState(8);
+  const [powderUsd,  setPowderUsd]  = useState(8);
+  const [reworkCost, setReworkCost] = useState(100);
 
   const roi = useMemo(() => {
-    const annualPowderValue = powderKg * 12 * POWDER_COST_MXN;
-    const annualPowder = annualPowderValue * POWDER_EFFICIENCY;
+    const powderCostMxn = powderUsd * USD_TO_MXN;
+    const annualPowder = powderKg * 12 * POWDER_EFFICIENCY * powderCostMxn;
     const monthlyParts = powderKg / KG_PER_PART;
-    const annualRework = monthlyParts * (rejectRate / 100) * REWORK_REDUCTION * REWORK_COST_MXN * 12;
+    const annualRework = monthlyParts * (rejectRate / 100) * REWORK_REDUCTION * reworkCost * 12;
     const total        = annualPowder + annualRework;
-    const serviceCost  = annualPowderValue * SERVICE_RATE;
-    const net          = total - serviceCost;
-    const ratio        = serviceCost > 0 ? total / serviceCost : 0;
     const co2Tonnes    = (powderKg * 12 * POWDER_EFFICIENCY * CO2_PER_KG) / 1000;
-    return { annualPowder, annualRework, total, serviceCost, net, ratio, co2Tonnes };
-  }, [powderKg, rejectRate]);
+    return { annualPowder, annualRework, total, co2Tonnes };
+  }, [powderKg, rejectRate, powderUsd, reworkCost]);
 
   return (
     <div className="bg-white border border-steel-200 rounded-2xl overflow-hidden shadow-sm">
@@ -49,8 +46,8 @@ export default function SurfaceAIROI() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-steel-100">
 
         {/* ─── Inputs ──────────────────────────────────────────────── */}
-        <div className="p-8 space-y-10">
-          {/* Slider 1 */}
+        <div className="p-8 space-y-8">
+          {/* Slider 1: consumo */}
           <div>
             <div className="flex justify-between items-baseline mb-3">
               <label className="text-steel-700 text-sm font-bold">
@@ -73,7 +70,30 @@ export default function SurfaceAIROI() {
             </div>
           </div>
 
-          {/* Slider 2 */}
+          {/* Slider 2: precio polvo */}
+          <div>
+            <div className="flex justify-between items-baseline mb-3">
+              <label className="text-steel-700 text-sm font-bold">
+                Precio del polvo
+              </label>
+              <span className="text-navy-950 font-black text-xl tabular-nums">
+                ${powderUsd}
+                <span className="text-steel-400 text-sm font-normal ml-1">USD/kg</span>
+              </span>
+            </div>
+            <input
+              type="range" min={3} max={25} step={1}
+              value={powderUsd}
+              onChange={(e) => setPowderUsd(Number(e.target.value))}
+              className="w-full h-1.5 rounded-full appearance-none bg-steel-200 accent-emerald-500 cursor-pointer"
+            />
+            <div className="flex justify-between mt-1.5">
+              <span className="text-steel-400 text-[10px]">$3 USD</span>
+              <span className="text-steel-400 text-[10px]">$25 USD</span>
+            </div>
+          </div>
+
+          {/* Slider 3: rechazo */}
           <div>
             <div className="flex justify-between items-baseline mb-3">
               <label className="text-steel-700 text-sm font-bold">
@@ -96,6 +116,29 @@ export default function SurfaceAIROI() {
             </div>
           </div>
 
+          {/* Slider 4: costo retrabajo */}
+          <div>
+            <div className="flex justify-between items-baseline mb-3">
+              <label className="text-steel-700 text-sm font-bold">
+                Costo por pieza retrabajada
+              </label>
+              <span className="text-navy-950 font-black text-xl tabular-nums">
+                ${reworkCost.toLocaleString("es-MX")}
+                <span className="text-steel-400 text-sm font-normal ml-1">MXN</span>
+              </span>
+            </div>
+            <input
+              type="range" min={20} max={2000} step={10}
+              value={reworkCost}
+              onChange={(e) => setReworkCost(Number(e.target.value))}
+              className="w-full h-1.5 rounded-full appearance-none bg-steel-200 accent-emerald-500 cursor-pointer"
+            />
+            <div className="flex justify-between mt-1.5">
+              <span className="text-steel-400 text-[10px]">$20 MXN</span>
+              <span className="text-steel-400 text-[10px]">$2,000 MXN</span>
+            </div>
+          </div>
+
           {/* Assumptions */}
           <div className="border border-steel-100 rounded-xl p-4 bg-steel-50">
             <p className="text-steel-400 text-[10px] font-black uppercase tracking-widest mb-2">
@@ -103,11 +146,10 @@ export default function SurfaceAIROI() {
             </p>
             <ul className="space-y-1">
               {[
-                `Costo polvo: $${POWDER_COST_MXN}/kg`,
                 `Ahorro de polvo: ${POWDER_EFFICIENCY * 100}% (el mínimo publicado; usuarios reportan 16-30%)`,
                 `Reducción de retrabajo: ${REWORK_REDUCTION * 100}% (conservador)`,
-                `Costo por retrabajo: $${REWORK_COST_MXN}/pieza`,
-                "El costo del servicio ya está descontado del resultado",
+                `Piezas estimadas a ${KG_PER_PART} kg de polvo por pieza`,
+                `Tipo de cambio de referencia: $${USD_TO_MXN} MXN/USD`,
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-steel-500 text-[11px]">
                   <span className="w-1 h-1 rounded-full bg-emerald-400 shrink-0" />
@@ -123,14 +165,14 @@ export default function SurfaceAIROI() {
           {/* Total saving */}
           <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6 text-center">
             <p className="text-emerald-700 text-[10px] font-black uppercase tracking-widest mb-2">
-              Ahorro neto anual estimado
+              Ahorro anual estimado
             </p>
             <p className="text-4xl sm:text-5xl font-black text-navy-950 tabular-nums leading-none mb-1">
-              {formatMXN(roi.net)}
+              {formatMXN(roi.total)}
             </p>
             <p className="text-steel-500 text-xs mt-2">
-              con el costo del servicio ya descontado · cada $1 invertido regresa{" "}
-              <span className="text-emerald-600 font-black">${roi.ratio.toFixed(1)}</span>
+              calculado con el ahorro mínimo publicado —{" "}
+              <span className="text-emerald-600 font-black">el escenario conservador</span>
             </p>
           </div>
 
@@ -150,13 +192,6 @@ export default function SurfaceAIROI() {
                 barClass: "bg-blue-500",
                 textClass: "text-blue-700",
                 bar: roi.total > 0 ? roi.annualRework / roi.total : 0,
-              },
-              {
-                label: "(−) Costo anual del servicio",
-                value: -roi.serviceCost,
-                barClass: "bg-steel-400",
-                textClass: "text-steel-600",
-                bar: roi.total > 0 ? roi.serviceCost / roi.total : 0,
               },
             ].map((row) => (
               <div key={row.label} className="bg-white border border-steel-200 rounded-lg p-4">
