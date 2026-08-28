@@ -50,6 +50,10 @@ export interface Product {
   name: string;
   sku: string;
   shortDescription: string;
+  /** Override del metaTitle para CTR (el layout agrega " | Trevigo"). */
+  seoTitle?: string;
+  /** Override del metaDescription. Si no se define usa shortDescription. */
+  seoDescription?: string;
   formats: ProductFormat[];
 }
 
@@ -186,6 +190,9 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
             id: "limpiador-desoxidante-fosfatizante",
             name: "Limpiador y Desoxidante Fosfatizante",
             sku: "MX-DESOX-003",
+            seoTitle: "Fosfatizante Líquido 3 en 1: Desoxida y Fosfatiza",
+            seoDescription:
+              "Fosfatizante líquido que limpia, quita el óxido y deposita el fosfato en una sola etapa. Cuándo conviene, cómo se aplica y venta por porrón, tambo o tote.",
             shortDescription:
               "Limpia, desoxida y fosfatiza en un solo paso, optimizando el proceso de pretratamiento metálico.",
             formats: FORMATS_LIQUID,
@@ -224,6 +231,9 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
             id: "fosfato-zinc-calcio-alta-resistencia",
             name: "Fosfato de Zinc-Calcio de Alta Resistencia",
             sku: "MX-FOSF-002",
+            seoTitle: "Fosfato de Zinc de Alta Resistencia: Usos y Venta",
+            seoDescription:
+              "Fosfato de zinc de alto peso para piezas que van a vivir en costa, intemperie o ambientes agresivos. Cuándo conviene y venta por tambo o tote desde Monterrey.",
             shortDescription:
               "Fosfato de zinc-calcio de alto peso para aplicaciones que demandan máxima resistencia a la corrosión.",
             formats: FORMATS_LIQUID,

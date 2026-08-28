@@ -29,8 +29,8 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   const product = allProducts.find((p) => p.id === params.id);
   if (!product) return { title: "Producto no encontrado" };
   return {
-    title: product.name,
-    description: product.shortDescription,
+    title: product.seoTitle ?? product.name,
+    description: product.seoDescription ?? product.shortDescription,
     alternates: { canonical: `${COMPANY.url}/productos/${product.id}` },
   };
 }

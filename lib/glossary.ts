@@ -36,10 +36,30 @@ export const GLOSSARY: GlossaryEntry[] = [
       "Existen tres tipos principales: fosfato al hierro (capa amorfa, para piezas de baja exigencia), fosfato al zinc (capa cristalina, estándar automotriz) y fosfato tricatiónico zinc-níquel-manganeso (alta resistencia, sectores premium).",
     ],
     category: "metales",
-    relatedTerms: ["pasivado", "decapado", "tropicalizado", "ph"],
+    relatedTerms: ["fosfatizante", "pasivado", "decapado", "tropicalizado", "ph"],
     relatedProductIds: ["fosfato-zinc-brillante", "fosfato-zinc-calcio-alta-resistencia", "limpiador-fosfato-fierro-multimetales"],
     relatedArticleSlugs: ["fosfatizado-zinc-pretratamiento-pintura"],
     relatedServiceSlugs: ["pintura-electrostatica"],
+  },
+  {
+    slug: "fosfatizante",
+    term: "Fosfatizante",
+    seoTitle: "Fosfatizante: Qué Es, Tipos y Cuál Elegir",
+    seoDescription:
+      "Un fosfatizante es el químico que deposita la capa de fosfato sobre el metal antes de pintar. Diferencias entre fosfato de hierro, de zinc y los 3 en 1.",
+    shortDef:
+      "Producto químico a base de ácido fosfórico y sales metálicas que deposita una capa de fosfato sobre el acero para anclar la pintura y frenar la corrosión.",
+    longDef: [
+      "Conviene separar dos palabras que en planta se usan como si fueran lo mismo: el fosfatizante es el químico; el fosfatizado es el proceso. Un fosfatizante es una solución ácida —ácido fosfórico más sales de zinc, hierro o manganeso— que al tocar la pieza reacciona con la superficie y deja una capa de cristales de fosfato pegada al metal. Sobre esa capa la pintura agarra de verdad; sin ella, se desprende a las primeras semanas de humedad.",
+      "En el mercado hay tres familias. El fosfatizante de hierro es el más sencillo: deja una capa amorfa y delgada, suficiente para muebles metálicos, gabinetes y piezas que vivirán bajo techo. El de zinc deposita una capa cristalina más pesada y es el estándar automotriz, donde se piden cientos de horas de niebla salina. Y están los combinados 3 en 1, que desengrasan, quitan el óxido y fosfatizan en la misma etapa: la solución práctica para talleres que no tienen espacio ni volumen para justificar una línea completa de siete etapas.",
+      "¿Cuál elegir? La pregunta correcta no es cuál es mejor, sino qué va a aguantar la pieza. Si el producto final vive en interiores, un fosfato de hierro bien operado sobra y cuesta menos. Si va a intemperie, costa o especificación automotriz, no hay atajo: fosfato de zinc. Y si la restricción es el espacio o el número de tinas, un 3 en 1 da un resultado intermedio honesto.",
+      "La aplicación es por aspersión o inmersión, típicamente entre 40 y 60 °C, con tiempos de contacto de 1 a 3 minutos según el producto. Lo que más falla en la práctica no es el químico sino el control del baño: concentración, temperatura y acidez libre se revisan a diario, porque un baño desbalanceado deposita mal aunque el fosfatizante sea bueno.",
+    ],
+    category: "metales",
+    relatedTerms: ["fosfatizado", "decapado", "ph"],
+    relatedProductIds: ["limpiador-desoxidante-fosfatizante", "fosfato-zinc-brillante", "limpiador-fosfato-fierro-multimetales"],
+    relatedArticleSlugs: ["fosfatizado-zinc-pretratamiento-pintura"],
+    relatedServiceSlugs: ["fosfatizado"],
   },
   {
     slug: "pasivado",
@@ -81,9 +101,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "tropicalizado",
     term: "Tropicalizado",
-    seoTitle: "Tropicalizado de metales: qué es, proceso y aplicaciones",
+    seoTitle: "Tropicalizado: Qué Es, Cuándo Exigirlo y Sus 3 Capas",
     seoDescription:
-      "Tropicalizado: sistema multicapa de protección anticorrosión para acero y zinc en climas húmedos y zonas costeras. Proceso, pasos y normas industriales.",
+      "El tropicalizado protege acero y zinc en clima húmedo y costero con un sistema de 3 capas. Qué es, cuándo lo exige tu cliente y cómo se aplica, en claro.",
     shortDef:
       "Sistema multicapa de protección anticorrosión para piezas metálicas en climas húmedos y zonas costeras.",
     longDef: [
@@ -660,6 +680,9 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "coa",
     term: "COA (Certificate of Analysis)",
+    seoTitle: "COA (Certificado de Análisis): Qué Es y Cómo Leerlo",
+    seoDescription:
+      "El COA certifica que un lote de producto químico cumple especificaciones. Qué contiene, cómo leerlo y qué exigirle a tu proveedor en cada entrega.",
     shortDef:
       "Documento que certifica que un lote específico de producto químico cumple con las especificaciones técnicas declaradas.",
     longDef: [
