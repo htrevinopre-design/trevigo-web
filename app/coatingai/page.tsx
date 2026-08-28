@@ -454,15 +454,14 @@ export default function CoatingAIPage() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-black text-navy-950 uppercase leading-tight mb-4">
-                ¿Por qué con Trevigo y{" "}
-                <span className="text-blue-600">no directo?</span>
+                coatingAI en México,{" "}
+                <span className="text-blue-600">implementado por Trevigo</span>
               </h2>
               <div className="w-12 h-1 bg-blue-500 mb-7" />
 
               <p className="text-steel-600 text-base leading-relaxed mb-6">
-                Mismo precio que comprar directo — como distribuidores
-                autorizados no cobramos de más. La diferencia es lo que viene
-                alrededor:{" "}
+                Como distribuidor autorizado, el software cuesta lo mismo que
+                con el fabricante. Lo que agregamos es todo lo demás:{" "}
                 <strong className="text-navy-950">
                   llevamos 35 años dentro de líneas de acabado como la tuya
                 </strong>

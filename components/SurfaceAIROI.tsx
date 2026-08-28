@@ -5,14 +5,11 @@ import { useState, useMemo } from "react";
 // ─── ROI Assumptions ─────────────────────────────────────────────────────────
 const POWDER_EFFICIENCY = 0.10; // 10% = ahorro MÍNIMO publicado por coatingAI (usuarios reportan 16-30%)
 const CO2_PER_KG        = 5.5;  // kg CO₂ por kg de polvo
-const USD_TO_MXN        = 17;   // tipo de cambio de referencia
 
-function formatMXN(n: number) {
-  const sign = n < 0 ? "−" : "";
-  const abs = Math.abs(n);
-  if (abs >= 1_000_000) return `${sign}$${(abs / 1_000_000).toFixed(2)} M MXN`;
-  if (abs >= 1_000)     return `${sign}$${Math.round(abs / 1_000).toLocaleString("es-MX")} K MXN`;
-  return `${sign}$${Math.round(abs).toLocaleString("es-MX")} MXN`;
+function formatUSD(n: number) {
+  if (n >= 1_000_000) return `$${(n / 1_000_000).toFixed(2)} M USD`;
+  if (n >= 1_000)     return `$${Math.round(n / 1_000).toLocaleString("es-MX")} K USD`;
+  return `$${Math.round(n).toLocaleString("es-MX")} USD`;
 }
 
 export default function SurfaceAIROI() {
@@ -20,8 +17,7 @@ export default function SurfaceAIROI() {
   const [powderUsd, setPowderUsd] = useState(8);
 
   const roi = useMemo(() => {
-    const powderCostMxn = powderUsd * USD_TO_MXN;
-    const total     = powderKg * 12 * POWDER_EFFICIENCY * powderCostMxn;
+    const total     = powderKg * 12 * POWDER_EFFICIENCY * powderUsd;
     const monthlyKg = powderKg * POWDER_EFFICIENCY;
     const co2Tonnes = (powderKg * 12 * POWDER_EFFICIENCY * CO2_PER_KG) / 1000;
     return { total, monthlyKg, co2Tonnes };
@@ -95,7 +91,6 @@ export default function SurfaceAIROI() {
             <ul className="space-y-1">
               {[
                 `Ahorro de polvo: ${POWDER_EFFICIENCY * 100}% (el mínimo publicado; usuarios reportan 16-30%)`,
-                `Tipo de cambio de referencia: $${USD_TO_MXN} MXN/USD`,
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2 text-steel-500 text-[11px]">
                   <span className="w-1 h-1 rounded-full bg-emerald-400 shrink-0" />
@@ -114,7 +109,7 @@ export default function SurfaceAIROI() {
               Ahorro anual estimado
             </p>
             <p className="text-4xl sm:text-5xl font-black text-navy-950 tabular-nums leading-none mb-1">
-              {formatMXN(roi.total)}
+              {formatUSD(roi.total)}
             </p>
             <p className="text-steel-500 text-xs mt-2">
               calculado con el ahorro mínimo publicado —{" "}
