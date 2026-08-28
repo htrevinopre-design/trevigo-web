@@ -29,6 +29,12 @@ const nextConfig = {
   // (capturan equity SEO de backlinks viejos + reemplazan 404s en Bing/Google)
   async redirects() {
     return [
+      // ── SurfaceAI renombrado a coatingAI (marca real del producto) ──
+      {
+        source: "/surface-ai",
+        destination: "/coatingai",
+        permanent: true,
+      },
       // ── Pages específicas del Shopify viejo ──
       {
         source: "/pages/productos-1",

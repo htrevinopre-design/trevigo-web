@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/nosotros`,          lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/contacto`,          lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/sak`,               lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/surface-ai`,        lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${baseUrl}/coatingai`,         lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${baseUrl}/recursos`,          lastModified: now, changeFrequency: "weekly",  priority: 0.85 },
     { url: `${baseUrl}/casos-de-exito`,    lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/glosario`,          lastModified: now, changeFrequency: "monthly", priority: 0.8 },

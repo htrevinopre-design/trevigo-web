@@ -4,8 +4,8 @@ import { useState, useMemo } from "react";
 
 // ─── ROI Assumptions ─────────────────────────────────────────────────────────
 const POWDER_COST_MXN   = 85;   // $/kg promedio polvo recubrimiento
-const POWDER_EFFICIENCY = 0.12; // +12% transferencia con SurfaceAI
-const REWORK_REDUCTION  = 0.60; // -60% retrabajo
+const POWDER_EFFICIENCY = 0.10; // 10% = ahorro MÍNIMO publicado por coatingAI (usuarios reportan 16-30%)
+const REWORK_REDUCTION  = 0.50; // conservador vs caso documentado de 61% de mejora de calidad
 const REWORK_COST_MXN   = 650;  // $/pieza retrabajada
 const KG_PER_PART       = 0.80; // kg/pieza promedio
 const CO2_PER_KG        = 5.5;  // kg CO₂ por kg de polvo
@@ -36,7 +36,7 @@ export default function SurfaceAIROI() {
       <div className="px-6 py-4 border-b border-steel-100 flex items-center gap-3 bg-steel-50">
         <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
         <span className="text-emerald-700 text-xs font-black uppercase tracking-widest">
-          Calculadora de ROI · SurfaceAI
+          Calculadora de ROI · coatingAI (escenario conservador)
         </span>
       </div>
 

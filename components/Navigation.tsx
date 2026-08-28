@@ -200,13 +200,13 @@ export default function Navigation() {
                 Sak™
               </Link>
 
-              {/* SURFACEAI — special branded link */}
+              {/* COATINGAI — special branded link */}
               <Link
-                href="/surface-ai"
+                href="/coatingai"
                 onMouseEnter={() => setActiveMenu(null)}
-                className={`flex items-center gap-1.5 px-4 h-full text-sm font-black border-b-2 transition-all text-emerald-600 hover:text-emerald-700 ${isActive("/surface-ai") ? "border-emerald-500" : "border-transparent hover:border-emerald-500"}`}
+                className={`flex items-center gap-1.5 px-4 h-full text-sm font-black border-b-2 transition-all text-emerald-600 hover:text-emerald-700 ${isActive("/coatingai") ? "border-emerald-500" : "border-transparent hover:border-emerald-500"}`}
               >
-                SurfaceAI
+                coatingAI
               </Link>
 
               {/* INDUSTRIAS */}
@@ -671,13 +671,13 @@ export default function Navigation() {
               Sak™
             </Link>
 
-            {/* SurfaceAI mobile link */}
+            {/* coatingAI mobile link */}
             <Link
-              href="/surface-ai"
+              href="/coatingai"
               className="block px-6 py-3 text-emerald-600 font-black text-sm border-t border-steel-100"
               onClick={() => setMobileOpen(false)}
             >
-              SurfaceAI
+              coatingAI
             </Link>
 
             {/* Industrias accordion */}
