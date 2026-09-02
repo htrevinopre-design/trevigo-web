@@ -185,6 +185,13 @@ export const SERVICES_CONTENT: ServiceContent[] = [
         ],
       },
       {
+        heading: "Despintado de piezas rechazadas: recuperar en vez de desechar",
+        paragraphs: [
+          "Una pieza rechazada por defecto de pintura (escurrido, cráteres, bajo espesor, color equivocado, contaminación) conserva todo el valor del metal y del formado. Mandarla a chatarra cuesta la pieza completa; despintarla cuesta una fracción. El circuito de recuperación es directo: remover la pintura defectuosa por inmersión, repetir el pretratamiento (desengrase y fosfatizado) y volver a pintar. Bien operado, el retrabajo de piezas rechazadas convierte una merma en producto vendible.",
+          "La decisión de recuperar o desechar es económica: piezas de valor medio y alto casi siempre justifican el despintado; piezas de lámina muy delgada o alto volumen y bajo costo unitario pueden no justificarlo. Te ayudamos a correr la prueba con tus piezas reales y a montar el circuito de retrabajo con el removedor adecuado para tu tipo de pintura.",
+        ],
+      },
+      {
         heading: "Manejo seguro de removedores químicos",
         paragraphs: [
           "Los removedores requieren equipo de protección personal completo (mandil, lentes, guantes resistentes a alcalinos o solventes), extracción adecuada de vapores y protocolos de almacenamiento estricto. Asesoramos en la implementación de procedimientos seguros y disposición de baños agotados como residuo peligroso conforme a NOM-052-SEMARNAT.",
@@ -195,6 +202,10 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       {
         q: "¿Cuál es el mejor removedor de pintura industrial?",
         a: "No hay un removedor universal: el mejor es el que remueve TU pintura sin dañar TU sustrato al menor costo total. Para powder coating sobre acero, un alcalino caliente suele ganar; para epóxicos curados o tiempos cortos, un formulado intensivo. Hacemos pruebas con tus piezas reales antes de recomendarte uno.",
+      },
+      {
+        q: "¿Conviene despintar una pieza rechazada o mandarla a chatarra?",
+        a: "Casi siempre conviene recuperarla: el despintado cuesta una fracción del valor de la pieza, y tras repetir el pretratamiento la pieza se repinta como nueva. La excepción son piezas de muy bajo costo unitario donde el manejo cuesta más que la pieza. La cuenta se hace con dos datos: costo de la pieza en chatarra contra costo de despintar + repintar.",
       },
       {
         q: "¿Cuál removedor es mejor para racks de pintura electrostática?",
@@ -219,28 +230,28 @@ export const SERVICES_CONTENT: ServiceContent[] = [
 
   {
     slug: "cadenas-pintura",
-    title: "Despintado de Cadenas y Bastidores de Líneas de Pintura",
-    metaTitle: "Despintado de Bastidores y Cadenas de Pintura",
+    title: "Despintado de Racks, Ganchos y Cadenas de Líneas de Pintura",
+    metaTitle: "Despintado de Racks y Ganchos de Pintura",
     metaDescription:
-      "Removedores y asesoría para despintar cadenas, ganchos y bastidores de líneas de pintura electrostática. Recupera la conductividad y la calidad del recubrimiento. Monterrey, N.L.",
+      "Removedores y asesoría para despintar racks, ganchos y cadenas de líneas de pintura electrostática. Recupera la conductividad del rack y baja el rechazo. Monterrey.",
     category: "metales",
     heroImage: "/servicios/cadena-pintura.png",
     heroImageAlt:
       "Cadena transportadora con bastidores entrando a una cabina de pintura electrostática",
     intro:
-      "Los bastidores, ganchos y cadenas transportadoras de una línea de pintura electrostática acumulan pintura horneada con cada ciclo de producción. Después de 50 a 200 ciclos, ese espesor de pintura acumulado aísla eléctricamente el bastidor: se pierde el contacto a tierra necesario para el efecto Faraday, cae la calidad del recubrimiento y aumenta el rechazo. El despintado periódico de cadenas y bastidores los restaura a su condición conductiva original. Trevigo suministra los removedores alcalinos especializados y la asesoría de proceso para hacerlo de forma eficiente y segura.",
+      "Los racks (también llamados bastidores), los ganchos y las cadenas transportadoras de una línea de pintura electrostática acumulan pintura horneada con cada ciclo de producción. Después de 50 a 200 ciclos, ese espesor de pintura acumulado aísla eléctricamente el rack: se pierde el contacto a tierra necesario para el efecto Faraday, cae la calidad del recubrimiento y aumenta el rechazo. El despintado periódico de racks y ganchos los restaura a su condición conductiva original. Trevigo suministra los removedores alcalinos especializados y la asesoría de proceso para hacerlo de forma eficiente y segura.",
     sections: [
       {
-        heading: "Por qué hay que despintar los bastidores periódicamente",
+        heading: "Por qué hay que despintar los racks periódicamente",
         paragraphs: [
-          "En la pintura electrostática, la pieza y el bastidor deben estar conectados a tierra para que el polvo cargado eléctricamente se deposite de manera uniforme (efecto Faraday). Cada ciclo de horneado deja una capa de pintura sobre el bastidor; al acumularse, esa pintura actúa como aislante y rompe la continuidad eléctrica entre la pieza y la línea.",
-          "El síntoma clásico es una caída gradual de la calidad del recubrimiento: zonas con menor espesor, mal cubrimiento en geometrías complejas y aumento del rechazo. La causa raíz no es la pintura ni la pistola — son los bastidores saturados. El despintado periódico (típicamente cada 50-200 ciclos según la producción) es mantenimiento preventivo que sostiene la calidad de toda la línea.",
+          "En la pintura electrostática, la pieza y el rack deben estar conectados a tierra para que el polvo cargado eléctricamente se deposite de manera uniforme (efecto Faraday). Cada ciclo de horneado deja una capa de pintura sobre el rack y sus ganchos; al acumularse, esa pintura actúa como aislante y rompe la continuidad eléctrica entre la pieza y la línea.",
+          "El síntoma clásico es una caída gradual de la calidad del recubrimiento: zonas con menor espesor, mal cubrimiento en geometrías complejas y aumento del rechazo. La causa raíz no es la pintura ni la pistola: son los racks saturados. El despintado de racks (típicamente cada 50-200 ciclos según la producción) es mantenimiento preventivo que sostiene la calidad de toda la línea.",
         ],
       },
       {
         heading: "El proceso: despintado alcalino por inmersión",
         paragraphs: [
-          "El método estándar para cadenas y bastidores es el despintado alcalino por inmersión en tinas calefaccionadas a 60-90°C. Los removedores alcalinos calientes disuelven la pintura en polvo, el e-coat y los primers epóxicos acumulados sin deformar el metal ni dañar los puntos de contacto, en tiempos de 30 minutos a 4 horas según el espesor.",
+          "El método estándar para racks, ganchos y cadenas es el despintado alcalino por inmersión en tinas calefaccionadas a 60-90°C. Los removedores alcalinos calientes disuelven la pintura en polvo, el e-coat y los primers epóxicos acumulados sin deformar el metal ni dañar los puntos de contacto, en tiempos de 30 minutos a 4 horas según el espesor.",
           "Es el método preferido para bastidores de acero al carbón porque cuesta menos por kilo de pintura removida, permite alta rotación y no ataca el sustrato base. Tras el despintado se enjuaga y se seca, y el bastidor regresa a la línea con su conductividad restaurada. Trevigo formula el removedor a la medida del tipo de pintura (powder, e-coat, líquida) de tu planta.",
         ],
       },
@@ -261,11 +272,15 @@ export const SERVICES_CONTENT: ServiceContent[] = [
     ],
     faqs: [
       {
-        q: "¿Cada cuánto debo despintar los bastidores de mi línea de pintura?",
+        q: "¿Cada cuánto debo despintar los racks de mi línea de pintura?",
         a: "Depende del volumen de producción y el tipo de pintura. Como referencia: líneas de alta producción despintan cada 1-2 semanas (o cada 50-100 ciclos), líneas medianas cada 1-2 meses (100-200 ciclos). La señal práctica es la caída de calidad del recubrimiento por pérdida de conductividad. Te ayudamos a definir la frecuencia óptima para tu operación.",
       },
       {
-        q: "¿El despintado daña los bastidores o los puntos de contacto?",
+        q: "¿Rack, bastidor y gancho son lo mismo?",
+        a: "En planta se usan casi como sinónimos, pero técnicamente el rack o bastidor es la estructura que carga varias piezas, y los ganchos son los puntos individuales de los que cuelga cada pieza. Para el despintado da igual: todos acumulan pintura, todos pierden conductividad y todos se procesan en el mismo baño alcalino.",
+      },
+      {
+        q: "¿El despintado daña los racks o los puntos de contacto?",
         a: "No, si se hace con el removedor y los parámetros correctos. Los removedores alcalinos calientes disuelven la pintura sin atacar el acero al carbón del bastidor ni deformar los puntos de contacto. El control de temperatura y tiempo de inmersión es clave; por eso formulamos el removedor a la medida de tu tipo de pintura y damos asesoría de proceso.",
       },
       {
