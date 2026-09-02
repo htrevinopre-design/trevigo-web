@@ -82,7 +82,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "decapado",
     term: "Decapado",
-    seoTitle: "Decapado de metales: qué es, ácidos usados y proceso industrial",
+    seoTitle: "Decapado: Qué Es, Ácidos Usados y Proceso",
     seoDescription:
       "Decapado industrial: proceso químico para remover óxidos y calamina con ácidos (clorhídrico, sulfúrico, fosfórico). Cuándo usarlo y qué ácido elegir.",
     shortDef:

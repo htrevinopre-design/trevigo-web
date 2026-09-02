@@ -1769,9 +1769,9 @@ export const ARTICLES: Article[] = [
     authorSlug: "nohemi-cervantes",
     title:
       "Aceite hidráulico ISO VG 32, 46 o 68: cómo seleccionar la viscosidad correcta",
-    metaTitle: "Aceite ISO VG 32 vs 46 vs 68: ¿Cuál Elegir? (2026)",
+    metaTitle: "ISO VG 32, 46 y 68: Diferencias, Tabla y Cuál Usar",
     metaDescription:
-      "Tabla comparativa ISO VG 32, 46 y 68: presión, temperatura y tipo de bomba. Elige la viscosidad correcta en 2 minutos y evita fallas en tu sistema hidráulico.",
+      "¿ISO VG 32, 46 o 68? Tabla de diferencias por presión, temperatura y tipo de bomba, con la regla práctica para elegir sin equivocarte. Guía de ingeniería.",
     excerpt:
       "ISO VG 46 es la viscosidad más universal para sistemas hidráulicos industriales — pero hay casos donde 32 o 68 son la elección correcta. Te explicamos cómo decidirlo según presión, temperatura y bomba.",
     category: "Lubricantes",
@@ -1870,9 +1870,9 @@ export const ARTICLES: Article[] = [
     authorSlug: "blanca-garza",
     title:
       "Hipoclorito de sodio industrial: usos, dosificación y compra para tratamiento de aguas",
-    metaTitle: "Hipoclorito de Sodio: Dosis, Usos y Venta MX",
+    metaTitle: "Hipoclorito de Sodio (NaClO): Dosis, Usos y Venta",
     metaDescription:
-      "Guía de hipoclorito de sodio industrial: dosificación para tratamiento de aguas, almacenamiento seguro y venta por tambo o tote en Monterrey.",
+      "Guía de hipoclorito de sodio (NaClO) industrial: qué es, dosificación para tratamiento de aguas, almacenamiento seguro y venta por tambo o tote en Monterrey.",
     excerpt:
       "El hipoclorito de sodio es el desinfectante químico más usado en la industria mexicana. Te explicamos las concentraciones disponibles, dosificaciones típicas y cómo elegir entre granel y envasado para tu planta.",
     category: "Tratamiento de Aguas",

@@ -308,7 +308,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       "Decapado químico por inmersión: ácidos formulados con inhibidor, control de baño y suministro continuo de químicos para tu planta. Asesoría en Monterrey.",
     category: "metales",
     intro:
-      "El decapado o pickling es el proceso químico mediante el cual se remueven óxidos, calamina y contaminantes superficiales de piezas metálicas con ácidos formulados. Es paso obligado antes de fosfatizado, galvanizado, pintura y operaciones de soldadura crítica. En Trevigo damos soporte completo: ácidos técnicos, mezclas con inhibidor y asesoría de optimización.",
+      "El decapado o pickling es el proceso químico mediante el cual se remueven óxidos, calamina y contaminantes superficiales de piezas metálicas con ácidos formulados. Es paso obligado antes de fosfatizado, galvanizado, pintura y operaciones de soldadura crítica. En Trevigo lo cubrimos completo: servicio de decapado por inmersión en nuestra planta, ácidos técnicos con inhibidor y asesoría de optimización para quien opera su propio baño.",
     sections: [
       {
         heading: "Decapado según el sustrato",
@@ -320,6 +320,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
           "Acero galvanizado: ácidos especialmente formulados con inhibidor para no consumir el zinc.",
           "Acero inoxidable: nítrico-fluorhídrico o nítrico-fosfórico para remover residuos de hierro libre.",
           "Aluminio: sosa cáustica seguida de desmutado nítrico para retirar smut superficial.",
+          "Tubería y perfiles: decapado por inmersión de tramos y spools previo a recubrimiento o galvanizado; longitudes mayores se cotizan caso por caso.",
         ],
       },
       {
@@ -356,6 +357,10 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       },
     ],
     faqs: [
+      {
+        q: "¿Ofrecen el servicio de decapado o solo venden los ácidos?",
+        a: "Las dos cosas. Decapamos piezas, racks y estructura por inmersión en nuestra planta de San Nicolás de los Garza, con entrega programada según tu producción. Y si operas tu propia línea de decapado, te suministramos los ácidos formulados con inhibidor y la asesoría de control del baño.",
+      },
       {
         q: "¿Qué temperatura debe tener un baño de decapado?",
         a: "Depende del ácido. HCl trabaja a temperatura ambiente (20-30°C). H₂SO₄ requiere 60-80°C para eficiencia. H₃PO₄ opera entre 40-60°C. Subir temperatura acelera la reacción pero también el ataque al metal base si no se usa inhibidor.",

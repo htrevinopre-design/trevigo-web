@@ -1175,6 +1175,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
       { value: "GM/Ford", label: "Normas automotrices de fosfatado cubiertas" },
     ],
     faqs: [
+      { q: "¿Son proveedor de ácidos para la industria automotriz?", a: "Sí. Suministramos ácido fosfórico para fosfatizado y desoxidado, ácidos de decapado formulados con inhibidor y ácido nítrico para pasivado, con certificado de análisis por lote y entrega en toda la cadena automotriz mexicana." },
       { q: "¿Qué productos químicos se usan en el pretratamiento antes de la pintura?", a: "El proceso estándar incluye: (1) Desengrase alcalino, (2) Fosfatado de zinc, (3) Enjuague con agua desmineralizada, (4) Pasivado final. Trevigo suministra productos para cada etapa." },
       { q: "¿Cómo cumplir con la normativa de descarga de aguas en una planta automotriz?", a: "Las plantas automotrices generan efluentes con metales pesados. Con nuestros coagulantes y floculantes ayudamos a cumplir NOM-001-SEMARNAT-2021. Realizamos Jar Test con muestra de tu efluente sin costo." },
       { q: "¿Atienden a plantas tier 1 y tier 2?", a: "Sí, atendemos OEMs y fabricantes tier 1 y tier 2 en todo México. Tenemos experiencia con plantas de estampado, maquinado, pintura y ensamble." },
@@ -1200,8 +1201,8 @@ export const INDUSTRIES: IndustryDefinition[] = [
   },
   {
     id: "aeronautica", name: "Aeronáutica", slug: "aeronautica", icon: "✈️",
-    seoTitle: "Fabricante y Proveedor de Químicos para la Industria Aeroespacial",
-    seoDescription: "Fabricante mexicano de químicos industriales para la industria aeronáutica y aeroespacial: pasivados, fosfatados y compuestos para tratamiento de aleaciones aeroespaciales.",
+    seoTitle: "Químicos y Ácidos para la Industria Aeroespacial",
+    seoDescription: "Fabricante y distribuidor de químicos y ácidos para la industria aeroespacial: pasivados ASTM A967, nítrico, cítrico y selladores libres de cromo VI. CoA por lote.",
     description: "Productos de alta precisión para el tratamiento de superficies aeroespaciales: fosfatados, pasivados, selladores y lubricantes de alto rendimiento.",
     heroText: "La industria aeronáutica exige los más altos estándares de calidad. Trevigo provee químicos de superficie que cumplen con las especificaciones más exigentes.",
     productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "sellos", "inhibidores", "pasivados", "aceites-metales", "lubricantes-especializados"],
@@ -1213,6 +1214,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
       { value: "TDS+SDS", label: "documentación técnica completa" },
     ],
     faqs: [
+      { q: "¿Qué ácidos suministran para la industria aeroespacial?", a: "Ácido nítrico para pasivado conforme a ASTM A967, ácido cítrico para pasivación libre de nítrico, ácido fosfórico para desoxidado y mezclas para decapado de inoxidable. Todos con certificado de análisis por lote y ficha de seguridad para auditorías." },
       { q: "¿Qué pasivados ofrecen para aluminio aeronáutico?", a: "Ofrecemos Pasivador de Aluminio con Cromo y Sellador ANTICOR SELL 50 a base de zirconio, compatibles con aleaciones de aluminio utilizadas en estructuras aeronáuticas." },
       { q: "¿Sus selladores son libres de cromo VI?", a: "Sí, nuestro Sellador Anticorrosión Libre de Cromo está formulado sin cromo hexavalente, cumpliendo con las restricciones medioambientales de la industria aeroespacial moderna." },
       { q: "¿Emiten certificados de análisis por lote?", a: "Sí, emitimos certificado de análisis (CoA) y ficha de seguridad (SDS) por cada lote, con trazabilidad completa para auditorías de calidad." },
