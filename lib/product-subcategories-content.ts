@@ -38,6 +38,46 @@ export interface SubcategoryContent {
 }
 
 export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
+  "solventes-alcoholes": {
+    id: "solventes-alcoholes",
+    categoryId: "materias-primas",
+    pageTitle: "Solventes y Alcoholes Industriales",
+    metaTitle: "Solventes y Alcoholes Industriales: Venta",
+    metaDescription:
+      "Venta de alcohol isopropílico (IPA) y alcohol etílico de grado industrial por porrón, tambo o tote. Con SDS y certificado de análisis por lote. Monterrey.",
+    hero: "Solventes y Alcoholes Industriales",
+    lead: "Alcohol isopropílico y alcohol etílico de grado industrial para limpieza de precisión, preparación de superficies y sanitización, con documentación completa por lote y entrega en presentaciones desde porrón hasta tote.",
+    sections: [
+      {
+        heading: "Cuál alcohol necesita tu proceso",
+        paragraphs: [
+          "La elección entre isopropílico y etílico depende del uso. El alcohol isopropílico (IPA) es el estándar para limpieza de precisión: evapora rápido, no deja residuo y es el que piden las especificaciones de electrónica, óptica y preparación de superficies antes de pintar o pegar. El alcohol etílico es el solvente de trabajo para limpieza y sanitización general de equipo, superficies y áreas de producción.",
+          "Ambos se entregan con ficha de seguridad (SDS) y certificado de análisis (CoA) por lote, que es lo que piden las auditorías de calidad en automotriz, aeroespacial y alimenticia. Si tu proceso exige un grado o concentración específica, consúltanos y te confirmamos disponibilidad con la documentación correspondiente.",
+        ],
+      },
+      {
+        heading: "Manejo seguro de alcoholes industriales",
+        paragraphs: [
+          "Los alcoholes son inflamables: se almacenan en áreas ventiladas, lejos de fuentes de ignición, y los recipientes se conectan a tierra al trasvasar para evitar descargas estáticas. Asesoramos en el manejo y almacenamiento seguro según el volumen de tu operación.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Qué diferencia hay entre alcohol isopropílico y etílico para uso industrial?",
+        a: "El isopropílico (IPA) es el preferido para limpieza de precisión y preparación de superficies: evapora rápido y sin residuo. El etílico se usa más para limpieza y sanitización general. Si tu especificación pide uno en particular, respétala; si tienes duda, cuéntanos la aplicación y te recomendamos con base en ella.",
+      },
+      {
+        q: "¿En qué presentaciones venden los alcoholes?",
+        a: "Porrón, tambo y tote, según tu consumo. Todas las entregas incluyen ficha de seguridad y certificado de análisis por lote.",
+      },
+      {
+        q: "¿Atienden a la industria aeroespacial y electrónica?",
+        a: "Sí. Suministramos IPA para limpieza de precisión con la documentación de trazabilidad que exigen las auditorías de estos sectores: SDS, CoA por lote y soporte técnico.",
+      },
+    ],
+    relatedIndustries: ["aeronautica", "electrica-electronica", "automotriz", "metalmecanica"],
+  },
   // ══════════════════════════════════════════════════════════════
   // SELLOS / SELLADORES ANTICORROSIVOS
   // ══════════════════════════════════════════════════════════════

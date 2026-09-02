@@ -744,6 +744,34 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
           },
         ],
       },
+      {
+        id: "solventes-alcoholes",
+        name: "Solventes y Alcoholes",
+        products: [
+          {
+            id: "alcohol-isopropilico",
+            name: "Alcohol Isopropílico (IPA)",
+            sku: "AIP-100",
+            seoTitle: "Alcohol Isopropílico (IPA): Venta Industrial",
+            seoDescription:
+              "Alcohol isopropílico (IPA) de grado industrial para limpieza de precisión y preparación de superficies. Venta por porrón, tambo o tote, con SDS y CoA por lote.",
+            shortDescription:
+              "Alcohol isopropílico de grado industrial para limpieza de precisión, preparación de superficies y dilución. Con ficha de seguridad y certificado de análisis.",
+            formats: FORMATS_LIQUID,
+          },
+          {
+            id: "alcohol-etilico",
+            name: "Alcohol Etílico Industrial",
+            sku: "AET-100",
+            seoTitle: "Alcohol Etílico Industrial: Venta por Tambo y Tote",
+            seoDescription:
+              "Alcohol etílico de grado industrial para limpieza, sanitización y procesos de manufactura. Venta por porrón, tambo o tote en Monterrey, con SDS y CoA por lote.",
+            shortDescription:
+              "Alcohol etílico de grado industrial para limpieza, sanitización y uso como solvente de proceso. Con ficha de seguridad y certificado de análisis por lote.",
+            formats: FORMATS_LIQUID,
+          },
+        ],
+      },
     ],
     get products() {
       return this.subcategories.flatMap((sc) => sc.products);
@@ -1215,6 +1243,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
     ],
     faqs: [
       { q: "¿Qué ácidos suministran para la industria aeroespacial?", a: "Ácido nítrico para pasivado conforme a ASTM A967, ácido cítrico para pasivación libre de nítrico, ácido fosfórico para desoxidado y mezclas para decapado de inoxidable. Todos con certificado de análisis por lote y ficha de seguridad para auditorías." },
+      { q: "¿Suministran alcoholes y solventes para la industria aeroespacial?", a: "Sí. Comercializamos alcohol etílico y alcohol isopropílico (IPA) de grado industrial para limpieza de precisión y preparación de superficies, con ficha de seguridad y certificado de análisis por lote." },
       { q: "¿Qué pasivados ofrecen para aluminio aeronáutico?", a: "Ofrecemos Pasivador de Aluminio con Cromo y Sellador ANTICOR SELL 50 a base de zirconio, compatibles con aleaciones de aluminio utilizadas en estructuras aeronáuticas." },
       { q: "¿Sus selladores son libres de cromo VI?", a: "Sí, nuestro Sellador Anticorrosión Libre de Cromo está formulado sin cromo hexavalente, cumpliendo con las restricciones medioambientales de la industria aeroespacial moderna." },
       { q: "¿Emiten certificados de análisis por lote?", a: "Sí, emitimos certificado de análisis (CoA) y ficha de seguridad (SDS) por cada lote, con trazabilidad completa para auditorías de calidad." },

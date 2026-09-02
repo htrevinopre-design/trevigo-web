@@ -182,6 +182,31 @@ export const PRODUCT_CONTENT: Record<string, ProductContent> = {
   // ══════════════════════════════════════════════
   // FOSFATOS
   // ══════════════════════════════════════════════
+  "alcohol-isopropilico": {
+    description:
+      "Alcohol isopropílico (IPA) de grado industrial, el solvente estándar para limpieza de precisión: se evapora rápido, no deja residuo y no ataca la mayoría de los plásticos y recubrimientos. En manufactura se usa para preparar superficies antes de pintar, pegar o sellar, para limpiar componentes electrónicos y ópticos, y para remover aceites ligeros y huellas en piezas terminadas. Lo suministramos con ficha de seguridad y certificado de análisis por lote, en presentaciones desde porrón hasta tote según el consumo de tu planta.",
+    applications: [
+      "Limpieza de precisión de componentes electrónicos y ópticos",
+      "Preparación de superficies antes de pintura, adhesivos o sellado",
+      "Remoción de aceites ligeros, huellas y residuos de maquinado",
+      "Limpieza de equipo y herramental en líneas de acabado",
+      "Dilución de tintas y recubrimientos según especificación del fabricante",
+    ],
+    notes:
+      "Inflamable: almacenar en área ventilada lejos de fuentes de ignición y conectar a tierra los recipientes al trasvasar. Consulta la SDS antes de usar.",
+  },
+  "alcohol-etilico": {
+    description:
+      "Alcohol etílico de grado industrial para limpieza, sanitización y uso como solvente de proceso. Es el solvente de elección cuando se necesita evaporación rápida con buen poder de limpieza en superficies de trabajo, equipo y utensilios industriales. Lo suministramos con ficha de seguridad y certificado de análisis por lote; consúltanos el grado y la concentración que requiere tu proceso para confirmarte disponibilidad y documentación.",
+    applications: [
+      "Limpieza y sanitización de superficies de trabajo y equipo",
+      "Solvente de proceso en manufactura y formulación",
+      "Limpieza de herramental y áreas de producción",
+      "Dilución de productos según especificación del fabricante",
+    ],
+    notes:
+      "Inflamable: manejar con ventilación adecuada y lejos de fuentes de ignición. El grado y concentración disponibles se confirman según tu aplicación.",
+  },
   "fosfato-zinc-brillante": {
     description:
       "Fosfato de zinc tricatiónico (Zn-Mn-Ni) de grano fino que produce un recubrimiento cristalino denso y uniforme de 1.5-3.5 g/m². Es el estándar OEM para pretratamiento automotriz: la cristalinidad fina (<10 micras) maximiza el área superficial efectiva, lo que se traduce en adhesión superior de electrodepósito (e-coat) y resistencia anticorrosiva extendida en pruebas de niebla salina (ASTM B117 >500 horas con e-coat). Cumple con especificaciones GM, Ford, Chrysler y los estándares de la cadena tier 1. Funciona óptimamente a 50-55°C con tiempo de contacto de 90-180 segundos en aspersión.",
