@@ -5,7 +5,7 @@ import { COMPANY } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Tecnología para Líneas de Acabado",
   description:
-    "La tecnología de Trevigo para líneas de acabado: coatingAI para optimizar pintura en polvo con IA, y SurfaceOS, la bitácora digital de pretratamiento con AMEF vivo y evidencia ISO 9001.",
+    "La tecnología de Trevigo para líneas de acabado: coatingAI para optimizar pintura en polvo con IA, y SurfaceOS, la bitácora digital de tus líneas de proceso con AMEF vivo y evidencia ISO 9001.",
   alternates: { canonical: `${COMPANY.url}/tecnologia` },
 };
 
@@ -28,8 +28,8 @@ const TECH = [
     badgeColor: "text-blue-700 border-blue-200 bg-blue-50",
     dot: "bg-blue-500",
     name: "SurfaceOS",
-    tagline: "La bitácora digital de tu línea de pretratamiento",
-    desc: "El sistema de registro y memoria de las líneas donde corren los químicos: captura de operador más rápida que el papel, evidencia ISO 9001 ordenada por cláusula, tendencias de parámetros por turno y un AMEF vivo que convierte cada intervención en conocimiento de proceso. Arranca con una tablet, sin sensores ni obra.",
+    tagline: "La bitácora digital de tus líneas de proceso",
+    desc: "El sistema de registro y memoria de las líneas donde corre la química — pretratamiento, galvanizado, decapado, pasivado: captura de operador más rápida que el papel, evidencia ISO 9001 ordenada por cláusula, tendencias de parámetros por turno y un AMEF vivo que convierte cada intervención en conocimiento de proceso. Arranca con una tablet, sin sensores ni obra.",
     facts: ["Evidencia ISO 9001 por cláusula (9.1.1 · 8.7.2 · 10.2)", "AMEF vivo alimentado por la operación real", "4-6 semanas a la primera línea operando"],
     cta: "Conocer SurfaceOS",
     ctaClass: "bg-blue-600 hover:bg-blue-700",

@@ -200,13 +200,17 @@ export default function Navigation() {
                 Sak™
               </Link>
 
-              {/* TECNOLOGÍA — special branded link */}
+              {/* TECNOLOGÍA — special branded link with dropdown */}
               <Link
                 href="/tecnologia"
-                onMouseEnter={() => setActiveMenu(null)}
+                onMouseEnter={() => setActiveMenu("tecnologia")}
+                onClick={() => setActiveMenu(null)}
                 className={`flex items-center gap-1.5 px-4 h-full text-sm font-black border-b-2 transition-all text-emerald-600 hover:text-emerald-700 ${isActive("/tecnologia") || isActive("/coatingai") || isActive("/surfaceos") ? "border-emerald-500" : "border-transparent hover:border-emerald-500"}`}
               >
                 Tecnología
+                <svg className={`w-3.5 h-3.5 transition-transform ${activeMenu === "tecnologia" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                </svg>
               </Link>
 
               {/* INDUSTRIAS */}
@@ -498,6 +502,87 @@ export default function Navigation() {
           </div>
         )}
 
+        {/* TECNOLOGÍA dropdown panel */}
+        {activeMenu === "tecnologia" && (
+          <div className="absolute top-full left-0 right-0 bg-white border-t border-steel-200 shadow-2xl z-50">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
+              <div className="grid grid-cols-3 gap-6">
+                {/* Hub */}
+                <Link
+                  href="/tecnologia"
+                  onClick={() => setActiveMenu(null)}
+                  className="group bg-steel-50 hover:bg-navy-50 border border-steel-200 hover:border-navy-300 rounded-xl p-5 transition-all flex flex-col"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xl">⚙️</span>
+                    <p className="text-[10px] font-black text-navy-500 uppercase tracking-widest">
+                      Tecnología Trevigo
+                    </p>
+                  </div>
+                  <h3 className="text-steel-900 font-black text-base uppercase leading-tight mb-2 group-hover:text-navy-700 transition-colors">
+                    Toda la tecnología
+                  </h3>
+                  <p className="text-steel-500 text-xs leading-relaxed mb-3 flex-1">
+                    Software y sistemas para líneas de acabado, nacidos de 35
+                    años de operar química en planta.
+                  </p>
+                  <span className="text-navy-500 text-xs font-black uppercase tracking-wide">
+                    Ver todo →
+                  </span>
+                </Link>
+
+                {/* coatingAI */}
+                <Link
+                  href="/coatingai"
+                  onClick={() => setActiveMenu(null)}
+                  className="group bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 hover:border-emerald-300 rounded-xl p-5 transition-all flex flex-col"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xl">🎯</span>
+                    <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">
+                      Distribuidor autorizado
+                    </p>
+                  </div>
+                  <h3 className="text-steel-900 font-black text-base uppercase leading-tight mb-2 group-hover:text-emerald-700 transition-colors">
+                    coatingAI
+                  </h3>
+                  <p className="text-steel-500 text-xs leading-relaxed mb-3 flex-1">
+                    IA que optimiza tu línea de pintura en polvo: mínimo 10% de
+                    ahorro de polvo sin cambiar equipo.
+                  </p>
+                  <span className="text-emerald-600 text-xs font-black uppercase tracking-wide">
+                    Conocer coatingAI →
+                  </span>
+                </Link>
+
+                {/* SurfaceOS */}
+                <Link
+                  href="/surfaceos"
+                  onClick={() => setActiveMenu(null)}
+                  className="group bg-blue-50 hover:bg-blue-100 border border-blue-200 hover:border-blue-300 rounded-xl p-5 transition-all flex flex-col"
+                >
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xl">📋</span>
+                    <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest">
+                      Producto Trevigo
+                    </p>
+                  </div>
+                  <h3 className="text-steel-900 font-black text-base uppercase leading-tight mb-2 group-hover:text-blue-700 transition-colors">
+                    SurfaceOS
+                  </h3>
+                  <p className="text-steel-500 text-xs leading-relaxed mb-3 flex-1">
+                    La bitácora digital de tus líneas de proceso: evidencia
+                    ISO 9001 por cláusula y AMEF vivo.
+                  </p>
+                  <span className="text-blue-600 text-xs font-black uppercase tracking-wide">
+                    Conocer SurfaceOS →
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* RECURSOS dropdown panel */}
         {activeMenu === "recursos" && (
           <div className="absolute top-full left-0 right-0 bg-white border-t border-steel-200 shadow-2xl z-50">
@@ -678,6 +763,20 @@ export default function Navigation() {
               onClick={() => setMobileOpen(false)}
             >
               Tecnología
+            </Link>
+            <Link
+              href="/coatingai"
+              className="block pl-10 pr-6 py-2 text-steel-600 font-bold text-sm"
+              onClick={() => setMobileOpen(false)}
+            >
+              coatingAI
+            </Link>
+            <Link
+              href="/surfaceos"
+              className="block pl-10 pr-6 py-2 text-steel-600 font-bold text-sm"
+              onClick={() => setMobileOpen(false)}
+            >
+              SurfaceOS
             </Link>
 
             {/* Industrias accordion */}

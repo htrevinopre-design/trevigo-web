@@ -3,9 +3,9 @@ import Link from "next/link";
 import { COMPANY } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "SurfaceOS: Bitácora Digital de Pretratamiento",
+  title: "SurfaceOS: Bitácora Digital de Proceso Químico",
   description:
-    "SurfaceOS digitaliza la bitácora de tu línea de pretratamiento: captura de operador más rápida que el papel, evidencia ISO 9001 por cláusula y AMEF vivo. Agenda una demo guiada.",
+    "SurfaceOS digitaliza la bitácora de tus líneas de proceso químico — pretratamiento, galvanizado, decapado, pasivado: captura más rápida que el papel, evidencia ISO 9001 por cláusula y AMEF vivo.",
   alternates: { canonical: `${COMPANY.url}/surfaceos` },
 };
 
@@ -83,7 +83,7 @@ export default function SurfaceOSPage() {
             applicationSubCategory: "Process Logging and Quality Compliance",
             operatingSystem: "Web",
             description:
-              "Bitácora digital de líneas de pretratamiento químico: captura de operador, evidencia ISO 9001 por cláusula, tendencias por turno y AMEF vivo.",
+              "Bitácora digital de líneas de proceso químico (pretratamiento, galvanizado, decapado, pasivado): captura de operador, evidencia ISO 9001 por cláusula, tendencias por turno y AMEF vivo.",
             url: `${COMPANY.url}/surfaceos`,
             provider: {
               "@type": "Organization",
@@ -127,17 +127,17 @@ export default function SurfaceOSPage() {
               </div>
 
               <h1 className="text-4xl sm:text-6xl font-black text-navy-950 uppercase leading-[0.9] mb-6">
-                La memoria de tu{" "}
-                <span className="text-blue-600">línea de pretratamiento</span>
+                La memoria de tus{" "}
+                <span className="text-blue-600">líneas de proceso</span>
               </h1>
 
               <div className="w-16 h-1 bg-blue-500 mb-7" />
 
               <p className="text-steel-600 text-lg leading-relaxed mb-10 max-w-xl">
-                SurfaceOS es la bitácora digital de las líneas donde corren
-                químicos de pretratamiento: la hoja junto al tanque —
-                concentración, temperatura, presión, conductividad — más lo que
-                esa hoja nunca capturó:{" "}
+                SurfaceOS es la bitácora digital de tus líneas de proceso
+                químico: pretratamiento, galvanizado, decapado, pasivado. Es la
+                hoja junto al tanque (concentración, temperatura, presión,
+                conductividad) más lo que esa hoja nunca capturó:{" "}
                 <strong className="text-navy-950">
                   qué se hizo cuando algo se salió, y si funcionó
                 </strong>
@@ -342,7 +342,7 @@ export default function SurfaceOSPage() {
 
                 <div className="space-y-4">
                   {[
-                    { step: "1", title: "Demo guiada", desc: "Recorremos el sistema contigo sobre el flujo real de una línea de pretratamiento.", color: "border-blue-500/30 bg-blue-500/5", accent: "text-blue-400" },
+                    { step: "1", title: "Demo guiada", desc: "Recorremos el sistema contigo sobre el flujo real de una línea de proceso químico.", color: "border-blue-500/30 bg-blue-500/5", accent: "text-blue-400" },
                     { step: "2", title: "Carga de tus especificaciones", desc: "Configuramos tus líneas, parámetros, rangos y frecuencias de captura reales.", color: "border-emerald-500/30 bg-emerald-500/5", accent: "text-emerald-400" },
                     { step: "3", title: "Arranque con el operador", desc: "Capacitación en piso. Si capturar no es más rápido que el papel, no avanzamos.", color: "border-orange-500/30 bg-orange-500/5", accent: "text-orange-400" },
                     { step: "4", title: "Primera auditoría con evidencia lista", desc: "El paquete por cláusula ISO 9001 se genera del uso diario, no de una carpeta.", color: "border-blue-500/30 bg-blue-500/5", accent: "text-blue-400" },
@@ -384,8 +384,8 @@ export default function SurfaceOSPage() {
           </h2>
           <p className="text-steel-400 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
             En 30 minutos te mostramos SurfaceOS corriendo sobre el flujo real
-            de una línea de pretratamiento: la captura del operador, la bandeja
-            de calidad y el AMEF vivo.
+            de una línea de proceso: la captura del operador, la bandeja de
+            calidad y el AMEF vivo.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
