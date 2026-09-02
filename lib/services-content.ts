@@ -217,7 +217,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       },
       {
         q: "¿Pueden ofrecer servicio de despintado en mi planta?",
-        a: "Trevigo no ofrece servicio de aplicación, somos proveedor químico y de asesoría técnica. Te conectamos con plantas de despintado en Monterrey si necesitas externalizar el proceso, o te capacitamos para implementarlo internamente con garantía de soporte técnico.",
+        a: "Sí. Ofrecemos el servicio de despintado en nuestra planta de San Nicolás de los Garza: nos envías tus racks, ganchos o piezas y te los regresamos despintados y listos para volver a línea. Y si prefieres montar el proceso en tu propia planta, te suministramos los removedores y la asesoría técnica para operarlo con seguridad.",
       },
     ],
     relatedProductIds: [
@@ -266,7 +266,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
         heading: "Seguridad y disposición de residuos",
         paragraphs: [
           "Los removedores alcalinos son cáusticos y requieren equipo de protección personal completo (mandil de PVC, lentes, careta, guantes resistentes a alcalinos), extracción de vapores y área dedicada con contención. Los baños agotados y la pintura removida se clasifican como residuo peligroso y deben disponerse conforme a NOM-052-SEMARNAT mediante empresa autorizada.",
-          "Asesoramos en la implementación segura del proceso: diseño del área de despintado, procedimientos de manejo, control del baño y disposición de residuos. Para plantas que prefieren externalizar, te conectamos con talleres de despintado en Monterrey.",
+          "Asesoramos en la implementación segura del proceso: diseño del área de despintado, procedimientos de manejo, control del baño y disposición de residuos. Y para plantas que prefieren no montar el proceso, ofrecemos el servicio completo en nuestra planta: recibimos tus racks y te los regresamos despintados.",
         ],
       },
     ],
@@ -285,7 +285,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       },
       {
         q: "¿Ofrecen el servicio de despintado o solo los químicos?",
-        a: "Trevigo es proveedor químico y de asesoría técnica: suministramos los removedores especializados y te apoyamos en la implementación y control del proceso de despintado de cadenas y bastidores en tu planta. Si prefieres externalizar, te conectamos con talleres de despintado en Monterrey.",
+        a: "Las dos cosas. Ofrecemos el servicio de despintado de racks, ganchos y cadenas en nuestra planta de San Nicolás de los Garza, con recolección y entrega programadas según el ritmo de tu línea. Y si tu volumen justifica montar el proceso en tu propia planta, te suministramos los removedores y la asesoría para operarlo.",
       },
       {
         q: "¿Sirve para e-coat y pintura en polvo acumulados?",
