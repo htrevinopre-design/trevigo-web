@@ -52,6 +52,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/pages/despintado",
+        destination: "/servicios/despintado",
+        permanent: true,
+      },
+      {
         source: "/pages/optimizacion-de-procesos-fisico-quimicos",
         destination: "/servicios/optimizacion-procesos",
         permanent: true,
