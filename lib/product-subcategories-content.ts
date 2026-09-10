@@ -267,6 +267,10 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     ],
     faqs: [
       {
+        q: "¿Manejan removedor de óxido industrial?",
+        a: "Sí. Nuestros desoxidantes son precisamente removedores de óxido industriales: formulaciones ácidas que disuelven el óxido y la escama sin comerse el metal base. Se aplican por inmersión o aspersión según la pieza, y te asesoramos sobre la dilución y el tiempo de contacto para tu caso.",
+      },
+      {
         q: "¿Desoxidante y decapante son lo mismo?",
         a: "Para metal, sí: el decapante ácido que remueve óxido y calamina es lo que la industria llama desoxidante (o solución de pickling). Si buscas decapante para quitar pintura, ese es otro producto — visita nuestra categoría de removedores.",
       },
@@ -371,11 +375,11 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     id: "removedores",
     categoryId: "tratamiento-metales",
     pageTitle: "Removedores de Pintura Industrial",
-    metaTitle: "Removedores de Pintura Industrial en México: Alcalinos y Solventes",
+    metaTitle: "Removedor de Pintura Industrial: Venta y Tipos",
     metaDescription:
-      "Proveedor de removedores de pintura industrial en México: alcalinos para despintado de bastidores, base solvente y formulaciones intensivas para epóxicos y poliuretanos. Cotización 24 h.",
+      "Venta de removedor de pintura industrial por cubeta y tambo: alcalino, base solvente e intensivo para epóxicos. Te asesoramos según tu recubrimiento.",
     hero: "Removedores de pintura",
-    lead: "Los removedores de pintura industriales son químicos especializados para eliminar pinturas curadas, primers, e-coat, polvo electrostático y recubrimientos orgánicos de piezas metálicas — sin dañar el sustrato base. Son críticos para reproceso, mantenimiento de bastidores y restauración de equipos.",
+    lead: "Los removedores de pintura industriales son químicos especializados para eliminar pinturas curadas, primers, e-coat, polvo electrostático y recubrimientos orgánicos de piezas metálicas — sin dañar el sustrato base. Son críticos para reproceso, mantenimiento de bastidores y restauración de equipos. Vendemos el removedor por cubeta o tambo con asesoría para elegir el correcto según tu recubrimiento, y si lo prefieres, la remoción de pintura industrial la hacemos por ti en nuestra planta.",
     sections: [
       {
         heading: "¿Qué es un removedor de pintura industrial y cuándo se usa?",
@@ -403,6 +407,13 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
         ],
       },
       {
+        heading: "Removedor para pintura electrostática (pintura en polvo)",
+        paragraphs: [
+          "La pintura en polvo horneada es de los recubrimientos más tercos: está curada térmicamente y los solventes comunes no la tocan. Intentar con thinner o con removedores de ferretería solo pierde tiempo. Lo que sí funciona es un removedor alcalino de alto poder trabajando en caliente, o un removedor intensivo por inmersión cuando la pieza acumula capas de muchos ciclos anteriores.",
+          "Si el despintado de pintura electrostática es un trabajo recurrente en tu operación, típico en racks, ganchos y bastidores de línea, hay dos rutas y ofrecemos las dos: te vendemos el removedor con la asesoría de proceso para que montes tu propia tina, o nos envías las piezas y te las regresamos despintadas desde nuestro servicio.",
+        ],
+      },
+      {
         heading: "Consideraciones de seguridad y disposición",
         paragraphs: [
           "Los removedores industriales son químicos altamente cáusticos o tóxicos según el tipo. Requieren obligatoriamente: ventilación forzada en zona de trabajo (especialmente solventes), EPP completo (guantes de neopreno, mandil PVC, protección facial), área dedicada con piso impermeable y muros de contención, y procedimiento de neutralización y disposición conforme NOM-052-SEMARNAT.",
@@ -426,6 +437,14 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
       {
         q: "¿El despintado químico daña el sustrato metálico?",
         a: "Los removedores alcalinos no atacan el acero al carbón ni el hierro fundido si se controlan temperatura y tiempo de contacto. Sin embargo, NO se deben usar sobre aluminio, zinc galvanizado o magnesio (los disuelven). Para esos sustratos use removedores con solventes específicos o intensivos selectivos.",
+      },
+      {
+        q: "¿Qué removedor sirve para pintura electrostática (en polvo)?",
+        a: "Un removedor alcalino de alto poder trabajando en caliente, o uno intensivo por inmersión si la capa acumula muchos ciclos horneados. Los removedores caseros o de ferretería no funcionan sobre polvo curado. Si nos dices el sustrato y el espesor acumulado, te decimos cuál de nuestros removedores aplica.",
+      },
+      {
+        q: "¿Venden el removedor o también hacen el trabajo de despintado?",
+        a: "Las dos cosas. Vendemos removedores por cubeta y tambo para que despintes en tu planta, y también ofrecemos el servicio: nos envías racks, ganchos o piezas y te las regresamos limpias. Para volúmenes recurrentes, el servicio suele salir más práctico que mantener una tina propia.",
       },
     ],
     relatedIndustries: ["metalmecanica", "automotriz", "tratamiento-superficies-metalicas"],

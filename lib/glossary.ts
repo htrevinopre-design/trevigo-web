@@ -62,6 +62,25 @@ export const GLOSSARY: GlossaryEntry[] = [
     relatedServiceSlugs: ["fosfatizado"],
   },
   {
+    slug: "decapante",
+    term: "Decapante",
+    seoTitle: "Decapante: Qué Es, Tipos y Cuál Usar en Metal",
+    seoDescription:
+      "Qué es un decapante, en qué se diferencia de un removedor de pintura y cómo elegir entre ácido, alcalino y solvente según el metal y el recubrimiento.",
+    shortDef:
+      "Producto químico que retira pintura, óxido o escama de una superficie metálica para dejarla limpia y lista para el siguiente proceso.",
+    longDef: [
+      "La palabra decapante se usa en México para dos cosas distintas, y conviene separarlas desde el principio. En pintura, un decapante es el químico que ablanda y levanta un recubrimiento viejo para poder retirarlo; en ese sentido es sinónimo de removedor de pintura. En metales, un decapante es la solución ácida que disuelve el óxido y la escama de laminación antes de galvanizar, fosfatizar o soldar; a ese proceso se le llama decapado. Cuando alguien pide un decapante sin más contexto, la primera pregunta es siempre qué quiere quitar: pintura u óxido.",
+      "Para quitar pintura hay tres familias. Los decapantes alcalinos trabajan en caliente y son los indicados para pintura en polvo horneada, esmaltes y primers sobre acero al carbón; no se usan en aluminio ni en galvanizado porque los atacan. Los de base solvente actúan en minutos y son la opción para piezas complejas con epóxicos o poliuretanos, a cambio de exigir ventilación y equipo de protección. Y los intensivos, que trabajan por inmersión prolongada, son la última carta para recubrimientos muy curados o con muchas capas acumuladas.",
+      "Para quitar óxido, el decapante típico es un ácido, normalmente clorhídrico o sulfúrico, formulado con inhibidores que frenan el ataque al metal una vez que el óxido se disolvió. La concentración, la temperatura y el tiempo de inmersión se ajustan según el grado de oxidación y el tipo de acero. El error común es usar ácido sin inhibidor: sí quita el óxido, pero se sigue comiendo la pieza.",
+      "¿Cuál es el mejor decapante para metal? Depende de tres datos: qué recubrimiento u óxido se quiere quitar, sobre qué metal está, y si el trabajo es un lote único o algo recurrente. Con esos tres datos se elige la química y la forma de aplicarla. Y cuando el volumen es recurrente, por ejemplo racks de líneas de pintura o tubería oxidada, muchas plantas prefieren enviar las piezas a un servicio de despintado o decapado en lugar de montar y mantener una tina propia.",
+    ],
+    category: "metales",
+    relatedTerms: ["decapado", "despintado", "fosfatizante"],
+    relatedProductIds: ["removedor-alcalino-pinturas", "removedor-intensivo-superficies", "acido-clorhidrico"],
+    relatedServiceSlugs: ["despintado", "decapado"],
+  },
+  {
     slug: "pasivado",
     term: "Pasivado",
     seoTitle: "Pasivado de Metales: Qué Es, Tipos y Cómo Funciona",

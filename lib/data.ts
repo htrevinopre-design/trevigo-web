@@ -264,6 +264,9 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
             id: "removedor-alcalino-pinturas",
             name: "Removedor Alcalino de Pinturas",
             sku: "MX-REM-001",
+            seoTitle: "Removedor Alcalino de Pinturas: Venta Industrial",
+            seoDescription:
+              "Removedor alcalino de alto poder para pintura en polvo horneada, esmaltes y primers sobre acero. Venta por cubeta y tambo con asesoría de uso.",
             shortDescription:
               "Removedor alcalino de alto poder para eliminar pintura, barnices y recubrimientos orgánicos sin dañar el sustrato.",
             formats: FORMATS_LIQUID,
@@ -272,6 +275,9 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
             id: "removedor-pintura-cloruro-metileno",
             name: "Removedor de Pintura con Cloruro de Metileno",
             sku: "MX-REM-002",
+            seoTitle: "Removedor de Pintura de Acción Rápida: Venta",
+            seoDescription:
+              "Removedor base solvente que disuelve epóxicos, poliuretanos y acrílicos en minutos, ideal para piezas metálicas complejas. Venta por cubeta y tambo.",
             shortDescription:
               "Removedor de acción rápida a base de solventes para despintado eficiente en piezas metálicas complejas.",
             formats: FORMATS_LIQUID,
@@ -280,6 +286,9 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
             id: "removedor-intensivo-superficies",
             name: "Removedor Intensivo para Superficies",
             sku: "MX-REM-003",
+            seoTitle: "Removedor para Epóxicos y Poliuretano Curado",
+            seoDescription:
+              "Removedor intensivo para los recubrimientos más difíciles: epóxicos cargados y poliuretanos curados a alta temperatura. Trabaja por inmersión prolongada.",
             shortDescription:
               "Removedor de alta concentración para recubrimientos de difícil remoción, incluidos epoxi y poliuretano.",
             formats: FORMATS_LIQUID,

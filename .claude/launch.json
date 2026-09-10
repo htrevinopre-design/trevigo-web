@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "trevigo-icono-wa",
+      "name": "amef",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev", "--", "-p", "3002"],
-      "port": 3002
+      "runtimeArgs": ["--prefix", "/Users/hernantrevino/Desktop/trevigo-amef", "run", "dev"],
+      "port": 3001
     }
   ]
 }
