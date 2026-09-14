@@ -305,10 +305,10 @@ export const SERVICES_CONTENT: ServiceContent[] = [
     title: "Servicio de Decapado: Remoción Química de Óxidos",
     metaTitle: "Decapado Químico por Inmersión: Servicio y Químicos",
     metaDescription:
-      "Decapado químico por inmersión: ácidos formulados con inhibidor, control de baño y suministro continuo de químicos para tu planta. Asesoría en Monterrey.",
+      "Decapado de metales por inmersión: servicio en nuestra planta y ácidos formulados con inhibidor para quien opera su propio baño. Asesoría en Monterrey.",
     category: "metales",
     intro:
-      "El decapado o pickling es el proceso químico mediante el cual se remueven óxidos, calamina y contaminantes superficiales de piezas metálicas con ácidos formulados. Es paso obligado antes de fosfatizado, galvanizado, pintura y operaciones de soldadura crítica. En Trevigo lo cubrimos completo: servicio de decapado por inmersión en nuestra planta, ácidos técnicos con inhibidor y asesoría de optimización para quien opera su propio baño.",
+      "El decapado o pickling es el proceso químico para decapar metales: remover óxidos, calamina y contaminantes superficiales de piezas de acero y otros metales con ácidos formulados. Es paso obligado antes de fosfatizado, galvanizado, pintura y operaciones de soldadura crítica. En Trevigo lo cubrimos completo: servicio de decapado por inmersión en nuestra planta, ácidos técnicos con inhibidor y asesoría de optimización para quien opera su propio baño.",
     sections: [
       {
         heading: "Decapado según el sustrato",
@@ -395,7 +395,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
   {
     slug: "pasivado",
     title: "Servicio de Pasivado: Capa Pasiva Anticorrosión Temporal y Permanente",
-    metaTitle: "Servicio de Pasivado Acero Inoxidable | ASTM A967",
+    metaTitle: "Servicio de Pasivado de Acero Inoxidable",
     metaDescription:
       "¿Buscas servicio de pasivado de acero inoxidable? Química ASTM A967, parámetros validados y certificado por lote para auditorías OEM. Monterrey, NL.",
     category: "metales",
@@ -449,6 +449,10 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       {
         q: "¿Cumplen sus pasivados con ASTM A967?",
         a: "Sí. Nuestros productos para pasivado de acero inoxidable cumplen los métodos C, D y E de ASTM A967, validados con prueba de sulfato de cobre. Entregamos COA por lote y guía de proceso para que tu equipo de calidad documente el procedimiento.",
+      },
+      {
+        q: "¿Qué pasivador se usa para soldaduras de acero inoxidable?",
+        a: "Para repasivar cordones de soldadura y zonas afectadas por el calor se usa un pasivador en frío para inoxidable, aplicado de forma localizada con brocha o gel después de limpiar el cordón. Reactiva la capa pasiva en la zona soldada sin sumergir la pieza completa. Lo manejamos junto con su guía de aplicación.",
       },
       {
         q: "¿Qué duración da el pasivado temporal en acero al carbón?",

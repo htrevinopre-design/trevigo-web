@@ -396,6 +396,10 @@ export const ARTICLES: Article[] = [
     ],
     faqs: [
       {
+        q: "¿Cuál es el mejor ácido para quitar el óxido de un metal?",
+        a: "Depende de la pieza y de la prisa. El fosfórico es el más equilibrado: quita el óxido, respeta el metal base y deja una capa que ayuda a la pintura. El clorhídrico es más rápido y económico para óxido severo, pero ataca más el metal y exige extracción de vapores. El cítrico es la opción suave para piezas delicadas o donde la seguridad del operador manda. Si nos describes la pieza y el grado de óxido, te decimos cuál conviene.",
+      },
+      {
         q: "¿El ácido fosfórico sí quita el óxido?",
         a: "Sí. Disuelve el óxido de hierro (Fe₂O₃) convirtiéndolo en fosfato de hierro soluble, y es el ácido preferido en la industria para eliminar óxido porque ataca menos el metal base que el clorhídrico y deja una capa fosfatada que protege temporalmente y mejora la adherencia de pintura.",
       },

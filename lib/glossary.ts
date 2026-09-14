@@ -107,7 +107,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     shortDef:
       "Proceso químico que remueve óxidos, calamina y contaminantes superficiales de piezas metálicas con ácidos.",
     longDef: [
-      "El decapado, conocido en inglés como pickling, es la remoción química de óxidos, calamina, escamas de laminación y contaminantes superficiales en piezas metálicas. Es paso obligado antes de fosfatizado, galvanizado, pintura o soldadura crítica.",
+      "El decapado, conocido en inglés como pickling, es la remoción química de óxidos, calamina, escamas de laminación y contaminantes superficiales en piezas metálicas; decapar un metal es justamente eso, quitarle la capa de óxido para dejar la superficie limpia y reactiva. Es paso obligado antes de fosfatizado, galvanizado, pintura o soldadura crítica.",
       "Para acero al carbón, los ácidos típicos son clorhídrico al 15-25% (rápido, agresivo, requiere extracción de vapores) y sulfúrico al 10-15% caliente (alta capacidad). Para acero inoxidable se usa una mezcla de ácido nítrico-fluorhídrico para remover hierro libre. Para aluminio se usa sosa cáustica seguida de desmutado nítrico.",
       "El monitoreo del baño es crítico: cuando el hierro disuelto supera 30-50 g/L, la velocidad de decapado cae al 20-30% del óptimo y conviene cambiar el baño.",
     ],
