@@ -3230,6 +3230,348 @@ export const ARTICLES: Article[] = [
         "Te ayudamos a diagnosticar si la causa son los bastidores y suministramos los removedores para despintarlos. Recupera la conductividad y estabiliza la calidad. Cotización en 24 h.",
     },
   },
+  {
+    slug: "desengrase-alcalino-metales",
+    title: "Desengrase alcalino de metales: cómo funciona y cómo elegir el desengrasante correcto",
+    metaTitle: "Desengrasante Alcalino Industrial: Cuál Elegir",
+    metaDescription:
+      "Cómo funciona el desengrase alcalino de metales y cómo elegir el desengrasante según el metal, el tipo de aceite y tu proceso. Guía práctica de planta.",
+    excerpt:
+      "Nueve de cada diez fallas de adherencia de pintura empiezan en el desengrase. Esta guía explica cómo trabaja la química alcalina y qué desengrasante conviene según el metal y el aceite que traes.",
+    category: "Tratamiento de Metales",
+    readingTime: "7 min",
+    publishedAt: "2026-10-20",
+    updatedAt: "2026-10-20",
+    keywords: [
+      "desengrasante alcalino",
+      "desengrase alcalino de metales",
+      "desengrasante industrial",
+      "desengrasante de metales",
+      "desengrasado industrial",
+      "limpieza alcalina de metales",
+    ],
+    intro:
+      "El desengrase es la etapa menos glamorosa de cualquier línea de tratamiento de metales, y la que decide todo lo que viene después. Un fosfatizado no agarra sobre aceite. Una pintura no ancla sobre grasa. Y cuando un lote completo regresa por falla de adherencia, la investigación casi siempre termina en la primera tina. Aquí explicamos cómo funciona la química del desengrase alcalino y, sobre todo, cómo elegir el desengrasante correcto para tu metal y tu tipo de suciedad, que es donde más se equivoca la gente.",
+    sections: [
+      {
+        heading: "La prueba de 10 segundos que dice si tu desengrase sirve",
+        paragraphs: [
+          "Antes de hablar de química: la prueba de ruptura de película de agua. Enjuaga la pieza recién desengrasada y mírala escurrir. Si el agua corre como una película continua que tarda en romperse, la superficie está limpia. Si el agua se junta en gotas y deja zonas secas, ahí sigue habiendo aceite, y todo lo que apliques encima va a fallar justo en esas zonas. No necesita instrumento, no cuesta nada, y es el control de calidad más honesto que existe en pretratamiento.",
+        ],
+      },
+      {
+        heading: "Cómo trabaja un desengrasante alcalino",
+        paragraphs: [
+          "Un desengrasante alcalino industrial combina dos mecanismos. El primero es la saponificación: los álcalis fuertes como la sosa y los silicatos convierten las grasas de origen animal y vegetal en jabón soluble, que se va con el enjuague. El segundo es la emulsificación: los aceites minerales, que no se saponifican, son rodeados por los tensoactivos de la fórmula y quedan suspendidos en el baño como gotitas que ya no se vuelven a pegar a la pieza.",
+          "Por eso la fórmula importa más que el pH solo. Un baño de pura sosa es muy alcalino y aún así limpia mal los aceites de corte modernos, porque le falta el paquete de tensoactivos. Los desengrasantes formulados agregan además builders como fosfatos y silicatos que ablandan el agua, mantienen la suciedad en suspensión y protegen ciertos metales del ataque.",
+          "El calor hace la mitad del trabajo. La mayoría de los desengrasantes alcalinos rinden entre 50 y 70 °C: por debajo, las grasas pesadas no se ablandan y el consumo de químico sube; muy por arriba, se gasta vapor sin ganar limpieza. Si tu baño limpia bien en verano y mal en invierno, lo primero que hay que revisar es la temperatura real de la tina, no la concentración.",
+        ],
+      },
+      {
+        heading: "Líquido o polvo: qué conviene y cuándo",
+        paragraphs: [
+          "El desengrasante líquido se dosifica fácil, se disuelve al instante y es el estándar para sistemas por aspersión y para dosificación automática. El polvo concentra más alcalinidad por peso, rinde bien en tinas de inmersión con cargas pesadas de grasa, y su costo por kilo de suciedad removida suele ser menor. En planta la decisión práctica es esta: si dosificas a mano y tu suciedad es pesada, el polvo rinde; si buscas control fino y automatización, el líquido gana.",
+        ],
+      },
+      {
+        heading: "El metal manda: acero no es lo mismo que aluminio",
+        paragraphs: [
+          "El acero al carbón aguanta alcalinidad alta sin despeinarse, así que para acero la elección se hace por el tipo de aceite, no por el metal. El aluminio y el zinc galvanizado son otra historia: un alcalino fuerte los ataca, los mancha y en el caso del aluminio lo disuelve. Para esos sustratos se usan desengrasantes multimetálicos, formulados con silicatos que inhiben el ataque, trabajando a alcalinidad moderada.",
+          "Si tu línea procesa piezas mixtas, lo correcto es formular para el metal más delicado. Un multimetálico limpia perfectamente el acero; un alcalino fuerte para acero arruina el aluminio. La regla solo funciona en esa dirección.",
+        ],
+      },
+      {
+        heading: "Los cuatro números que mantienen vivo el baño",
+        paragraphs: [
+          "Un baño de desengrase se opera con cuatro parámetros, y conviene anotarlos por turno:",
+        ],
+        list: {
+          items: [
+            "Concentración: se mide por titulación con ácido, en puntos. Cada producto tiene su rango; operar por debajo deja aceite, operar por arriba gasta químico y arrastra más álcali a los enjuagues",
+            "Temperatura: el rango típico es 50 a 70 °C según la fórmula. Medirla en la tina, no confiar en el display de la caldera",
+            "Tiempo de contacto: de 1 a 3 minutos por aspersión, de 3 a 10 por inmersión según la carga de aceite",
+            "Carga de aceite acumulada: el baño emulsifica hasta que se satura. Cuando la pieza sale con velo aunque la titulación esté en rango, el baño ya no da más y toca renovarlo o instalar remoción de aceites",
+          ],
+        },
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Puedo usar el mismo desengrasante para acero y aluminio?",
+        a: "Solo si es un desengrasante multimetálico formulado para ello. Los alcalinos fuertes diseñados para acero atacan y manchan el aluminio y el galvanizado. Si tu producción mezcla metales, elige la química por el metal más sensible.",
+      },
+      {
+        q: "¿Cada cuándo se renueva un baño de desengrase?",
+        a: "No hay calendario universal: depende de la carga de aceite que entra por pieza. La señal práctica es cuando la limpieza decae aunque la concentración titule en rango, o cuando la capa de aceite flotante regresa a la pieza al sacarla. Plantas con mucha carga instalan skimmer o separación de aceites para estirar la vida del baño dos o tres veces.",
+      },
+      {
+        q: "¿Desengrase alcalino o con solvente?",
+        a: "Para producción en línea, el alcalino en caliente es más barato, más seguro y se integra con los enjuagues y el fosfatizado. El solvente queda para limpieza localizada, mantenimiento o piezas que no pueden mojarse con agua. Si el objetivo es pintar o fosfatizar después, el camino estándar es el alcalino.",
+      },
+    ],
+    relatedProducts: [
+      "limpiador-liquido-alcalino-metales",
+      "limpiador-polvo-alcalino-multiusos",
+      "limpiador-alcalino-multimetalico",
+      "desengrasante-multisuperficies",
+    ],
+    cta: {
+      title: "¿Tu desengrase está dejando pasar aceite?",
+      description: "Cuéntanos qué metal procesas y qué aceite traes de la operación anterior. Te decimos qué desengrasante conviene y con qué parámetros arrancar, con prueba en tu pieza real.",
+    },
+  },
+
+  {
+    slug: "desmoldantes-industriales-como-elegir",
+    title: "Desmoldantes industriales: tipos, grado alimenticio y cómo elegir el correcto",
+    metaTitle: "Desmoldantes Industriales: Tipos y Cuál Elegir",
+    metaDescription:
+      "Tipos de desmoldante industrial: base aceite, base agua, con y sin silicón, y grado alimenticio. Cuál usar según tu proceso y qué error evitar si después pintas.",
+    excerpt:
+      "El desmoldante correcto hace que la pieza suelte limpia y el molde dure. El incorrecto te regala piezas pegadas, acumulación en el molde o cráteres en la pintura. Guía para elegir sin pagar la novatada.",
+    category: "Lubricantes y Aceites",
+    readingTime: "6 min",
+    publishedAt: "2026-10-20",
+    updatedAt: "2026-10-20",
+    keywords: [
+      "desmoldantes industriales",
+      "desmoldante industrial",
+      "desmoldante grado alimenticio",
+      "desmoldante para concreto",
+      "desmoldante sin silicon",
+      "aceite desmoldante",
+    ],
+    intro:
+      "Un desmoldante es la película delgada que se interpone entre el molde y el material para que la pieza suelte sin pelear. Suena simple, y por eso casi nadie lo elige con cuidado: se compra el que usaba el proveedor anterior y se descubre el error cuando las piezas salen marcadas, el molde acumula residuo o, el clásico más caro, cuando la pintura posterior se llena de cráteres por un desmoldante con silicón. Esta guía ordena los tipos y te dice cuál va con cada proceso.",
+    sections: [
+      {
+        heading: "Qué hace exactamente un desmoldante",
+        paragraphs: [
+          "El desmoldante forma una interfase de baja adherencia entre la superficie del molde y el material que va a curar o solidificar: concreto, hule, poliuretano, resina o alimento. Un buen desmoldante hace tres cosas a la vez: suelta la pieza sin dañarla, protege el molde del desgaste y la corrosión, y no se transfiere a la pieza más de lo necesario, porque todo lo que se transfiere se vuelve un problema para el siguiente proceso.",
+        ],
+      },
+      {
+        heading: "Los tipos que vas a encontrar",
+        paragraphs: [
+          "En la práctica industrial mexicana el mercado se divide así:",
+        ],
+        list: {
+          items: [
+            "Base aceite mineral: el caballo de batalla para concreto, prefabricados y aplicaciones generales. Económico, protege el molde metálico contra óxido, y los nafténicos destacan por su untuosidad y facilidad de aplicación",
+            "Base agua (emulsiones): menos olor, mejor para áreas cerradas y moldes que no toleran residuo aceitoso. Requieren más cuidado en almacén porque la emulsión puede romperse con heladas o tiempo excesivo",
+            "Con silicón: sueltan como nada, pero el silicón migra. Si la pieza o cualquier cosa en esa nave se va a pintar después, el silicón es el origen número uno de cráteres y ojos de pescado en el acabado",
+            "Grado alimenticio: formulados con componentes aptos para contacto incidental con alimentos, para panificación, moldes de chocolate y procesos donde la pieza termina en la boca de alguien",
+          ],
+        },
+      },
+      {
+        heading: "La regla del silicón: la novatada más cara",
+        paragraphs: [
+          "Si en tu planta existe una cabina de pintura, aunque esté en la otra punta de la nave, piensa dos veces antes de meter desmoldantes con silicón. El silicón viaja: en las manos de los operadores, en el aire, en los racks compartidos. Y basta una traza sobre la superficie a pintar para que el recubrimiento se abra en cráteres. Las plantas que pintan trabajan con desmoldantes libres de silicón como política, no como preferencia.",
+          "Si ya tienes el problema, la solución no es solo cambiar el desmoldante: hay que limpiar a fondo todo lo que lo tocó, porque el silicón persiste semanas en cabinas y herramienta.",
+        ],
+      },
+      {
+        heading: "Grado alimenticio: qué significa de verdad",
+        paragraphs: [
+          "Un desmoldante grado alimenticio está formulado para que un contacto incidental con el alimento no represente riesgo, con componentes reconocidos para ese uso. No significa que sea comestible ni que puedas dosificarlo sin control: significa que si una traza queda en el pan o en la pieza de chocolate, no pasa nada. Para plantas de alimentos la documentación importa tanto como el producto: ficha técnica y hoja de seguridad por lote, y trazabilidad del proveedor.",
+          "El error común en alimentos es el inverso al del silicón: usar un desmoldante industrial genérico en moldes de comida porque suelta igual. Suelta igual, sí, hasta la primera auditoría.",
+        ],
+      },
+      {
+        heading: "Cómo elegir en tres preguntas",
+        paragraphs: [
+          "Primera: ¿qué material estás moldeando? El concreto perdona casi todo; el hule y el poliuretano son selectivos; el alimento exige grado alimenticio sin discusión. Segunda: ¿qué pasa con la pieza después? Si se pinta, se pega o se recubre, necesitas un desmoldante que no deje residuo activo, y silicón prohibido. Tercera: ¿cómo lo aplicas? Aspersión pide viscosidad baja y buena atomización; brocha o trapo toleran productos más untuosos. Con esas tres respuestas, la elección se reduce a dos o tres candidatos que se prueban en molde real.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿El desmoldante con silicón es malo?",
+        a: "No es malo, suelta excelente. El problema es dónde: en cualquier planta donde algo se pinte o se recubra después, el silicón migra y produce cráteres en el acabado. Si pintas, usa libre de silicón; si no pintas nada nunca, el siliconado es una opción legítima.",
+      },
+      {
+        q: "¿Qué significa que un desmoldante sea grado alimenticio?",
+        a: "Que está formulado con componentes aptos para contacto incidental con alimentos: si una traza queda en el producto, no representa riesgo. Se usa en panificación, confitería y moldes de proceso alimenticio, siempre acompañado de su documentación por lote.",
+      },
+      {
+        q: "¿Cada cuántos ciclos se reaplica?",
+        a: "Depende del tipo: los convencionales se aplican cada ciclo o cada pocos ciclos; los semipermanentes forman una película que aguanta decenas de desmoldeos. La señal de reaplicar es cuando la fuerza de desmoldeo empieza a subir, no cuando la pieza ya se quedó pegada.",
+      },
+    ],
+    relatedProducts: ["desmoldante-industrial", "aceite-desmoldante-naftenico"],
+    cta: {
+      title: "Dinos qué moldeas y te decimos qué desmoldante va",
+      description: "Concreto, hule, resinas o alimentos: cuéntanos tu proceso y si la pieza se pinta después. Te recomendamos el desmoldante correcto con prueba en tu molde.",
+    },
+  },
+
+  {
+    slug: "fosfato-manganeso-para-que-sirve",
+    title: "Fosfato de manganeso: para qué sirve y en qué se diferencia del zinc y del hierro",
+    metaTitle: "Fosfato de Manganeso: Para Qué Sirve y Cuándo",
+    metaDescription:
+      "El fosfato de manganeso es el recubrimiento antifricción para engranes, cigüeñales y tornillería. Qué hace, cómo se aplica y en qué se diferencia del de zinc.",
+    excerpt:
+      "De los tres fosfatos industriales, el de manganeso es el menos conocido y el más especializado: no se usa para pintar, se usa para que las piezas que rozan entre sí sobrevivan sus primeras horas de trabajo.",
+    category: "Tratamiento de Metales",
+    readingTime: "6 min",
+    publishedAt: "2026-10-20",
+    updatedAt: "2026-10-20",
+    keywords: [
+      "fosfato de manganeso",
+      "fosfatizado de manganeso",
+      "fosfato de manganeso para que sirve",
+      "recubrimiento antifriccion",
+      "fosfato manganeso engranes",
+    ],
+    intro:
+      "Cuando se habla de fosfatizado casi siempre se piensa en preparar metal para pintura, y para eso están el fosfato de zinc y el de hierro. El fosfato de manganeso juega otro partido: es un recubrimiento antifricción. Se aplica a engranes, cigüeñales, árboles de levas, pistones y tornillería de alta resistencia para que las superficies que rozan entre sí se asienten sin dañarse durante las primeras horas de operación, y para que retengan aceite el resto de su vida. Esta guía explica qué hace, cómo se aplica y cuándo conviene sobre las otras dos químicas.",
+    sections: [
+      {
+        heading: "Qué es y qué aspecto tiene",
+        paragraphs: [
+          "El fosfato de manganeso es un recubrimiento de conversión química: la pieza de acero se sumerge en una solución ácida caliente de fosfatos de manganeso, la superficie reacciona y se cubre de una capa cristalina gris oscuro a negra, integrada al metal. No es pintura ni recubrimiento depositado encima: es la propia superficie transformada, por eso no se descascara.",
+          "La capa típica pesa entre 5 y 20 gramos por metro cuadrado, bastante más que un fosfato de zinc para pintura, y su estructura cristalina porosa es precisamente la gracia del producto: esos poros atrapan y retienen el aceite de lubricación.",
+        ],
+      },
+      {
+        heading: "Para qué sirve: asentamiento y retención de aceite",
+        paragraphs: [
+          "Dos funciones concentran casi todos los usos. La primera es el asentamiento o running-in: cuando dos piezas nuevas de acero rozan por primera vez, sus micro picos de rugosidad chocan en seco y pueden soldarse localmente, lo que raya y arruina las superficies. La capa de fosfato de manganeso, más suave que el acero, actúa como sacrificio: los picos se desgastan sobre ella de forma controlada mientras las piezas se acoplan. Por eso engranes, cigüeñales y levas nuevos salen grises de fábrica.",
+          "La segunda es la retención de lubricante. Los poros del cristal funcionan como micro depósitos de aceite que mantienen una película lubricante aun en arranques en seco o cargas extremas. Como extra, la capa da una protección anticorrosiva temporal razonable cuando va impregnada de aceite, útil en tornillería y refacciones almacenadas.",
+        ],
+      },
+      {
+        heading: "Manganeso, zinc o hierro: el partido de cada uno",
+        paragraphs: [
+          "La forma más fácil de ordenarlos es por su propósito final. El fosfato de hierro prepara superficies para pintar donde la exigencia es moderada. El fosfato de zinc prepara para pintar donde la exigencia anticorrosiva es seria, y es el estándar automotriz. El fosfato de manganeso no prepara para pintar: es el tratamiento final de piezas que trabajan rozando, lubricadas con aceite, que nunca verán pintura.",
+          "Si tu duda es entre zinc y hierro para una línea de pintura, esa comparación la desarrollamos a fondo en nuestro artículo de fosfato de zinc contra fosfato de hierro. Si tu pieza es un engrane, un buje, un tornillo de alta resistencia o un componente de motor, el candidato es el manganeso.",
+        ],
+      },
+      {
+        heading: "Cómo se aplica y qué exige el proceso",
+        paragraphs: [
+          "El fosfato de manganeso se aplica únicamente por inmersión, en baños que trabajan calientes, típicamente entre 90 y 98 °C, con tiempos de 5 a 20 minutos según el peso de capa buscado. Eso lo hace más demandante en energía que los otros fosfatos, y explica por qué se procesa por lote y no en líneas continuas de aspersión.",
+          "La secuencia completa importa tanto como el baño: desengrase a fondo, enjuague, activado con sales de manganeso para afinar el cristal, fosfatizado, enjuague y aceitado final. El activado define el tamaño de grano: sin activador el cristal crece grueso y la pieza queda áspera; con buen activado el grano es fino y uniforme, que es lo que piden las especificaciones de componentes de motor.",
+        ],
+      },
+      {
+        heading: "Cuándo no usarlo",
+        paragraphs: [
+          "No conviene cuando la pieza se va a pintar (para eso están zinc y hierro), cuando el sustrato no es acero (aluminio y zinc no fosfatizan con esta química), ni cuando la tolerancia dimensional no admite las micras de capa: en piezas rectificadas de precisión el espesor se considera en el diseño o se enmascara la zona crítica. Tampoco sustituye a un recubrimiento anticorrosivo de largo plazo a la intemperie: su protección es temporal y depende del aceite.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿El fosfato de manganeso sirve para pintar encima?",
+        a: "No es su función y no es recomendable: la capa es gruesa, porosa y está pensada para impregnarse de aceite, no de pintura. Para preparar pintura se usan el fosfato de zinc o el de hierro según la exigencia anticorrosiva.",
+      },
+      {
+        q: "¿Por qué los engranes y cigüeñales nuevos vienen grises o negros?",
+        a: "Ese acabado gris oscuro mate es fosfato de manganeso. Está ahí para que las superficies se asienten sin rayarse durante las primeras horas de trabajo y para retener aceite en los poros del cristal durante toda la vida de la pieza.",
+      },
+      {
+        q: "¿Qué espesor o peso de capa se maneja?",
+        a: "Los pesos típicos van de 5 a 20 gramos por metro cuadrado según la aplicación, bastante más que un fosfato para pintura. Las especificaciones de componentes de motor suelen pedir además grano fino, que se logra con el activado previo correcto.",
+      },
+    ],
+    relatedProducts: [
+      "fosfato-zinc-brillante",
+      "fosfato-zinc-calcio-alta-resistencia",
+      "limpiador-fosfato-fierro-multimetales",
+    ],
+    cta: {
+      title: "¿Tu pieza necesita manganeso, zinc o hierro?",
+      description: "Platícanos qué pieza es, qué hace y qué le exige tu cliente. Te decimos qué química de fosfatizado corresponde y cómo montar o afinar el proceso.",
+    },
+  },
+
+  {
+    slug: "agentes-secuestrantes-quelantes-agua",
+    title: "Agentes secuestrantes y quelantes: qué son y cuándo los necesita tu proceso",
+    metaTitle: "Agentes Secuestrantes: Qué Son y Cuándo Usarlos",
+    metaDescription:
+      "Qué es un agente secuestrante o quelante, qué problemas de dureza y hierro resuelve en agua de proceso, calderas y limpieza, y cómo elegir el correcto.",
+    excerpt:
+      "La dureza del agua no se ve, pero cobra: incrustación en calderas, manchas en piezas, detergentes que rinden la mitad. Los secuestrantes son la química que atrapa esos iones antes de que hagan daño.",
+    category: "Tratamiento de Aguas",
+    readingTime: "6 min",
+    publishedAt: "2026-10-20",
+    updatedAt: "2026-10-20",
+    keywords: [
+      "agentes secuestrantes",
+      "agente secuestrante",
+      "secuestrantes para tratamiento de aguas",
+      "quelante industrial",
+      "secuestrante de dureza",
+      "secuestrante de oxigeno",
+    ],
+    intro:
+      "Casi toda el agua industrial de México trae calcio, magnesio y con frecuencia hierro disueltos. Esos iones no se ven, pero trabajan en contra tuya todo el día: forman incrustación en calderas y torres, manchan piezas recién enjuagadas, cortan el rendimiento de los detergentes y desestabilizan formulaciones. Un agente secuestrante, también llamado quelante, es la molécula que atrapa esos iones y los mantiene ocupados en solución para que no precipiten ni reaccionen. Aquí explicamos cómo funcionan, qué tipos hay y cuál corresponde a cada problema.",
+    sections: [
+      {
+        heading: "Qué hace un secuestrante, en una imagen",
+        paragraphs: [
+          "Un ion de calcio suelto en el agua es un problema buscando dónde pasar: se junta con carbonatos y hace sarro, se junta con los tensoactivos del detergente y hace grumos insolubles que son jabón desperdiciado. La molécula de secuestrante funciona como una pinza: envuelve al ion metálico con varios puntos de agarre y forma un complejo estable y soluble. El calcio sigue en el agua, pero ya no puede reaccionar con nada más. Secuestrado, literalmente.",
+        ],
+      },
+      {
+        heading: "Dónde duele la dureza (y dónde un secuestrante lo arregla)",
+        paragraphs: [
+          "Los cuatro frentes clásicos en planta:",
+        ],
+        list: {
+          items: [
+            "Calderas y circuitos de agua caliente: el calcio precipita como incrustación sobre las superficies de intercambio. Milímetros de sarro se traducen en por cientos de combustible extra y en fallas de tubos",
+            "Torres de enfriamiento: la evaporación concentra las sales y la incrustación tapa relleno y serpentines. Los programas de torre combinan secuestrantes y dispersantes por eso",
+            "Limpieza industrial y lavanderías: el calcio consume detergente antes de que el detergente toque la mugre. Secuestrar la dureza es la diferencia entre lavar con 2 gramos por litro o con 4",
+            "Enjuagues y acabados de metales: dureza y hierro en el agua de enjuague se quedan en la pieza al secar, como manchas blancas o amarillas que aparecen justo antes de pintar",
+          ],
+        },
+      },
+      {
+        heading: "Las familias de secuestrantes y cuándo usar cada una",
+        paragraphs: [
+          "No hay un secuestrante universal; hay familias con fortalezas distintas. Los aminopolicarboxilatos, con el EDTA como el más conocido, son los quelantes fuertes de uso general: agarran calcio, magnesio y metales pesados con fuerza, y son el estándar en limpieza y formulación. Los fosfonatos aguantan temperatura y cloro mucho mejor, y además inhiben el crecimiento del cristal a dosis bajísimas, por eso dominan en calderas y torres de enfriamiento. Los gluconatos y citratos son quelantes de origen natural, biodegradables, excelentes para hierro en medio alcalino y para formulaciones donde la biodegradabilidad pesa. Y los polifosfatos, los veteranos del grupo, siguen vigentes como secuestrantes económicos aunque pierden fuerza en agua muy caliente porque se hidrolizan.",
+          "En la práctica, muchas formulaciones industriales combinan dos familias: un quelante fuerte para la dureza gruesa y un fosfonato o policarboxilato como inhibidor de cristalización de respaldo.",
+        ],
+      },
+      {
+        heading: "Ojo: el secuestrante de oxígeno es otra cosa",
+        paragraphs: [
+          "El nombre confunde y vale la pena deshacer el nudo: el secuestrante de oxígeno que se dosifica en calderas no atrapa dureza, atrapa el oxígeno disuelto en el agua de alimentación para que no corroa los tubos por dentro. Son químicas distintas, con productos distintos, para problemas distintos: la dureza incrusta, el oxígeno pica. Una caldera bien tratada normalmente lleva los dos programas a la vez: secuestrante de dureza o ablandamiento para el sarro, y secuestrante de oxígeno para la corrosión.",
+        ],
+      },
+      {
+        heading: "Cómo se dosifica y cómo saber si está funcionando",
+        paragraphs: [
+          "La dosis correcta sale de un dato: la dureza real de tu agua, medida, no supuesta. Con la dureza en mano, la dosis se calcula de forma casi estequiométrica más un margen de seguridad, y se verifica en campo con la prueba de dureza residual: si después de dosificar el agua sigue titulando dureza libre, falta secuestrante; si titula cero con la dosis mínima, vas bien. En calderas y torres el control es por análisis semanal del agua del circuito; en limpieza, la señal es directa: el detergente rinde, la espuma regresa y las manchas de secado desaparecen.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Qué diferencia hay entre un secuestrante y un suavizador de agua?",
+        a: "El suavizador (intercambio iónico) saca el calcio del agua físicamente antes de usarla. El secuestrante lo deja en el agua pero lo neutraliza químicamente. Si el volumen de agua es grande y constante, el suavizador suele ser más económico; el secuestrante gana cuando no hay suavizador, cuando la dureza es moderada o como respaldo dentro de la formulación.",
+      },
+      {
+        q: "¿El EDTA es malo para el ambiente?",
+        a: "Su biodegradabilidad es lenta y por eso en algunas aplicaciones se está sustituyendo por quelantes de nueva generación y por gluconatos o citratos biodegradables. En uso industrial controlado sigue siendo legal y estándar; si tu descarga tiene restricciones específicas, se elige la familia con ese criterio desde el inicio.",
+      },
+      {
+        q: "¿Sirve el mismo producto para la caldera y para el detergente?",
+        a: "No conviene. La caldera pide fosfonatos estables a temperatura y un programa de oxígeno aparte; el detergente pide quelantes compatibles con su formulación. Son productos hermanos pero no intercambiables, y dosificar el equivocado sale más caro que comprar los dos correctos.",
+      },
+    ],
+    relatedProducts: ["agente-secuestrante", "inhibidor-oxigeno-calderas"],
+    cta: {
+      title: "¿Tu agua está cobrando en sarro, manchas o detergente?",
+      description: "Mándanos el análisis de tu agua o cuéntanos el síntoma: incrustación, manchas de secado o bajo rendimiento de limpieza. Te decimos qué secuestrante corresponde y la dosis de arranque.",
+    },
+  },
+
 ];
 
 export const getArticleBySlug = (slug: string) =>
