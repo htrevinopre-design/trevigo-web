@@ -153,7 +153,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       "Removedores de pintura industrial para racks, ganchos y piezas con pintura curada: alcalinos y formulados. Te ayudamos a elegir el correcto. Monterrey.",
     category: "metales",
     intro:
-      "El despintado es el proceso de remoción de pintura curada en piezas metálicas, racks, ganchos y herramienta de línea. Es indispensable cuando se necesita re-trabajar piezas con defectos de pintura, recuperar racks de cabinas de pintura electrostática o reciclar herramienta para nuevos lotes de producción.",
+      "El despintado es el proceso de remoción de pintura curada en piezas metálicas, racks, ganchos y herramienta de línea: despintar metal sin dañar el sustrato, con el químico correcto para cada recubrimiento. Es indispensable cuando se necesita re-trabajar piezas con defectos de pintura, recuperar racks de cabinas de pintura electrostática o reciclar herramienta para nuevos lotes de producción.",
     sections: [
       {
         heading: "Tipos de removedores de pintura",

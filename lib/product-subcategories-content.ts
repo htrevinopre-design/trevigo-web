@@ -379,7 +379,7 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     metaDescription:
       "Venta de removedor de pintura industrial por cubeta y tambo: alcalino, base solvente e intensivo para epóxicos. Te asesoramos según tu recubrimiento.",
     hero: "Removedores de pintura",
-    lead: "Los removedores de pintura industriales son químicos especializados para eliminar pinturas curadas, primers, e-coat, polvo electrostático y recubrimientos orgánicos de piezas metálicas — sin dañar el sustrato base. Son críticos para reproceso, mantenimiento de bastidores y restauración de equipos. Vendemos el removedor por cubeta o tambo con asesoría para elegir el correcto según tu recubrimiento, y si lo prefieres, la remoción de pintura industrial la hacemos por ti en nuestra planta.",
+    lead: "Los removedores de pintura industriales son químicos especializados para eliminar pinturas curadas, primers, e-coat, polvo electrostático y recubrimientos orgánicos de piezas metálicas — sin dañar el sustrato base. Son críticos para reproceso, mantenimiento de bastidores y restauración de equipos. Si buscas con qué despintar metal, vendemos el removedor por cubeta o tambo con asesoría para elegir el correcto según tu recubrimiento, y si lo prefieres, la remoción de pintura industrial la hacemos por ti en nuestra planta.",
     sections: [
       {
         heading: "¿Qué es un removedor de pintura industrial y cuándo se usa?",
@@ -437,6 +437,10 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
       {
         q: "¿El despintado químico daña el sustrato metálico?",
         a: "Los removedores alcalinos no atacan el acero al carbón ni el hierro fundido si se controlan temperatura y tiempo de contacto. Sin embargo, NO se deben usar sobre aluminio, zinc galvanizado o magnesio (los disuelven). Para esos sustratos use removedores con solventes específicos o intensivos selectivos.",
+      },
+      {
+        q: "¿Qué ácido sirve para despintar metal?",
+        a: "Aquí va un dato que ahorra dinero: para despintar metal casi nunca se usa ácido. Los ácidos quitan óxido y calamina (eso es decapado), pero la pintura curada resiste la mayoría de los ácidos. El químico correcto para despintar es un removedor alcalino en caliente o uno base solvente, según la pintura y la pieza. Si alguien te vendió ácido para quitar pintura, por eso no te funcionó.",
       },
       {
         q: "¿Qué removedor sirve para pintura electrostática (en polvo)?",
