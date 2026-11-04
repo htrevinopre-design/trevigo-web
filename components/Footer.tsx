@@ -91,6 +91,7 @@ export default function Footer() {
                 { label: "Decapado", href: "/servicios#decapado" },
                 { label: "Pasivado", href: "/servicios#pasivado" },
                 { label: "Pintura Electrostática", href: "/servicios#pintura-electrostatica" },
+                { label: "Pavonado", href: "/servicios#pavonado" },
                 { label: "Tratamiento de Aguas", href: "/servicios#tratamiento-aguas" },
                 { label: "Ingeniería y Asesoría", href: "/servicios#ingenieria-asesoria" },
               ].map((link) => (

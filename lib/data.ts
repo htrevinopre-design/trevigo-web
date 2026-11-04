@@ -1088,6 +1088,14 @@ export const SERVICES_METALES: ServiceItem[] = [
     description:
       "Removedores especializados y asesoría de proceso para despintar las cadenas, ganchos y bastidores de líneas de pintura electrostática. Tras cientos de ciclos, los bastidores acumulan pintura horneada que reduce la conductividad eléctrica y afecta la calidad del recubrimiento; el despintado periódico los restaura a su condición original.",
   },
+  {
+    id: "pavonado",
+    name: "Pavonado",
+    icon: "⚫",
+    category: "metales",
+    description:
+      "Soporte técnico y químico para procesos de pavonado (óxido negro) en acero: desengrase, decapado, control del baño de ennegrecimiento y aceite protector final. Un acabado negro uniforme, sin cambio dimensional, ideal para herramienta, tornillería, refacciones y piezas de precisión.",
+  },
 ];
 
 export const SERVICES_AGUAS: ServiceItem[] = [

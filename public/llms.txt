@@ -28,6 +28,7 @@ Industrias Trevigo (trevigo.com.mx) es un proveedor técnico B2B que vende produ
 - [Decapado](https://www.trevigo.com.mx/servicios/decapado): remoción de óxidos y contaminantes superficiales
 - [Despintado](https://www.trevigo.com.mx/servicios/despintado): eliminación química de recubrimientos antiguos
 - [Pintura electrostática](https://www.trevigo.com.mx/servicios/pintura-electrostatica): recubrimiento de polvo de alta durabilidad
+- [Pavonado](https://www.trevigo.com.mx/servicios/pavonado): acabado de óxido negro para acero sin cambio dimensional
 - [Ingeniería y asesoría en aguas](https://www.trevigo.com.mx/servicios/ingenieria-asesoria): diseño y optimización de plantas de tratamiento
 - [Pruebas de jarras (Jar Test)](https://www.trevigo.com.mx/servicios/pruebas-jarras): ensayo de coagulación-floculación sin costo para nuevos proyectos
 - [Optimización de procesos](https://www.trevigo.com.mx/servicios/optimizacion-procesos): ajuste de dosis y química para PTAR existentes
