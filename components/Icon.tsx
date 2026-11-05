@@ -46,6 +46,7 @@ export type IconName =
   | "ruler"          // Ingeniería y asesoría (📐)
   | "hammer"         // Mantenimiento (🔨)
   | "link"           // Despintado de cadenas y bastidores (🔗)
+  | "circle-half"    // Pavonado / óxido negro (⚫)
   // Industrias
   | "car"            // Automotriz (🚗)
   | "factory"        // Manufactura general (🏭)
@@ -70,6 +71,12 @@ export type IconName =
   | "external-link";
 
 const PATHS: Record<IconName, JSX.Element> = {
+  "circle-half": (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" />
+    </>
+  ),
   flask: (
     <>
       <path d="M9 3h6" />
@@ -418,6 +425,7 @@ const EMOJI_TO_ICON: Record<string, IconName> = {
   "📐": "ruler",
   "🔨": "hammer",
   "🔗": "link",
+  "⚫": "circle-half",
   "🧫": "flask",
   "📊": "chart-bar",
   // Industrias

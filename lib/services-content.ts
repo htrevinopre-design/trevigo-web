@@ -628,6 +628,95 @@ export const SERVICES_CONTENT: ServiceContent[] = [
     relatedIndustrySlugs: ["automotriz", "metalmecanica", "electrica-electronica"],
   },
 
+  {
+    slug: "pavonado",
+    title: "Servicio de Pavonado: Acabado de Óxido Negro para Acero",
+    metaTitle: "Pavonado Industrial en Monterrey",
+    metaDescription:
+      "Soporte técnico para líneas de pavonado (óxido negro) en acero: desengrase, decapado, control del baño de ennegrecimiento y aceite protector. Nuevo León y norte de México.",
+    category: "metales",
+    intro:
+      "El pavonado (también llamado ennegrecido, óxido negro o black oxide) es un tratamiento de conversión química que transforma la superficie del acero en una capa de óxido negro de hierro (magnetita, Fe₃O₄). Da un acabado negro uniforme y estético, sin alterar las dimensiones de la pieza, y combinado con un aceite o cera protectora ofrece resistencia moderada a la corrosión. En Industrias Trevigo damos soporte químico y técnico a líneas de pavonado: preparación de superficie, control del baño y protección final.",
+    sections: [
+      {
+        heading: "Tipos de pavonado y cuándo usar cada uno",
+        paragraphs: [
+          "En la industria se utilizan principalmente tres variantes de pavonado, según el volumen de producción, el tipo de pieza y el nivel de acabado requerido:",
+        ],
+        list: [
+          "Pavonado en caliente (135-145°C): baño de sales alcalinas oxidantes en ebullición. Produce la capa de magnetita más resistente y uniforme. Es el estándar para tornillería, herramienta, refacciones automotrices y piezas de precisión en alto volumen.",
+          "Pavonado de temperatura media (90-120°C): opera por debajo del punto de ebullición de las sales tradicionales. Menos vapores cáusticos y menor consumo de energía, con acabado similar al caliente.",
+          "Pavonado en frío (temperatura ambiente): depósito de compuestos de cobre-selenio que oscurece la superficie. Rápido y sencillo para retoques, lotes pequeños o mantenimiento, pero con menor resistencia al desgaste y a la corrosión.",
+        ],
+      },
+      {
+        heading: "Etapas de una línea de pavonado",
+        paragraphs: [
+          "Como en todo tratamiento de conversión, el resultado del pavonado depende de que la superficie llegue perfectamente limpia y activa al baño de ennegrecimiento. Una línea típica incluye:",
+        ],
+        list: [
+          "Desengrase alcalino caliente: elimina aceites de maquinado, refrigerantes y grasas.",
+          "Enjuague.",
+          "Decapado o desoxidación ácida: remueve óxido, cascarilla y manchas de tratamiento térmico.",
+          "Enjuague.",
+          "Baño de pavonado: formación de la capa de óxido negro (control de temperatura, concentración y tiempo).",
+          "Enjuague en frío y enjuague caliente: retira sales residuales que provocarían manchas o corrosión.",
+          "Aceite protector, cera o sellador: el paso que realmente da la resistencia a la corrosión.",
+        ],
+      },
+      {
+        heading: "Defectos comunes del pavonado y cómo resolverlos",
+        paragraphs: [
+          "La mayoría de los rechazos en pavonado no vienen del baño de ennegrecimiento, sino de la preparación previa o del acabado final. Los problemas que más vemos en planta son:",
+        ],
+        list: [
+          "Color rojizo o café en lugar de negro: baño fuera de concentración o temperatura demasiado baja.",
+          "Manchas o zonas sin color: desengrase insuficiente o residuos de óxido por un decapado incompleto.",
+          "Polvo o capa que se desprende al frotar: baño sobreconcentrado, temperatura excesiva o tiempo de inmersión demasiado largo.",
+          "Manchas blancas o verdosas después del proceso: enjuague deficiente que deja sales atrapadas.",
+          "Oxidación a los pocos días: aceite protector inadecuado o mal aplicado.",
+        ],
+      },
+      {
+        heading: "Cómo Trevigo apoya tu línea de pavonado",
+        paragraphs: [
+          "Trabajamos con talleres de tratamiento de superficies, metalmecánicas y fabricantes de tornillería, herramienta y refacciones en Nuevo León y norte de México. Suministramos los químicos de preparación (desengrasantes alcalinos, ácidos de decapado y desoxidantes), aceites protectores e inhibidores de corrosión para el acabado final, y damos asesoría técnica para el control del baño y la solución de defectos.",
+          "Si estás evaluando incorporar el pavonado como un proceso nuevo, te ayudamos a definir la secuencia de etapas y los parámetros de operación adecuados para tus piezas.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "¿Qué es el pavonado y para qué sirve?",
+        a: "El pavonado es un tratamiento químico que convierte la superficie del acero en una capa de óxido negro de hierro. Sirve para dar un acabado negro uniforme y estético, reducir el reflejo de la luz y, junto con un aceite protector, dar una resistencia moderada a la corrosión en ambientes interiores.",
+      },
+      {
+        q: "¿El pavonado cambia las dimensiones de la pieza?",
+        a: "Prácticamente no. La capa de óxido negro mide alrededor de 1 µm, por lo que es ideal para piezas con tolerancias estrechas como roscas, engranes, herramienta de corte y componentes de precisión, donde un recubrimiento más grueso no es aceptable.",
+      },
+      {
+        q: "¿El pavonado protege contra la corrosión?",
+        a: "Por sí solo, poco. La capa de óxido negro es porosa y la protección real la da el aceite, cera o sellador que se aplica después. Para ambientes interiores es suficiente; para exposición a la intemperie o humedad alta conviene evaluar tropicalizado, galvanizado o fosfatizado con aceite.",
+      },
+      {
+        q: "¿Cuál es la diferencia entre pavonado y tropicalizado?",
+        a: "El pavonado forma una capa de óxido negro sobre el propio acero y es principalmente un acabado estético de baja protección. El tropicalizado es un sistema multicapa sobre zinc diseñado para alta resistencia a la corrosión en climas húmedos o salinos.",
+      },
+      {
+        q: "¿Qué metales se pueden pavonar?",
+        a: "El pavonado tradicional está diseñado para acero al carbono, aceros de baja aleación y hierro fundido. El acero inoxidable, el cobre, el latón y el aluminio requieren formulaciones de ennegrecido específicas para cada metal.",
+      },
+    ],
+    relatedProductIds: [
+      "limpiador-liquido-alcalino-metales",
+      "limpiador-alcalino-multimetalico",
+      "acido-clorhidrico",
+      "aceite-protector-piezas-metalicas",
+      "inhibidor-oxidacion-temporal",
+    ],
+    relatedIndustrySlugs: ["metalmecanica", "automotriz", "tratamiento-superficies-metalicas", "manufactura-general"],
+  },
+
   // ─────────────────────────── AGUAS ───────────────────────────
   {
     slug: "ingenieria-asesoria",

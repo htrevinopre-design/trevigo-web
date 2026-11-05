@@ -6,7 +6,7 @@ import { COMPANY } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Servicios de Tratamiento de Metales y Aguas",
   description:
-    "Servicios aplicados de galvanizado, tropicalizado, despintado, decapado, pasivado, pintura electrostática e ingeniería para tratamiento de aguas. Monterrey, N.L.",
+    "Servicios aplicados de galvanizado, tropicalizado, despintado, decapado, pasivado, pavonado, pintura electrostática e ingeniería para tratamiento de aguas. Monterrey, N.L.",
   alternates: { canonical: `${COMPANY.url}/servicios` },
 };
 
@@ -66,7 +66,7 @@ export default function ServiciosPage() {
             "@type": "CollectionPage",
             name: "Servicios de Tratamiento de Metales y Aguas",
             description:
-              "Servicios técnicos de Industrias Trevigo: galvanizado, tropicalizado, fosfatizado, decapado, pasivado, pintura electrostática y tratamiento de aguas residuales.",
+              "Servicios técnicos de Industrias Trevigo: galvanizado, tropicalizado, fosfatizado, decapado, pasivado, pavonado, pintura electrostática y tratamiento de aguas residuales.",
             url: `${COMPANY.url}/servicios`,
             isPartOf: { "@type": "WebSite", name: COMPANY.legalName, url: COMPANY.url },
             provider: {
@@ -84,6 +84,7 @@ export default function ServiciosPage() {
                 "Decapado",
                 "Pasivado",
                 "Pintura Electrostática",
+                "Pavonado",
                 "Ingeniería y Asesoría en Aguas",
                 "Mantenimiento de PTAR",
                 "Pruebas de Jarras",
@@ -174,6 +175,7 @@ export default function ServiciosPage() {
               { label: "Pasivado", href: "#pasivado" },
               { label: "Pintura Electrostática", href: "#pintura-electrostatica" },
               { label: "Cadenas y Bastidores", href: "#cadenas-pintura" },
+              { label: "Pavonado", href: "#pavonado" },
             ].map((p) => (
               <a key={p.href} href={p.href}
                 className="inline-flex items-center px-4 py-1.5 bg-steel-50 border border-steel-200 hover:border-navy-400 hover:bg-navy-50 text-steel-700 hover:text-navy-700 text-xs font-bold uppercase tracking-wide transition-all">
@@ -741,6 +743,77 @@ export default function ServiciosPage() {
             linkLabel="Solicitar cotización →"
             linkHref="/contacto"
             detailSlug="cadenas-pintura"
+          />
+        </div>
+      </section>
+
+      {/* ─── PAVONADO ─────────────────────────────────────────────── */}
+      <section id="pavonado" className="py-20 bg-steel-50 border-y border-steel-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeader label="Servicio · Tratamiento de Metales" title="Pavonado (Óxido Negro)" accent="navy" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
+            <div>
+              <p className="text-steel-600 text-sm leading-relaxed mb-4">
+                El pavonado, también conocido como ennegrecido u óxido negro, es un tratamiento de conversión química que transforma la superficie del acero en una capa de óxido negro de hierro (magnetita). Da un acabado negro uniforme y elegante sin alterar las dimensiones de la pieza, y con un aceite protector final ofrece resistencia moderada a la corrosión.
+              </p>
+              <p className="text-steel-600 text-sm leading-relaxed mb-6">
+                Trevigo da soporte químico y técnico a líneas de pavonado: desengrasantes alcalinos, ácidos de decapado, aceites protectores e inhibidores de corrosión, además de asesoría para el control del baño y la solución de defectos de color y adherencia.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Acero al carbono", "Capa ≈ 1 micra", "Sin cambio dimensional", "Black oxide"].map((tag) => (
+                  <span key={tag} className="inline-flex items-center px-3 py-1 bg-navy-50 border border-navy-200 text-navy-700 text-xs font-bold uppercase tracking-wide rounded">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              {[
+                { tipo: "Pavonado en caliente", uso: "135–145°C · Alto volumen", desc: "Baño de sales alcalinas oxidantes en ebullición. Produce la capa de magnetita más resistente y uniforme. Estándar para tornillería, herramienta, refacciones y piezas de precisión.", border: "border-l-navy-500" },
+                { tipo: "Pavonado de temperatura media", uso: "90–120°C", desc: "Opera por debajo del punto de ebullición de las sales tradicionales: menos vapores cáusticos y menor consumo de energía, con un acabado similar al pavonado en caliente.", border: "border-l-orange-400" },
+                { tipo: "Pavonado en frío", uso: "Temperatura ambiente · Retoques", desc: "Oscurecimiento químico rápido y sencillo para lotes pequeños, mantenimiento o retoques. Menor resistencia al desgaste y a la corrosión que el pavonado en caliente.", border: "border-l-steel-400" },
+              ].map((item) => (
+                <div key={item.tipo} className={`bg-white border border-steel-200 border-l-4 ${item.border} rounded-xl p-5`}>
+                  <div className="flex items-start justify-between gap-3 mb-1">
+                    <h4 className="text-steel-900 font-black text-sm uppercase">{item.tipo}</h4>
+                    <span className="text-[10px] font-bold text-steel-400 uppercase tracking-wide text-right shrink-0">{item.uso}</span>
+                  </div>
+                  <p className="text-steel-500 text-xs leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Etapas */}
+          <div className="bg-white border border-steel-200 rounded-xl p-6">
+            <h3 className="text-steel-900 font-black text-sm uppercase tracking-wide mb-5 text-center">Línea de pavonado: etapas del proceso</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              {[
+                { n: "1", name: "Desengrase", detail: "Alcalino caliente", icon: "🧼" },
+                { n: "2", name: "Decapado", detail: "Óxido y cascarilla", icon: "⚗️" },
+                { n: "3", name: "Enjuague", detail: "Agua limpia", icon: "💧" },
+                { n: "4", name: "Pavonado", detail: "Óxido negro", icon: "⚫" },
+                { n: "5", name: "Enjuague", detail: "Frío + caliente", icon: "💧" },
+                { n: "6", name: "Protección", detail: "Aceite / cera", icon: "🛡️" },
+              ].map((step) => (
+                <div key={step.n} className="text-center bg-steel-50 border border-steel-200 rounded-lg p-3">
+                  <div className="text-xl mb-1">{step.icon}</div>
+                  <div className="text-[10px] font-bold text-orange-500 uppercase">Etapa {step.n}</div>
+                  <div className="text-steel-900 font-black text-xs uppercase">{step.name}</div>
+                  <div className="text-steel-400 text-[10px] mt-0.5">{step.detail}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <ServiceCTA
+            title="¿Manchas, color rojizo u oxidación en tus piezas pavonadas?"
+            body="Revisamos tu línea completa, desde el desengrase hasta el aceite protector, para encontrar la causa raíz y estabilizar el acabado negro."
+            linkLabel="Solicitar asesoría →"
+            linkHref="/contacto"
+            detailSlug="pavonado"
           />
         </div>
       </section>
