@@ -2,14 +2,16 @@ import type { Metadata } from "next";
 import { COMPANY } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Sak: Insumos para Limpieza Industrial",
+  // SEO P002: title y description optimizados para "SAK inhibidor corrosión"
+  // Anterior: "Sak: Insumos para Limpieza Industrial" (no capturaba intent metalúrgico)
+  title: "SAK: Inhibidor de Corrosión para Metal | Trevigo",
   description:
-    "Sak es la línea de Trevigo para limpieza industrial e institucional: químicos, papel, jarcería, equipo y bolsas. Inventario completo y entrega 48h en Monterrey.",
+    "SAK químico para tratamiento y protección de metales en Monterrey. Ideal para industria metalmecánica. Solicita cotización →",
   alternates: { canonical: `${COMPANY.url}/sak` },
   openGraph: {
-    title: "Sak: Insumos para Limpieza Industrial",
+    title: "SAK: Inhibidor de Corrosión para Metal | Trevigo",
     description:
-      "Línea Sak de Trevigo: químicos, papel, jarcería y equipo de limpieza institucional. Un solo proveedor, entrega 48h en Monterrey.",
+      "SAK químico para tratamiento y protección de metales en Monterrey. Ideal para industria metalmecánica. Solicita cotización →",
     url: `${COMPANY.url}/sak`,
   },
 };
