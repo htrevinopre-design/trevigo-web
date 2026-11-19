@@ -214,9 +214,10 @@ export const ARTICLES: Article[] = [
   {
     slug: "fosfatizado-zinc-pretratamiento-pintura",
     title: "Fosfatizado de zinc: el paso clave en el pretratamiento antes de pintar",
-    metaTitle: "Fosfatizado de Zinc: Pretratamiento para Pintura",
+    // SEO P003: title apunta a "fosfato de zinc anticorrosivo" — 1,384 impresiones GSC
+    metaTitle: "Fosfato de Zinc Anticorrosivo: Qué es y Tipos | Trevigo",
     metaDescription:
-      "Guía técnica del fosfatizado de zinc: cómo funciona, por qué se usa antes de la pintura, etapas del proceso y normas automotrices. Proveedor en Monterrey.",
+      "Fosfato de zinc para recubrimientos anticorrosivos industriales. Propiedades, tipos y aplicaciones en pintura. Proveedor en Monterrey →",
     excerpt:
       "El fosfatizado de zinc es el tratamiento más importante para garantizar adherencia y resistencia a la corrosión en piezas pintadas. Aprende cómo funciona, qué etapas tiene y qué normas debe cumplir.",
     category: "Tratamiento de Metales",
@@ -561,9 +562,10 @@ export const ARTICLES: Article[] = [
   {
     slug: "decapado-metales-industrial",
     title: "Decapado industrial de metales: químicos, procesos y aplicaciones en manufactura",
-    metaTitle: "Decapado Industrial de Metales: Guía Técnica",
+    // SEO P004: title y meta optimizados para featured snippet con tabla comparativa
+    metaTitle: "Decapante Industrial: Qué es, Tipos y Usos en Metal",
     metaDescription:
-      "Guía técnica del decapado industrial: ácidos, procesos y aplicaciones en acero, aluminio y acero inoxidable. Productos químicos y servicio en Monterrey.",
+      "Decapante ácido y alcalino para limpieza de metales industriales. Tabla comparativa de tipos y aplicaciones. Trevigo, Monterrey →",
     excerpt:
       "El decapado es el proceso químico que remueve óxidos, calamina y contaminantes de una superficie metálica antes de la pintura, galvanizado o ensamble. Conoce los ácidos y procesos según el sustrato.",
     category: "Tratamiento de Metales",

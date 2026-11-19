@@ -59,9 +59,10 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "decapado",
     term: "Decapado",
-    seoTitle: "Decapado de metales: qué es, ácidos usados y proceso industrial",
+    // SEO P004: title recortado para <58 chars, meta apunta a tabla comparativa
+    seoTitle: "Decapante Industrial: Qué es, Tipos y Usos en Metal",
     seoDescription:
-      "Decapado industrial: proceso químico para remover óxidos y calamina con ácidos (clorhídrico, sulfúrico, fosfórico). Cuándo usarlo y qué ácido elegir.",
+      "Decapante ácido y alcalino para limpieza de metales industriales. Tabla comparativa de tipos y aplicaciones. Trevigo, Monterrey →",
     shortDef:
       "Proceso químico que remueve óxidos, calamina y contaminantes superficiales de piezas metálicas con ácidos.",
     longDef: [
@@ -407,6 +408,10 @@ export const GLOSSARY: GlossaryEntry[] = [
   {
     slug: "iso-vg",
     term: "ISO VG (ISO Viscosity Grade)",
+    // SEO: title recortado a <58 chars — era genérico, ahora captura búsqueda directa
+    seoTitle: "ISO VG: Clasificación de Viscosidad para Aceites",
+    seoDescription:
+      "ISO VG 32, 46, 68 y más: guía de grados de viscosidad para aceites industriales. Tabla de aplicaciones por sistema y temperatura.",
     shortDef:
       "Sistema internacional de clasificación de aceites industriales por viscosidad cinemática a 40°C.",
     longDef: [

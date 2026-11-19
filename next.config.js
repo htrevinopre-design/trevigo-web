@@ -120,6 +120,20 @@ const nextConfig = {
         destination: "/productos",
         permanent: true,
       },
+
+      // ── SEO: /recursos/sds → /recursos/hojas-de-seguridad (P005) ──
+      // La URL antigua /sds no tiene contenido semántico; la nueva landing
+      // centraliza todas las fichas SDS con estructura indexable por Google/Bing.
+      {
+        source: "/recursos/sds",
+        destination: "/recursos/hojas-de-seguridad",
+        permanent: true,
+      },
+      {
+        source: "/recursos/sds/:path*",
+        destination: "/recursos/hojas-de-seguridad/:path*",
+        permanent: true,
+      },
     ];
   },
 };
