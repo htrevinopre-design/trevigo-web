@@ -63,6 +63,8 @@ export default function Footer() {
                 { label: "Inhibidores de Corrosión", href: "/productos/categoria/inhibidores" },
                 { label: "Tratamiento de Aguas", href: "/productos/linea/tratamiento-aguas" },
                 { label: "Coagulantes y Floculantes", href: "/productos/categoria/coagulantes" },
+                { label: "Aceites Lubricantes", href: "/productos/linea/aceites-lubricantes" },
+                { label: "Aceite Hidráulico", href: "/productos/categoria/aceites-hidraulicos-iso" },
                 { label: "Materias Primas", href: "/productos/linea/materias-primas" },
                 { label: "Aditivos para Lubricantes", href: "/productos/linea/aditivos-lubricantes" },
               ].map((link) => (

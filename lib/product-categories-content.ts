@@ -6,6 +6,8 @@
 // "lubricantes industriales".
 // ============================================================
 
+import { LUBRICANTES_LINEA_CONTENT } from "./catalog-lubricantes-content";
+
 export interface CategoryContent {
   /** Slug — coincide con id en PRODUCT_CATEGORIES de lib/data.ts */
   id: string;
@@ -405,6 +407,8 @@ export const CATEGORY_CONTENT: Record<string, CategoryContent> = {
     relatedIndustries: ["metalmecanica", "automotriz", "minera", "agroindustria"],
     relatedServices: ["ingenieria-asesoria", "mantenimiento"],
   },
+  // Catálogo de aceites lubricantes Trevigo 2026
+  "aceites-lubricantes": LUBRICANTES_LINEA_CONTENT,
 };
 
 export function getCategoryContent(id: string): CategoryContent | undefined {

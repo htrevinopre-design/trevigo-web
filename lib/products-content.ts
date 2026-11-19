@@ -5,6 +5,8 @@
 // específicas y consideraciones técnicas / limitaciones.
 // ============================================================
 
+import { LUBRICANTES_CONTENT } from "./catalog-lubricantes";
+
 export interface ProductContent {
   /** Descripción técnica extendida — 80-120 palabras única por producto */
   description: string;
@@ -1153,4 +1155,6 @@ export const PRODUCT_CONTENT: Record<string, ProductContent> = {
     notes:
       "No usar en fluidos que requieren fricción controlada (ATF con frenos húmedos, fluidos de tractor): reduciría la fricción necesaria y haría patinar los embragues.",
   },
+  // Catálogo de aceites lubricantes Trevigo 2026 (lib/catalog-lubricantes.ts)
+  ...LUBRICANTES_CONTENT,
 };

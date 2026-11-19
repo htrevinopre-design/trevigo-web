@@ -4,6 +4,8 @@
 // contenido del sitio vive aquí para fácil mantenimiento.
 // ============================================================
 
+import { LUBRICANTES_CATEGORY } from "./catalog-lubricantes";
+
 export const COMPANY = {
   name: "Industrias Trevigo",
   shortName: "Trevigo",
@@ -54,6 +56,10 @@ export interface Product {
   seoTitle?: string;
   /** Override del metaDescription. Si no se define usa shortDescription. */
   seoDescription?: string;
+  /** Imagen propia del producto (envase etiquetado). Si no hay, se usa la del formato. */
+  image?: string;
+  /** Especificaciones técnicas (grado SAE/ISO, nivel API, etc.) para la tabla y el schema. */
+  specs?: { label: string; value: string }[];
   formats: ProductFormat[];
 }
 
@@ -682,6 +688,11 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
   },
 
   // ══════════════════════════════════════════════
+  // ACEITES LUBRICANTES TREVIGO (catálogo 2026) — ver lib/catalog-lubricantes.ts
+  // ══════════════════════════════════════════════
+  LUBRICANTES_CATEGORY,
+
+  // ══════════════════════════════════════════════
   // CATEGORÍA 4: MATERIAS PRIMAS
   // ══════════════════════════════════════════════
   {
@@ -1191,7 +1202,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
     seoDescription: "Proveedor de químicos para manufactura: limpieza de piezas, pretratamiento de metales, lubricantes y tratamiento de aguas de proceso. Monterrey, NL.",
     description: "Química de proceso para plantas de manufactura: limpieza y desengrase de piezas, pretratamiento antes de pintura, lubricación industrial y tratamiento de aguas de proceso.",
     heroText: "De la limpieza de piezas al tratamiento del agua de descarga: un solo proveedor técnico para la química de tu planta de manufactura.",
-    productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "inhibidores", "aceites-metales", "coagulantes", "floculantes"],
+    productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "inhibidores", "aceites-metales", "coagulantes", "floculantes", "aceites-hidraulicos-iso", "aceites-industriales"],
     serviceIds: ["fosfatizado", "decapado", "pasivado", "ingenieria-asesoria", "optimizacion-procesos"],
     stats: [
       { value: "80+", label: "productos químicos de línea para manufactura" },
@@ -1211,7 +1222,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
     seoDescription: "Proveedor y distribuidor de químicos industriales para la cadena automotriz mexicana: fosfatado, galvanizado, inhibidores y tratamiento de aguas. 35+ años en Nuevo León.",
     description: "Soluciones para la cadena automotriz en Nuevo León: fosfatado, galvanizado, tratamiento de aguas residuales de taller y productos para fabricantes de autopartes.",
     heroText: "Nuevo León produce el 42% de las autopartes de México. Trevigo lleva 35 años siendo proveedor técnico de confianza para esta industria.",
-    productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "sellos", "inhibidores", "aceites-metales", "coagulantes", "floculantes", "lubricantes-especializados"],
+    productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "sellos", "inhibidores", "aceites-metales", "coagulantes", "floculantes", "lubricantes-especializados", "aceites-motor-diesel", "aceites-transmision-diferencial", "aceites-hidraulicos-iso"],
     serviceIds: ["galvanizado", "fosfatizado", "pasivado", "decapado", "ingenieria-asesoria"],
     stats: [
       { value: "42%", label: "de autopartes de México producidas en N.L." },
@@ -1230,7 +1241,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
     id: "metalmecanica", name: "Metalmecánica", slug: "metalmecanica", icon: "🔩",
     description: "Desde talleres de maquinado hasta grandes plantas: desoxidantes, inhibidores, fluidos de corte y tratamiento de aguas industriales.",
     heroText: "La industria metalmecánica es el núcleo de la manufactura mexicana. Trevigo entiende sus procesos y tiene el producto correcto para cada etapa.",
-    productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "removedores", "inhibidores", "aceites-metales", "grasas-lubricantes", "lubricantes-especializados", "coagulantes", "floculantes"],
+    productSubcategoryIds: ["detergentes", "desoxidantes", "fosfatos", "removedores", "inhibidores", "aceites-metales", "grasas-lubricantes", "lubricantes-especializados", "coagulantes", "floculantes", "aceites-hidraulicos-iso", "aceites-industriales"],
     serviceIds: ["galvanizado", "despintado", "decapado", "pasivado", "pintura-electrostatica"],
     stats: [
       { value: "35+", label: "años en la industria metalmecánica" },
@@ -1339,7 +1350,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
     id: "papel-derivados", name: "Papel y derivados", slug: "papel-derivados", icon: "📄",
     description: "Tratamiento de aguas residuales de plantas papeleras, control de incrustaciones y biocidas para sistemas de agua de proceso.",
     heroText: "Las plantas papeleras generan efluentes complejos con alta carga de fibras y sólidos. Trevigo tiene los coagulantes y floculantes para tratarlos eficientemente.",
-    productSubcategoryIds: ["coagulantes", "floculantes", "poliacrilamidas", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas"],
+    productSubcategoryIds: ["coagulantes", "floculantes", "poliacrilamidas", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas", "aceites-industriales"],
     serviceIds: ["ingenieria-asesoria", "mantenimiento", "pruebas-jarras", "optimizacion-procesos"],
     stats: [
       { value: "Alta", label: "eficiencia en remoción de fibras y sólidos" },
@@ -1373,7 +1384,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
     id: "agroindustria", name: "Agroindustria", slug: "agroindustria", icon: "🌾",
     description: "Tratamiento de aguas residuales agroindustriales, materias primas para limpieza de equipos y lubricantes grado alimento para maquinaria de campo.",
     heroText: "La agroindustria genera efluentes con alta carga orgánica. Trevigo provee los químicos necesarios para tratarlos y mantener la maquinaria operando eficientemente.",
-    productSubcategoryIds: ["coagulantes", "floculantes", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas", "acidos-bases", "lubricantes-especializados", "lubricantes-formato-especial"],
+    productSubcategoryIds: ["coagulantes", "floculantes", "agentes-secuestrantes", "inhibidores-oxigeno", "microbicidas", "acidos-bases", "lubricantes-especializados", "lubricantes-formato-especial", "aceites-motor-diesel", "aceites-transmision-diferencial", "aceites-hidraulicos-iso"],
     serviceIds: ["ingenieria-asesoria", "mantenimiento", "pruebas-jarras"],
     stats: [
       { value: "NSF H1", label: "lubricantes para maquinaria de proceso de alimentos" },
@@ -1390,7 +1401,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
     id: "minera", name: "Minera", slug: "minera", icon: "⛏️",
     description: "Tratamiento de aguas ácidas de mina, lubricantes industriales de alto rendimiento y materias primas para la industria extractiva.",
     heroText: "Las operaciones mineras enfrentan condiciones extremas. Trevigo provee lubricantes de alta exigencia y químicos para el tratamiento de aguas ácidas de mina (AMD).",
-    productSubcategoryIds: ["coagulantes", "floculantes", "poliacrilamidas", "agentes-secuestrantes", "lubricantes-especializados", "grasas-lubricantes", "aceites-generales", "lubricantes-formato-especial", "acidos-bases"],
+    productSubcategoryIds: ["coagulantes", "floculantes", "poliacrilamidas", "agentes-secuestrantes", "lubricantes-especializados", "grasas-lubricantes", "aceites-generales", "lubricantes-formato-especial", "acidos-bases", "aceites-motor-diesel", "aceites-transmision-diferencial", "aceites-hidraulicos-iso", "aceites-industriales"],
     serviceIds: ["ingenieria-asesoria", "mantenimiento", "pruebas-jarras", "optimizacion-procesos"],
     stats: [
       { value: "Extremo", label: "rendimiento en condiciones de alta carga y temperatura" },
@@ -1495,7 +1506,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
     id: "electrica-electronica", name: "Eléctrica y electrónica", slug: "electrica-electronica", icon: "⚡",
     description: "Limpiadores de precisión, pasivados y lubricantes para la industria eléctrica y electrónica: protección de componentes, terminales y gabinetes.",
     heroText: "La industria eléctrica y electrónica requiere limpiadores de alta precisión y protectores anticorrosivos para componentes sensibles. Trevigo tiene la solución.",
-    productSubcategoryIds: ["detergentes", "desoxidantes", "pasivados", "sellos", "inhibidores", "aceites-metales", "lubricantes-especializados"],
+    productSubcategoryIds: ["detergentes", "desoxidantes", "pasivados", "sellos", "inhibidores", "aceites-metales", "lubricantes-especializados", "aceites-industriales"],
     serviceIds: ["pasivado", "decapado", "tropicalizado"],
     stats: [
       { value: "Alta", label: "precisión en limpiadores para componentes electrónicos" },
@@ -1563,7 +1574,7 @@ export const INDUSTRIES: IndustryDefinition[] = [
     id: "polimeros", name: "Polímeros", slug: "polimeros", icon: "🔬",
     description: "Desmoldantes industriales, lubricantes para maquinaria de inyección y extrusión, y aceites de proceso para la industria de plásticos y polímeros.",
     heroText: "Las plantas de inyección y extrusión de plásticos necesitan desmoldantes precisos y lubricantes de alta temperatura. Trevigo tiene el portafolio adecuado.",
-    productSubcategoryIds: ["grasas-lubricantes", "lubricantes-especializados", "aceites-generales", "lubricantes-formato-especial", "aceites-metales", "detergentes"],
+    productSubcategoryIds: ["grasas-lubricantes", "lubricantes-especializados", "aceites-generales", "lubricantes-formato-especial", "aceites-metales", "detergentes", "aceites-hidraulicos-iso", "aceites-industriales"],
     serviceIds: ["ingenieria-asesoria", "decapado", "galvanizado"],
     stats: [
       { value: "Alta", label: "temperatura de operación en lubricantes de proceso" },

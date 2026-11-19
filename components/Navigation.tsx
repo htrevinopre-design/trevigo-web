@@ -54,6 +54,19 @@ const PRODUCTOS_MENU = [
     ],
   },
   {
+    title: "Aceites Lubricantes",
+    href: "/productos/linea/aceites-lubricantes",
+    image: "/imagenes/mega-aceites-lubricantes.jpg",
+    cta: "Ver catálogo de aceites",
+    items: [
+      { label: "Aceite para Motor a Diésel",       href: "/productos/categoria/aceites-motor-diesel" },
+      { label: "Aceite para Motor a Gasolina y Moto", href: "/productos/categoria/aceites-motor-gasolina" },
+      { label: "Transmisión y Diferencial",        href: "/productos/categoria/aceites-transmision-diferencial" },
+      { label: "Aceite Hidráulico",                href: "/productos/categoria/aceites-hidraulicos-iso" },
+      { label: "Aceites Industriales",             href: "/productos/categoria/aceites-industriales" },
+    ],
+  },
+  {
     title: "Materias Primas",
     href: "/productos/linea/materias-primas",
     image: "/imagenes/mega-lubricantes.png",

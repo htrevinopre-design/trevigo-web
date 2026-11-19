@@ -50,6 +50,16 @@ const CATEGORY_THEME: Record<
     subCount: "bg-amber-100 text-amber-700",
     pill: "bg-amber-600 hover:bg-amber-700 text-white",
   },
+  "aceites-lubricantes": {
+    header: "bg-sky-700",
+    cardHover: "hover:border-sky-300 hover:shadow-sky-100",
+    cta: "border-sky-600 text-sky-700 group-hover:bg-sky-700 group-hover:text-white group-hover:border-sky-700",
+    textHover: "group-hover:text-sky-700",
+    subBanner: "border-sky-600 bg-sky-50",
+    subText: "text-sky-800",
+    subCount: "bg-sky-100 text-sky-700",
+    pill: "bg-sky-600 hover:bg-sky-700 text-white",
+  },
   "materias-primas": {
     header: "bg-emerald-700",
     cardHover: "hover:border-emerald-300 hover:shadow-emerald-100",

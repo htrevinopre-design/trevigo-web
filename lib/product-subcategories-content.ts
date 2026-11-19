@@ -6,6 +6,8 @@
 // "desoxidantes industriales", etc.
 // ============================================================
 
+import { LUBRICANTES_SUBCATEGORY_CONTENT } from "./catalog-lubricantes-content";
+
 export interface SubcategoryContent {
   /** Slug de la subcategoría — coincide con id en lib/data.ts */
   id: string;
@@ -1659,6 +1661,8 @@ export const SUBCATEGORY_CONTENT: Record<string, SubcategoryContent> = {
     relatedServices: ["ingenieria-asesoria", "mantenimiento"],
     relatedGlossary: ["indice-de-viscosidad", "viscosidad", "iso-vg", "sae"],
   },
+  // Catálogo de aceites lubricantes Trevigo 2026
+  ...LUBRICANTES_SUBCATEGORY_CONTENT,
 };
 
 export function getSubcategoryContent(id: string): SubcategoryContent | undefined {

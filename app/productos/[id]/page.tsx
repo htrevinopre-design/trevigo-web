@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { COMPANY, PRODUCT_CATEGORIES, INDUSTRIES } from "@/lib/data";
 import { ARTICLES } from "@/lib/articles";
 import { PRODUCT_CONTENT } from "@/lib/products-content";
+import { CATEGORY_CONTENT } from "@/lib/product-categories-content";
+import { SUBCATEGORY_CONTENT } from "@/lib/product-subcategories-content";
 import ProductCotizaForm from "@/components/ProductCotizaForm";
 import { Icon, EmojiIcon } from "@/components/Icon";
 
@@ -28,10 +30,20 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const product = allProducts.find((p) => p.id === params.id);
   if (!product) return { title: "Producto no encontrado" };
+  const title = product.seoTitle ?? product.name;
+  const description = product.seoDescription ?? product.shortDescription;
+  const url = `${COMPANY.url}/productos/${product.id}`;
   return {
-    title: product.seoTitle ?? product.name,
-    description: product.seoDescription ?? product.shortDescription,
-    alternates: { canonical: `${COMPANY.url}/productos/${product.id}` },
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      ...(product.image ? { images: [{ url: `${COMPANY.url}${product.image}`, alt: product.name }] } : {}),
+    },
   };
 }
 
@@ -63,6 +75,20 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
     product.formats.find((f) => f.name === "porron") ??
     product.formats[0];
 
+  // Imagen propia del producto (envase etiquetado) cuando existe
+  const heroImage = product.image ?? heroFormat.image;
+
+  // Lubricantes y aceites: la guía de uso es de lubricación, no de dilución en agua
+  const isLubricant = ["aceites-lubricantes", "lubricantes-aceites"].includes(product.categoryId);
+
+  // Landing pages de línea y subcategoría (para breadcrumb e internal linking)
+  const lineaHref = CATEGORY_CONTENT[product.categoryId]
+    ? `/productos/linea/${product.categoryId}`
+    : `/productos#${product.categoryId}`;
+  const subcategoryHref = SUBCATEGORY_CONTENT[product.subcategoryId]
+    ? `/productos/categoria/${product.subcategoryId}`
+    : null;
+
   const waUrl = `https://wa.me/528120403135?text=${encodeURIComponent(
     `Hola, me interesa obtener la ficha técnica y cotización del producto: ${product.name} (SKU: ${product.sku})`
   )}`;
@@ -75,8 +101,17 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
     description: product.shortDescription,
     sku: product.sku,
     mpn: product.sku,
-    image: `${COMPANY.url}${heroFormat.image}`,
+    image: `${COMPANY.url}${heroImage}`,
     category: `${product.categoryName} > ${product.subcategoryName}`,
+    ...(product.specs
+      ? {
+          additionalProperty: product.specs.map((s) => ({
+            "@type": "PropertyValue",
+            name: s.label,
+            value: s.value,
+          })),
+        }
+      : {}),
     brand: {
       "@type": "Brand",
       name: COMPANY.shortName,
@@ -131,11 +166,14 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
         "@type": "ListItem",
         position: 3,
         name: product.categoryName,
-        item: `${COMPANY.url}/productos#${product.categoryId}`,
+        item: `${COMPANY.url}${lineaHref}`,
       },
+      ...(subcategoryHref
+        ? [{ "@type": "ListItem", position: 4, name: product.subcategoryName, item: `${COMPANY.url}${subcategoryHref}` }]
+        : []),
       {
         "@type": "ListItem",
-        position: 4,
+        position: subcategoryHref ? 5 : 4,
         name: product.name,
         item: `${COMPANY.url}/productos/${product.id}`,
       },
@@ -161,10 +199,18 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
             <span>/</span>
             <Link href="/productos" className="hover:text-steel-300 transition-colors">Productos</Link>
             <span>/</span>
-            <Link href={`/productos#${product.categoryId}`} className="hover:text-steel-300 transition-colors">
+            <Link href={lineaHref} className="hover:text-steel-300 transition-colors">
               {product.categoryName}
             </Link>
             <span>/</span>
+            {subcategoryHref && (
+              <>
+                <Link href={subcategoryHref} className="hover:text-steel-300 transition-colors">
+                  {product.subcategoryName}
+                </Link>
+                <span>/</span>
+              </>
+            )}
             <span className="text-steel-300 truncate max-w-[200px]">{product.name}</span>
           </nav>
         </div>
@@ -179,10 +225,10 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
             <div className="space-y-4">
               {/* Product image */}
               <div className="bg-white border border-steel-200 rounded-xl p-8 flex items-center justify-center min-h-[260px]">
-                <div className="relative w-48 h-48">
+                <div className={`relative ${product.image ? "w-56 h-56" : "w-48 h-48"}`}>
                   <Image
-                    src={heroFormat.image}
-                    alt={product.name}
+                    src={heroImage}
+                    alt={product.image ? `${product.name} Trevigo en ${heroFormat.label.toLowerCase()}` : product.name}
                     fill
                     className="object-contain"
                     priority
@@ -259,6 +305,7 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
                   </div>
                   <div className="divide-y divide-steel-100">
                     {[
+                      ...(product.specs ?? []).map((s) => ({ key: s.label, val: s.value })),
                       { key: "Forma física", val: product.formats[0].name === "saco" ? "Sólido / Polvo" : "Líquido" },
                       { key: "Presentación principal", val: `${heroFormat.label}, ${heroFormat.weight}` },
                       { key: "Otras presentaciones", val: product.formats.length > 1 ? product.formats.map(f => f.label).join(", ") : "N/A" },
@@ -397,7 +444,7 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
 
           {/* Tab content — Método de uso */}
           <div className="py-8 px-2 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
+            {(isLubricant ? LUBRICANT_STEPS : [
               {
                 icon: "1",
                 title: "Preparación",
@@ -413,7 +460,7 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
                 title: "Enjuague y disposición",
                 desc: "Enjuague con agua limpia según se indique. Los residuos deben disponerse conforme a la normativa local (NOM-052-SEMARNAT o la aplicable). Consulte la SDS para detalles.",
               },
-            ].map((step) => (
+            ]).map((step) => (
               <div key={step.title} className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-navy-500 text-white font-black text-sm rounded-full flex items-center justify-center shrink-0">
                   {step.icon}
@@ -542,3 +589,22 @@ export default function ProductoPage({ params }: { params: { id: string } }) {
     </>
   );
 }
+
+// Guía de uso para aceites y lubricantes (se aplica en lugar de la de químicos diluibles)
+const LUBRICANT_STEPS = [
+  {
+    icon: "1",
+    title: "Selección",
+    desc: "Verifique en el manual del equipo la viscosidad (grado SAE o ISO VG) y el nivel de desempeño (API, DEXRON, etc.) que especifica el fabricante. Si tiene dudas, un asesor Trevigo le ayuda a elegir.",
+  },
+  {
+    icon: "2",
+    title: "Cambio y llenado",
+    desc: "Drene el aceite usado con el equipo a temperatura de operación, cambie filtros y llene al nivel indicado. No mezcle aceites de distinto tipo o marca sin validar su compatibilidad; use embudos y recipientes limpios.",
+  },
+  {
+    icon: "3",
+    title: "Aceite usado",
+    desc: "El aceite lubricante usado es residuo peligroso (NOM-052-SEMARNAT). Almacénelo en recipientes cerrados e identificados y entréguelo a un recolector autorizado. Consulte la SDS para manejo seguro.",
+  },
+];

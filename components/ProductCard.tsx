@@ -30,6 +30,12 @@ const CATEGORY_THEME: Record<
     cta: "border-amber-600 text-amber-700 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-600",
     textHover: "group-hover:text-amber-700",
   },
+  "aceites-lubricantes": {
+    header: "bg-sky-700",
+    cardHover: "hover:border-sky-300 hover:shadow-sky-100",
+    cta: "border-sky-600 text-sky-700 group-hover:bg-sky-700 group-hover:text-white group-hover:border-sky-700",
+    textHover: "group-hover:text-sky-700",
+  },
   "materias-primas": {
     header: "bg-emerald-700",
     cardHover: "hover:border-emerald-300 hover:shadow-emerald-100",
@@ -70,6 +76,17 @@ export default function ProductCard({
         </p>
       </div>
       <div className="p-4 flex-1 flex flex-col">
+        {product.image && (
+          <div className="relative w-full h-28 mb-3">
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              sizes="160px"
+              className="object-contain"
+            />
+          </div>
+        )}
         <h4
           className={`text-steel-900 font-black text-sm uppercase leading-tight mb-2 transition-colors ${theme.textHover}`}
         >

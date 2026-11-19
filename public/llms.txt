@@ -17,6 +17,12 @@ Industrias Trevigo (trevigo.com.mx) es un proveedor técnico B2B que vende produ
 - [Tratamiento de metales](https://www.trevigo.com.mx/productos): detergentes alcalinos, desoxidantes ácidos, fosfatos de zinc, removedores de pintura, selladores anticorrosivos libres de cromo, inhibidores de oxidación temporal, pasivadores y aceites protectores
 - [Tratamiento de aguas residuales](https://www.trevigo.com.mx/productos): coagulantes inorgánicos y orgánicos, floculantes aniónicos, poliacrilamidas (PHPA, PAC-L, PAC-R), agentes secuestrantes, microbicidas de amplio espectro
 - [Lubricantes y aceites](https://www.trevigo.com.mx/productos): lubricantes sintéticos, fluidos de corte para metalworking, aceites hidráulicos, aceites de turbina, grasas industriales, lubricantes grado alimento NSF H1
+- [Aceites lubricantes Trevigo](https://www.trevigo.com.mx/productos/linea/aceites-lubricantes): 30 aceites marca Trevigo en cubeta 19 L, tambo 208 L, tote 1,000 L y granel en pipa
+  - [Motor a diésel](https://www.trevigo.com.mx/productos/categoria/aceites-motor-diesel): Turbo CI-4 15W-40/20W-50, CK-4 SAE 40, CJ-4 Plus, Flota Mixta CI-4 Plus/SL 15W-40, 15W-40, 25W-60, Monogrado CF-2
+  - [Motor a gasolina y moto](https://www.trevigo.com.mx/productos/categoria/aceites-motor-gasolina): Multigrado API SL 15W-40/20W-50, Monogrado SAE 10W-50, SAE 40 API SL, Alto Desempeño 5W-30, Motocicleta 4T 20W-50
+  - [Transmisión y diferencial](https://www.trevigo.com.mx/productos/categoria/aceites-transmision-diferencial): Engranes API GL-5 80W-90 y 85W-140, ATF DEX III (Dexron/Mercon III), ATF III, ATF II
+  - [Hidráulicos](https://www.trevigo.com.mx/productos/categoria/aceites-hidraulicos-iso): ISO 32, ISO 46, AW ISO 68, AW ISO 100, multigrado, fluido hidráulico antiflama
+  - [Industriales](https://www.trevigo.com.mx/productos/categoria/aceites-industriales): cajas reductoras ISO 32-220 y alta carga ISO 320-680, guías y correderas, compresores SAE 10W/30/40, circulación, transferencia de calor ISO 22/46, dieléctrico
 - [Materias primas](https://www.trevigo.com.mx/productos): ácido cítrico, ácido nítrico, ácido clorhídrico, ácido fosfórico, sosa cáustica en escamas y al 50%, hipoclorito de sodio
 
 ## Servicios de tratamiento de superficie
