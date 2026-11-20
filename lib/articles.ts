@@ -1793,71 +1793,61 @@ export const ARTICLES: Article[] = [
       "viscosidad aceite hidraulico",
     ],
     intro:
-      "Un sistema hidráulico mal lubricado puede acortar la vida útil de la bomba de 20,000 horas a menos de 5,000 — quintuplicando el costo de mantenimiento. La causa #1 de fallas prematuras en hidráulicos industriales es usar la viscosidad incorrecta de aceite. Esta guía técnica explica cómo seleccionar entre ISO VG 32, 46 y 68, cuándo necesitas variantes especializadas (HM, HV, HE), y los errores más comunes que vemos en visitas técnicas a plantas en el norte de México.",
+      "La pregunta llega más seguido de lo que parece: tengo un sistema hidráulico y no sé si debo usar ISO VG 32, 46 o 68. La respuesta correcta depende de tres variables que casi nadie considera juntas: la temperatura real de operación del aceite dentro del sistema, la presión de trabajo, y lo que el fabricante de la bomba especifica en el manual. Cuando esas tres coinciden con la viscosidad elegida, el sistema funciona con la eficiencia para la que fue diseñado. Cuando no coinciden, el desgaste silencioso hace su trabajo hasta que algo falla en el peor momento. Esta guía explica la lógica detrás de cada grado, las variantes HM/HV/HE y lo que vemos con más frecuencia en visitas técnicas a plantas del norte de México.",
     sections: [
       {
-        heading: "¿Qué significa ISO VG y por qué es importante?",
+        heading: "Qué es ISO VG y por qué el número importa",
         paragraphs: [
-          "ISO VG (Viscosity Grade) es la norma ISO 3448 que estandariza la viscosidad cinemática de aceites industriales a 40°C. El número indica la viscosidad nominal en centistokes (cSt): ISO VG 32 significa ~32 cSt @ 40°C, ISO VG 46 significa ~46 cSt, ISO VG 68 ~68 cSt.",
-          "La viscosidad del aceite es crítica en hidráulicos porque determina: (1) la capacidad de formar película lubricante en superficies con presión, (2) la eficiencia volumétrica de la bomba (pérdidas internas), (3) la generación de calor por fricción interna, y (4) la respuesta dinámica del sistema (tiempo de actuación de cilindros y válvulas).",
+          "ISO VG (Viscosity Grade) es la norma ISO 3448 que clasifica aceites industriales por su viscosidad cinemática medida a 40°C. El número indica centistokes (cSt): ISO VG 32 tiene ~32 cSt a esa temperatura, VG 46 tiene ~46 cSt, VG 68 tiene ~68 cSt. La tolerancia permitida es ±10% del valor nominal.",
+          "En un sistema hidráulico, la viscosidad determina cosas muy concretas: si el aceite es demasiado delgado para la presión que maneja la bomba, no forma película suficiente y hay contacto metal-metal. Si es demasiado espeso para la temperatura de operación, la bomba trabaja contra resistencia interna, genera calor y pierde eficiencia volumétrica. Los dos extremos dañan; lo que el manual OEM especifica es el punto donde la bomba fue diseñada para operar.",
         ],
       },
       {
-        heading: "Cómo elegir entre ISO VG 32, 46 y 68",
+        heading: "Cuándo usar cada grado de viscosidad",
         paragraphs: [
-          "La selección depende principalmente de la temperatura operativa, la presión del sistema y el tipo de bomba. Como guía técnica:",
-        ],
-        list: {
-          items: [
-            "ISO VG 32: para sistemas hidráulicos en clima frío (operación <30°C ambiente), baja presión (<140 bar), y sistemas con servoválvulas que requieren respuesta dinámica rápida. Común en maquinaria de plástico, prensas pequeñas y equipos de laboratorio",
-            "ISO VG 46: la viscosidad más universal para industria. Sistemas estándar a temperatura ambiente moderada (30-60°C operativo), presión media (140-210 bar), bombas de paletas o engranajes. Cubre 70-80% de aplicaciones hidráulicas en plantas mexicanas",
-            "ISO VG 68: para climas calientes (operación >40°C ambiente), alta presión (>210 bar), maquinaria pesada de alta carga, equipo móvil expuesto al sol, y aplicaciones con bombas de pistón axial que toleran viscosidad mayor. Necesario en prensas grandes, equipo de minería y construcción",
-            "ISO VG 100+: aplicaciones muy específicas con cargas extremas y velocidades bajas — engranajes, no típicamente hidráulicos",
-          ],
-        },
-      },
-      {
-        heading: "HM vs HV vs HE: variantes especializadas",
-        paragraphs: [
-          "Más allá del grado ISO VG, los aceites hidráulicos se clasifican por aditivos en familias funcionales. Las principales son:",
-        ],
-        list: {
-          items: [
-            "HM (Mineral con aditivos antidesgaste) — el estándar industrial. Aditivos zinc-fósforo para protección antidesgaste. Adecuado para sistemas estándar a presión media-alta",
-            "HV (High Viscosity Index) — índice de viscosidad >140, viscosidad más estable en rangos amplios de temperatura. Para equipo móvil expuesto a variaciones día/noche, y aplicaciones con arranques en frío",
-            "HE (Hydraulic Environmental / Biodegradable) — para equipos en zonas ambientalmente sensibles (forestal, marítimo, agrícola). Cumple normas OECD 301B de biodegradabilidad. Base de ésteres saturados",
-            "HL (Hydraulic Lubricant) — sin aditivos antidesgaste. Solo para sistemas de muy baja presión (<70 bar). Cada vez menos usado",
-            "HEES (Environmental Synthetic Ester) — variante de HE con base sintética. Excelente desempeño + biodegradable. Premium",
-          ],
-        },
-      },
-      {
-        heading: "Errores comunes en selección de aceite hidráulico",
-        paragraphs: [
-          "Los errores que más vemos en visitas técnicas son cuatro, y cualquiera puede acortar significativamente la vida útil del sistema:",
-          "(1) Usar la 'viscosidad que siempre se ha usado' sin verificar manual OEM — el fabricante de la bomba especifica viscosidad operativa óptima; ignorarlo causa cavitación o desgaste prematuro. (2) Mezclar marcas distintas sin verificar compatibilidad — diferentes paquetes de aditivos pueden reaccionar y formar lodos o precipitados. (3) No considerar temperatura real de operación — un sistema 'a 40°C ambiente' puede operar a 75°C internamente; ahí ISO VG 46 ya no es suficiente. (4) No cambiar aceite hasta que falla visible — el aceite degradado pierde aditivos antes que viscosidad y desgasta el sistema en silencio.",
+          "ISO VG 32 es para sistemas que operan con aceite frío — instalaciones en zonas con temperatura ambiente bajo 20°C, o equipos que arrancan en frío con frecuencia y no tienen ciclos largos de calentamiento. También aplica a sistemas con servoválvulas de respuesta muy rápida, donde la viscosidad más baja acelera el tiempo de actuación. En el contexto de Monterrey, donde las plantas raramente bajan de 15°C en operación continua, el VG 32 es la opción menos común.",
+          "ISO VG 46 cubre la mayoría de los sistemas hidráulicos industriales en México. Funciona bien entre 40 y 60°C de temperatura operativa del aceite, que es el rango típico de plantas con sistemas estándar de bombas de paletas o engranajes a presiones de 140 a 210 bar. Si el manual de la bomba no especifica nada distinto, VG 46 HM es la selección correcta por defecto.",
+          "ISO VG 68 entra cuando hay condiciones que elevan la temperatura del aceite: clima caliente con naves sin climatizar, alta presión sostenida por encima de 210 bar, equipos con ciclos continuos intensivos, o maquinaria pesada expuesta al sol. También es la especificación de muchas bombas de pistón axial de alta presión. En plantas del noreste con naves que llegan a 45°C en verano, la diferencia entre VG 46 y VG 68 puede ser la diferencia entre bomba que dura 10 años o bomba que se cambia cada tres.",
         ],
       },
       {
-        heading: "Análisis de aceite en uso: la práctica que ahorra millones",
+        heading: "HM, HV y HE: qué significa la letra después de ISO VG",
         paragraphs: [
-          "El análisis periódico del aceite hidráulico es la práctica de mantenimiento con mayor retorno de inversión en hidráulicos. Por 250-400 MXN por muestra, un laboratorio certificado entrega reporte con: viscosidad real, código de partículas ISO 4406 (contaminación), agua, TAN/TBN, espectrometría de elementos de desgaste (Fe, Cu, Cr, Pb, Si) y oxidación FTIR.",
-          "Indicadores de alerta: cambio de viscosidad >10% del nominal indica oxidación o contaminación; código ISO 4406 superior a 22/20/17 indica filtración deficiente; agua >0.1% indica problema de empaques o respiraderos; partículas de Fe altas indican desgaste anormal. Cualquier alerta permite intervención antes de falla catastrófica. Recomendamos análisis cada 250-500 horas en equipos críticos y cada 1,000 horas en equipos estándar.",
+          "El grado ISO VG define la viscosidad, pero la letra que sigue define los aditivos y el comportamiento del aceite bajo condiciones específicas.",
+          "HM es el estándar para industria general. Lleva aditivos antidesgaste a base de zinc-ditionofosfato (ZDDP) que forman una película de sacrificio sobre superficies metálicas bajo presión. Es el aceite correcto para la mayoría de sistemas industriales fijos con presión media a alta.",
+          "HV tiene índice de viscosidad alto (generalmente >140 VI). Lo que eso significa en la práctica es que su viscosidad cambia menos con la temperatura que un aceite HM estándar. Es importante en equipo móvil — cargadores, grúas, compactadoras — que arranca en frío a las 7am y opera en campo hasta las 2pm con calor. También aplica a sistemas con ciclos de temperatura muy variables en el mismo turno.",
+          "HE y HEES son aceites biodegradables para aplicaciones donde una fuga afectaría el entorno: industria forestal, maquinaria cerca de cuerpos de agua, equipos en zonas de captación de agua potable. Base de ésteres naturales o sintéticos. Mayor costo, pero obligatorios en ciertas aplicaciones con certificaciones ambientales.",
+        ],
+      },
+      {
+        heading: "Los errores de selección que más vemos en planta",
+        paragraphs: [
+          "El error más frecuente es no consultar el manual OEM de la bomba y continuar usando la viscosidad que 'siempre se ha usado'. El problema es que equipos de distintos fabricantes, comprados en distintas épocas, pueden tener especificaciones diferentes — y cuando se estandariza el inventario con un solo grado por conveniencia de almacén, algunos sistemas terminan mal lubricados.",
+          "El segundo error es mezclar marcas sin verificar compatibilidad de aditivos. Dos aceites HM 46 de marcas distintas pueden tener paquetes de aditivos que reaccionan entre sí formando lodos o precipitados que tapan filtros y válvulas. No es el caso siempre, pero cuando ocurre es costoso. Si se va a cambiar de marca, lo correcto es drenar, lavar y llenar con el aceite nuevo.",
+          "El tercero, y el que más se subestima, es no medir la temperatura real del aceite en operación. Un sistema puede estar en una nave a 35°C de temperatura ambiente, pero el aceite dentro del sistema, después de 4 horas de trabajo, está a 75°C. Ahí el VG 46 ya opera en el límite inferior de su rango, y si hay alguna condición extra de carga, la película lubricante se adelgaza más de lo que el fabricante calculó.",
+        ],
+      },
+      {
+        heading: "Análisis de aceite en uso: cuándo y por qué hacerlo",
+        paragraphs: [
+          "El análisis de aceite en uso es la herramienta de diagnóstico con mejor relación costo-beneficio en mantenimiento de sistemas hidráulicos. Por 250 a 400 pesos por muestra, un laboratorio certificado entrega viscosidad real medida, código de contaminación ISO 4406 (partículas por mililitro en tres rangos de tamaño), contenido de agua, TAN (número de acidez total) y espectrometría de elementos metálicos — hierro, cobre, cromo, plomo, aluminio.",
+          "Los valores que indican acción inmediata: viscosidad que se desvía más del 10% del nominal indica oxidación avanzada o contaminación con otro fluido. Código ISO 4406 por encima de 22/20/17 indica filtración insuficiente. Agua por encima de 0.1% indica falla de sellos o respiraderos tapados. Hierro elevado sin justificación indica desgaste de bomba o cilindros. Con esa información, la decisión de cambiar aceite o intervenir el sistema es técnica, no un cálculo de horas de calendario.",
+          "Recomendamos análisis cada 250 a 500 horas en equipos críticos (prensas principales, líneas de producción continua) y cada 1,000 horas en equipos de apoyo. El costo del análisis anual de un sistema crítico es menos que 2 horas de paro no programado en la mayoría de plantas.",
         ],
       },
     ],
     faqs: [
       {
         q: "¿Puedo cambiar de ISO VG 46 a ISO VG 68 sin drenar el sistema?",
-        a: "No es recomendable. La mezcla resultante tendrá viscosidad intermedia variable según proporción exacta — perdiendo las propiedades de ambos. Adicionalmente, los paquetes de aditivos pueden ser incompatibles entre marcas. Para cambiar viscosidad: drenado completo, flush con aceite nuevo si el sistema mostró contaminación, y llenado con la nueva viscosidad. Mantener registro del cambio.",
+        a: "No es lo que se recomienda. La mezcla resultante tendrá viscosidad intermedia indefinida dependiendo de la proporción, y si los paquetes de aditivos de ambos aceites no son compatibles, puedes terminar con sedimentos o lodos que tapan filtros. El procedimiento correcto es drenado completo, flush con una carga de aceite nuevo si el sistema tiene historial de contaminación, y llenado con la viscosidad nueva. Es una tarea de medio turno que evita problemas de varios días.",
       },
       {
         q: "¿Cada cuánto debo cambiar el aceite hidráulico?",
-        a: "Por calendario: 4,000-8,000 horas de operación (1-2 años en uso continuo). La mejor práctica es por análisis de laboratorio — extiende intervalos en sistemas bien mantenidos y detecta problemas temprano en sistemas con desgaste. Cambio anticipado si: viscosidad cambia >10%, TAN aumenta >0.5 mg KOH/g, agua >0.1%, código ISO 4406 supera 22/20/17, o se detecta oxidación significativa por FTIR.",
+        a: "El intervalo por calendario para aceite mineral HM en sistemas industriales estándar está entre 4,000 y 8,000 horas, equivalente a uno o dos años en operación continua. Pero ese intervalo asume condiciones normales — si hay contaminación de agua, temperaturas altas sostenidas, o partículas en suspensión, el aceite se degrada antes. La manera más confiable de decidir cuándo cambiar es con análisis de laboratorio: si la viscosidad se desvía más del 10%, si el TAN sube más de 0.5 mg KOH/g, o si el código de partículas supera 22/20/17, es cambio independientemente de las horas.",
       },
       {
         q: "¿Vale la pena pagar más por un aceite hidráulico sintético?",
-        a: "Depende del valor del equipo. En equipos críticos (prensas industriales, inyectoras grandes, sistemas con servoválvulas), un sintético dura 3-5x más, opera mejor en temperaturas extremas y reduce desgaste — ROI positivo en 12-24 meses. En equipos estándar de baja exigencia (cargadores, equipos pequeños), el mineral HM sigue siendo más económico en costo total. Recomendamos sintético solo donde el caso técnico lo justifica.",
+        a: "En equipos de alta exigencia, sí. Un aceite sintético de base PAO u éster resiste mejor la oxidación, opera en rangos de temperatura más amplios y protege mejor bajo presiones extremas. En prensas industriales grandes, inyectoras de alto tonelaje o sistemas con servoválvulas, el costo adicional se recupera en intervalos de cambio más largos y menor desgaste. En equipos de apoyo o baja exigencia, el mineral HM bien mantenido con análisis periódico sigue siendo la opción más económica en costo total.",
       },
     ],
     relatedProducts: ["aceite-hidraulico-iso-46", "aceite-hidraulico-premium"],
